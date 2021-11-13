@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>iTechX | Help</title>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/style.css">
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "layui/hm.js";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+
+<div id="navigator" class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav" lay-filter="">
+            <a class="logo" href="">
+                <img src="" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">
+            </a>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 8em;"><a href="dashboard">课程面板</a></li>
+            <li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 2em;"><a href="help">帮助</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="layui-fluid" style="margin: 2em 20px;">
+
+    <div class="layui-tab-content" style="height: auto;">
+        <h1 style="font-family: Quicksand; font-weight: bold; font-size: 2.5em;">Help 帮助</h1>
+        <hr>
+
+        <div class="layui-row" style="margin: 0 12em;">
+            <!-- 目录 -->
+            <div class="container menu">
+                <details>
+                    <summary>我应该如何选择课程？</summary>
+                    <div class="details-wrapper">
+                    <div class="details-styling">
+                        <p>任意页面中的右上方，选择“课程面板”即可跳转至课程选择页面。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>课程具有有效期吗？</summary>
+                    <div class="details-wrapper">
+                    <div class="details-styling">        
+                        <p>我们希望学习是不受限制的，因此会尽可能不设置课程有效期。</p>
+                        <p>您如果担心课程失效，可以使用git clone下载整个网站的内容。但注意本地不再能够渲染、浏览部分页面。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>页面似乎有一些地方看起来少了一些公式之类的，怎么回事？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>网页中的所有公式均由MathJax渲染。若您发现网页有任何异常加载状况，请尝试刷新重试。
+                        </p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>填空题可以键入表达式吗？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>当然可以！大部分填空题会通过Java Script中的<code>eval</code>函数处理，再进行评判。</p>
+                        <p>但出于准确性考虑，作业中关于小数点后精确度的要求仍会在问题中呈现。答案均为课程提供的原始答案。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>为什么没有课程视频？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>上课没有录像，当然也就没有课程视频咯。</p>
+                        <p>幸运的是，由于疫情原因，Spring 2020学期的课程将包含部分或全部课程视频。这些资料将仅用于教学目的，不得随意传播。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>我的页面出现了奇奇怪怪的错误！怎么回事？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>这很正常。网页本来就是我写着玩玩的，并没有考虑到兼容各个浏览器与平台。如果有好的建议，可以到github发布issue。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>刚才还好好的，怎么突然访问不了了？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>新版网页采用github api动态渲染文件内容。网页无法访问，可能是api请求失败造成的，可以尝试刷新网页。如果您刷新若干次仍无法解决问题， 则可能达到了该小时github api调用上限。您可以通过连接热点的方式更换IP地址，从而获得额外的api调用次数；或登录github获取大量api调用许可。注意：使用校园网可能会共享IP地址，很容易达到频率上限，造成网页无法访问。</p>
+                        <p>除此之外，github对未登录用户还会有其他限制，故我们鼓励您登录查看内容。</p>
+                    </div>
+                    </div>
+                </details>
+            </div>
+            <!-- 目录 结束 -->
+        </div>
+        
+        <hr>
+        <h1 style="font-family: Quicksand; font-weight: bold; font-size: 2.5em; padding-top: 1em;">User Authority  用户权限</h1>
+
+        <div class="layui-row" style="margin: auto 30px;">
+            <div class="layui-col-md4">
+                <div class="layui-card" style="border-radius: 18px; box-shadow: 0.2em 1em 2em -1em #d6d1e0; border: 1px solid #d6d1e0; margin: 10px;">
+                    <div style="flex: 1 1 auto; padding: 1rem 1rem;">
+                        <h5 style="font-size: 1.5rem; margin: 0; text-align: center; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica Neue,Tahoma,PingFang SC,Microsoft Yahei,Arial,Hiragino Sans GB,sans-serif;">访客</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看所有课程内容</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>约60个请求/小时（单个页面包含多个请求）</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>查看、参与课程评分</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>发表评论</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>上传课程资料</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>审核已上传的课程资料</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>管理、屏蔽用户评论</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>添加、修改课程基本信息</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+                <div class="layui-card" style="border-radius: 18px; box-shadow: 0.2em 1em 2em -1em #d6d1e0; border: 1px solid #d6d1e0; margin: 10px;">
+                    <div style="flex: 1 1 auto; padding: 1rem 1rem;">
+                        <h5 style="font-size: 1.5rem; margin: 0; text-align: center; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica Neue,Tahoma,PingFang SC,Microsoft Yahei,Arial,Hiragino Sans GB,sans-serif;">登录用户</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看所有课程内容</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>按最新到最旧排序查看评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>约5000个请求/小时（单个页面包含多个请求）</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看、参与课程评分</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>发表评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>上传课程资料</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>审核已上传的课程资料</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>管理、屏蔽用户评论</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>添加、修改课程基本信息</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+                <div class="layui-card" style="border-radius: 18px; box-shadow: 0.2em 1em 2em -1em #d6d1e0; border: 1px solid #d6d1e0; margin: 10px;">
+                    <div style="flex: 1 1 auto; padding: 1rem 1rem;">
+                        <h5 style="font-size: 1.5rem; margin: 0; text-align: center; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica Neue,Tahoma,PingFang SC,Microsoft Yahei,Arial,Hiragino Sans GB,sans-serif;">管理员</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看、编辑所有课程内容</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>按最新到最旧排序查看评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>约5000个请求/小时（单个页面包含多个请求）</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看、参与课程评分</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>以高亮背景发表评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>上传课程资料</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>审核已上传的课程资料</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>管理、屏蔽用户评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>添加、修改课程基本信息</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="layui-footer" style="margin-top: 2em;">
+            <!-- 底部固定区域 -->
+            <p style="display:flex; justify-content: center;">© 2020-2021 iTechX - MIT license.</p>
+        </div>
+    </div>
+</div>
+
+<script  src="layui/accordion.js"></script>
+<script src="layui/layui.js"></script>
+<script>
+    layui.config({
+        base: 'layui/js/modules/'
+    }).use(['layer', 'element', 'nav'], function(){
+        var nav = layui.nav({
+            page: "index",
+            clientID: "2de790a6c048f147f91d",
+            clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+        });
+
+        nav.render("navigator");
+    });
+</script>
+<script>
+
+    {var makeMePretty = document.querySelector(".menu");
+    var accordion = new Collapse(makeMePretty, { accordion: false }).init();}
+
+    layui.use(['layer', 'element'], function(){
+        var layer = layui.layer
+            ,element = layui.element
+            ,$ = layui.$;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../font/Quicksand-Regular.ttf) format('truetype');
+}
+/*
+  Please wrap your collapsible content in a single element or so help me
+  Must add a transition or it breaks because that's the whole purpose of this
+  Only one transition-duration works (see explanation on line #141 in JS)
+  You can add more to an inner wrapper (.details-styling)
+*/
+.collapse-init summary + * {
+  transition: all 0.25s ease-in-out;
+  overflow: hidden;
+}
+
+/*
+  Closed state. Any CSS transitions work here
+  The JS has a height calculation to make sliding opened/closed easier, but it's not necessary
+  Remove the height prop for a simple toggle on/off (after all that work I did for you?)
+*/
+.collapse-init :not(.panel-active) summary + * {
+  height: 0;
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+}
+
+.collapse-init summary {
+  list-style: none;
+}
+.collapse-init summary::-webkit-details-marker {
+  display: none;
+}
+.collapse-init summary::before {
+  display: none;
+}
+.collapse-init summary {
+  cursor: pointer;
+}
+
+/*
+  This element exists so .details-wrapper has no extra margin/padding that can screw with the smooth height collapse
+  You can style .details-wrapper decoratively but avoid anything that modifies the box and add it to .details-styling instead
+  Otherwise, this element is totally optional. Remove if you hate divitis
+*/
+.details-styling, .content {
+  padding: 1em;
+  margin-left: 2em;
+  font-size: 1em;
+}
+
+::-moz-selection {
+  background: #fbcb6a;
+  color: #4d4433;
+}
+
+::selection {
+  background: #fbcb6a;
+  color: #4d4433;
+}
+
+html {
+  background: #f8f5fe;
+  color: #3c334d;
+}
+
+/* body {
+  font: 1em/1.4 'Quicksand', sans-serif;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 5vw;
+} */
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+h1 + p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50ch;
+}
+h1 ~ p {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+code {
+  font-family: consolas;
+  font-weight: bold;
+}
+
+/* a {
+  color: #8f63e9;
+  box-shadow: inset 0 -3px #cfbcf5;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:hover, a:focus {
+  box-shadow: inset 0 -1.2em #8f63e9;
+  color: #f8f5fe;
+} */
+
+abbr {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  font-size: 1.2em;
+}
+
+[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+[type=checkbox] + label {
+  background: #efe7fd;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  text-align: left;
+  transition: 0.1s;
+  padding: 0.75em 1em;
+}
+[type=checkbox] + label::before {
+  border: 2px solid;
+  border-radius: 2px;
+  color: #5b13ec;
+  content: '';
+  display: inline-block;
+  margin-right: 0.75ch;
+  transition: 0.1s;
+  width: 1.5ch;
+  height: 1.5ch;
+  vertical-align: top;
+}
+[type=checkbox]:focus + label {
+  outline: 2px solid #5b13ec;
+}
+[type=checkbox]:checked + label::before {
+  background: currentColor;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.layui-form-label {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.layui-form-checkbox, .layui-form-radio {
+  display: block;
+  background-color: #efe7fd;
+  padding-right:0;
+  width: 100%;
+  height: auto;
+}
+.layui-form-radio *{
+  font-size: inherit;
+}
+.layui-input {
+  width: 200px;
+  height: 45px;
+  margin-bottom: 1em;
+}
+.layui-form-checkbox > span, .layui-form-radio > span {
+  background: #efe7fd;
+  color: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  text-align: left;
+  transition: 0.1s;
+  padding: 0.4em 1em;
+  margin: 0.5em 0;
+  white-space: normal;
+}
+.layui-form-checkbox > span::before, .layui-form-radio > span::before{
+  border: 2px solid;
+  border-radius: 2px;
+  color: #5b13ec;
+  content: '';
+  display: inline-block;
+  margin-right: 1.25ch;
+  transition: 0.1s;
+  width: 1.5ch;
+  height: 1.5ch;
+  vertical-align: text-bottom;
+}
+.layui-form-radio > span::before {
+  border-radius: 100%;
+}
+.layui-form-checkbox span span, .layui-form-radio span span {
+  vertical-align: baseline;
+}
+.layui-form-checkbox span script, .layui-form-radio span script {
+  display: none;
+}
+.layui-form-checkbox:hover > span, .layui-form-radio:hover > span {
+  border-radius: 1px;
+  box-shadow: 0 0 0 2px #5b13ec;
+  /* outline: 2px solid #5b13ec; */
+  background-color: #efe7fd;
+}
+.layui-input:hover {
+  border-radius: 1px;
+  box-shadow: 0 0 0 2px #5b13ec;
+}
+.layui-form-checked > span::before, .layui-form-radioed > span::before {
+  background: currentColor;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+.layui-form-true > span, .layui-form-true:hover > span{
+  border-radius: 1px;
+  box-shadow: 0 0 0 2px green;
+}
+.layui-form-false > span, .layui-form-false:hover > span{
+  border-radius: 1px;
+  box-shadow: 0 0 0 2px rgb(190, 0, 0);
+}
+.layui-form-input-true, .layui-form-input-true:hover{
+  border-radius: 1px;
+  box-shadow: 0 0 0 2px green;
+}
+.layui-form-input-false, .layui-form-input-false:hover{
+  border-radius: 1px;
+  box-shadow: 0 0 0 2px rgb(190, 0, 0);
+}
+.tick-label {
+  padding:0 0 0.5em 1em;
+  font-size: large;
+}
+
+
+.container {
+  box-shadow: 0.2em 1em 2em -1em #d6d1e0;
+  margin: 2.4em 0;
+}
+
+details {
+  background: #fff;
+  border: 1px solid #d6d1e0;
+  border-bottom: 0;
+  list-style: none;
+}
+details:first-child {
+  border-radius: 6px 6px 0 0;
+}
+details:last-child {
+  border-bottom: 1px solid #d6d1e0;
+  border-radius: 0 0 6px 6px;
+}
+
+summary {
+  display: block;
+  transition: 0.2s;
+  font-weight: 700;
+  padding: 1em;
+}
+summary:focus {
+  outline: 2px solid #5b13ec;
+}
+.collapse-init summary::after {
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  content: '';
+  float: right;
+  width: 0.5em;
+  height: 0.5em;
+  margin-top: 0.25em;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  transition: inherit;
+}
+[open] summary {
+  background: #5b13ec;
+  color: #f8f5fe;
+}
+[open] summary::after {
+  margin-top: 0.5em;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.problem {
+  margin: 0.5em;
+  font-family: sans-serif;
+}
+.problem .problem-title, .reading-content .problem-title {
+  font-family: sans-serif;
+  font-size: 16pt;
+  margin: 0.5em 0;
+}
+.problem .problem-grade {
+  font-size: small;
+  color: rgb(172, 172, 172);
+  margin: 1.3em 0;
+}
+.problem .problem-content, .reading-content, .question p {
+  font-size: medium;
+  margin: 1em 0;
+}
+
+.shadow {
+  margin-bottom: 20px;
+  border-radius: 2px;
+	box-shadow: 0 0 3px 2px grey;
+}
+
+pre{
+  display: block;
+  margin: 1em auto;
+  max-width: fit-content;
+}

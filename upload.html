@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>iTechX | Upload Document</title>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/style.css">
+    
+</head>
+<body>
+
+<div id="navigator" class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav" lay-filter="">
+            <a class="logo" href="">
+                <img src="layui/images/iTechX.png" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">
+            </a>
+            <li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 8em;"><a href="dashboard">课程面板</a></li>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 2em;"><a href="help">帮助</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="layui-fluid" style="margin: 2em 20px;">
+
+    <div class="layui-tab-content" style="height: auto;">
+        <h1 style="font-family: Quicksand; font-weight: bold; font-size: 2.5em;">Upload 上传文件</h1>
+        <hr>
+
+        <div class="layui-row">
+            <div class="layui-fluid">
+                <div class="layui-card">
+                    <div class="layui-card-body" style="padding-top: 40px;">
+                        <div class="layui-carousel" id="stepForm" lay-filter="stepForm" style="margin: 0 auto;">
+                            <div carousel-item>
+                                <div>
+                                    <div class="layui-upload-drag" style="width: 80%; height: 224px; margin: 2em 6em; border: 0; padding-top: 126px;" id="test10">
+                                        <svg style="position: absolute; top: 0; left: 0;" viewBox="-1 -1 832 286" preserveAspectRatio="none">
+                                            <path style="fill: none;
+                                            stroke: #e7e7e7;
+                                            stroke-width: 1;
+                                            stroke-dasharray: 6,6;" d="M0 6
+                                            A 6 6, 0, 0, 1, 6, 0
+                                            H 824
+                                            A 6 6, 0, 0, 1, 830, 6
+                                            V 278
+                                            A 6 6, 0, 0, 1, 824, 284
+                                            H 6
+                                            A 6 6, 0, 0, 1, 0, 278
+                                            Z"></path></svg>
+                                        <i class="layui-icon layui-icon-upload-drag" style="color: #8f63e9;"></i>
+                                        <p>点击上传，或将文件拖拽到此处</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <form class="layui-form" style="margin: 0 auto;max-width: 460px;padding-top: 40px;">
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">文件名称</label>
+                                            <div class="layui-input-block">
+                                                <input name="file_name" type="text" lay-filter="file_name" placeholder="Please input the filename" class="layui-input" lay-verify="required" />
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">课程</label>
+                                            <div class="layui-input-block">
+                                              <select name="course_code" lay-filter="course_code" lay-verify="required" lay-search>
+                                                <option value=""></option>
+                                              </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">学期</label>
+                                            <div class="layui-input-block">
+                                              <select name="course_id" lay-filter="course_id" lay-verify="required" lay-search>
+                                                <option value=""></option>
+                                              </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">文件夹</label>
+                                            <div class="layui-input-block">
+                                              <select name="folder" lay-filter="folder" lay-verify="required" lay-search>
+                                                <option value=""></option>
+                                              </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <div class="layui-input-block">
+                                                <button type="button" class="layui-btn layui-btn-primary-violet pre">上一步</button>
+                                                <button class="layui-btn layui-btn-violet" lay-submit lay-filter="formStep">
+                                                    &emsp;上传&emsp;
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div>
+                                    <div style="margin: 0 auto;max-width: 460px;padding-top: 40px;">
+                                        <div class="layui-progress layui-progress-big" lay-filter="progress-bar" lay-showpercent="true">
+                                            <div class="layui-progress-bar" lay-percent="0%"></div>
+                                        </div>
+                                        <div style="text-align: center;">
+                                            <i class="layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop" style="font-size: 90px; color: #666; margin-top: 60px;"></i>
+                                            <h2 lay-filter="hint" style="font-family: Quicksand; font-weight: light; font-size: 1.5em; margin-top: 30px;">正在准备上传...</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="text-align: center;margin-top: 90px;">
+                                        <i class="layui-icon layui-circle"
+                                           style="color: white;font-size:30px;font-weight:bold;background: #52C41A;padding: 20px;line-height: 80px;">&#xe605;</i>
+                                        <div style="font-size: 24px;color: #333;font-weight: 500;margin-top: 30px;">
+                                            上传成功
+                                        </div>
+                                        <div style="font-size: 14px;color: #666;margin-top: 20px;">我们会尽快完成审核</div>
+                                    </div>
+                                    <!-- <div style="text-align: center;margin-top: 50px;">
+                                        <button class="layui-btn next">再入一笔</button>
+                                        <button class="layui-btn layui-btn-primary">查看账单</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <hr>
+                        <div style="color: #666;margin-top: 30px;margin-bottom: 40px;padding-left: 30px;">
+                            <h3>常见问题</h3><br>
+                            <h4>上传文件</h4>
+                            <p>没有找到课程或学期？点击这里。</p>
+                            <br>
+                            <h4>入款到现金</h4>
+                            <p>如果需要，这里可以放一些关于产品的常见问题说明。</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-footer" style="margin-top: 2em;">
+            <!-- 底部固定区域 -->
+            <p style="display:flex; justify-content: center;">© 2020-2021 iTechX - MIT license.</p>
+        </div>
+    </div>
+</div>
+
+<script src="layui/layui.js"></script>
+<script>
+    layui.config({
+        base: 'layui/js/modules/'
+    }).use(['layer', 'element', 'github_upload', 'nav', 'form', 'step', 'select'], function(){
+        var nav = layui.nav({
+            page: "none",
+            clientID: "2de790a6c048f147f91d",
+            clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+        });
+
+        nav.render("navigator");
+
+        var upload = layui.github_upload;
+        var element = layui.element;
+        //拖拽上传
+        var upload_obj = upload.render({
+            elem: '#test10'
+            ,url: 'https://httpbin.org/put'
+            ,data: {
+                'branch': 'file-base',
+                'message': 'Trial for uploading'
+            }
+            ,field: 'content'
+            ,headers: {
+                'Accept': 'application/json',
+                'Authorization': 'token ' + window.localStorage.getItem('GT_ACCESS_TOKEN'),
+            }
+            ,accept: 'file'
+            ,auto: false
+            ,choose: function(obj){
+                step.next('#stepForm');
+                obj.preview(function(index, file, result){
+                    $("[lay-filter='file_name']")[0].value = file.name;
+                });
+            }
+            ,done: function(res){
+                step.next('#stepForm');
+            }
+            ,progress: function(n, elem, e, index){ //注意：index 参数为 layui 2.6.6 新增
+                element.progress('progress-bar', n + '%'); //执行进度条。n 即为返回的进度百分比
+            }
+        });
+
+
+        var select = layui.select({
+            repo: 'iTechX',
+            owner: 'i-TechX',
+            course_code: 'course_code',
+            course_id: 'course_id',
+            folder: 'folder',
+            upload: upload_obj
+        });
+        select.loadCourses();
+
+
+        var $ = layui.$
+            , form = layui.form
+            , step = layui.step;
+
+        step.render({
+            elem: '#stepForm',
+            filter: 'stepForm',
+            width: '100%', //设置容器宽度
+            stepWidth: '750px',
+            height: '500px',
+            stepItems: [{
+                title: '选择文件'
+            },{
+                title: '填写文件信息'
+            }, {
+                title: '等待上传'
+            }, {
+                title: '完成'
+            }]
+        });
+
+
+        form.on('submit(formStep)', function (data) {
+            step.next('#stepForm');
+            select.upload(data.field);
+            return false;
+        });
+
+        form.on('submit(formStep2)', function (data) {
+            step.next('#stepForm');
+            return false;
+        });
+
+        $('.pre').click(function () {
+            step.pre('#stepForm');
+        });
+
+        $('.next').click(function () {
+            step.next('#stepForm');
+        });
+        
+    });
+</script> 
+</body>
+</html>

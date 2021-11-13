@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>iTechX | Dash Board</title>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/style.css">
+    
+    
+    <style type="text/css">
+        .activate {
+            border: 2px solid #ebe09f;
+            border-radius: 12px;
+            background: #5c5d34;
+            box-shadow: .5px .5px 10px 2px rgba(251, 255, 0, 0.3);
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navigator" class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav" lay-filter="">
+            <a class="logo" href="">
+                <img src="" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">
+            </a>
+            <li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 8em;"><a href="dashboard">课程面板</a></li>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 2em;"><a href="help">帮助</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="layui-fluid" style="margin: 2em 20px;">
+
+    <div class="layui-tab-content" style="height: auto;">
+        <h1 style="font-family: Quicksand; font-weight: bold; font-size: 2.5em;">Dash Board 课程面板</h1>
+        <hr>
+
+        <div class="layui-row">
+            <div class="layui-col-sm9" id="course-cards">
+            </div>
+            <div class="layui-col-sm3">
+            </div>
+        </div>
+
+        <div class="layui-footer" style="margin-top: 2em;">
+            <!-- 底部固定区域 -->
+            <p style="display:flex; justify-content: center;">© 2020-2021 iTechX - MIT license.</p>
+        </div>
+    </div>
+</div>
+
+<script src="layui/layui.js"></script>
+<script>
+    layui.config({
+        base: 'layui/js/modules/'
+    }).use(['layer', 'element', 'nav', 'course_card'], function(){
+        var nav = layui.nav({
+            page: "dashboard",
+            clientID: "2de790a6c048f147f91d",
+            clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+        });
+
+        nav.render("navigator");
+
+        var card = layui.course_card({
+            repo: 'iTechX',
+            owner: 'i-TechX',
+        });
+
+        card.render("course-cards");
+    
+    });
+</script> 
+</body>
+</html>

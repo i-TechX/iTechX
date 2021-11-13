@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>iTechX</title>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/style.css">
+    <link rel="stylesheet" href="layui/css/github-markdown.css">
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "layui/hm.js";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+
+<div id="navigator" class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav" lay-filter="">
+            <a class="logo" href="dashboard">
+                <img src="" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">
+            </a>
+            <li style="font-family:sans-serif; position:relative;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;line-height:60px">
+                <div class="layui-hide" id="courseHeader">
+                    <span style="color:#fff;">{{d.code}}</span>
+                    <span style="color:rgba(255,255,255,.7);">{{d.name}}</span>
+                </div>
+            </li>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 8em;"><a href="dashboard">课程面板</a></li>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 2em;"><a href="help">帮助</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="layui-fluid" style="margin: 2em 20px;">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <div class="layui-tab-content" style="height: auto;">
+            <div class="layui-tab-item layui-show">
+                <span class="layui-breadcrumb" lay-separator='<span class="icon fa fa-angle-right" aria-hidden="true"></span>'>
+                    <div class="layui-hide" id="breadcrumb">
+                        <a href="courses?course_code={{d.code}}">{{d.code}}</a>
+                        <a href="courses?course_code={{d.code}}">{{d.semester}}</a>
+                        <a href="courses?course_code={{d.code}}">{{d.category}}</a>
+                        <a><cite>{{d.title}}</cite></a>
+                    </div>
+                </span>
+                <hr>
+
+                <div id="content" style="text-align: center;"></div>
+
+                <div class="main-content" id="test-out" style="margin: 1em 5%;">
+                    <div style="text-align: center;">
+                        <i class="layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop" style="margin: 5rem 0 0 0; font-size: 5em; color: #b4b4b4;"></i>
+                        <h1 style="text-align: center; font-size: 3em; line-height: 1.3em; margin: 1rem 0 3rem 0; padding: 0; text-shadow: 0 0 1rem #fefefe; font-family: Quicksand, Arial; color: #b4b4b4;">Loading...</h1>
+                        
+                    </div>
+                </div>
+
+                <div id="successor" style="text-align: center;"></div>
+
+            </div>
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            <p style="display:flex; justify-content: center;">© 2020-2021 iTechX - MIT license.</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="layui/layui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+<script src="layui/js/showdown/mdx-ext.js"></script>
+
+<script>
+    layui.config({
+        base: 'layui/js/modules/'
+    }).use(['form', 'jquery', 'laytpl', 'gradeffect', 'nav', 'layer'], function(){
+        var $ = layui.$,
+            form = layui.form,
+            layer = layui.layer;
+        
+        const queryParse = (search = window.location.search) => {
+            if (!search) return {}
+            const queryString = search[0] === '?' ? search.substring(1) : search
+            const query = {}
+            queryString
+              .split('&')
+              .forEach(queryStr => {
+                const [key, value] = queryStr.split('=')
+                /* istanbul ignore else */
+                if (key) query[decodeURIComponent(key)] = decodeURIComponent(value)
+              })
+          
+            return query
+        }
+
+        var index = layer.load(2, {
+            content:"<p style='position: relative; left: -10px;'><br><br>Loading...</p>",
+            shade:0
+        });
+
+        $.ajax({
+            url: queryParse()['url'],
+            type: "GET",
+            success: function (data) {
+                var s = data;
+                var metadata = "";
+                layer.close(index);
+
+                if (queryParse()['url'].endsWith('.mdx')) {
+                    var converter = new showdown.Converter({metadata: true, tables: true, literalMidWordUnderscores: true, extensions: mdxext()});
+                    ans = converter.makeHtml(s);
+                    metadata = converter.getMetadata();
+                    var converter = new showdown.Converter({tables: true, literalMidWordUnderscores: true, extensions: mdext()});
+                    ans = converter.makeHtml(ans);
+                    document.getElementById('test-out').innerHTML=ans;
+
+                    form.render();
+                    var Grade = layui.gradeffect;
+                    Grade.render(metadata);
+                } else if (queryParse()['url'].endsWith('.htmlx'))  {
+                    var converter = new showdown.Converter({metadata: true, tables: true, literalMidWordUnderscores: true, extensions: mdext()});
+                    ans = converter.makeHtml(s);
+                    metadata = converter.getMetadata();
+                    document.getElementById('test-out').innerHTML=ans;
+
+                    form.render();
+                    var Grade = layui.gradeffect;
+                    Grade.render(metadata);
+                } else if (queryParse()['url'].endsWith('.md'))  {
+                    var converter = new showdown.Converter({metadata: true, tables: true, literalMidWordUnderscores: true, extensions: mdext()});
+                    ans = converter.makeHtml(s);
+                    metadata = converter.getMetadata();
+                    ans = '<div class="markdown-body">' + ans + '</div>'
+                    document.getElementById('test-out').innerHTML=ans;
+
+                    var laytpl = layui.laytpl;
+                    var breadcrumbTpl = lay('#breadcrumb')[0].innerHTML;
+                    lay('#breadcrumb').html(layui.laytpl(breadcrumbTpl).render(metadata))
+                    .removeClass('layui-hide');
+                } else if (queryParse()['url'].endsWith('.raw'))  {
+                    var converter = new showdown.Converter({metadata: true, tables: true, literalMidWordUnderscores: true, extensions: mdext()});
+                    ans = converter.makeHtml(s);
+                    metadata = converter.getMetadata();
+                    document.getElementById('test-out').innerHTML=ans;
+                } else {
+                    var converter = new showdown.Converter({metadata: true, tables: true, literalMidWordUnderscores: true, extensions: mdext()});
+                    ans = converter.makeHtml(s);
+                    metadata = converter.getMetadata();
+                    document.getElementById('test-out').innerHTML=ans;
+
+                    var laytpl = layui.laytpl;
+                    var breadcrumbTpl = lay('#breadcrumb')[0].innerHTML;
+                    lay('#breadcrumb').html(layui.laytpl(breadcrumbTpl).render(metadata))
+                    .removeClass('layui-hide');
+                }
+
+                document.title = 'iTechX | ' + metadata.title + ' ' + metadata.code + ' ' + metadata.name;
+
+                var nav = layui.nav({
+                    page: "course",
+                    owner: "i-TechX",
+                    repo: "iTechX",
+                    clientID: "2de790a6c048f147f91d",
+                    clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+                });
+                nav.course_code = metadata.code;
+                nav.course_name = metadata.name;
+                nav.render("navigator");
+            },
+            error: function(err) {
+                console.log(err);
+                var nav = layui.nav({
+                    page: "course",
+                    owner: "i-TechX",
+                    repo: "iTechX",
+                    clientID: "2de790a6c048f147f91d",
+                    clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+                });
+                nav.render("navigator");
+                layer.close(index);
+                document.getElementById('test-out').innerHTML='<div style="text-align: center;">\
+                    <h1 style="text-align: center; font-size: 5em; line-height: 1.3em; margin: 5rem 0 3rem 0; padding: 0; text-shadow: 0 0 1rem #fefefe; font-family: Quicksand, Arial; color: #b4b4b4;">Page not found...</h1>\
+                    <div style="position: relative;width: 200px;height: 200px; margin:auto;">\
+                        <svg viewBox="0 0 120 120" style="overflow: visible"> <defs> <path id="a" d="M0 4.21585531V.05647427h4.15889198v4.15938104H0z"></path> </defs> <g fill="none" fill-rule="evenodd"> <g class="stars animated"> <path d="M32.9862439 29.2981615c.1110863.8208744-.4626987 1.5770446-1.2847376 1.6881041-.8210729.1110595-1.5764599-.4635526-1.6875462-1.2844271-.1120523-.8208744.4626987-1.5760789 1.2837716-1.6881041.8220388-.1110595 1.5774259.4635526 1.6885122 1.2844271" fill="#D0E7FB"></path> <path d="M100.94858 6.8876353c-.214287.79954375-1.0363503 1.27471744-1.8366061 1.06131608-.7983596-.21340136-1.2743411-1.03570792-1.0610028-1.83620012.2142866-.80049221 1.0363503-1.2756659 1.8366062-1.06131609.8002557.21434981 1.2752897 1.03570792 1.0610027 1.83620013" fill="#D0E7FB"></path> <g transform="translate(0 69)"> <mask id="b" fill="#fff"> <use xlink:href="#a"></use> </mask> <path d="M4.0876 2.6727c-.296 1.109-1.436 1.769-2.545 1.472-1.109-.297-1.768-1.436-1.472-2.546.297-1.109 1.436-1.768 2.546-1.471 1.11.296 1.768 1.436 1.471 2.545" fill="#A1D2F8" mask="url(#b)"></path> </g> <path d="M106.948688 111.887537c-.212978.799632-1.035129 1.275692-1.835888 1.060907-.80076-.213855-1.276008-1.035802-1.06117-1.835434.212978-.799632 1.036059-1.275692 1.835888-1.061837.80076.213855 1.275078 1.036732 1.06117 1.836364" fill="#A1D2F8"></path> <path d="M54.2354557 18.9014571c-1.5953959-.4199186-2.556853-2.0704598-2.1369062-3.6657486.4209514-1.5962933 2.0705988-2.5576859 3.6659948-2.1367627 1.5953959.4209232 2.556853 2.0704598 2.1369062 3.6657486-.4209514 1.5952888-2.0695942 2.5566813-3.6659948 2.1367627z" stroke="#A1D2F8" stroke-width="2"></path> <path d="M16.9721415 7.59675618c.2239612 1.64109572-.9269786 3.15263122-2.5690262 3.37559532-1.640039.222964-3.1515262-.9270082-3.3754875-2.56810392-.2229569-1.64210006.9279829-3.1536356 2.5690262-3.37659964 1.6410433-.22296405 3.1525306.92700817 3.3754875 2.56910824" fill="#A1D2F8"></path> <path d="M49.2357085 117.901451c-1.5962933-.419947-2.5576859-2.070599-2.1367627-3.665995.4209232-1.595396 2.0704598-2.556853 3.6657486-2.136907 1.5952888.420952 2.5566813 2.070599 2.1367627 3.665995-.4209231 1.595396-2.0694552 2.556853-3.6657486 2.136907z" stroke="#A1D2F8" stroke-width="2"></path> </g> <g class="rocket animated"> <path fill="#F2F9FE" d="M53.9118329 92L44 81.3510365 50.0881671 76 60 86.6489635z"></path> <path stroke="#A1D2F8" stroke-width="2" stroke-linejoin="round" d="M53.9118329 92L44 81.3510365 50.0881671 76 60 86.6489635z"></path> <path fill="#FFF" d="M57 47.0157449L49.8317064 42 24 60.6301909 49.2570499 62z"></path> <path fill="#F2F9FE" d="M87.754216 81L92 88.7814042 71 113l1.16221-25.7194181z"></path> <path d="M108.233532 59.9703727c10.579453-16.2472813 10.22216-27.2231872 9.399093-31.6550767v-.0029805c-.413027-5.3975467-5.752516-6.357243-5.752516-6.357243-4.3323-1.2656865-15.2362027-2.7350352-32.5037006 6.126757-22.9294458 11.767705-28.5485982 30.6029873-28.5485982 30.6029873s-4.8199707 15.3392457 1.1942938 22.6243939c.0288621.0387455.0467766.0824584.0806149.1192169.0338383.0377521.0716576.0695432.1054959.1072953.0328431.037752.0627005.0784845.0965388.1162365.0328431.0357651.0746433.0596084.1104722.0923931 6.6512212 6.7099265 22.4268471 3.4771606 22.4268471 3.4771606s19.3415882-3.6718816 33.3914591-25.2511404" fill="#FFF"></path> <path d="M108.214668 59.904736c10.318007-15.8150644 10.338974-26.7477325 9.407418-31.913642-.442314-5.0236555-4.362238-6.8839002-6.034646-7.4529163-.310519-.105447-.646997-.2198471-.998452-.2795341-.309521-.0885357-.642005-.1750818-.993461-.2586436.726874 5.517068.100844 16.050828-9.569167 30.8730987-13.9234193 21.3450646-32.8900212 25.1550846-33.6897816 25.3062916-.5082122.1044523-10.6714593 2.1099353-18.3365784-.7391239.5171983 1.9637021 1.3359293 3.8090251 2.610953 5.3509392l.1936998.233774 1.710349-1.3658374-1.5745595 1.5259975.2546054.2397428c7.1129749 7.0052638 22.6978186 3.9154669 23.3298389 3.7861451.8007589-.151207 19.7663623-3.961227 33.6897814-25.3062916" fill="#F2F9FE"></path> <g> <path d="M77.0779 50.9007l4.331 4.795-8.215 7.421c-.817.738-.623 1.045.429.688l17.561-6.405c1.053-.358 1.261-1.362.463-2.245l-4.331-4.795 8.215-7.421c.818-.738.623-1.045-.43-.69l-17.56 6.407c-1.054.356-1.261 1.362-.463 2.245" fill="#FFF"></path> <path d="M77.0779 50.9007l4.331 4.795-8.215 7.421c-.817.738-.623 1.045.429.688l17.561-6.405c1.053-.358 1.261-1.362.463-2.245l-4.331-4.795 8.215-7.421c.818-.738.623-1.045-.43-.69l-17.56 6.407c-1.054.356-1.261 1.362-.463 2.245" stroke="#A1D2F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> <path d="M108.233532 59.9703727c10.579453-16.2472813 10.22216-27.2231872 9.399093-31.6550767v-.0029805c-.413027-5.3975467-5.752516-6.357243-5.752516-6.357243-4.3323-1.2656865-15.2362027-2.7350352-32.5037006 6.126757-22.9294458 11.767705-28.5485982 30.6029873-28.5485982 30.6029873s-4.8199707 15.3392457 1.1942938 22.6243939c.0288621.0387455.0467766.0824584.0806149.1192169.0338383.0377521.0716576.0695432.1054959.1072953.0328431.037752.0627005.0784845.0965388.1162365.0328431.0357651.0746433.0596084.1104722.0923931 6.6512212 6.7099265 22.4268471 3.4771606 22.4268471 3.4771606s19.3415882-3.6718816 33.3914591-25.2511404z" stroke="#A1D2F8" stroke-width="2"></path> <path stroke="#A1D2F8" stroke-width="2" stroke-linejoin="round" d="M57 47.0157449L49.8317064 42 24 60.6301909 49.2570499 62z"></path> <path d="M65 72l-31 28" stroke="#A1D2F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M110.154443 64.7093112c1.02326.8964969 1.133632 2.4760391.244468 3.5099781l-5.959048 6.9262459c-.888132 1.033939-2.452937 1.1453504-3.476197.2478122l-.117593-.1030815c-1.0242917-.896497-1.133632-2.4760392-.2455-3.508937l5.96008-6.9272871c.888132-1.033939 2.452937-1.1443091 3.476197-.2478122l.117593.1030816z" fill="#FFF"></path> <path d="M110.154443 64.7093112c1.02326.8964969 1.133632 2.4760391.244468 3.5099781l-5.959048 6.9262459c-.888132 1.033939-2.452937 1.1453504-3.476197.2478122l-.117593-.1030815c-1.0242917-.896497-1.133632-2.4760392-.2455-3.508937l5.96008-6.9272871c.888132-1.033939 2.452937-1.1443091 3.476197-.2478122l.117593.1030816z" stroke="#A1D2F8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path fill="#D0E7FB" d="M91 85.8362964L88.1804586 81l-15.890329 5.9908294L72 93z"></path> <path stroke="#A1D2F8" stroke-width="2" stroke-linejoin="round" d="M87.754216 81L92 88.7814042 71 113l1.16221-25.7194181z"></path></g></g></svg>\
+                    </div>\
+                </div>';
+            }
+        })
+    });
+</script>
+</body>
+</html>
