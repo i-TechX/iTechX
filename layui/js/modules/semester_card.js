@@ -35,6 +35,16 @@ layui.define(['jquery', 'util', 'element', 'rate'], function(exports){
             return query
           }
 
+        const randomString = (len = 32) => {
+        　　var chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz';
+        　　var maxPos = chars.length;
+        　　var pwd = '';
+        　　for (i = 0; i < len; i++) {
+        　　　　pwd += chars.charAt(Math.floor(Math.random() * maxPos));
+        　　}
+        　　return pwd;
+        }
+
         options = assign({
             proxy: 'https://ghproxy.com/',
             baseURL: 'https://api.github.com',
@@ -159,18 +169,28 @@ layui.define(['jquery', 'util', 'element', 'rate'], function(exports){
                                                     </div>                                              \
                     ';
 
+                    var cnt = 0, clsid = randomString(8);
                     for (const pid in semester.teacher) {
                         if (Object.hasOwnProperty.call(this.people, semester.teacher[pid])) {
                             const pinfo = this.people[semester.teacher[pid]];
                             cards += '                                          \
-                            <div class="instructor">                            \
+                            <div class="instructor'+(cnt<5?'':(' layui-hide '+clsid))+'">                            \
                                 <a href="people?pid='+semester.teacher[pid]+'">                         \
                                 <div><img src="' + (pinfo.image ? pinfo.image : "layui/images/teacher.jpg") + '" style="border-radius: 50%; width: 60px; height: 60px;"></div> \
                                 <div>' + pinfo.name + '</div>                   \
                                 </a>                                            \
                             </div>                                              \
                             ';
+                            cnt++;
                         }
+                    }
+                    if (cnt>5) {
+                        var clsidmore = randomString(8);
+                        cards += '\
+                            <div class="instructor '+clsidmore+'">\
+                                <a href="javascript: document.getElementsByClassName(\''+clsidmore+'\')[0].classList.add(\'layui-hide\'); Array.prototype.forEach.call(document.getElementsByClassName(\''+clsid+'\'), function (element) { element.classList.remove(\'layui-hide\'); });"><div><div style="border-radius:50%;border: 1px solid #d6d1e0; width: 60px; height: 60px; line-height: 60px; margin: auto;">更多...</div></div><div>&nbsp;</div></a>\
+                            </div>\
+                        ';
                     }
                     
                     cards += '                                  \
@@ -181,19 +201,30 @@ layui.define(['jquery', 'util', 'element', 'rate'], function(exports){
                         </div>                                  \
                     ';
 
+                    cnt = 0, clsid = randomString(8);
                     for (const pid in semester.ta) {
                         if (Object.hasOwnProperty.call(this.people, semester.ta[pid])) {
                             const pinfo = this.people[semester.ta[pid]];
                             cards += '                                          \
-                            <div class="instructor">                            \
+                            <div class="instructor'+(cnt<5?'':(' layui-hide '+clsid))+'">                            \
                                 <a href="people?pid='+semester.ta[pid]+'">                         \
                                 <div><img src="' + (pinfo.image ? pinfo.image : "layui/images/teacher.jpg") + '" style="border-radius: 50%; width: 60px; height: 60px;"></div> \
                                 <div>' + pinfo.name + '</div>                   \
                                 </a>                                            \
                             </div>                                              \
                             ';
+                            cnt++;
                         }
                     }
+                    if (cnt>5) {
+                        var clsidmore = randomString(8);
+                        cards += '\
+                            <div class="instructor '+clsidmore+'">\
+                                <a href="javascript: document.getElementsByClassName(\''+clsidmore+'\')[0].classList.add(\'layui-hide\'); Array.prototype.forEach.call(document.getElementsByClassName(\''+clsid+'\'), function (element) { element.classList.remove(\'layui-hide\'); });"><div><div style="border-radius:50%;border: 1px solid #d6d1e0; width: 60px; height: 60px; line-height: 60px; margin: auto;">更多...</div></div><div>&nbsp;</div></a>\
+                            </div>\
+                        ';
+                    }
+                    
                                                 
                     cards += '                                                                                          \
                                                 </div>                                                                  \
