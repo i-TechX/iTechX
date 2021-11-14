@@ -177,7 +177,7 @@ layui.define(['jquery', 'util', 'element', 'rate'], function(exports){
                             <div class="instructor'+(cnt<5?'':(' layui-hide '+clsid))+'">                            \
                                 <a href="people?pid='+semester.teacher[pid]+'">                         \
                                 <div><img src="' + (pinfo.image ? pinfo.image : "layui/images/teacher.jpg") + '" style="border-radius: 50%; width: 60px; height: 60px;"></div> \
-                                <div>' + pinfo.name + '</div>                   \
+                                <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' + pinfo.name + '</div>                   \
                                 </a>                                            \
                             </div>                                              \
                             ';
@@ -209,7 +209,7 @@ layui.define(['jquery', 'util', 'element', 'rate'], function(exports){
                             <div class="instructor'+(cnt<5?'':(' layui-hide '+clsid))+'">                            \
                                 <a href="people?pid='+semester.ta[pid]+'">                         \
                                 <div><img src="' + (pinfo.image ? pinfo.image : "layui/images/teacher.jpg") + '" style="border-radius: 50%; width: 60px; height: 60px;"></div> \
-                                <div>' + pinfo.name + '</div>                   \
+                                <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' + pinfo.name + '</div>                   \
                                 </a>                                            \
                             </div>                                              \
                             ';
