@@ -1,0 +1,19 @@
+{
+    "jiangjh": {
+        "name": "姜嘉骅",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/jiangjh.jpg",
+        "info": [
+            ["envelope", "&#106;&#x69;&#97;&#110;&#x67;&#106;&#104;&#x40;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#104;&#46;&#101;&#100;&#117;&#46;&#99;&#110;", "mailto:&#106;&#x69;&#97;&#110;&#x67;&#106;&#104;&#x40;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#104;&#46;&#101;&#100;&#117;&#46;&#99;&#110;"],
+            ["home", "Home Page", "https://sist.shanghaitech.edu.cn/2020/0707/c7499a58298/page.htm"]
+        ],
+        "teach-courses": [
+            ["Spring", "2021", "SI120", "Discrete Mathematics"]
+        ]
+    },
+    "qiaowh": {
+        "name": "乔文汇",
+        "ta-courses": [
+            ["Spring", "2021", "SI120", "Discrete Mathematics"]
+        ]
+    }
+}
