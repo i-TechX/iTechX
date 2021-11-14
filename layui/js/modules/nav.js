@@ -108,6 +108,13 @@ layui.define(['jquery', 'element', 'layer'], function(exports){
 
             getCourseName: function(callback) {
                 const query = queryParse();
+                var accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
+                var headers = {
+                    'Accept': 'application/json',
+                }
+                if (accessToken) {
+                    headers['Authorization'] = 'token ' + accessToken;
+                }
                 if (query.course_code) {
                     $.ajax({
                         url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/courses/" + query.course_code + "/meta.json",
@@ -115,9 +122,7 @@ layui.define(['jquery', 'element', 'layer'], function(exports){
                         data: {
                             'ref': 'file-base'
                         },
-                        headers: {
-                            'Accept': 'application/json',
-                        },
+                        headers: headers,
                         success: function (data) {
                             if (data && data.content) {
                                 var string = window.atob(data.content.replace(/[\r\n]/g,""));

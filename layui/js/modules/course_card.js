@@ -41,6 +41,14 @@ layui.define(['jquery', 'util', 'layer'], function(exports){
             baseURL: 'https://api.github.com',
         }, options);
 
+        var accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
+        var headers = {
+            'Accept': 'application/json',
+        }
+        if (accessToken) {
+            headers['Authorization'] = 'token ' + accessToken;
+        }
+
         var cardComponent = {
 
             config: function(options_) {
@@ -63,9 +71,7 @@ layui.define(['jquery', 'util', 'layer'], function(exports){
                     data: {
                         'ref': 'file-base'
                     },
-                    headers: {
-                        'Accept': 'application/json',
-                    },
+                    headers: headers,
                     success: function (data) {
                         if (data) {
                             var d = document.createElement('div');
@@ -112,9 +118,7 @@ layui.define(['jquery', 'util', 'layer'], function(exports){
                     data: {
                         'ref': 'file-base'
                     },
-                    headers: {
-                        'Accept': 'application/json',
-                    },
+                    headers: headers,
                     success: function (data) {
                         if (data) {
                             if (data && data.content) {

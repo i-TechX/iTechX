@@ -40,6 +40,14 @@ layui.define(['jquery', 'form'], function(exports){
             baseURL: 'https://api.github.com',
         }, options);
 
+        var accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
+        var headers = {
+            'Accept': 'application/json',
+        }
+        if (accessToken) {
+            headers['Authorization'] = 'token ' + accessToken;
+        }
+
         var selectComponent = {
 
             config: function(options_) {
@@ -58,9 +66,7 @@ layui.define(['jquery', 'form'], function(exports){
                     data: {
                         'ref': 'file-base'
                     },
-                    headers: {
-                        'Accept': 'application/json',
-                    },
+                    headers: headers,
                     success: function (data) {
                         if (data) {
                             var courses = new Array();
@@ -100,9 +106,7 @@ layui.define(['jquery', 'form'], function(exports){
                     data: {
                         'ref': 'file-base'
                     },
-                    headers: {
-                        'Accept': 'application/json',
-                    },
+                    headers: headers,
                     success: function (data) {
                         if (data) {
                             if (data && data.content) {
@@ -142,9 +146,7 @@ layui.define(['jquery', 'form'], function(exports){
                     data: {
                         'ref': 'file-base'
                     },
-                    headers: {
-                        'Accept': 'application/json',
-                    },
+                    headers: headers,
                     success: function (data) {
                         if (data) {
                             var folders = new Array();
@@ -221,10 +223,7 @@ layui.define(['jquery', 'form'], function(exports){
                 $.ajax({
                     url: options.baseURL + "/user",
                     type: "GET",
-                    headers: {
-                        'Accept': 'application/json',
-                        'Authorization': 'token ' + accessToken,
-                    },
+                    headers: headers,
                     success: function (data) {
                         selectComponent.userInfo = data;
                         if (callback) callback();
@@ -237,14 +236,10 @@ layui.define(['jquery', 'form'], function(exports){
 
             getUserRepo: function (callback, error) {
                 const user = selectComponent.userInfo.login;
-                const accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
                 $.ajax({
                     url: options.baseURL + "/repos/" + user + "/" + options.repo,
                     type: "GET",
-                    headers: {
-                        'Accept': 'application/json',
-                        'Authorization': 'token ' + accessToken,
-                    },
+                    headers: headers,
                     success: function (data) {
                         console.log(data);
                         if (callback) callback();
@@ -258,14 +253,10 @@ layui.define(['jquery', 'form'], function(exports){
 
             forkUserRepo: function (callback) {
                 const user = selectComponent.userInfo.login;
-                const accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
                 $.ajax({
                     url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/forks",
                     type: "POST",
-                    headers: {
-                        'Accept': 'application/json',
-                        'Authorization': 'token ' + accessToken,
-                    },
+                    headers: headers,
                     success: function (data) {
                         console.log(data);
                         if (callback) callback();
@@ -278,7 +269,6 @@ layui.define(['jquery', 'form'], function(exports){
 
             makePullRequest: function (callback) {
                 const user = selectComponent.userInfo.login;
-                const accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
                 $.ajax({
                     url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/pulls",
                     type: "POST",
@@ -287,10 +277,7 @@ layui.define(['jquery', 'form'], function(exports){
                         "head" : user + ":" + "file-base",
                         "base" : "file-base"
                     }),
-                    headers: {
-                        'Accept': 'application/json',
-                        'Authorization': 'token ' + accessToken,
-                    },
+                    headers: headers,
                     success: function (data) {
                         console.log(data);
                         if (callback) callback();
