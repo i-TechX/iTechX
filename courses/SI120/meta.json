@@ -35,6 +35,57 @@
             "hours": "64",
             "prerequisite": "无",
             "evaluation": "Attendance: 5% (quiz, roll call, ...) Homework: 35% (no plagiarisms) Midterm: 30% Final Exam: 30%"
+        },
+        {
+            "course_id": "SI120.01",
+            "season": "Spring",
+            "year": "2019",
+            "mainpage": "https://i-techx.github.io/SI120/index.html",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Attendance: 5% (quiz, roll call, ...) Homework: 35% (no plagiarisms) Midterm: 30% Final Exam: 30%"
+        },
+        {
+            "course_id": "SI120.01",
+            "season": "Spring",
+            "year": "2018",
+            "mainpage": "https://i-techx.github.io/SI120/index.html",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Quiz: 5% Homework: 55% Final Exam: 40%"
+        },
+        {
+            "course_id": "SI120.01",
+            "season": "Spring",
+            "year": "2017",
+            "mainpage": "https://i-techx.github.io/SI120/index.html",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Quiz: 5% Homework: 55% Final Exam: 40%"
         }
     ]
 }
