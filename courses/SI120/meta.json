@@ -1,7 +1,6 @@
 {
     "code": "SI120",
     "name": "Discrete Mathematics",
-    "cover": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/courses/SI120/cover.jpg",
     "semesters": [
         {
             "course_id": "SI120.01",
