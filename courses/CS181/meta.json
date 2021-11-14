@@ -1,0 +1,22 @@
+{
+    "code": "CS181",
+    "name": "Artificial Intelligence I",
+    "semesters": [
+        {
+            "course_id": "CS181.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "tukw"
+            ],
+            "ta": [
+                "wuhy1", "chenzhuo", "chents", "yangsl"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "作业10% 编程作业25% 课程设计15% 期中考试25% 期末考试25%"
+        }
+    ]
+}
