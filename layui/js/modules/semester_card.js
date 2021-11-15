@@ -241,7 +241,7 @@ layui.define(['jquery', 'util', 'element', 'rate'], function(exports){
                                                 <div class="layui-col-md6">                                              \
                                                     <b>学时：</b>' + semester.hours + '                                                     \
                                                 </div>                                                                  \
-                                                <div class="layui-col-md6">                                             \
+                                                <div class="layui-col-md12">                                             \
                                                     <b>先修课程：</b>' + semester.prerequisite + '                                                   \
                                                 </div>                                                                  \
                                                 <div class="layui-col-md12">                                            \
