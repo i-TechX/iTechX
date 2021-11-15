@@ -37,6 +37,16 @@
             ["Spring", "2020", "SI120", "Discrete Mathematics"]
         ]
     },
+    "nlegout": {
+        "name": "Noémie Legout",
+        "info": [
+            ["envelope", "&#x6e;&#108;&#101;&#103;&#111;&#117;&#x74;&#64;&#115;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#110;", "mailto:&#x6e;&#108;&#101;&#103;&#111;&#117;&#x74;&#64;&#115;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#110;"],
+            ["home", "Home Page", "https://ims.shanghaitech.edu.cn/2018/1110/c4741a35988/page.htm"]
+        ],
+        "teach-courses": [
+            ["Spring", "2019", "SI120", "Discrete Mathematics"]
+        ]
+    },
     "tukw": {
         "name": "屠可伟",
         "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/tukw.jpg",
