@@ -17,6 +17,22 @@
             "hours": "64",
             "prerequisite": "无",
             "evaluation": "作业10% 编程作业25% 课程设计15% 期中考试25% 期末考试25%"
+        },
+        {
+            "course_id": "CS181.01",
+            "season": "Fall",
+            "year": "2020",
+            "teacher": [
+                "tukw", "hexm"
+            ],
+            "ta": [
+                "jiangchy", "wuhy1", "jiazx", "qiaowh", "chendh1", "zhanggl1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "作业10% 编程作业25% 课程设计15% 期中考试25% 期末考试25%"
         }
     ]
 }
