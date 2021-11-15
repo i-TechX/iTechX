@@ -15,13 +15,14 @@
             "department": "信息科学与技术学院",
             "credit": "4",
             "hours": "64",
-            "prerequisite": "无",
+            "prerequisite": "Programming Languages, Data Structures and Algorithms, Discrete Mathematics, Probability and Statistics",
             "evaluation": "作业10% 编程作业25% 课程设计15% 期中考试25% 期末考试25%"
         },
         {
             "course_id": "CS181.01",
             "season": "Fall",
             "year": "2020",
+            "mainpage": "https://i-techx.github.io/CS181/index.html",
             "teacher": [
                 "tukw", "hexm"
             ],
@@ -31,8 +32,42 @@
             "department": "信息科学与技术学院",
             "credit": "4",
             "hours": "64",
-            "prerequisite": "无",
+            "prerequisite": "Programming Languages, Data Structures and Algorithms, Discrete Mathematics, Probability and Statistics",
             "evaluation": "作业10% 编程作业25% 课程设计15% 期中考试25% 期末考试25%"
+        },
+        {
+            "course_id": "CS181.01",
+            "season": "Fall",
+            "year": "2019",
+            "mainpage": "https://i-techx.github.io/CS181/index.html",
+            "teacher": [
+                "tukw"
+            ],
+            "ta": [
+                "jiangchy", "huzch", "shenyao", "caoyf", "dengbw"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Programming Languages, Data Structures, Algorithms, Discrete Mathematics, Probability and Statistics",
+            "evaluation": "作业10% 编程作业25% 课程设计15% 期中考试25% 期末考试25%"
+        },
+        {
+            "course_id": "CS181.01",
+            "season": "Fall",
+            "year": "2018",
+            "mainpage": "https://i-techx.github.io/CS181/index.html",
+            "teacher": [
+                "tukw"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
         }
     ]
 }

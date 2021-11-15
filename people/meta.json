@@ -46,7 +46,9 @@
         ],
         "teach-courses": [
             ["Fall", "2021", "CS181", "Artificial Intelligence I"],
-            ["Fall", "2020", "CS181", "Artificial Intelligence I"]
+            ["Fall", "2020", "CS181", "Artificial Intelligence I"],
+            ["Fall", "2019", "CS181", "Artificial Intelligence I"],
+            ["Fall", "2018", "CS181", "Artificial Intelligence I"]
         ]
     },
     "hexm": {
@@ -191,7 +193,8 @@
             ["home", "Home Page", "https://jeffchy.github.io/"]
         ],
         "ta-courses": [
-            ["Fall", "2020", "CS181", "Artificial Intelligence I"]
+            ["Fall", "2020", "CS181", "Artificial Intelligence I"],
+            ["Fall", "2019", "CS181", "Artificial Intelligence I"]
         ]
     },
     "jiazx": {
@@ -219,6 +222,33 @@
         ],
         "ta-courses": [
             ["Fall", "2020", "CS181", "Artificial Intelligence I"]
+        ]
+    },
+    "huzch": {
+        "name": "胡泽川",
+        "info": [
+            ["envelope", "&#x68;&#x75;&#122;&#99;&#104;&#64;&#115;&#x68;&#x61;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#110;", "mailto:&#x68;&#x75;&#122;&#99;&#104;&#64;&#115;&#x68;&#x61;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2019", "CS181", "Artificial Intelligence I"]
+        ]
+    },
+    "shenyao": {
+        "name": "沈尧",
+        "ta-courses": [
+            ["Fall", "2019", "CS181", "Artificial Intelligence I"]
+        ]
+    },
+    "caoyf": {
+        "name": "曹逸凡",
+        "ta-courses": [
+            ["Fall", "2019", "CS181", "Artificial Intelligence I"]
+        ]
+    },
+    "dengbw": {
+        "name": "邓博文",
+        "ta-courses": [
+            ["Fall", "2019", "CS181", "Artificial Intelligence I"]
         ]
     }
 }
