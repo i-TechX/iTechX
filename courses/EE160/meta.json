@@ -17,6 +17,87 @@
             "hours": "64",
             "prerequisite": "无",
             "evaluation": "Homework: 20%, Mid-Term Exam: 40%, Final Exam: 40%"
+        },
+        {
+            "course_id": "EE160.01",
+            "season": "Fall",
+            "year": "2020",
+            "mainpage": "https://faculty.sist.shanghaitech.edu.cn/faculty/boris/EE160.html",
+            "teacher": [
+                "borish", "wangyang4"
+            ],
+            "ta": [
+                "duxu", "guoyx1", "lijl"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework: 20%, Mid-Term Exam: 40%, Final Exam: 40%"
+        },
+        {
+            "course_id": "EE160.01",
+            "season": "Fall",
+            "year": "2019",
+            "teacher": [
+                "borish"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "EE160.01",
+            "season": "Fall",
+            "year": "2018",
+            "teacher": [
+                "borish"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "EE160.01",
+            "season": "Fall",
+            "year": "2017",
+            "teacher": [
+                "borish"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "EE160.01",
+            "season": "Spring",
+            "year": "2017",
+            "teacher": [
+                "borish"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "未知"
         }
     ]
 }

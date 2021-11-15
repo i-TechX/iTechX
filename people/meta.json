@@ -81,7 +81,23 @@
             ["flask", "Lab Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/wangyang/"]
         ],
         "teach-courses": [
-            ["Fall", "2021", "EE160", "Introduction to Control"]
+            ["Fall", "2021", "EE160", "Introduction to Control"],
+            ["Fall", "2020", "EE160", "Introduction to Control"]
+        ]
+    },
+    "borish": {
+        "name": "Boris Houska",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/borish.jpg",
+        "info": [
+            ["envelope", "&#x62;&#111;&#114;&#105;&#115;&#104;&#64;&#115;&#104;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;", "mailto:&#x62;&#111;&#114;&#105;&#115;&#104;&#64;&#115;&#104;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;"],
+            ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/boris/"]
+        ],
+        "teach-courses": [
+            ["Fall", "2020", "EE160", "Introduction to Control"],
+            ["Fall", "2019", "EE160", "Introduction to Control"],
+            ["Fall", "2018", "EE160", "Introduction to Control"],
+            ["Fall", "2017", "EE160", "Introduction to Control"],
+            ["Spring", "2017", "EE160", "Introduction to Control"]
         ]
     },
     "qiaowh": {
@@ -307,6 +323,30 @@
         ],
         "ta-courses": [
             ["Fall", "2021", "EE160", "Introduction to Control"]
+        ]
+    },
+    "duxu": {
+        "name": "杜旭",
+        "info": [
+            ["envelope", "&#100;&#117;&#x78;&#117;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#x74;&#101;&#99;&#104;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;", "mailto:&#100;&#117;&#x78;&#117;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#x74;&#101;&#99;&#104;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "EE160", "Introduction to Control"]
+        ]
+    },
+    "guoyx1": {
+        "name": "郭宇璇",
+        "info": [
+            ["envelope", "&#103;&#117;&#111;&#121;&#x78;&#49;&#64;&#x73;&#x68;&#97;&#x6e;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#x2e;&#101;&#100;&#117;&#46;&#x63;&#110;", "mailto:&#103;&#117;&#111;&#121;&#x78;&#49;&#64;&#x73;&#x68;&#97;&#x6e;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#x2e;&#101;&#100;&#117;&#46;&#x63;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "EE160", "Introduction to Control"]
+        ]
+    },
+    "lijl": {
+        "name": "李家纶",
+        "ta-courses": [
+            ["Fall", "2020", "EE160", "Introduction to Control"]
         ]
     }
 }
