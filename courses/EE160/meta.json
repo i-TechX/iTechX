@@ -1,0 +1,22 @@
+{
+    "code": "EE160",
+    "name": "Introduction to Control",
+    "semesters": [
+        {
+            "course_id": "EE160.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "wangyang4"
+            ],
+            "ta": [
+                "yuxp", "hegq", "panyq", "zhangheng1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework: 20%, Mid-Term Exam: 40%, Final Exam: 40%"
+        }
+    ]
+}
