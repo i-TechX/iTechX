@@ -115,15 +115,21 @@
         const pid = queryParse()['pid'];
         document.title = 'iTechX | People';
 
+        var accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
+        var headers = {
+            'Accept': 'application/json',
+        }
+        if (accessToken) {
+            headers['Authorization'] = 'token ' + accessToken;
+        }
+
         $.ajax({
             url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/people/meta.json",
             type: "GET",
             data: {
                 'ref': 'file-base'
             },
-            headers: {
-                'Accept': 'application/json',
-            },
+            headers: headers,
             success: function (data) {
                 if (data && data.content) {
                     var string = decodeURIComponent(escape(window.atob(data.content.replace(/[\r\n]/g,""))));
@@ -207,9 +213,7 @@
             data: {
                 'ref': 'file-base'
             },
-            headers: {
-                'Accept': 'application/json',
-            },
+            headers: headers,
             success: function (data) {
                 if (data && data.content) {
                     var s = decodeURIComponent(escape(window.atob(data.content.replace(/[\r\n]/g,""))));
