@@ -18,6 +18,23 @@
             "hours": "64",
             "prerequisite": "Introduction to Programming, Algorithms and Data Structures, Computer Architecture I",
             "evaluation": "考试：期中（10%）、期末（15%）；作业：10%；编程项目：项目1（10%），项目2（10%），项目3（20%），项目4（20%）；考勤：5%"
+        },
+        {
+            "course_id": "CS130.01",
+            "season": "Fall",
+            "year": "2020",
+            "mainpage": "https://lion.sist.shanghaitech.edu.cn/Course/CS130/20f/",
+            "teacher": [
+                "yinshu"
+            ],
+            "ta": [
+                "songyj", "zhangqh", "linzhy", "sunshuo", "xuzj", "wuhp", "wuty", "zhangjian"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming, Algorithms and Data Structures, Computer Architecture I",
+            "evaluation": "考试：期中（10%）、期末（15%）；作业：10%；编程项目：项目1（10%），项目2（10%），项目3（20%），项目4（20%）；考勤：5%"
         }
     ]
 }
