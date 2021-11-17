@@ -93,18 +93,12 @@
             return query
         }
 
-        var index = layer.load(2, {
-            content:"<p style='position: relative; left: -10px;'><br><br>Loading...</p>",
-            shade:0
-        });
-
         $.ajax({
             url: queryParse()['url'],
             type: "GET",
             success: function (data) {
                 var s = data;
                 var metadata = "";
-                layer.close(index);
 
                 if (queryParse()['url'].endsWith('.mdx')) {
                     var converter = new showdown.Converter({metadata: true, tables: true, literalMidWordUnderscores: true, extensions: mdxext()});
@@ -177,7 +171,6 @@
                     clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
                 });
                 nav.render("navigator");
-                layer.close(index);
                 document.getElementById('test-out').innerHTML='<div style="text-align: center;">\
                     <h1 style="text-align: center; font-size: 5em; line-height: 1.3em; margin: 5rem 0 3rem 0; padding: 0; text-shadow: 0 0 1rem #fefefe; font-family: Quicksand, Arial; color: #b4b4b4;">Page not found...</h1>\
                     <div style="position: relative;width: 200px;height: 200px; margin:auto;">\
