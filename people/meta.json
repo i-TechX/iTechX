@@ -110,7 +110,8 @@
         ],
         "teach-courses": [
             ["Fall", "2021", "CS130", "Operating Systems I"],
-            ["Fall", "2020", "CS130", "Operating Systems I"]
+            ["Fall", "2020", "CS130", "Operating Systems I"],
+            ["Fall", "2018", "CS130", "Operating Systems I"]
         ]
     },
     "xietao": {
@@ -432,7 +433,8 @@
         ],
         "ta-courses": [
             ["Fall", "2020", "CS130", "Operating Systems I"],
-            ["Fall", "2019", "CS130", "Operating Systems I"]
+            ["Fall", "2019", "CS130", "Operating Systems I"],
+            ["Fall", "2018", "CS130", "Operating Systems I"]
         ]
     },
     "zhangqh": {
@@ -443,7 +445,8 @@
         ],
         "ta-courses": [
             ["Fall", "2020", "CS130", "Operating Systems I"],
-            ["Fall", "2019", "CS130", "Operating Systems I"]
+            ["Fall", "2019", "CS130", "Operating Systems I"],
+            ["Fall", "2018", "CS130", "Operating Systems I"]
         ]
     },
     "linzhy": {
@@ -560,7 +563,8 @@
             ["envelope", "&#100;&#x65;&#110;&#x67;&#x74;&#108;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;", "mailto:&#100;&#x65;&#110;&#x67;&#x74;&#108;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;"]
         ],
         "ta-courses": [
-            ["Fall", "2019", "CS130", "Operating Systems I"]
+            ["Fall", "2019", "CS130", "Operating Systems I"],
+            ["Fall", "2018", "CS130", "Operating Systems I"]
         ]
     },
     "xiezhq": {
@@ -571,6 +575,54 @@
         ],
         "ta-courses": [
             ["Fall", "2019", "CS130", "Operating Systems I"]
+        ]
+    },
+    "zouyl": {
+        "name": "邹彦良",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zouyl.jpg",
+        "info": [
+            ["envelope", "&#x7a;&#x6f;&#x75;&#121;&#108;&#x40;&#115;&#104;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;", "mailto:&#x7a;&#x6f;&#x75;&#121;&#108;&#x40;&#115;&#104;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2018", "CS130", "Operating Systems I"]
+        ]
+    },
+    "chenchen": {
+        "name": "陈宸",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/chenchen.jpg",
+        "info": [
+            ["envelope", "&#x63;&#x68;&#101;&#x6e;&#x63;&#x68;&#101;&#110;&#x40;&#115;&#x68;&#97;&#110;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;", "mailto:&#x63;&#x68;&#101;&#x6e;&#x63;&#x68;&#101;&#110;&#x40;&#115;&#x68;&#97;&#110;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2018", "CS130", "Operating Systems I"]
+        ]
+    },
+    "luohc": {
+        "name": "罗浩聪",
+        "info": [
+            ["envelope", "&#x6c;&#117;&#111;&#x68;&#99;&#64;&#115;&#104;&#x61;&#x6e;&#103;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#x6c;&#117;&#111;&#x68;&#99;&#64;&#115;&#104;&#x61;&#x6e;&#103;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2018", "CS130", "Operating Systems I"]
+        ]
+    },
+    "nianzhl": {
+        "name": "念中林",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/nianzhl.jpg",
+        "info": [
+            ["envelope", "&#x6e;&#105;&#x61;&#x6e;&#x7a;&#104;&#x6c;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#x6e;", "mailto:&#x6e;&#105;&#x61;&#x6e;&#x7a;&#104;&#x6c;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2018", "CS130", "Operating Systems I"]
+        ]
+    },
+    "hugzh1": {
+        "name": "胡冠洲",
+        "info": [
+            ["envelope", "&#x68;&#x75;&#x67;&#x7a;&#104;&#49;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#104;&#97;&#x69;&#116;&#x65;&#x63;&#x68;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#110;", "mailto:&#x68;&#x75;&#x67;&#x7a;&#104;&#49;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#104;&#97;&#x69;&#116;&#x65;&#x63;&#x68;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2018", "CS130", "Operating Systems I"]
         ]
     }
 }
