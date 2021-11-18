@@ -211,6 +211,9 @@ var mdxext = function () {
                     }
                     throw Error('Problem parsing error - syntex not matched');
                 }
+
+                if (problem_type == 'readonly') { return this.parseReadonlyProblem(properties); }
+
                 question_id = 'Question' + (++this._probCnt).toString();
                 explanation_template = '<blockquote class="layui-elem-quote q-explanation layui-hide" style="margin: 2em; margin-bottom: 1em;">\n<p><b>Explanation</b></p>\n<p>{}<br></p>\n</blockquote>';
                 whole_template = '<div class="problem">\n<hr>\n<div class="problem-title">{0mAGiccOde}</div>\n<div class="problem-grade" id="{2mAGiccOde}">?/? point (graded)</div>\n<div class="problem-content">{1mAGiccOde}</div>\n<form class="layui-form" action="" lay-filter="{2mAGiccOde}">\n    <div class="layui-form-item">\n        <div class="question q1 q-{5mAGiccOde}" answer="{6mAGiccOde}">{3mAGiccOde}<p class="tick-label"></p>\n        </div>{4mAGiccOde}\n        <button class="layui-btn layui-btn-lg layui-btn-violet" lay-submit>提交</button>\n    </div>\n</form>\n</div>';
@@ -267,6 +270,14 @@ var mdxext = function () {
                 }
                 html_code = whole_template.replace('{0mAGiccOde}', properties['title']).replace('{1mAGiccOde}', content).replaceAll('{2mAGiccOde}', question_id).replace('{3mAGiccOde}', choices_code).replace('{4mAGiccOde}', explanation_code).replace('{5mAGiccOde}', problem_type).replace('{6mAGiccOde}', answer);
 
+                return html_code;
+            },
+
+            parseReadonlyProblem: function(properties) {
+                var whole_template = '<div class="reading-content" style="margin: 1em; line-height: 1.4em;"><h3 style="font-family: sans-serif; font-size: 16pt; margin: 0.5em 0;">{0mAGiccOde}</h3><p style="font-family: sans-serif; font-size: small; color: rgb(172, 172, 172); margin: 1.3em 0;">0/{1mAGiccOde} point (ungraded)</p><div style="font-family: sans-serif; font-size: medium; margin: 1em 0;">{2mAGiccOde}</div></div>';
+                var content = (typeof(properties['content']) == 'string') ? properties['content'] : properties['content'].join('\n');
+                content = convert(content);
+                var html_code = whole_template.replace('{0mAGiccOde}', properties['title']).replace('{1mAGiccOde}', properties['points']).replace('{2mAGiccOde}', content);
                 return html_code;
             }
         };
