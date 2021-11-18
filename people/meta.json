@@ -289,7 +289,8 @@
         ],
         "ta-courses": [
             ["Fall", "2020", "CS181", "Artificial Intelligence I"],
-            ["Fall", "2019", "CS181", "Artificial Intelligence I"]
+            ["Fall", "2019", "CS181", "Artificial Intelligence I"],
+            ["Spring", "2018", "CS110", "Computer Architecture I"]
         ]
     },
     "jiazx": {
@@ -648,7 +649,8 @@
             ["envelope", "&#x6e;&#105;&#x61;&#x6e;&#x7a;&#104;&#x6c;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#x6e;", "mailto:&#x6e;&#105;&#x61;&#x6e;&#x7a;&#104;&#x6c;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#x6e;"]
         ],
         "ta-courses": [
-            ["Fall", "2018", "CS130", "Operating Systems I"]
+            ["Fall", "2018", "CS130", "Operating Systems I"],
+            ["Spring", "2018", "CS110", "Computer Architecture I"]
         ]
     },
     "hugzh1": {
@@ -840,6 +842,85 @@
         ],
         "ta-courses": [
             ["Spring", "2020", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "chenbin": {
+        "name": "陈彬",
+        "ta-courses": [
+            ["Spring", "2017", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "liuyh1": {
+        "name": "刘永豪",
+        "ta-courses": [
+            ["Spring", "2017", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "qinxin": {
+        "name": "覃昕",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/qinxin.jpg",
+        "ta-courses": [
+            ["Spring", "2017", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "jiafr": {
+        "name": "贾斐然",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/jiafr.jpg",
+        "ta-courses": [
+            ["Spring", "2017", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "liujzh": {
+        "name": "刘健中",
+        "ta-courses": [
+            ["Spring", "2017", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "yangych": {
+        "name": "杨贇晨",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yangych.jpg",
+        "ta-courses": [
+            ["Spring", "2017", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "zhaoyp1": {
+        "name": "赵彦鹏",
+        "ta-courses": [
+            ["Spring", "2016", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "dongyb": {
+        "name": "董艳兵",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/dongyb.jpg",
+        "ta-courses": [
+            ["Spring", "2016", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "wumy": {
+        "name": "吴旻烨",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wumy.jpg",
+        "ta-courses": [
+            ["Spring", "2016", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "jinshi": {
+        "name": "金石",
+        "ta-courses": [
+            ["Spring", "2016", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "xuqw": {
+        "name": "徐晴雯",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/xuqw.jpg",
+        "ta-courses": [
+            ["Spring", "2017", "CS110", "Computer Architecture I"],
+            ["Spring", "2016", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "zhuchen": {
+        "name": "朱晨",
+        "ta-courses": [
+            ["Spring", "2016", "CS110", "Computer Architecture I"]
         ]
     }
 }
