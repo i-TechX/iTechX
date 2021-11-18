@@ -1,0 +1,23 @@
+{
+    "code": "CS110",
+    "name": "Computer Architecture I",
+    "semesters": [
+        {
+            "course_id": "CS110.01",
+            "season": "Spring",
+            "year": "2021",
+            "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/21s/",
+            "teacher": [
+                "soerensch", "wangchd"
+            ],
+            "ta": [
+                "xuky", "chents", "daiqy", "diaozh", "lipf", "pengsht", "wangchy4", "wangjr", "xuteng", "yezhe", "yuzy", "zhangchb1", "zhengyt1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
+            "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
+        }
+    ]
+}
