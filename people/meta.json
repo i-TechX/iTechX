@@ -134,7 +134,12 @@
             ["flask", "Lab Page", "https://robotics.shanghaitech.edu.cn/"]
         ],
         "teach-courses": [
-            ["Spring", "2021", "CS110", "Computer Architecture I"]
+            ["Spring", "2021", "CS110", "Computer Architecture I"],
+            ["Spring", "2020", "CS110", "Computer Architecture I"],
+            ["Spring", "2019", "CS110", "Computer Architecture I"],
+            ["Spring", "2018", "CS110", "Computer Architecture I"],
+            ["Spring", "2017", "CS110", "Computer Architecture I"],
+            ["Spring", "2016", "CS110", "Computer Architecture I"]
         ]
     },
     "wangchd": {
@@ -145,7 +150,8 @@
             ["flask", "Lab Page", "https://toast-lab.sist.shanghaitech.edu.cn/"]
         ],
         "teach-courses": [
-            ["Spring", "2021", "CS110", "Computer Architecture I"]
+            ["Spring", "2021", "CS110", "Computer Architecture I"],
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
         ]
     },
     "qiaowh": {
@@ -459,6 +465,7 @@
         ],
         "ta-courses": [
             ["Fall", "2020", "CS130", "Operating Systems I"],
+            ["Spring", "2020", "CS110", "Computer Architecture I"],
             ["Fall", "2019", "CS130", "Operating Systems I"],
             ["Fall", "2018", "CS130", "Operating Systems I"]
         ]
@@ -482,7 +489,8 @@
             ["envelope", "&#x6c;&#x69;&#x6e;&#x7a;&#104;&#x79;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;", "mailto:&#x6c;&#x69;&#x6e;&#x7a;&#104;&#x79;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"]
         ],
         "ta-courses": [
-            ["Fall", "2020", "CS130", "Operating Systems I"]
+            ["Fall", "2020", "CS130", "Operating Systems I"],
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
         ]
     },
     "sunshuo": {
@@ -520,7 +528,8 @@
             ["envelope", "&#x77;&#x75;&#116;&#121;&#64;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#97;&#x69;&#x74;&#101;&#x63;&#x68;&#46;&#x65;&#100;&#x75;&#x2e;&#x63;&#x6e;", "mailto:&#x77;&#x75;&#116;&#121;&#64;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#97;&#x69;&#x74;&#101;&#x63;&#x68;&#46;&#x65;&#100;&#x75;&#x2e;&#x63;&#x6e;"]
         ],
         "ta-courses": [
-            ["Fall", "2020", "CS130", "Operating Systems I"]
+            ["Fall", "2020", "CS130", "Operating Systems I"],
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
         ]
     },
     "zhangjian": {
@@ -658,7 +667,8 @@
             ["envelope", "&#120;&#x75;&#x6b;&#121;&#x40;&#115;&#104;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;", "mailto:&#120;&#x75;&#x6b;&#121;&#x40;&#115;&#104;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;"]
         ],
         "ta-courses": [
-            ["Spring", "2021", "CS110", "Computer Architecture I"]
+            ["Spring", "2021", "CS110", "Computer Architecture I"],
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
         ]
     },
     "daiqy": {
@@ -684,7 +694,8 @@
     "lipf": {
         "name": "李沛繁",
         "ta-courses": [
-            ["Spring", "2021", "CS110", "Computer Architecture I"]
+            ["Spring", "2021", "CS110", "Computer Architecture I"],
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
         ]
     },
     "pengsht": {
@@ -713,7 +724,8 @@
             ["envelope", "&#119;&#97;&#x6e;&#103;&#106;&#x72;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;", "mailto:&#119;&#97;&#x6e;&#103;&#106;&#x72;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;"]
         ],
         "ta-courses": [
-            ["Spring", "2021", "CS110", "Computer Architecture I"]
+            ["Spring", "2021", "CS110", "Computer Architecture I"],
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
         ]
     },
     "xuteng": {
@@ -764,6 +776,70 @@
         ],
         "ta-courses": [
             ["Spring", "2021", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "pangaq": {
+        "name": "庞安琪",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/pangaq.jpg",
+        "info": [
+            ["envelope", "&#112;&#x61;&#110;&#103;&#x61;&#113;&#64;&#115;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#105;&#116;&#101;&#x63;&#x68;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;", "mailto:&#112;&#x61;&#110;&#103;&#x61;&#113;&#64;&#115;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#105;&#116;&#101;&#x63;&#x68;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "yucheng": {
+        "name": "郁程",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yucheng.jpg",
+        "info": [
+            ["envelope", "&#x79;&#x75;&#x63;&#x68;&#x65;&#110;&#103;&#64;&#x73;&#104;&#97;&#110;&#103;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#110;", "mailto:&#x79;&#x75;&#x63;&#x68;&#x65;&#110;&#103;&#64;&#x73;&#104;&#97;&#110;&#103;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#110;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "suhang": {
+        "name": "苏杭",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/suhang.jpg",
+        "info": [
+            ["envelope", "&#115;&#117;&#x68;&#97;&#x6e;&#x67;&#x40;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#x2e;&#99;&#x6e;", "mailto:&#115;&#117;&#x68;&#97;&#x6e;&#x67;&#x40;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#x2e;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "wumy1": {
+        "name": "邬梦莹",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wumy1.jpg",
+        "ta-courses": [
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "wangph": {
+        "name": "王培豪",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wangph.jpg",
+        "info": [
+            ["github-alt", "Github", "https://github.com/peihaowang"]
+        ],
+        "ta-courses": [
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "songze": {
+        "name": "宋泽",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/songze.jpg",
+        "ta-courses": [
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "caizhy": {
+        "name": "蔡中一",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/caizhy.jpg",
+        "info": [
+            ["envelope", "&#99;&#x61;&#x69;&#122;&#x68;&#121;&#64;&#115;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#99;&#x61;&#x69;&#122;&#x68;&#121;&#64;&#115;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2020", "CS110", "Computer Architecture I"]
         ]
     }
 }

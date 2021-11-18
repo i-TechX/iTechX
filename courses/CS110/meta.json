@@ -18,6 +18,91 @@
             "hours": "64",
             "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
             "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
+        },
+        {
+            "course_id": "CS110.01",
+            "season": "Spring",
+            "year": "2020",
+            "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/20s/",
+            "teacher": [
+                "soerensch", "wangchd"
+            ],
+            "ta": [
+                "songyj", "pangaq", "yucheng", "suhang", "wangjr", "xuky", "wumy1", "lipf", "wangph", "wuty", "songze", "caizhy", "linzhy"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
+            "evaluation": "Projects: 30%, Homework: 15%, Lab: 5%, Exams: 30% (Midterm: 10%, Final: 20%), Participation: 10%, Quiz: 10%"
+        },
+        {
+            "course_id": "CS110.01",
+            "season": "Spring",
+            "year": "2019",
+            "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/19s/",
+            "teacher": [
+                "soerensch"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
+            "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
+        },
+        {
+            "course_id": "CS110.01",
+            "season": "Spring",
+            "year": "2018",
+            "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/18s/",
+            "teacher": [
+                "soerensch"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
+            "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
+        },
+        {
+            "course_id": "CS110.01",
+            "season": "Spring",
+            "year": "2017",
+            "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/17s/",
+            "teacher": [
+                "soerensch"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
+            "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
+        },
+        {
+            "course_id": "CS110.01",
+            "season": "Spring",
+            "year": "2016",
+            "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/16s/",
+            "teacher": [
+                "soerensch"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
+            "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
         }
     ]
 }
