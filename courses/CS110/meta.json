@@ -51,7 +51,7 @@
             "credit": "4",
             "hours": "64",
             "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
-            "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
+            "evaluation": "Projects: 33%, Homework: 17%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 5%"
         },
         {
             "course_id": "CS110.01",
@@ -68,7 +68,7 @@
             "credit": "4",
             "hours": "64",
             "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
-            "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
+            "evaluation": "Projects: 33%, Homework: 17%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 5%"
         },
         {
             "course_id": "CS110.01",
@@ -85,7 +85,7 @@
             "credit": "4",
             "hours": "64",
             "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
-            "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
+            "evaluation": "Projects: 33%, Homework: 17%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 5%"
         },
         {
             "course_id": "CS110.01",
@@ -102,7 +102,7 @@
             "credit": "4",
             "hours": "64",
             "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
-            "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
+            "evaluation": "Projects: 33%, Homework: 17%, Lab: 10%, Exams: 35% (Midterm 1: 7.5%, Midterm 2: 7.5%, Final: 20%), Participation: 5%"
         }
     ]
 }
