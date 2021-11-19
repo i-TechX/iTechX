@@ -1,0 +1,22 @@
+{
+    "code": "CS240",
+    "name": "Algorithm Design and Analysis",
+    "semesters": [
+        {
+            "course_id": "CS240.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "tukw", "fanrui"
+            ],
+            "ta": [
+                "zuwq", "yangfm", "chengk", "wumy1", "liuhl2", "hejj1", "gaozq", "panzh", "wangchy8"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Computer Programming, Data Structures and Algorithms (undergraduate level)",
+            "evaluation": "Homework (20%), Midterm (35%), Final (35%), Project (10%)"
+        }
+    ]
+}
