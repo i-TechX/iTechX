@@ -154,6 +154,18 @@
             ["Spring", "2020", "CS110", "Computer Architecture I"]
         ]
     },
+    "zhaodj": {
+        "name": "赵登吉",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhaodj.jpg",
+        "info": [
+            ["envelope", "&#x7a;&#104;&#97;&#111;&#100;&#x6a;&#64;&#x73;&#x68;&#x61;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;", "mailto:&#x7a;&#104;&#97;&#111;&#100;&#x6a;&#64;&#x73;&#x68;&#x61;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;"],
+            ["home", "Home Page", "http://dengji-zhao.net/"],
+            ["flask", "Lab Page", "http://dengji-zhao.net/smart/index.html"]
+        ],
+        "teach-courses": [
+            ["Spring", "2021", "CS243", "Introduction to Algorithmic Game Theory"]
+        ]
+    },
     "qiaowh": {
         "name": "乔文汇",
         "info": [
@@ -921,6 +933,56 @@
         "name": "朱晨",
         "ta-courses": [
             ["Spring", "2016", "CS110", "Computer Architecture I"]
+        ]
+    },
+    "zhangty": {
+        "name": "张天一",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhangty.jpg",
+        "info": [
+            ["envelope", "&#122;&#104;&#97;&#110;&#x67;&#116;&#121;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;", "mailto:&#122;&#104;&#97;&#110;&#x67;&#116;&#121;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS243", "Introduction to Algorithmic Game Theory"]
+        ]
+    },
+    "yangty2": {
+        "name": "杨天易",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yangty2.jpg",
+        "info": [
+            ["envelope", "&#x79;&#x61;&#110;&#x67;&#x74;&#121;&#50;&#x40;&#x73;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#x6e;", "mailto:&#x79;&#x61;&#110;&#x67;&#x74;&#121;&#50;&#x40;&#x73;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS243", "Introduction to Algorithmic Game Theory"]
+        ]
+    },
+    "zhangyao1": {
+        "name": "张尧",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhangyao1.jpg",
+        "info": [
+            ["envelope", "&#122;&#104;&#97;&#110;&#103;&#121;&#97;&#x6f;&#x31;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;", "mailto:&#122;&#104;&#97;&#110;&#103;&#121;&#97;&#x6f;&#x31;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS243", "Introduction to Algorithmic Game Theory"]
+        ]
+    },
+    "lianxy": {
+        "name": "连新远",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/lianxy.jpg",
+        "info": [
+            ["envelope", "&#108;&#105;&#97;&#x6e;&#120;&#121;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#46;&#101;&#100;&#x75;&#x2e;&#99;&#110;", "mailto:&#108;&#105;&#97;&#x6e;&#120;&#121;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#46;&#101;&#100;&#x75;&#x2e;&#99;&#110;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS243", "Introduction to Algorithmic Game Theory"]
+        ]
+    },
+    "gexu": {
+        "name": "葛煦",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/gexu.jpg",
+        "info": [
+            ["envelope", "&#x67;&#x65;&#x78;&#117;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#x67;&#x65;&#x78;&#117;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS243", "Introduction to Algorithmic Game Theory"]
         ]
     }
 }

@@ -1,0 +1,23 @@
+{
+    "code": "CS243",
+    "name": "Introduction to Algorithmic Game Theory",
+    "semesters": [
+        {
+            "course_id": "CS243.01",
+            "season": "Spring",
+            "year": "2021",
+            "mainpage": "http://dengji-zhao.net/AGTCourse/index.html",
+            "teacher": [
+                "zhaodj"
+            ],
+            "ta": [
+                "zhangty", "yangty2", "zhangyao1", "lianxy", "gexu"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Classroom Quizzes (10%); Homework (25%); Project (25%); Exam (40%)"
+        }
+    ]
+}
