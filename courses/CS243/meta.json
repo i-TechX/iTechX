@@ -18,6 +18,22 @@
             "hours": "64",
             "prerequisite": "无",
             "evaluation": "Classroom Quizzes (10%); Homework (25%); Project (25%); Exam (40%)"
+        },
+        {
+            "course_id": "CS243.01",
+            "season": "Spring",
+            "year": "2017",
+            "teacher": [
+                "zhaodj"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
         }
     ]
 }

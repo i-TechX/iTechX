@@ -165,7 +165,8 @@
             ["flask", "Lab Page", "http://dengji-zhao.net/smart/index.html"]
         ],
         "teach-courses": [
-            ["Spring", "2021", "CS243", "Introduction to Algorithmic Game Theory"]
+            ["Spring", "2021", "CS243", "Introduction to Algorithmic Game Theory"],
+            ["Spring", "2017", "CS243", "Introduction to Algorithmic Game Theory"]
         ]
     },
     "fanrui": {
@@ -947,6 +948,10 @@
     },
     "zhuchen": {
         "name": "朱晨",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhuchen.jpg",
+        "info": [
+            ["home", "Home Page", "https://zhuchen03.github.io/"]
+        ],
         "ta-courses": [
             ["Spring", "2016", "CS110", "Computer Architecture I"]
         ]
