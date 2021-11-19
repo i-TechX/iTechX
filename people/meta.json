@@ -58,6 +58,7 @@
             ["Fall", "2021", "CS181", "Artificial Intelligence I"],
             ["Spring", "2021", "CS240", "Algorithm Design and Analysis"],
             ["Fall", "2020", "CS181", "Artificial Intelligence I"],
+            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"],
             ["Fall", "2019", "CS181", "Artificial Intelligence I"],
             ["Fall", "2018", "CS181", "Artificial Intelligence I"]
         ]
@@ -175,7 +176,8 @@
             ["home", "Home Page", "https://sist.shanghaitech.edu.cn/2020/0707/c7499a53905/page.htm"]
         ],
         "teach-courses": [
-            ["Spring", "2021", "CS240", "Algorithm Design and Analysis"]
+            ["Spring", "2021", "CS240", "Algorithm Design and Analysis"],
+            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"]
         ]
     },
     "qiaowh": {
@@ -323,7 +325,8 @@
             ["envelope", "&#106;&#105;&#x61;&#122;&#120;&#x40;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#x69;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;", "mailto:&#106;&#105;&#x61;&#122;&#120;&#x40;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#x69;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;"]
         ],
         "ta-courses": [
-            ["Fall", "2020", "CS181", "Artificial Intelligence I"]
+            ["Fall", "2020", "CS181", "Artificial Intelligence I"],
+            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"]
         ]
     },
     "chendh1": {
@@ -1068,6 +1071,54 @@
         ],
         "ta-courses": [
             ["Spring", "2021", "CS240", "Algorithm Design and Analysis"]
+        ]
+    },
+    "lichq": {
+        "name": "李承谦",
+        "info": [
+            ["envelope", "&#108;&#105;&#x63;&#x68;&#113;&#x40;&#x73;&#104;&#97;&#x6e;&#x67;&#104;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;", "mailto:&#108;&#105;&#x63;&#x68;&#113;&#x40;&#x73;&#104;&#97;&#x6e;&#x67;&#104;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"]
+        ]
+    },
+    "xuwk": {
+        "name": "许惟锴",
+        "ta-courses": [
+            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"]
+        ]
+    },
+    "chenjy1": {
+        "name": "陈晋晔",
+        "info": [
+            ["envelope", "&#99;&#104;&#101;&#x6e;&#x6a;&#121;&#49;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#x61;&#105;&#116;&#101;&#x63;&#104;&#46;&#101;&#100;&#x75;&#46;&#x63;&#x6e;", "mailto:&#99;&#104;&#101;&#x6e;&#x6a;&#121;&#49;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#x61;&#105;&#116;&#101;&#x63;&#104;&#46;&#101;&#100;&#x75;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"]
+        ]
+    },
+    "xush": {
+        "name": "许泗杭",
+        "info": [
+            ["envelope", "&#x78;&#x75;&#x73;&#104;&#x40;&#x73;&#104;&#97;&#110;&#103;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#104;&#46;&#101;&#100;&#117;&#x2e;&#99;&#x6e;", "mailto:&#x78;&#x75;&#x73;&#104;&#x40;&#x73;&#104;&#97;&#110;&#103;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#104;&#46;&#101;&#100;&#117;&#x2e;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"]
+        ]
+    },
+    "lizy": {
+        "name": "李梓玥",
+        "info": [
+            ["envelope", "&#x6c;&#105;&#122;&#x79;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;", "mailto:&#x6c;&#105;&#122;&#x79;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"]
+        ]
+    },
+    "wanglt": {
+        "name": "王乐童",
+        "ta-courses": [
+            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"]
         ]
     }
 }

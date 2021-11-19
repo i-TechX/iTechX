@@ -17,6 +17,22 @@
             "hours": "64",
             "prerequisite": "Computer Programming, Data Structures and Algorithms (undergraduate level)",
             "evaluation": "Homework (20%), Midterm (35%), Final (35%), Project (10%)"
+        },
+        {
+            "course_id": "CS240.01",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "tukw", "fanrui"
+            ],
+            "ta": [
+                "lichq", "jiazx", "xuwk", "chenjy1", "xush", "lizy", "wanglt"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Computer Programming, Data Structures and Algorithms (undergraduate level)",
+            "evaluation": "Homework: 25%, Project: 15%, Final exam: 60%"
         }
     ]
 }
