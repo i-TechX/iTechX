@@ -4,6 +4,22 @@
     "semesters": [
         {
             "course_id": "CS240.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "liquan"
+            ],
+            "ta": [
+                "dongjx", "geyx", "congpsh", "wangmy1", "panzh", "lichq"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithm and Data Structure (Undergraduate course), Basic discrete mathematics, Basic probability theory, Computer programming",
+            "evaluation": "Assignments (20%), Midterm (35%), Final (35%), Course Project (10%)"
+        },
+        {
+            "course_id": "CS240.01",
             "season": "Spring",
             "year": "2021",
             "teacher": [
