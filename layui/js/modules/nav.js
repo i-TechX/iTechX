@@ -178,14 +178,16 @@ layui.define(['jquery', 'element', 'layer'], function(exports){
                 if (page == "dashboard") {
                     tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 16em;"><a href="dashboard">课程面板</a></li>';
                 } else {
-                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 16em;"><a href="dashboard">课程面板</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 24em;"><a href="dashboard">课程面板</a></li>';
                 }
 
                 if (page == "help") {
                     tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 10em;"><a href="help">帮助</a></li>';
                 } else {
-                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 10em;"><a href="help">帮助</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 18em;"><a href="help">帮助</a></li>';
                 }
+
+                tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 10em;"><a href="https://i-techx.github.io/dashboard">返回旧版</a></li>';
 
                 if (this.userInfo) {
                     tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 2em;">                \
@@ -194,6 +196,7 @@ layui.define(['jquery', 'element', 'layer'], function(exports){
                         <dl class="layui-nav-child" style="left:auto; right:0; text-align:center;">                                                    \
                             <dd><a href="'+this.userInfo.html_url+'">'+this.userInfo.login+'</a></dd>                                    \
                             <dd><a href="upload">上传</a></dd>\
+                            <dd><a href="https://github.com/'+options.owner+'/'+options.repo+'/discussions/">有话要说</a></dd>\
                             <dd><a href="javascript:window.localStorage.removeItem(\'GT_ACCESS_TOKEN\');window.location.reload();">退出</a></dd>                                    \
                         </dl>                                                                           \
                     </li>'

@@ -80,7 +80,7 @@
                     <summary>我的页面出现了奇奇怪怪的错误！怎么回事？</summary>
                     <div class="details-wrapper">   
                     <div class="details-styling">        
-                        <p>这很正常。网页本来就是我写着玩玩的，并没有考虑到兼容各个浏览器与平台。如果有好的建议，可以到github发布issue。</p>
+                        <p>这很正常。网页本来就是我写着玩玩的，并没有考虑到兼容各个浏览器与平台。如果有好的建议，可以到github discussions进行讨论。</p>
                     </div>
                     </div>
                 </details>
@@ -94,6 +94,16 @@
                     </div>
                 </details>
                 <details>
+                    <summary>我在页面上看到了明文电子邮箱，这是否会有被抓取的风险？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>不会。新版网页采用github api动态渲染文件内容。爬取的任何网页都不包含任何课程或人物数据。此外，电子邮箱由HTML实体随机编码，即便被抓取到，也无法看出这是电子邮箱地址。</p>
+                        <p>例如，iTechX的电子邮箱<code>&#x69;&#116;&#101;&#x63;&#x68;&#120;&#64;&#122;&#x6f;&#x68;&#111;&#x2e;&#x63;&#x6f;&#x6d;&#46;&#99;&#x6e;</code>可能由以下代码编码：</p>
+                        <pre>&amp;#x69;&amp;#116;&amp;#101;&amp;#x63;&amp;#x68;&amp;#120;&amp;#64;&amp;#122;&amp;#x6f;&amp;#x68;&amp;#111;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;&amp;#46;&amp;#99;&amp;#x6e;</pre>
+                    </div>
+                    </div>
+                </details>
+                <details>
                     <summary>iTechX内容是否受到许可保护？</summary>
                     <div class="details-wrapper">   
                     <div class="details-styling">        
@@ -101,6 +111,14 @@
                         <p>所有内容均受到<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>的保护。具体内容若有进一步要求，按内容所述为准。
                         </p>
                         <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>我有话要说！怎样反馈我的意见呢？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>很高兴你愿意向我们反馈意见！我们目前采用Github Discussions来收集反馈与进行讨论。登录用户将鼠标悬停至右上方头像，在下拉框中点击“有话要说”即可进入Discussions页面。</p>
                     </div>
                     </div>
                 </details>
@@ -189,6 +207,8 @@
     }).use(['layer', 'element', 'nav'], function(){
         var nav = layui.nav({
             page: "index",
+            owner: "i-TechX",
+            repo: "iTechX",
             clientID: "2de790a6c048f147f91d",
             clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
         });
