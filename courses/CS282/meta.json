@@ -1,0 +1,38 @@
+{
+    "code": "CS282",
+    "name": "Machine Learning",
+    "semesters": [
+        {
+            "course_id": "CS282.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "yangsb"
+            ],
+            "ta": [
+                "tianpch", "suhang", "longjf1", "shicheng"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "calculus (required), algebra (required), probability and statistics (required), optimization (strongly recommended)",
+            "evaluation": "Assignments/Quizzes(30%), Project(30%), Exam(40%)"
+        },
+        {
+            "course_id": "CS282.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "wanghao1"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "calculus (required), algebra (required), probability and statistics (required), optimization (strongly recommended)",
+            "evaluation": "exam (40%), assignments/quiz(30%), project(30%)"
+        }
+    ]
+}
