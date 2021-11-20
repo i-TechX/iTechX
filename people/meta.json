@@ -192,6 +192,17 @@
             ["Fall", "2021", "CS240", "Algorithm Design and Analysis"]
         ]
     },
+    "zhouyi": {
+        "name": "周熠",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhoyi.jpg",
+        "info": [
+            ["envelope", "&#121;&#x7a;&#104;&#x6f;&#117;&#x40;&#x62;&#x73;&#98;&#105;&#105;&#46;&#x63;&#x6e;", "mailto:&#121;&#x7a;&#104;&#x6f;&#117;&#x40;&#x62;&#x73;&#98;&#105;&#105;&#46;&#x63;&#x6e;"],
+            ["home", "Home Page", "https://www.bsbii.cn/website/h5/77/content/2019/1575364477723.html"]
+        ],
+        "teach-courses": [
+            ["Summer", "2020", "CS290L", "Symbolic Artificial Intelligence"]
+        ]
+    },
     "qiaowh": {
         "name": "乔文汇",
         "info": [
@@ -1173,6 +1184,24 @@
         ],
         "ta-courses": [
             ["Fall", "2021", "CS240", "Algorithm Design and Analysis"]
+        ]
+    },
+    "yueym": {
+        "name": "岳杨明",
+        "ta-courses": [
+            ["Summer", "2020", "CS290L", "Symbolic Artificial Intelligence"]
+        ]
+    },
+    "liuky": {
+        "name": "刘开元",
+        "ta-courses": [
+            ["Summer", "2020", "CS290L", "Symbolic Artificial Intelligence"]
+        ]
+    },
+    "hupb": {
+        "name": "胡鹏博",
+        "ta-courses": [
+            ["Summer", "2020", "CS290L", "Symbolic Artificial Intelligence"]
         ]
     }
 }
