@@ -1,0 +1,22 @@
+{
+    "code": "CS150A",
+    "name": "Database",
+    "semesters": [
+        {
+            "course_id": "CS150A.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "sunlu1"
+            ],
+            "ta": [
+                "wangbin", "ningshanl", "xiechh"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "算法与数据结构, 操作系统 I",
+            "evaluation": "作业 (20%) + 小测试 (10%), 课程project (25%), 期中考试 (20%), 期末考试 (25%)"
+        }
+    ]
+}
