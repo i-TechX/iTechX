@@ -168,11 +168,11 @@ var mdxext = function () {
                     lines.push(raw_lines[i]);
                 }
                 if (pwd) {
-                    document = [pwd_template.replace('{}',pwd), '<center>'].concat(lines, ['</center>']);
+                    document_ = [pwd_template.replace('{}',pwd), '<center>'].concat(lines, ['</center>']);
                 } else {
-                    document = ['<center>'].concat(lines, ['</center>']);
+                    document_ = ['<center>'].concat(lines, ['</center>']);
                 }
-                html_code = document.join('');
+                html_code = document_.join('');
                 return html_code;
             },
 
