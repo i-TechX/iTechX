@@ -1,0 +1,22 @@
+{
+    "code": "CS150",
+    "name": "Database and Data Mining",
+    "semesters": [
+        {
+            "course_id": "CS150.01",
+            "season": "Fall",
+            "year": "2020",
+            "teacher": [
+                "sunlu1"
+            ],
+            "ta": [
+                "lvwj", "congpsh", "tianpch"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Problem Sets (20%), Quizs (10%), Course project (25%), Midterm (20%), Final exam (25%)"
+        }
+    ]
+}
