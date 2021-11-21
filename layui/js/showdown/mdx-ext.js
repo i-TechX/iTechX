@@ -165,7 +165,7 @@ var mdxext = function () {
                         pwd = m[2];
                         continue;
                     }
-                    lines.push(line);
+                    lines.push(raw_lines[i]);
                 }
                 if (pwd) {
                     document = [pwd_template.replace('{}',pwd), '<center>'].concat(lines, ['</center>']);
