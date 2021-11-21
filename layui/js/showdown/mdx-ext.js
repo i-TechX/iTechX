@@ -153,7 +153,7 @@ var mdxext = function () {
 
             parseVideo: function(raw_lines) {
                 pwd_template = '<div class="layui-form layui-form-pane" style="font-family: Quicksand; margin: 1.5em; width: 100%; padding-left:1em;"><div class="layui-form-item"><label class="layui-form-label" style="display: block; opacity: inherit; position: relative; width:fit-content;"><b>Password</b> 密码</label><div class="layui-input-inline"><input readonly type="text" class="layui-input" style="height: 38px;" value="{}"></div><div class="layui-btn-group"><button type="button" class="layui-btn layui-btn-violet pwd-copy-btn"><i class="fa fa-copy"></i> 复制</button></div><div style="display: none; padding-left: 10px; color:green;"><i class="fa fa-check-circle"></i> 复制成功！</div><div style="display: none; padding-left: 10px; color:rgb(190, 0, 0);"><i class="fa fa-times-circle"></i> 复制失败，请重试。</div></div></div>';
-                lines = [];
+                var lines = [];
                 pwd = null;
                 for (var i=0; i<raw_lines.length; i++) {
                     // skip blank lines
