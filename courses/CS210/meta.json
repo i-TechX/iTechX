@@ -1,0 +1,23 @@
+{
+    "code": "CS210",
+    "name": "Computer Architecture III",
+    "semesters": [
+        {
+            "course_id": "CS210.01",
+            "season": "Spring",
+            "year": "2021",
+            "mainpage": "https://lion.sist.shanghaitech.edu.cn/Course/CS210/21s/",
+            "teacher": [
+                "yinshu"
+            ],
+            "ta": [
+                "wuhp"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Computer Architecture I. Operating System I. Computer Architecture II(optional).",
+            "evaluation": "60% - Project (10% - Proposal Report, 10% - Progress Report, 40% - Final Portfolio, 5% - Code README, 15% - Project Final Report, 10% - Code Demonstration, 10% - Final Presentation), 15% - Assignments, 20% - Reading Presentation, 5% - Participation"
+        }
+    ]
+}

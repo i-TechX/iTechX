@@ -114,6 +114,7 @@
         ],
         "teach-courses": [
             ["Fall", "2021", "CS130", "Operating Systems I"],
+            ["Spring", "2021", "CS210", "Computer Architecture III"],
             ["Fall", "2020", "CS130", "Operating Systems I"],
             ["Fall", "2018", "CS130", "Operating Systems I"]
         ]
@@ -654,6 +655,7 @@
             ["envelope", "&#119;&#x75;&#x68;&#x70;&#x40;&#x73;&#104;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#46;&#x63;&#x6e;", "mailto:&#119;&#x75;&#x68;&#x70;&#x40;&#x73;&#104;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#46;&#x63;&#x6e;"]
         ],
         "ta-courses": [
+            ["Spring", "2021", "CS210", "Computer Architecture III"],
             ["Fall", "2020", "CS130", "Operating Systems I"]
         ]
     },
