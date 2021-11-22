@@ -6,6 +6,7 @@
             "course_id": "CS182.01",
             "season": "Fall",
             "year": "2021",
+            "mainpage": "https://cs182.sist.shanghaitech.edu.cn/",
             "teacher": [
                 "zhaoziping"
             ],
