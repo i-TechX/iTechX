@@ -1,0 +1,22 @@
+{
+    "code": "CS182",
+    "name": "Introduction to Machine Learning",
+    "semesters": [
+        {
+            "course_id": "CS182.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "zhaoziping"
+            ],
+            "ta": [
+                "gaochy", "zhangzp1", "xiawf"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Computer Science (OOP and Data Structure, Algorithm Design and Analysis), Mathematics (Multivariable Calculus, Linear Algebra and Matrix Analysis, Probability and Statistics)",
+            "evaluation": "5 Problem sets with programming (30%), 3h Final exam (40%), Final project (30%)"
+        }
+    ]
+}
