@@ -154,7 +154,9 @@
             ["flask", "Lab Page", "https://toast-lab.sist.shanghaitech.edu.cn/"]
         ],
         "teach-courses": [
+            ["Fall", "2021", "CS211", "Computer Architecture II"],
             ["Spring", "2021", "CS110", "Computer Architecture I"],
+            ["Fall", "2020", "CS211", "Computer Architecture II"],
             ["Spring", "2020", "CS110", "Computer Architecture I"]
         ]
     },
@@ -702,6 +704,7 @@
             ["envelope", "&#x79;&#101;&#x63;&#x68;&#x6e;&#64;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#101;&#100;&#117;&#x2e;&#99;&#110;", "mailto:&#x79;&#101;&#x63;&#x68;&#x6e;&#64;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#101;&#100;&#117;&#x2e;&#99;&#110;"]
         ],
         "ta-courses": [
+            ["Fall", "2021", "CS211", "Computer Architecture II"],
             ["Fall", "2019", "CS130", "Operating Systems I"]
         ]
     },
@@ -1541,6 +1544,15 @@
         ],
         "ta-courses": [
             ["Spring", "2021", "CS251", "Convex Optimization"]
+        ]
+    },
+    "rongchy": {
+        "name": "荣春燕",
+        "info": [
+            ["envelope", "&#114;&#111;&#110;&#103;&#99;&#104;&#x79;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#46;&#101;&#100;&#117;&#x2e;&#99;&#x6e;", "mailto:&#114;&#111;&#110;&#103;&#99;&#104;&#x79;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#46;&#101;&#100;&#117;&#x2e;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS211", "Computer Architecture II"]
         ]
     }
 }

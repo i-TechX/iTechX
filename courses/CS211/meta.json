@@ -1,0 +1,40 @@
+{
+    "code": "CS211",
+    "name": "Computer Architecture II",
+    "semesters": [
+        {
+            "course_id": "CS211.01",
+            "season": "Fall",
+            "year": "2021",
+            "mainpage": "https://toast-lab.gitee.io/courses/CS211@ShanghaiTech/Fall-2021/",
+            "teacher": [
+                "wangchd"
+            ],
+            "ta": [
+                "yechn"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "CS110 (Computer Architecture I) of ShanghaiTech University, or equivalents",
+            "evaluation": "Participation and quizzes (10%), 3+ Homework (15%), Mid-term exam (15%), 3 Literature reading (15%), 3 Labs (20%), Final exam (25%)"
+        },
+        {
+            "course_id": "CS211.01",
+            "season": "Fall",
+            "year": "2020",
+            "mainpage": "https://toast-lab.gitee.io/courses/CS211@ShanghaiTech/Fall-2020/",
+            "teacher": [
+                "wangchd"
+            ],
+            "ta": [
+                "rongchy"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "CS110 (Computer Architecture I) of ShanghaiTech University, or equivalents",
+            "evaluation": "Participation and quizzes (10%), 4+ Homework (15%), Mid-term exam (15%), 4 Literature reading (15%), 5 Labs (20%), Final exam (25%)"
+        }
+    ]
+}
