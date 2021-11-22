@@ -262,6 +262,30 @@
             ["Fall", "2021", "CS182", "Introduction to Machine Learning"]
         ]
     },
+    "shiym": {
+        "name": "石远明",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/shiym.jpg",
+        "info": [
+            ["envelope", "&#115;&#x68;&#105;&#x79;&#109;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#101;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;", "mailto:&#115;&#x68;&#105;&#x79;&#109;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#101;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;"],
+            ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/shiym/home.html"]
+        ],
+        "teach-courses": [
+            ["Spring", "2021", "CS251", "Convex Optimization"],
+            ["Spring", "2019", "CS251", "Convex Optimization"]
+        ]
+    },
+    "shiye": {
+        "name": "石野",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/shiye.jpg",
+        "info": [
+            ["envelope", "&#x73;&#104;&#105;&#121;&#x65;&#x40;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#110;", "mailto:&#x73;&#104;&#105;&#121;&#x65;&#x40;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#110;"],
+            ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/shiye/"]
+        ],
+        "teach-courses": [
+            ["Fall", "2021", "CS251", "Convex Optimization"],
+            ["Spring", "2021", "CS251", "Convex Optimization"]
+        ]
+    },
     "qiaowh": {
         "name": "乔文汇",
         "info": [
@@ -1481,6 +1505,42 @@
         ],
         "ta-courses": [
             ["Fall", "2021", "CS182", "Introduction to Machine Learning"]
+        ]
+    },
+    "huangshm": {
+        "name": "黄少明",
+        "info": [
+            ["envelope", "&#104;&#x75;&#x61;&#x6e;&#x67;&#x73;&#x68;&#109;&#64;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;", "mailto:&#104;&#x75;&#x61;&#x6e;&#x67;&#x73;&#x68;&#109;&#64;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS251", "Convex Optimization"]
+        ]
+    },
+    "zengxy": {
+        "name": "曾翔钰",
+        "info": [
+            ["envelope", "&#x7a;&#101;&#x6e;&#103;&#x78;&#121;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#101;&#x63;&#104;&#46;&#101;&#100;&#x75;&#x2e;&#99;&#x6e;", "mailto:&#x7a;&#101;&#x6e;&#103;&#x78;&#121;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#101;&#x63;&#104;&#46;&#101;&#100;&#x75;&#x2e;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS251", "Convex Optimization"]
+        ]
+    },
+    "xiashh": {
+        "name": "夏舒豪",
+        "info": [
+            ["envelope", "&#x78;&#105;&#x61;&#115;&#x68;&#104;&#64;&#115;&#x68;&#x61;&#110;&#103;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;", "mailto:&#x78;&#105;&#x61;&#115;&#x68;&#104;&#64;&#115;&#x68;&#x61;&#110;&#103;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS251", "Convex Optimization"]
+        ]
+    },
+    "shiyd": {
+        "name": "施雁东",
+        "info": [
+            ["envelope", "&#115;&#x68;&#x69;&#x79;&#x64;&#x40;&#115;&#x68;&#97;&#110;&#103;&#104;&#x61;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#x6e;", "mailto:&#115;&#x68;&#x69;&#x79;&#x64;&#x40;&#115;&#x68;&#97;&#110;&#103;&#104;&#x61;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS251", "Convex Optimization"]
         ]
     }
 }
