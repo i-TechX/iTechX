@@ -1,0 +1,22 @@
+{
+    "code": "CS151A",
+    "name": "Convex Optimization and Its Applications in Information Science",
+    "semesters": [
+        {
+            "course_id": "CS151A.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "shiym"
+            ],
+            "ta": [
+                "xuzhl2"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "Mathematical Analysis II, Linear Algebra",
+            "evaluation": "4 Homework (20%), 2-hour open book Final Exam (50%), Project (30%)"
+        }
+    ]
+}
