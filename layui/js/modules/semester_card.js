@@ -763,11 +763,13 @@ layui.define(['jquery', 'util', 'element', 'rate'], function(exports){
                                         <a href="' + url + '">' + file.name.replace(/(.md$)|(.mdx$)|(.htmlx$)/,'') + '</a>   \
                                         ');
                                     } else {
-                                        url = options.proxy + url;
                                         if (url.endsWith(".pdf")) {
+                                            url = options.proxy + url;
                                             url = "https://mozilla.github.io/pdf.js/web/viewer.html?file=" + url;
                                         } else if (url.endsWith(".doc") || url.endsWith(".docx") || url.endsWith(".ppt") || url.endsWith(".pptx") || url.endsWith(".xls") || url.endsWith(".xlsx")) {
                                             url = "http://view.officeapps.live.com/op/view.aspx?src=" + url;
+                                        } else {
+                                            url = options.proxy + url;
                                         }
                                         normal_contents.push('                        \
                                         <a href=&quot;' + url + '&quot;>' + file.name + '</a>   \
