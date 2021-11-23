@@ -1,9 +1,9 @@
 {
-    "code": "CS151A",
+    "code": "SI151A",
     "name": "Convex Optimization and Its Applications in Information Science",
     "semesters": [
         {
-            "course_id": "CS151A.01",
+            "course_id": "SI151A.01",
             "season": "Fall",
             "year": "2021",
             "teacher": [
