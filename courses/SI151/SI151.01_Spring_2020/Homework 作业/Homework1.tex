@@ -1,0 +1,171 @@
+%!TEX program = xelatex
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{titlesec}
+\usepackage{xcolor}
+%\usepackage[shortlabels]{enumitem}
+\usepackage{enumerate}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{listings}
+\usetikzlibrary{arrows}
+\usepackage{subfigure}
+\usepackage{graphicx,booktabs,multirow}
+\usepackage[a4paper]{geometry}
+\usepackage{upquote}
+\usepackage{float}
+\usepackage{pdfpages}
+
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\lstset{language=Matlab}
+\lstset{breaklines}
+
+\input defs.tex
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\titleformat*{\section}{\centering\LARGE\scshape}
+\renewcommand{\thesection}{\Roman{section}}
+\lstset{language=Matlab,tabsize=4,frame=shadowbox,basicstyle=\footnotesize,
+keywordstyle=\color{blue!90}\bfseries,breaklines=true,commentstyle=\color[RGB]{50,50,50},stringstyle=\ttfamily,numbers=left,numberstyle=\tiny,
+  numberstyle={\color[RGB]{192,92,92}\tiny},backgroundcolor=\color[RGB]{245,245,244},inputpath=code}
+
+\begin{document}
+
+\date{\today}
+\title{Optimization and Machine Learning, Spring 2020 \\
+Homework 1\\
+\small (Due Wednesday, Mar. 18 at 11:59pm (CST))}
+\maketitle
+\begin{enumerate}[1.]
+
+
+		\item  Suppose that we have $N$ training samples, in which
+		each sample is composed of $p$ input variables and one continuous/binary response.
+		\begin{itemize}
+			\item[(a)] Please define the input and output variables, and show a linear relationship between them.~\defpoints{5}
+			\item[(b)] Please define a data matrix and corresponding response vector, and find your $i$-th ($i=1,...,N$) sample with its response.~\defpoints{5}
+			\item[(c)] Please use the least squares to estimate the parameters of the linear model in (a) based on the dataset in (b), and explain in which case the solution is unique.~\defpoints{10}
+			\item[(d)] Is there any way to get an unique closed-form solution once the least squares fails? If yes, please show how do you obtain the solution.~\defpoints{5}
+			\item[(e)] How can you select the best model in (d) based only on your training data.~\defpoints{5}
+		\end{itemize}
+               
+		\item  Given the input variables $X \in \mathbb{R}^p$ and response variable $Y \in \mathbb{R}$, the Expected Prediction Error (EPE) is defined by 
+		\begin{equation}
+		\text{EPE}(\hat{f}) = \mathbb{E}[L(Y,\hat{f}(X))],
+		\end{equation}
+		where $\mathbb{E}(\cdot)$ denotes the expectation over the joint distribution $\text{Pr}(X,Y)$, and $L(Y,\hat{f}(X))$ is a loss function measuring the difference between the estimated $\hat{f}(X)$ and observed $Y$.
+		\begin{itemize}
+			\item[(a)] Given the squared error loss $L(Y,\hat{f}(X))=(Y-\hat{f}(X))^2$, please derive the regression function $\hat{f}(x) = \mathbb{E}(Y|X=x)$ by minimizing $\text{EPE}(\hat{f})$ w.r.t. $\hat{f}$.~\defpoints{5} 
+			\item[(b)] Please explain why the nearest neighbors is an approximation to the regression function in (a).~\defpoints{5}
+			\item[(c)] Please explain how the least squares approximates the regression function in (a).~\defpoints{5}
+			\item[(d)] Please discuss the difference between the nearest neighbors and the least squares based on your results in (b) and (c).~\defpoints{5} 
+		\end{itemize}
+
+
+
+        \item  Given a set of observation pairs $(x_{1},y_{1})\cdots(x_{N},y_{N})$. By assuming the linear model is a reasonable approximation, we consider fitting the model via least squares approaches, in which we choose coefficients $\beta$ to minimize the residual sum of squares (RSS), 
+        \begin{equation*}\label{eq:1}
+        	\hat{\beta}_{0},~ \hat{\beta} = \argmin_{\beta_{0},~ \beta}~ \sum_{i=1}^{N}(y_{i} -\beta_{0}-\beta x_{i})^{2}.
+        \end{equation*} 
+        \begin{itemize}
+			\item[(a)] Show that 
+			\begin{equation}\label{eq:1-1}
+			\begin{aligned}
+			\hat{\beta} &= \tfrac{\sum_{i=1}^{N}(x_{i}-\bar{x})(y_{i}-\bar{y})}{\sum_{i=1}^{N}(x_{i}-\bar{x})^{2}},\\
+			\hat{\beta}_{0} &= \bar{y} -\hat{\beta}\bar{x},
+			\end{aligned}
+			\end{equation}
+			where $\bar{x} = \tfrac{1}{N}\sum_{i=1}^{N}x_{i}$ and $\bar{y} = \tfrac{1}{N}\sum_{i=1}^{N}y_{i}$ are the sample means.~\defpoints{3}
+			
+			\item[(b)] Using~\eqref{eq:1-1}, argue that in the case of simple linear regression, the
+least squares line always passes through the point $(\bar{x},\bar{y})$.~\defpoints{2}
+        \end{itemize}
+        
+        
+
+
+        \item  Given a set of training data $(\bm{x}_{1},y_1),\cdots,(\bm{x}_{N},y_N)$ from which to estimate the parameters $\bm{\beta}$, where each $\bm{x}_{i} = \left[x_{i1},\cdots,x_{ip} \right]^{T}$ denotes a vector of feature measurements for the $i$th sample. Consider a linear regression problem in which we want to \textquotedblleft weight\textquotedblright different training examples differently. Specifically, suppose we aim at minimizing
+        \begin{equation}\label{eq: 2-1}
+        	\textrm{RSS}(\bm{\beta}) = \frac{1}{2}\sum_{i=1}^{N}w_{i}(y_{i} -\bm{x}_{i}^{T}\bm{\beta})^{2}.
+        \end{equation}
+        \begin{itemize}
+        	\item[(a)] Show that $\textrm{RSS}(\bm{\beta}) = (\bm{X}\bm{\beta} - \bm{y})^{T}\bm{W}(\bm{X}\bm{\beta}-\bm{y})$
+        	for an appropriate diagonal matrix $\bm{W}$, and where $\bm{X} = \left[\bm{x}_{1},\cdots,\bm{x}_{N} \right]^{T}$ and $\bm{y} = \left[y_1,\cdots,y_N \right]^{T}$. State clearly what $\bm{W}$ is. ~\defpoints{1}
+        	
+        	\item[(b)] By finding the derivative $\nabla_{\bm{\beta}}\textrm{RSS}(\bm{\beta})$ and setting that to zero, write the normal equations to this weighted setting and give the value of $\bm{\beta}$ that minimizes $\textrm{RSS}(\bm{\beta})$ in closed form as a function of $\bm{X}$, $\bm{W}$ and $\bm{y}$.~\defpoints{2}
+        	
+        	\item[(c)] Suppose the $y_{i}$'s were observed with differing variances. To be specific, suppose that
+        	\begin{equation}
+        		p(y_{i}|\bm{x}_{i};\bm{\beta}) = \frac{1}{\sqrt{2\pi}\sigma_{i}}\exp\left( -\frac{(y_{i}-\bm{x}_{i}^{T}\bm{\beta})^{2}}{2\sigma_{i}^{2}}\right),
+        	\end{equation}
+		i.e., $y_{i}$ has mean $\bm{x}_{i}^{T}\bm{\beta}$ and variance $\sigma_{i}^{2}$, where the $\sigma_{i}$'s are fixed, known, constants). Show that finding the maximum likelihood estimate of $\beta$ is equivalent to solving a weight linear regression problem. State clearly what the $w_{i}$'s are in terms of the $\sigma_{i}$'s.~\defpoints{4}    	
+        \end{itemize}
+    	
+    	\item To perform variable selection, three classical approaches were introduced in class, including variable subset selection, forward stepwise selection and backward stepwise selection. 
+    	\begin{itemize}
+    		\item[(a)] To deepen your understanding of these approaches, please make a table to describe their key procedures as well as the pros and cons.~\defpoints{6}
+    		
+    		\item[(b)] Suppose we perform these three approaches on a single data set. For each approach, we obtain $p + 1$
+models, containing $0, 1, 2, \cdots, p$ predictors. \textbf{Explain} your answers:
+    		\begin{itemize}
+    			\item[$\bullet$] Which of the three models with $k$ predictors has the smallest
+training \textrm{RSS}? \defpoints{1}
+    			
+    			\item[$\bullet$] Which of the three models with $k$ predictors has the smallest test \textrm{RSS}? \defpoints{1}
+    		\end{itemize}
+    	(\textcolor{red}{Note that:} Solutions with the correct answer but without adequate explanation will not earn credit.)
+    	\end{itemize}
+    	 
+        
+        \item Refer to~\cite[Ex. 3.5]{hastie2009elements}. Consider the ridge regression problem
+        \begin{equation}\label{eq: 4-1}
+        	\hat{\beta}^{\textrm{ridge}} = \argmin_{\beta}\left\lbrace\sum_{i=1}^{N}(y_i - \beta_{0} - \sum_{j=1}^{p}x_{ij}\beta_{j})^{2} + \lambda \sum_{j=1}^{p}\beta_{j}^{2}\right\rbrace, 
+        \end{equation}
+        where $\lambda \geq 0$ is a complexity parameter that controls the amount of shrinkage. Show that problem~\eqref{eq: 4-1} is equivalent to the problem
+        \begin{equation}\label{eq: 4-2}
+        	\hat{\beta}^{\textrm{c}} = \argmin_{\beta^{\textrm{c}}}\left\lbrace\sum_{i=1}^{N}(y_i - \beta_{0}^{\textrm{c}} - \sum_{j=1}^{p}(x_{ij}-\bar{x}_j)\beta_{j}^{\textrm{c}})^{2} + \lambda \sum_{j=1}^{p}(\beta_{j}^{\textrm{c}})^{2}\right\rbrace. 
+        \end{equation}
+        Give the correspondence between $\beta^{\textrm{c}}$ and the original $\beta$ in~\eqref{eq: 4-1}. Characterize the solution to this modified criterion. Moreover, show that a similar result holds for the least absolute shrinkage and selection
+
+        operator (LASSO).~\defpoints{10}
+        
+        \item It is well-known that ridge regression tends to give similar coefficient values to correlated variables, whereas the LASSO may give quite different coefficient values to correlated variables. We will now explore this property in a very simple setting.
+        
+        Suppose that $n = 2$, $p = 2$, $x_{11} = x_{12}$, $x_{21} = x_{22}$. Furthermore,
+suppose that $y_1 +y_2 = 0$ and $x_{11} +x_{21} = 0$ and $x_{12} +x_{22} = 0$, so that
+the estimate for the intercept in a least squares, ridge regression, or LASSO model is zero: $\hat{\beta}_{0} = 0$.
+        
+        \begin{itemize}
+        	\item[(a)] Write out the ridge regression optimization problem in this setting.~\defpoints{2}
+        	 
+        	\item[(b)] Argue that in this setting, the ridge coefficient estimates satisfy $\hat{\beta}_{1} = \hat{\beta}_{2}$.~\defpoints{4}
+        	
+        	\item[(c)] Write out the LASSO optimization problem in this setting.~\defpoints{2}
+        	
+        	\item[(d)] Argue that in this setting, the LASSO coefficients $\hat{\beta}_{1}$ and $\hat{\beta}_{2}$ are not unique—in other words, there are many possible solutions to the optimization problem in (c). Describe these solutions.~\defpoints{2}
+        \end{itemize}
+    
+		\item Refer to~\cite[Ex. 3.30]{hastie2009elements}. Consider the elastic-net optimization problem:
+		\begin{equation}
+			\min_{\beta}~\Vert\bm{y}-\bm{X}\beta\Vert^{2} + \lambda\left[ \alpha\Vert\beta\Vert_{2}^{2} + (1-\alpha)\Vert\beta\Vert_{1}\right]. 
+		\end{equation}
+		Show how one can turn this into a LASSO problem, using an augmented
+version of $\bm{X}$ and $\bm{y}$.~\defpoints{10} 
+\end{enumerate}
+% \appendix
+% \lstinputlisting{hw5.m}
+% \lstinputlisting{lasso_barrier.m}
+% \lstinputlisting{lasso_GaussSeidel.m}
+% \lstinputlisting{lasso_Jacobi.m}
+% \lstinputlisting{soft.m}
+
+\bibliographystyle{ieeetr}
+\bibliography{ref}
+
+\end{document}
+

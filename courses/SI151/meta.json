@@ -1,0 +1,38 @@
+{
+    "code": "SI151",
+    "name": "Optimization and Machine Learning",
+    "semesters": [
+        {
+            "course_id": "SI151.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "sunlu1"
+            ],
+            "ta": [
+                "congpsh", "jinjch", "tianpch"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework: 30%, Course project: 30%, Final exam: 40%"
+        },
+        {
+            "course_id": "SI151.01",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "sunlu1", "shiym"
+            ],
+            "ta": [
+                "dengxin1", "xiashh", "xuwk", "yangyx3", "zhouyy1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework: 30%, Course project: 30%, Final exam: 40%"
+        }
+    ]
+}

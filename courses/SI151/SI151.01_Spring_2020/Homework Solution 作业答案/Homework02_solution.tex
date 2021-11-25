@@ -1,0 +1,537 @@
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{listings}
+\usetikzlibrary{arrows}
+\usepackage{graphicx,booktabs,multirow}
+\usepackage[a4paper]{geometry}
+\usepackage{upquote}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{subfig}
+
+\newcommand{\pr}[1]{\text{Pr} #1}
+
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\lstset{language=Matlab}
+\lstset{breaklines}
+
+\input defs.tex
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\titleformat*{\section}{\centering\LARGE\scshape}
+\renewcommand{\thesection}{\Roman{section}}
+\lstset{language=Matlab,tabsize=4,frame=shadowbox,basicstyle=\footnotesize,
+keywordstyle=\color{blue!90}\bfseries,breaklines=true,commentstyle=\color[RGB]{50,50,50},stringstyle=\ttfamily,numbers=left,numberstyle=\tiny,
+  numberstyle={\color[RGB]{192,92,92}\tiny},backgroundcolor=\color[RGB]{245,245,244},inputpath=code}
+
+\begin{document}
+
+\date{\today}
+\title{Optimization and Machine Learning, Spring 2020 \\
+    Homework 2\\
+    \small (Due Wednesday, Apr. 1 at 11:59pm (CST))}
+\maketitle
+\begin{enumerate}[1.]
+
+
+    \item Suppose that we have $N$ training samples, in which each sample is composed of $p$ input variable and one categorical response with $K$ states.
+          \begin{itemize}
+              \item[(a)] Please define this multi-class classification problem, and solve it by ridge regression. ~\defpoints{4}\\
+                    {\color{blue}
+                    Input:\begin{equation*}
+                        \mathbf{X} = \begin{bmatrix}
+                            x_1^T  \\
+                            x_2^T  \\
+                            \vdots \\
+                            x_N^T
+                        \end{bmatrix},
+                    \end{equation*}
+                    where $x_i$ is the $i$-th observation with $p$ parameter.\\
+                    Output:\begin{equation*}
+                        \mathbf{Y} = \begin{bmatrix}
+                            y_1^T  \\
+                            y_2^T  \\
+                            \vdots \\
+                            y_N^T
+                        \end{bmatrix},
+                    \end{equation*}
+                    where $y_i = (0,\cdots,0,1,0,\cdots,0)^T$, with its $k$-th element being 1, 
+                    indicating that the $k$-th class is associated with the $i$-th observation $x_i$.\\
+                    By minimizing the following objective function,
+                    \begin{equation*}
+                     ||\mathbf{X}\mathbf{B}-\mathbf{Y}||_F^2+\lambda||\mathbf{B}||_F^2,
+                    \end{equation*}
+                    we can get the solution $\mathbf{B} = (\mathbf{X}^T\mathbf{X}+\lambda \mathbf{I})\mathbf{X}^T\mathbf{Y}$, 
+                    where $\lambda > 0$ denotes the regularization parameter.
+                    }
+              \item[(b)] Please make the prediction of a testing sample $x \in \mathbb{R}^p$ based on your model in (a). ~\defpoints{3}\\
+                    {\color{blue} 
+                    The prediction is made by
+                    \begin{align*}
+                        \hat y & = \arg\max_k \hat{f}_k(x),
+                    \end{align*}
+                    where $\hat{f}_k(x)$ is the $k$-th element of 
+                    \begin{equation*}
+                        \hat f(x) =x^T \mathbf{B} =\begin{pmatrix}
+                            \hat f_1(x) \\ \hat f_2(x) \\ \vdots \\ \hat f_K(x)
+                        \end{pmatrix}.
+                    \end{equation*}
+                    }
+              \item[(c)] Is there any limitation on your model? If yes, please explain the problem by drawing a picture. ~\defpoints{3}\\
+                    { \color{blue}
+                    The masking problem:
+                    \begin{figure}[H]
+                        \centerline{
+                            \subfloat[Two classes]{\includegraphics[width=.45\linewidth]{masking1}}
+                            \hfil
+                            \subfloat[Three classes]{\includegraphics[width=.37\linewidth]{masking2}}
+                        }
+                    \caption{Illustion of the masking problem in linear regression for classification.}                        
+                    \end{figure}
+                    }
+              \item[(d)] Can you propose a model to overcome this limitation? If yes, please derive the decision boundary between an arbitrary class-pair. ~\defpoints{5}\\
+                    { \color{blue}
+                    Linear discriminant analysis (LDA). In LDA, the decision boundary between two arbitrary classes $A$ and $B$ is
+                    $$
+                        \textbf{x}^T\hat\Sigma^{-1}(\hat\mu_A-\hat\mu_B)+\left(\ln(\dfrac{\pr (A)}{\pr (B)})-\dfrac{\hat{\mu}_A\hat\Sigma^{-1}\hat{\mu}_A-\hat{\mu}_B\hat\Sigma^{-1}\hat{\mu}_B}{2}\right) = 0.
+                    $$
+                    }
+              \item[(e)] Can you revise your model in (d) by strength or weaken its assumptions? If yes, please tell the difference between your models in (d) and (e). ~\defpoints{5}\\
+                    {\color{blue}
+                    We can use quadratic discriminative analysis (QDA) for classification.\\
+                    Difference:
+                    \begin{itemize}
+                        \item LDA and QDA both assume that the class conditional probability distributions are normally distributed with different means $\mu_k$,
+                              but LDA is different from QDA in that it requires all of the distributions to share the same covariance matrix $\Sigma$
+                              and QDA requires all of the distribution to have different covariance matrix $\Sigma_k$.
+                        \item The decision boundary is linear in LDA and quadratic in QDA.
+                        \item The number of estimated parameters is $p \times (K+p)$ in LDA and
+                              $K \times p \times (p+1)$ in QDA.
+                    \end{itemize}
+                    }
+          \end{itemize}
+
+
+
+    \item Given an random variable, we have $N$ i.i.d. observations by repeated experiments.
+          \begin{itemize}
+              \item[(a)] If the variable is boolean, please calculate the log-likelihood function. ~\defpoints{4}\\
+                    { \color{blue}
+                    Let $X$ be a boolean random variable which can take either value 1 or 0,
+                    and let $\theta = \pr(X = 1)$ refer to the true. Given an i.i.d dataset
+                    $\mathcal{D} = \{ x_1,x_2,...,x_N\}$, we observe $X = 1$ in a total of $\alpha_1$ times, and $X = 0$
+                    in a total of $\alpha_0$ times. We denote the likelihood function
+                    by $L(\theta) = \pr(\mathcal{D}|\theta)$:
+                    \begin{align*}
+                        L(\theta) = \pr(\mathcal{D}|\theta) = \prod_{i=1}^N \pr(X=x_i|\theta) = \theta^{\alpha_1}(1-\theta)^{\alpha_0}, \quad x_i \in \{ 0,1\}.
+                    \end{align*}
+                    By taking log on both sides, we have the log-likelihood function, i.e.,
+                    \begin{align*}
+                        \ell(\theta) = \ln L(\theta) = \alpha_1\ln \theta + \alpha_0\ln (1-\theta).
+                    \end{align*}
+                    }
+              \item[(b)] If the variable is categorical, please calculate the log-likelihood function. ~\defpoints{4}\\
+                    { \color{blue}
+                    Suppose that $X \in \{1,2,...,K\}$, and $\theta = \{\theta_1, ..., \theta_K\}$,
+                    in which the $k$-th element $\theta_k = \pr (X = k)$. 
+                    The likelihood function 
+                    $L(\theta) = \pr(\mathcal{D}|\theta)$ is then derived in the similar way with (a),
+                    \begin{align*}
+                        L(\theta) = \pr(\mathcal{D}|\theta) = \prod_{i=1}^N \pr(X=x_i|\theta) = \prod_{k=1}^{K}\theta_k^{\alpha_k}, \quad x_i \in \{ 1,...,K\}.
+                    \end{align*}
+                    where $\alpha_k$ counts the number of $x_i = k$ in $\mathcal{D}$, $\forall i, k$. 
+                    Thus, the log-likelihood function is calculated by
+                    \begin{align*}
+                        \ell(\theta) = \ln L(\theta)  = \sum_{k=1}^K\alpha_k\ln\theta_k.
+                    \end{align*}
+                    }
+              \item[(c)] If the variable is continuous and follows Gaussian distribution, please calculate the log-likelihood function. ~\defpoints{5}\\
+                    { \color{blue}
+                    Let $X$ be a Gaussian random variable parameterized by mean $\mu$ and variance $\sigma$.
+                    Its PDF is given by
+                    \begin{align*}
+                        \mathcal{N}\left(X | \mu, \sigma^{2}\right) \triangleq \frac{1}{\sqrt{2 \pi \sigma^{2}}} e^{-\frac{1}{2 \sigma^{2}}(x-\mu)^{2}}.
+                    \end{align*}
+                    Under the i.i.d. assumption, the likelihood function $L(\mu, \sigma)$ is expressed as follows,
+                    \begin{align*}
+                        L(\mu, \sigma) = \pr(\mathcal{D}|\mu, \sigma) = \prod_{i=1}^N\frac{1}{\sqrt{2 \pi \sigma^{2}}} e^{-\frac{1}{2 \sigma^{2}}(x_i-\mu)^{2}},
+                    \end{align*}
+                    and the log-likelihood function becomes
+                    \begin{align*}
+                        \ell(\mu, \sigma) = \ln L(\mu, \sigma) = \frac{N}{2}\ln \frac{1}{2\pi\sigma^2} - \sum_{i=1}^N\frac{(x_i-\mu)^2}{2\sigma^2}.
+                    \end{align*}
+                    }
+              \item[(d)] Please discuss the difference between Maximum Likelihood Estimation (MLE) and Maximum a Posterior (MAP) estimation
+                    based on ONE of your results in (a), (b) and (c). ~\defpoints{7}\\
+                    {\color{blue}
+                    MLE seeks an estimation of $\theta$ that maximizes the conditional probability $\pr (\mathcal{D}|\theta)$;
+                    in contrast, MAP aims to estimate $\theta$ by maximizing its posterior $\pr (\theta |\mathcal{D})$, 
+                    leading to $\pr (\theta |\mathcal{D}) \propto \pr (\mathcal{D}|\theta) \pr (\theta)$. \\
+                    We can also see the difference by analyzing the results of (a), in which MLE produces
+                    \begin{align*}
+                        \hat{\theta}^{MLE} = \frac{\alpha_1}{\alpha_1+\alpha_0},
+                    \end{align*}
+                    while MAP gives rise to
+                    \begin{align*}
+                        \hat{\theta}^{MAP} = \frac{\alpha_1 + \beta_1 - 1}{(\alpha_1 + \beta_1 - 1) + (\alpha_0 + \beta_0 - 1)},
+                    \end{align*}
+                    with the Beta prior $Beta(\beta_1, \beta_0)$.
+                    }
+          \end{itemize}
+
+
+
+    \item  Given the input variables $X \in \mathbb{R}^p$ and a response variable $Y \in \{ 0,1 \}$, the Expected Prediction Error (EPE) is defined by
+          \begin{equation*}
+              \text{EPE} = \mathbb{E}[L(Y,\hat{Y}(X))],
+          \end{equation*}
+          where $\mathbb{E}(\cdot)$ denotes the expectation over the joint distribution $\text{Pr}(X,Y)$, and $L(Y,\hat{Y}(X))$ is a loss
+          function measuring the difference between the estimated $\hat{Y}(X)$ and observed $Y$.
+          \begin{itemize}
+              \item[(a)] Given the zero-one loss
+                    \begin{align*}
+                        L(k,\ell)=\left\{\begin{array}{ll}
+                            1 & \text { if } k \neq \ell \\
+                            0 & \text { if } k = \ell,
+                        \end{array}\right.
+                    \end{align*}
+                    please derive the Bayes classifier $\hat{Y}(x) = \text{argmax}_{k \in \{ 0,1\}} \text{Pr}(Y=k|X=x)$ by minimizing $\text{EPE}$.~\defpoints{2} \\
+                    { \color{blue}
+                    Without loss of generality, we consider $Y \in \{1,2,...,M \}$, and rewrite EPE as follows
+                    \begin{align*}
+                        \text{EPE} & = \mathbb{E}[L(Y, \hat{Y}(X)]                                                                \\
+                                   & =\int_{x} \left[ \sum_{m=1}^M L\left(Y=m,\hat{Y}(x)\right) \text{Pr}(Y=m | X=x) \right] dx \\
+                                   & =\int_{x} \left[ 1 - \text{Pr}\left(Y = \hat{Y}(x) | X=x\right) \right] dx.
+                    \end{align*}
+                    Therefore,
+                    \begin{equation*}
+                        \hat{Y}(x) = \text{argmin}\ \text{EPE} = \text{argmax}_{m \in \{ 1,...,M\}} \text{Pr}(Y=m|X=x).
+                    \end{equation*}
+                    }
+              \item[(b)] Please define a function which enables to map the range of an arbitrary linear function to the range of a probability. ~\defpoints{2} \\
+                    {\color{blue}
+                    Given an arbitrary liner function,
+                    \begin{equation*}
+                        f(X) = \beta_0 + X^\top \beta \in (-\infty,+\infty),
+                    \end{equation*}
+                    the required function can be defined by
+                    \begin{equation*}
+                        \text{Pr}(Y|X) = \frac{\exp(f(X))}{1 + \exp(f(X))} \in (0,1).
+                    \end{equation*}
+                    }
+              \item[(c)] Based on the function you defined in (b), please approximate the Bayes classifier in (a)
+                    by a linear function between $X$ and $Y$, and derive its decision boundary. ~\defpoints{4}\\
+                    {\color{blue}
+                    Based on (a), we have
+                    \begin{align*}
+                        \text{Pr}(Y=0|X) & = \frac{\exp(f(X))}{1 + \exp(f(X))},              \\
+                        \text{Pr}(Y=1|X) & = 1- \text{Pr}(Y=0|X) = \frac{1}{1 + \exp(f(X))}.
+                    \end{align*}
+                    Thus, using the Bayes classifier in (a), we assign the label $Y = 0$
+                    if the following conditions hold:
+                    \begin{align*}
+                        1          & < \frac{P(Y=0 | \boldsymbol{X})}{P(Y=1 | \boldsymbol{X})} \\
+                        \implies 0 & < \ln \exp(f(\boldsymbol{{x}}))                           \\
+                        \implies 0 & < f(\boldsymbol{{x}}),
+                    \end{align*}
+                    and assign $Y = 1$ otherwise.
+                    Hence, we obtain the linear decision boundary $\{ X | \beta_0 + X^\top \beta = 0 \}$.
+                    }
+              \item[(d)] If each element of $X$ is boolean, please show how many independent parameters are needed in order to estimate $\text{Pr}(Y|X)$ directly;
+                    and is there any way to reduce its number? If yes, please describe your way mathematically. ~\defpoints{4}  \\
+                    {\color{blue}
+                    Given $X \in \{0,1\}^p$ and $Y \in \{ 0,1\}$, we need $2^p$ parameters to estimate $\text{Pr}(Y=1|X)$,
+                    and another $2^p$ parameters to estimate $\text{Pr}(Y=0|X)$.
+                    However, because of $\text{Pr}(Y=0|X) = 1 - \text{Pr}(Y=1|X)$,
+                    there are $2^p$ independent parameters in total. \\
+                    To reduce the number of parameters, conditional independent assumption is
+                    applied, such that
+                    \begin{align*}
+                        \text{Pr}(Y|X) \propto & \ \text{Pr}(X_1, \ldots, X_p | Y) \text{Pr}(Y) \\
+                        =                      & \prod_{j=1}^{p}\text{Pr}(X_j|Y) \text{Pr}(Y),
+                    \end{align*}
+                    according to which we only need to estimate $2p$ independent parameters.
+                    }
+              \item[(e)] Based on your results in (d) and the Bayes theorem, please develop a classifier with a linear number of parameters w.r.t. $p$,
+                    and estimate these parameters by MLE. ~\defpoints{5} \\
+                    {\color{blue}
+                    Naive Bayes: \\
+                    Based on the results in (d) and the Bayes theorem,
+                    we immediately obtain the naive Bayes classifier:
+                    \begin{equation*}
+                        \hat{y} = \text{argmax}_{m \in \{0,1\}} \text{Pr}(Y=m)\prod_{j=1}^p \text{Pr}\left(X_j=k| Y=m\right), \quad k\in \{ 0,1\}
+                    \end{equation*}
+                    MLE: \\
+                    According to our discussion in Q2 (a) and (d),
+                    $\text{Pr}(X_j = k | Y = m)$ ($k, m\in \{0,1\}$) is estimated
+                    on a training data $\mathcal{D} = \{ (x_i,y_i) \}_{i=1}^N$ by
+                    \begin{align*}
+                        \widehat{\text{Pr}}\left(X_{j}=k | Y=m\right) & = \frac{\sum_{i=1}^N \mathbf{1}_{x_{ij}=k} \mathbf{1}_{y_i=m}}{\sum_{i=1}^N \mathbf{1}_{y_i=m}}, \\
+                        \widehat{\text{Pr}}\left(Y=m\right)           & = \frac{\sum_{i=1}^N\mathbf{1}_{y_i=m}}{N},
+                    \end{align*}
+                    where $\mathbf{1}_{(\cdot)}$ denotes the indicator function.
+                    }
+              \item[(f)] Please find at least three different points between your developed models in (c) and (e). ~\defpoints{3}   \\
+                    { \color{blue}
+                    Difference:
+                    \begin{itemize}
+                        \item Naive Bayes in (e) assumes that the random variables are conditional independent
+                              given $Y$, whereas logistic regression in (c) does not hold such assumption.
+                        \item Naive Bayes in (e) estimates the parameters of $\text{Pr}(X|Y)$ and $\text{Pr}(Y)$,
+                              whereas logistic regression in (c) choose to directly approximate $\text{Pr}(Y|X)$ by a linear function.
+                        \item Naive Bayes is a generative model since it models $\text{Pr}(X,Y)$,
+                              while logistic regression is a discriminative model as it approximates $\text{Pr}(Y|X)$.
+                        \item Two models will converge toward their asymptotic accuracies at different rates.
+                    \end{itemize}
+                    }
+          \end{itemize}
+
+
+
+    \item  Consider 12 labeled data points sampled from three distinct classes:
+          \begin{scriptsize}
+              \begin{equation*}
+                  \text{Class 0}:
+                  \begin{bmatrix}
+                      0 \\
+                      2
+                  \end{bmatrix},\begin{bmatrix}
+                      -2 \\
+                      0
+                  \end{bmatrix},
+                  \begin{bmatrix}
+                      5 \\
+                      3
+                  \end{bmatrix},
+                  \begin{bmatrix}
+                      -3 \\
+                      -5
+                  \end{bmatrix}
+                  \hspace{0.5cm}\text{Class 1}:
+                  \begin{bmatrix}
+                      \sqrt{2} \\
+                      \sqrt{2}
+                  \end{bmatrix},\begin{bmatrix}
+                      -\sqrt{2} \\
+                      \sqrt{2}
+                  \end{bmatrix},
+                  \begin{bmatrix}
+                      4\sqrt{2} \\
+                      -\sqrt{2}
+                  \end{bmatrix},
+                  \begin{bmatrix}
+                      -4\sqrt{2} \\
+                      -\sqrt{2}
+                  \end{bmatrix}, \hspace{0.5cm}\text{Class 2}:
+                  \begin{bmatrix}
+                      3 \\
+                      5
+                  \end{bmatrix},\begin{bmatrix}
+                      -1 \\
+                      3
+                  \end{bmatrix},
+                  \begin{bmatrix}
+                      8 \\
+                      6
+                  \end{bmatrix},
+                  \begin{bmatrix}
+                      0 \\
+                      -2
+                  \end{bmatrix}
+              \end{equation*}
+          \end{scriptsize}
+          \begin{itemize}
+              \item[(a)] For each class $C \in [0, 1, 2]$, compute the class sample mean $\mu_C$, the class sample covariance matrix $\Sigma_C$, and the estimate
+                    of the prior probability $\pi_C$ that a point belongs to class $C$. ~\defpoints{6} \\
+                    {\color{blue}Solution:
+                    \begin{align*}
+                        \text{Class 0}: & \ \mu_0 =
+                        \begin{bmatrix}
+                            0 \\
+                            0
+                        \end{bmatrix},\Sigma_0 =\begin{bmatrix}
+                            \frac{38}{3} & 10           \\
+                            10           & \frac{38}{3}
+                        \end{bmatrix}, \pi_0 =\frac{1}{3},   \\
+                        \text{Class 1}: &  \ \mu_1 =
+                        \begin{bmatrix}
+                            0 \\
+                            0
+                        \end{bmatrix},\Sigma_1 = \begin{bmatrix}
+                            \frac{68}{3} & 0            \\
+                            0            & \dfrac{8}{3}
+                        \end{bmatrix}, \pi_1 = \frac{1}{3}, \\
+                        \text{Class 2}: & \ \mu_2 =
+                        \begin{bmatrix}
+                            2.5 \\
+                            3
+                        \end{bmatrix}, \Sigma_2 = \begin{bmatrix}
+                            \frac{49}{3} & 10           \\
+                            10           & \frac{38}{3}
+                        \end{bmatrix},\pi_1 = \frac{1}{3}.
+                    \end{align*} }
+              \item[(b)] Suppose that we apply LDA to classify the data given in part (a). Will this get the good decision boundary? Briefly explain your answer.~\defpoints{4} \\
+                    {\color{blue}The discriminant functions for classes 0 and 1 would
+                    have the exact same mean, so there would be no decision boundary between them.}
+          \end{itemize}
+
+
+
+
+
+    \item  We have two classes, named $N$ for normal and $E$ for exponential. For the former class $(Y=N)$, the prior probability is $\pi_N = P(Y=N) = \frac{\sqrt{2\pi}}{1+\sqrt{2\pi}}$ and the class conditional $P(X|Y=N)$ has the normal distribution $N(0,\sigma^2)$. For the latter, the prior probability is $\pi_E = P(Y=E) = \frac{1}{1+\sqrt{2\pi}}$ and the class conditional has the exponential distribution.
+          $$ P(X=x|Y=E)=\left\{
+              \begin{aligned}
+                   & \lambda e^{-\lambda x} &  & \text{if } x\geq 0 \\
+                   & 0                      &  & \text{if } x< 0
+              \end{aligned}
+              \right.
+          $$
+          Write an equation in $x$ for the decision boundary. (Only the positive solutions of your equation will be relevant;
+          ignore all $x < 0$.) Simplify the equation until it is quadratic in $x$. (You don’t need to solve
+          the quadratic equation. It should contain the constants $\sigma$ and $\lambda$. Ignore the fact that 0 might or might not also be
+          a point in the decision boundary.) ~\defpoints{10} \\
+          {\color{blue} Solution:
+          \begin{align*}
+              P(Y=N|X=x)                                                                                  & = P(Y=E|X=x)                                     \\
+              P(X=x|Y=N)P(Y=N)                                                                            & = P(X=x|Y=E)P(Y=E)                               \\
+              \dfrac{1}{\sqrt{2\pi}\sigma}\exp(-\dfrac{x^2}{2\sigma^2})\dfrac{\sqrt{2\pi}}{1+\sqrt{2\pi}} & = \lambda e^{-\lambda x}\dfrac{1}{1+\sqrt{2\pi}} \\
+              -\ln \sigma -\dfrac{x^2}{2\sigma^2}                                                         & = \ln\lambda-\lambda x                           \\
+              \dfrac{x^2}{2\sigma^2}-\lambda x+\ln \sigma+\ln \lambda                                     & =0.
+          \end{align*}
+          }
+
+
+    \item  Given data $\{(x_i, y_i) \in R^d \times \{0, 1\}\}_{i=1}^n$ and a query point $x$, we choose a parameter vector $\theta$ to minimize the loss (which is simply the
+          negative log likelihood, weighted appropriately):
+          \begin{align*}
+              l(\theta;x) = -\sum_{i=1}^{n}w_i(x)[y_i\log(\mu(x_i))+(1-y_i)\log(1-\mu(x_i))]
+          \end{align*}
+          where
+          \begin{align*}
+              \mu(x_i) = \frac{1}{1+e^{-\theta\cdot x_i}}, w_i(x) = \exp(-\frac{||x-x_i||^2}{2\tau})
+          \end{align*}
+          where $\tau$ s a hyperparameter that must be tuned. Note that whenever we receive a new query point $x$, we must solve
+          the entire problem again with these new weights $w_i(x)$.
+
+          \begin{itemize}
+              \item[(a)] Given a data point $x$,  derive the gradient of $l(\theta; x)$ with respect to $\theta$.~\defpoints{4}
+                    {\color{blue}
+                        \begin{align*}
+                            \nabla_\theta l(\theta;x) & =-\sum_{i=1}^{n}w_i(x)(y_i-\mu(x_i))x_i \\
+                                                      & =-\textbf{X}^Tz,
+                        \end{align*}
+                        where $z_i = w_i(x)(y_i-\mu(x_i)$.
+                    }
+              \item[(b)] Given a data point $x$,  derive the Hessian of $l(\theta; x)$ with respect to $\theta$.~\defpoints{4}
+                    {\color{blue}
+                        \begin{align*}
+                            H_\theta l(\theta;x) & =-\sum_{i=1}^{n}w_i(x)\mu(x_i)(1-\mu(x_i))x_ix_i^T \\
+                                                 & =\textbf{X}^TD\textbf{X},
+                        \end{align*}
+                        where $D_{ii} = w_i(x)\mu(x_i)(1-\mu(x_i))$, $D_{ij} = 0$ if $i\neq j$.
+                    }
+              \item[(c)]  Given a data point $x$, write the update formula for Newton’s method.~\defpoints{2}
+                    {\color{blue}
+                        \begin{align*}
+                            \theta^{(t+1)} & = \theta^{(t)}+[\textbf{X}^TD\textbf{X}]^{-1}\textbf{X}^Tz. \\
+                        \end{align*}}
+          \end{itemize}
+
+
+
+    \item Now we discuss Bayesian inference in coin flipping.
+          Let's denote the number of heads and the total number of trials by $N_1$ and $N$, respectively.
+          %Please derive the Maximum a Posterior (MAP) estimate as a function of $N_1$ and $N$ in two cases:
+          \begin{enumerate}
+              \item Please derive the MAP estimation based on the prior $p(\theta) = \text{Beta}(\theta|\alpha, \beta)$.~\defpoints{4} \\
+                    { \color{blue}
+                    The Beta distribution is defined by
+                    \begin{align*}
+                        P(\theta)=\operatorname{Beta}\left(\alpha, \beta\right)=\frac{\theta^{\beta-1}(1-\theta)^{\alpha-1}}{B\left(\alpha, \beta\right)}.
+                    \end{align*}
+                    Combining with the expression for $P(D|\theta)$, we have:
+                    \begin{align*}
+                        \begin{aligned}
+                            \hat{\theta}^{M A P} & =\arg \max _{\theta} P(D | \theta) P(\theta)                                                                                \\
+                                                 & =\arg \max _{\theta} \theta^{N_1}(1-\theta)^{N_0} \frac{\theta^{\beta-1}(1-\theta)^{\alpha-1}}{B\left(\alpha, \beta\right)} \\
+                                                 & =\arg \max _{\theta} \frac{\theta^{N_1+\beta-1}(1-\theta)^{N_0+\alpha-1}}{B\left(\alpha, \beta\right)}                      \\
+                                                 & =\arg \max _{\theta} \theta^{N_1+\beta-1}(1-\theta)^{N_0+\alpha-1}.
+                        \end{aligned}
+                    \end{align*}
+                    We calculate the derivative of the log of the likelihood function:
+                    \begin{align*}
+                        \begin{aligned}
+                            \frac{\partial \ell(\theta)}{\partial \theta} & =\frac{\partial \ln P(D | \theta)P(\theta)}{\partial \theta}                                                                                                                     \\
+                                                                          & =\frac{\partial \ln \left[\theta^{N_1+\beta-1}(1-\theta)^{N_0+\alpha-1}\right]}{\partial \theta}                                                                                 \\
+                                                                          & =\frac{\partial\left[N_1 \ln \theta+N_0 \ln (1-\theta)\right]}{\partial \theta}                                                                                                  \\
+                                                                          & =(N_1+\beta_1 -1) \frac{\partial \ln \theta}{\partial \theta}+(N_0+\alpha-1) \frac{\partial \ln (1-\theta)}{\partial \theta}                                                     \\
+                                                                          & =(N_1+\beta_1 -1) \frac{\partial \ln \theta}{\partial \theta}+(N_0+\alpha-1) \frac{\partial \ln (1-\theta)}{\partial(1-\theta)} \cdot \frac{\partial(1-\theta)}{\partial \theta} \\
+                            \frac{\partial \ell(\theta)}{\partial \theta} & =(N_1+\beta_1-1)  \frac{1}{\theta}-(N_0+\alpha-1)  \frac{1}{(1-\theta)}.
+                        \end{aligned}
+                    \end{align*}
+                    Therefore,
+                    \begin{align*}
+                        \hat{\theta}^{M A P}=\arg \max _{\theta} P(D | \theta) P(\theta)=\frac{N_1+\beta-1}{N+\beta+\alpha-2}.
+                    \end{align*}
+                    }
+              \item Please derive the MAP estimation based on the following prior:
+                    \begin{align*}
+                        p(\theta)=\left\{\begin{array}{ll}
+                            0.5 & \text { if } \theta=0.5 \\
+                            0.5 & \text { if } \theta=0.4 \\
+                            0   & \text { otherwise,}
+                        \end{array}\right.
+                    \end{align*}
+                    that believes the coin is fair, or is slightly biased towards tails. ~\defpoints{4} \\
+                    {\color{blue}
+                    With the prior, the posterior becomes
+                    \begin{align*}
+                        P(D|\theta)P(\theta) = \left\{\begin{array}{ll}
+                        	0.5\cdot 0.5^{N_1}(1-0.5)^{N_0}  &\theta = 0.5 \\
+                        	0.5\cdot 0.4^{N_1}(1-0.4)^{N_0}  &\theta = 0.4 \\
+                        	0  &\text{otherwise}
+                        \end{array}\right.  = \left\{\begin{array}{ll}
+                        	0.5^{N+1} &\theta = 0.5 \\
+                        	0.5\cdot 0.4^{N_1} 0.6^{N-N_1} &\theta = 0.4 \\
+                        	0  &\text{otherwise}
+                        	\end{array}\right.
+                    \end{align*}
+                    Since the value of $\theta$ only can be taken 0.5 or 0.4, we just need to compare two posteriors as follows:
+                    \begin{align*}
+                    	\hat{\theta}^{MAP} = \arg \max _{\theta} P(D | \theta) P(\theta) = \left\{\begin{array}
+                    		{ll}
+                    		0.5 & \text{if}~0.5^{N+1} > 0.5\cdot 0.4^{N_1} 0.6^{N-N_1}, \\
+                    		0.4 & \text{if}~0.5^{N+1} < 0.5\cdot 0.4^{N_1} 0.6^{N-N_1}.
+                    	\end{array}\right.
+                    \end{align*}
+                    Here, we don't consider the case of $0.5^{N+1} = 0.5\cdot 0.4^{N_1} 0.6^{N-N_1}$. After some simple computations, we have the solution:
+                    \begin{align*}
+                    	\hat{\theta}^{MAP} = \left\{\begin{array}
+                    		{ll}
+                    		0.5 & \text{if}~N < \frac{\ln 3-\ln 2}{\ln 6-\ln 5} N_1, \\
+                    		0.4 & \text{if}~N > \frac{\ln 3-\ln 2}{\ln 6-\ln 5 } N_1.
+                    	\end{array}\right.
+                    \end{align*}
+                    }
+              \item Suppose the true parameter is $\theta = 0.41$.
+                    Which prior leads to a better estimate when $N$ is small?
+                    Which prior leads to a better estimate when N is large? ~\defpoints{2} \\
+                    {\color{blue}
+                    When $N$ is small, the prior in (b) leads a better estimate since the prior is a summary of our subjective beliefs about the data. When $N$ is large, the estimate in (a) is better according to the law of large number.
+                    }
+          \end{enumerate}
+\end{enumerate}
+
+\end{document}
+

@@ -1,0 +1,259 @@
+%!TEX program = xelatex
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{titlesec}
+\usepackage{xcolor}
+%\usepackage[shortlabels]{enumitem}
+\usepackage{enumerate}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{listings}
+\usetikzlibrary{arrows}
+\usepackage{subfigure}
+\usepackage{graphicx,booktabs,multirow}
+\usepackage[a4paper]{geometry}
+\usepackage{upquote}
+\usepackage{float}
+\usepackage{pdfpages}
+
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\lstset{language=Matlab}
+\lstset{breaklines}
+
+\input defs.tex
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\titleformat*{\section}{\centering\LARGE\scshape}
+\renewcommand{\thesection}{\Roman{section}}
+\lstset{language=Matlab,tabsize=4,frame=shadowbox,basicstyle=\footnotesize,
+keywordstyle=\color{blue!90}\bfseries,breaklines=true,commentstyle=\color[RGB]{50,50,50},stringstyle=\ttfamily,numbers=left,numberstyle=\tiny,
+  numberstyle={\color[RGB]{192,92,92}\tiny},backgroundcolor=\color[RGB]{245,245,244},inputpath=code}
+
+\begin{document}
+
+\date{\today}
+\title{Optimization and Machine Learning, Spring 2020 \\
+Homework 2\\
+\small (Due Wednesday, Apr. 1 at 11:59pm (CST))}
+\maketitle
+\begin{enumerate}[1.]
+
+
+        \item Suppose that we have $N$ training samples, in which each sample is composed of $p$ input variable and one categorical response with $K$ states.
+        \begin{itemize}
+            \item[(a)] Please define this multi-class classification problem, and solve it by ridge regression. ~\defpoints{4}
+            \item[(b)] Please make the prediction of a testing sample $x \in \mathbb{R}^p$ based on your model in (a). ~\defpoints{3}
+            \item[(c)] Is there any limitation on your model? If yes, please explain the problem by drawing a picture. ~\defpoints{3}
+            \item[(d)] Can you propose a model to overcome this limitation? If yes, please derive the decision boundary between an arbitrary class-pair. ~\defpoints{5}
+            \item[(e)] Can you revise your model in (d) by strength or weaken its assumptions? If yes, please tell the difference between your models in (d) and (e). ~\defpoints{5}
+     %       \item[(e)] Please use maximum likelihood estimation (MLE) to estimate one of parameters in your model in (d). ~\defpoints{5}
+        \end{itemize}
+
+
+
+        \item Given an random variable, we have $N$ i.i.d. observations by repeated experiments.
+        \begin{itemize}
+        \item[(a)] If the variable is boolean, please calculate the log-likelihood function. ~\defpoints{4}
+        \item[(b)] If the variable is categorical, please calculate the log-likelihood function. ~\defpoints{4}
+        \item[(c)] If the variable is continuous and follows Gaussian distribution, please calculate the log-likelihood function. ~\defpoints{5}
+        \item[(d)] Please discuss the difference between Maximum Likelihood Estimation (MLE) and Maximum a Posterior (MAP) estimation 
+        based on ONE of your results in (a), (b) and (c). ~\defpoints{7}
+       \end{itemize}
+       
+
+
+        \item  Given the input variables $X \in \mathbb{R}^p$ and a response variable $Y \in \{ 0,1 \}$, the Expected Prediction Error (EPE) is defined by 
+		\begin{equation*}
+		\text{EPE} = \mathbb{E}[L(Y,\hat{Y}(X))],
+		\end{equation*}
+        where $\mathbb{E}(\cdot)$ denotes the expectation over the joint distribution $\text{Pr}(X,Y)$, and $L(Y,\hat{Y}(X))$ is a loss 
+        function measuring the difference between the estimated $\hat{Y}(X)$ and observed $Y$.
+		\begin{itemize}
+            \item[(a)] Given the zero-one loss
+                        \begin{align*}
+                            L(k,\ell)=\left\{\begin{array}{ll}
+                                1 & \text { if } k \neq \ell \\
+                                0 & \text { if } k = \ell,
+                            \end{array}\right.
+                        \end{align*}
+            please derive the Bayes classifier $\hat{Y}(x) = \text{argmax}_{k \in \{ 0,1\}} \text{Pr}(Y=k|X=x)$ by minimizing $\text{EPE}$.~\defpoints{2} 
+            \item[(b)] Please define a function which enables to map the range of an arbitrary linear function to the range of a probability. ~\defpoints{2}
+            \item[(c)] Based on the function you defined in (b), please approximate the Bayes classifier in (a)
+            by a linear function between $X$ and $Y$, and derive its decision boundary. ~\defpoints{4}
+        \item[(d)] If each element of $X$ is boolean, please show how many independent parameters are needed in order to estimate $\text{Pr}(Y|X)$ directly;
+        and is there any way to reduce its number? If yes, please describe your way mathematically. ~\defpoints{4}  
+        \item[(e)] Based on your results in (d) and the Bayes theorem, please develop a classifier with a linear number of parameters w.r.t. $p$, 
+        and estimate these parameters by MLE. ~\defpoints{5}
+        \item[(f)] Please find at least three different points between your developed models in (c) and (e). ~\defpoints{3}   
+        \end{itemize}
+
+
+
+
+
+
+
+		\item  Consider 12 labeled data points sampled from three distinct classes:\\
+        \begin{scriptsize}
+        \begin{equation*}
+\text{Class 0}: 
+\begin{bmatrix}
+0\\
+2
+\end{bmatrix},\begin{bmatrix}
+-2\\
+0
+\end{bmatrix},
+\begin{bmatrix}
+5\\
+3
+\end{bmatrix},
+\begin{bmatrix}
+-3\\
+-5
+\end{bmatrix}
+ \hspace{0.5cm}\text{Class 1}: 
+\begin{bmatrix}
+\sqrt{2}\\
+\sqrt{2}
+\end{bmatrix},\begin{bmatrix}
+-\sqrt{2}\\
+\sqrt{2}
+\end{bmatrix},
+\begin{bmatrix}
+4\sqrt{2}\\
+-\sqrt{2}
+\end{bmatrix},
+\begin{bmatrix}
+-4\sqrt{2}\\
+-\sqrt{2}
+\end{bmatrix}, \hspace{0.5cm}\text{Class 2}: 
+\begin{bmatrix}
+3\\
+5
+\end{bmatrix},\begin{bmatrix}
+-1\\
+3
+\end{bmatrix},
+\begin{bmatrix}
+8\\
+6
+\end{bmatrix},
+\begin{bmatrix}
+0\\
+-2
+\end{bmatrix}
+\end{equation*} 
+\end{scriptsize}
+		\begin{itemize}
+			\item[(a)] For each class $C \in [0, 1, 2]$, compute the class sample mean $\mu_C$, the class sample covariance matrix $\Sigma_C$, and the estimate
+of the prior probability $\pi_C$ that a point belongs to class $C$. ~\defpoints{6}
+			\item[(b)] Suppose that we apply LDA to classify the data given in part (a). Will this get the good decision boundary? Briefly explain your answer.~\defpoints{4}
+		\end{itemize}
+               
+		\item  We have two classes, named $N$ for normal and $E$ for exponential. For the former class $(Y=N)$, the prior probability is $\pi_N = P(Y=N) = \frac{\sqrt{2\pi}}{1+\sqrt{2\pi}}$ and the class conditional $P(X|Y=N)$ has the normal distribution $N(0,\sigma^2)$. For the latter, the prior probability is $\pi_E = P(Y=E) = \frac{1}{1+\sqrt{2\pi}}$ and the class conditional has the exponential distribution.
+        $$ P(X=x|Y=E)=\left\{
+\begin{aligned}
+&\lambda e^{-\lambda x} & & \text{if } x\geq 0\\
+&0 & & \text{if } x< 0
+\end{aligned}
+\right.
+$$
+Write an equation in $x$ for the decision boundary. (Only the positive solutions of your equation will be relevant;
+ignore all $x < 0$.) Simplify the equation until it is quadratic in $x$. (You don’t need to solve
+the quadratic equation. It should contain the constants $\sigma$ and $\lambda$. Ignore the fact that 0 might or might not also be
+a point in the decision boundary.) ~\defpoints{10}
+
+
+
+        \item  Given data $\{(x_i, y_i) \in R^d \times \{0, 1\}\}_{i=1}^n$ and a query point $x$, we choose a parameter vector $\theta$ to minimize the loss (which is simply the
+negative log likelihood, weighted appropriately):
+        \begin{align*}
+            l(\theta;x) = -\sum_{i=1}^{n}w_i(x)[y_i\log(\mu(x_i))+(1-y_i)\log(1-\mu(x_i))]
+        \end{align*}
+        where
+        \begin{align*}
+            \mu(x_i) = \frac{1}{1+e^{-\theta\cdot x_i}}, w_i(x) = \exp(-\frac{||x-x_i||^2}{2\tau})
+        \end{align*}
+        where $\tau$ s a hyperparameter that must be tuned. Note that whenever we receive a new query point $x$, we must solve
+the entire problem again with these new weights $w_i(x)$.
+
+        \begin{itemize}
+			\item[(a)] Given a data point $x$,  derive the gradient of $l(\theta; x)$ with respect to $\theta$.~\defpoints{4}
+			
+			\item[(b)] Given a data point $x$,  derive the Hessian of $l(\theta; x)$ with respect to $\theta$.~\defpoints{4}
+
+            \item[(c)]  Given a data point $x$, write the update formula for Newton’s method.~\defpoints{2}
+        \end{itemize}
+        
+
+
+                \item Now we discuss Bayesian inference in coin flipping.  
+                Let's denote the number of heads and the total number of trials by $N_1$ and $N$, respectively. 
+                %Please derive the Maximum a Posterior (MAP) estimate as a function of $N_1$ and $N$ in two cases:
+		\begin{enumerate}
+			\item Please derive the MAP estimation based on the prior $p(\theta) = \text{Beta}(\theta|\alpha, \beta)$.~\defpoints{4}
+			\item Please derive the MAP estimation based on the following prior:
+			\begin{align*}
+				p(\theta)=\left\{\begin{array}{ll}
+0.5 & \text { if } \theta=0.5 \\
+0.5 & \text { if } \theta=0.4 \\
+0 & \text { otherwise,}
+\end{array}\right.
+            \end{align*}
+            that believes the coin is fair, or is slightly biased towards tails. ~\defpoints{4}
+        \item Suppose the true parameter is $\theta = 0.41$. 
+        Which prior leads to a better estimate when $N$ is small?
+        Which prior leads to a better estimate when N is large? ~\defpoints{2}
+		\end{enumerate}
+        
+
+
+        \iffalse
+        \item  Refer to~\cite[Ex. 4.2]{hastie2009elements}
+        Suppose we have features $x \in R^p$, a two-class response, with class
+sizes $N_1,N_2$, and the target coded as $−N/N_1,N/N_2$.
+        \begin{itemize}
+        	\item[(a)] Show that the LDA rule classifies to class 2 if
+            $$x^T \hat \Sigma^{-1} (\hat \mu_2 - \hat \mu_1) > \frac{1}{2} \hat \mu_2^T \hat \Sigma^{-1} \hat \mu_2 - \frac{1}{2} \hat \mu_1^T \hat \Sigma^{-1} \hat \mu_1 + \log \frac{N_1}{N} - \log \frac{N_2}{N}$$ ~\defpoints{5}
+        	
+        	\item[(b)] Consider minimization of the least squares criterion 
+            $$
+                \sum_{i=1}^{N}(y_i-\beta_0-\beta^Tx_i)^2
+            $$
+            Show that the solution $\hat\beta$ satisfies
+            $$
+                (N-2)\hat{\Sigma}\beta + \dfrac{N_1N_2}{N}\hat\Sigma_B\beta=N(\hat{\mu_2}-\hat{\mu_1})
+            $$
+        ,(after simplification), where $\hat\Sigma_B = (\hat{\mu_2}-\hat{\mu_1})(\hat{\mu_2}-\hat{\mu_1})^T$. ~\defpoints{5}
+        	
+        	\item[(c)] Hence show that $\hat\Sigma_B\beta$ is in the direction $(\hat\mu_2 − \hat\mu_1)$ and thus
+            $$
+                \hat\beta \propto\hat\Sigma^{-1}(\hat\mu_2-\hat\mu_1)\\
+            $$
+            Therefore the least squares regression coefficient is identical to the LDA coefficient, up to a scalar multiple.
+            ~\defpoints{3}
+            \item[(d)] Show that this result holds for any (distinct) coding of the two classes.~\defpoints{3}
+            \item[(e)]   Find the solution $\hat\beta_0$, and hence the predicted values $\hat f=\hat\beta_0+\hat\beta^Tx$.
+            Consider the following rule: classify to class 2 if $\hat y_i>0$ and class 1 otherwise. Show this is not the same as the LDA rule unless the classes have equal numbers of observations.  ~\defpoints{4} 	
+        \end{itemize}
+        \fi
+    	
+\end{enumerate}
+% \appendix
+% \lstinputlisting{hw5.m}
+% \lstinputlisting{lasso_barrier.m}
+% \lstinputlisting{lasso_GaussSeidel.m}
+% \lstinputlisting{lasso_Jacobi.m}
+% \lstinputlisting{soft.m}
+
+%\bibliographystyle{ieeetr}
+%\bibliography{ref}
+
+\end{document}
+

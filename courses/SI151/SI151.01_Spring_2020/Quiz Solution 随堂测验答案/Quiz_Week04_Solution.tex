@@ -1,0 +1,105 @@
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{subfigure}
+\usepackage{graphicx,booktabs,multirow}
+\usepackage[a4paper]{geometry}
+\usepackage{upquote}
+\usepackage{float}
+\usepackage{pdfpages}
+
+
+\begin{document}
+
+\date{\today}
+\title{Solutions to Quizzes in Lectures 7 and 8}
+\author{Lu Sun}
+\maketitle
+
+
+\section{Solution to Quiz in Lecture 7}
+\subsection{Probability Density Function}
+Suppose that we have a categorical random variable $X$
+with $K$ states, i.e., $X \in \{ 1,2,...,K\}$.
+Let $\theta_k$ denote the probability of $X=k$ ($k = 1,2,...,K$),
+the probability density function is defined by
+\begin{equation}
+	P(X|\theta) = \theta_1^{\mathbf{1}_{X=1}}\theta_2^{\mathbf{1}_{X=2}}\cdots\theta_K^{\mathbf{1}_{X=K}},
+	\label{eq_pdf}
+\end{equation}
+where $\theta = \{ \theta_1,\theta_2,...,\theta_K\}$, and $\mathbf{1}_{(\cdot)}$ is the indicator function.
+
+\subsection{Likelihood Function}
+Given a training dataset $\mathcal{D} = \{ x_1,x_2,...,x_N \}$,
+in which each sample $x_i$ is an observation of $X$, the likelihood function becomes
+\begin{align}
+	L(\theta) 
+	& = P(\mathcal{D}|\theta) \nonumber \\
+	& = P(x_1,x_2,...,x_N | \theta) \nonumber \\
+	& = \prod_{i=1}^N P(x_i|\theta) \nonumber \\
+	& = \prod_{i=1}^N \theta_1^{\mathbf{1}_{x_i=1}}\theta_2^{\mathbf{1}_{x_i=2}}\cdots\theta_K^{\mathbf{1}_{x_i=K}} \nonumber \\
+	& = \theta_1^{\sum_{i=1}^N\mathbf{1}_{x_i=1}} \theta_2^{\sum_{i=1}^N\mathbf{1}_{x_i=2}} \cdots \theta_K^{\sum_{i=1}^N\mathbf{1}_{x_i=K}} \nonumber \\
+	& = \theta_1^{\alpha_1} \theta_2^{\alpha_2} \cdots \theta_K^{\alpha_K},
+	\label{eq_likelihood}
+\end{align}
+where $\alpha_k$ denotes the 
+number of $X=k$ in the training dataset $\mathcal{D}$, thus $\alpha_k = \sum_{i=1}^N\mathbf{1}_{x_i=k}$, $\forall k$.
+
+\subsection{Prior Probability}
+If the prior of $\theta$ are from the Dirichlet($\beta_1,\beta_2,...,\beta_K$), we have
+\begin{equation}
+	P(\theta) = \frac{\theta_1^{\beta_1-1}\theta_2^{\beta_2-1}\cdots\theta_K^{\beta_K-1}}{B(\beta_1,\beta_2,...,\beta_K)}.
+	\label{eq_prior}
+\end{equation}
+In (\ref{eq_prior}), $\beta_k$ ($\forall k$) is the hyperparameter of Dirichlet distribution, and
+$B(\cdot)$ denotes the beta distribution, that is irrelevant with $\theta$.
+
+\subsection{Posterior Probability}
+By combining (\ref{eq_likelihood}) and (\ref{eq_prior}), log-posterior is formulated as follows:
+\begin{align}
+	\ln P(\theta|\mathcal{D}) 
+	& \propto \ln \left( P(\mathcal{D}|\theta) P(\theta) \right) \nonumber \\
+	& \propto \ln \left( \theta_1^{\alpha_1+\beta_1-1} \theta_2^{\alpha_2+\beta_2-1} \cdots \theta_K^{\alpha_K+\beta_K-1} \right) \nonumber \\
+	& \propto \sum_{k=1}^K (\alpha_k+\beta_k-1) \ln \theta_k.	
+	\label{eq_posterior}
+\end{align}
+Based on the fact that $\sum_{k=1}^K \theta_k = 1$, there are $K-1$ independent parameters in 
+$\{ \theta_1,\theta_2,...,\theta_K\}$. Thus we can treat 
+$\theta_K = 1 - \sum_{k=1}^{K-1} \theta_k$ as the dependent parameter.
+As the log-posterior is a concave function w.r.t. $\theta$,
+its global maximum is obtained by setting its derivative equal to 0, leading to
+\begin{align}
+	\frac{\partial 	\ln P(\theta|\mathcal{D}) }{\partial \theta_k} 
+	& = \frac{\alpha_k+\beta_k-1}{\theta_k} - \frac{\alpha_K+\beta_K-1}{1-\sum_{k=1}^{K-1}\theta_k}  \nonumber \\
+	& = \frac{\alpha_k+\beta_k-1}{\theta_k} - \frac{\alpha_K+\beta_K-1}{\theta_K} \nonumber \\
+	& = 0.
+	\label{eq_derivative}
+\end{align}
+Obviously, 
+\begin{equation}
+	\hat{\theta}_k = \frac{\alpha_k+\beta_k-1}{\alpha_K+\beta_K-1}\hat{\theta}_K.
+	\label{eq_theta_k}
+\end{equation}
+Substituting (\ref{eq_theta_k}) into $\sum_{k=1}^K \theta_k = 1$, gives rise to
+\begin{equation}
+	\hat{\theta}_K = \frac{\alpha_K+\beta_K-1}{\sum_{k=1}^K \alpha_k+\beta_k-1}.
+	\label{eq_theta_K}
+\end{equation}
+By combing (\ref{eq_theta_k}) and (\ref{eq_theta_K}), we reach our conclusion:
+\begin{equation}
+	\hat{\theta}_k = \frac{\alpha_k+\beta_k-1}{\sum_{k=1}^K \alpha_k+\beta_k-1}, \quad k = 1,2,...,K.
+\end{equation}
+
+\section{Solution to Quiz in Lecture 8}
+The solution is the MLE version of the above one,
+by replacing $X$ and $\theta$ by $Y$ and $\pi$, respectively. 
+
+\end{document}
+

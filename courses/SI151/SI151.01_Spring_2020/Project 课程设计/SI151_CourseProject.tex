@@ -1,0 +1,145 @@
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[a4paper]{geometry}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+\title{Optimization and Machine Learning, Spring 2020 \\
+	Course Project\\
+	\small (Due Wednesday, Jun. 24 at 11:59pm (CST))}
+\author{Instructor: Lu Sun}
+\maketitle
+
+
+One of main goals of SI151 is to prepare you to utilize optimization and machine learning techniques to solve real-world problems,
+and the course project provides a good opportunity for you to start in this direction.
+
+
+\section{Guidelines}
+As a part of evaluation of SI151, you are required to complete a course project based on this material.
+Your project must be closely related to what you have learnt in this course,
+and you cannot use the ideas or results developed in previous semesters or other courses.
+Also, you should not submit a project that is largely collaborated with people outside this course.
+
+In short, a typical project consists of picking an interesting dataset or application, applying
+one or more well-known optimization and machine learning algorithms as baselines, and extending
+these baselines in creative and innovative ways. The general guidelines are listed as follows.
+\begin{itemize}
+	\item Projects should be completed in groups, each of which is composed of \textbf{1-3} students (we recommend groups of 3 students).
+	      Only one group member is supposed to submit the project, tag the rest of group members,
+	      and make sure the member-specific contributions.
+	\item Each project consists of three major parts: presentation with slides, one final writeup and the source code.
+	      Both presentation and writeup will be posted online\footnote{\footnotesize We strongly encourage students to do so, but it is not mandatory.
+		      If you do not want your work to be posted online,
+		      please let us know at least one week before the submission deadline.}
+	      (on the BB platform), so that students from different groups
+	      can read each other's work.
+	      \begin{itemize}
+		      \item \textbf{Presentation with slides}: Due to time limitation, there will be no in-class presentation.
+		            Instead, each group should prepare and record an oral presentation (\textbf{$< 5$min}, $< 50$MB, MP4 file format) with slides.
+		            The presentation should focus on your high-level idea, and leave any technical details to the writeup. \textcolor{red}{(25 points)}
+		      \item \textbf{Final writeup}: You are expected to submit a final writeup summarizing your findings,
+		            ideas and contributions. Final writeup must be in the form of a \href{https://neurips.cc/Conferences/2020/PaperInformation/StyleFiles}{NeurlIPS paper}.
+		            and \textbf{no longer than 5 pages} in total: 4 pages for the body of the writeup, and an additional page for references.
+		            Only the hard copy in PDF, rather than the source latex code, should be submitted. \textcolor{red}{(50 points)}
+		      \item \textbf{Source code}: For the sake of convenience, it is highly recommended to use Python or Matlab to implement your ideas and algorithms in the project.
+		            However, any other programming languages are allowed. It is your responsibility to make sure the source code is executable and contains no severe bugs.
+		            Please submit the code in a \textbf{zip} file, which should not exceed 5MB.
+		            \textcolor{red}{(25 points)}
+	      \end{itemize}
+	\item All the projects must be submitted via Gradescope before \textbf{11:59pm (CST), June 24th, 2020}.
+	      There will be \textbf{no late days} for the final writeup. Note that this course project is $\mathbf{30\%}$ of the final grade.
+\end{itemize}
+
+
+\section{Project Types}
+Basically speaking, there are three types of projects:
+\begin{itemize}
+	\item[1.] \textbf{Application project}. This is the easiest and most common project. Select one application that
+	      interests you, and explore how best to apply existing learning algorithms to solve it. If you want to choose this project type,
+	      please make sure the application is somewhat new, and compare a sufficient number ($\geq 5$) of cutting-edge algorithms in your projects.
+	\item[2.] \textbf{Algorithmic project}. It aims to solve a problem or a family of problems by developing a new learning algorithm, or a novel variant of an
+	      existing algorithm. The proposed algorithm is expected to be comparable with state-of-the-art algorithms on some datasets or specific problem settings,
+	      and should not be the exactly same with any existing algorithms.
+	\item[3.] \textbf{Theoretical project}. This is purely theoretical, and is usually the most difficult project.
+	      Prove some interesting or non-trivial properties of a new or an existing algorithm. If you decide to challenge this type of project,
+	      please let me know before you start your project.
+\end{itemize}
+Of course, it will be also fine if you would like to complete your project by combing the three elements of applications, algorithms and theoretical analysis.
+
+
+\section{Project Topics}
+The first task for you is to pick one interesting project topic. If you are looking for topics, or would like to discuss them, please feel free to
+talk with TAs and/or me. We are happy to give you some advice and suggest some project ideas.
+
+There are many avenues that you may pursue for this project, and we encourage you to be brave and creative
+even if you don't think you'll necessarily get ``good'' results. Here are some preliminary ideas\footnote{\footnotesize Note that this list is by no means comprehensive,
+	and you can pick any topic that is related to our course and interests you}:
+\begin{itemize}
+	\item Extend classical supervised learning algorithms in the setting of semi-supervised or active or reinforcement learning.
+	\item Develop algorithms that stores both global/linear and local/non-linear information during learning.
+	\item Propose methods that overcome the limitations of existing methods in terms of classification accuracy or computational complexity
+	      or theoretical analysis.
+	\item Extend existing binary classification/regression models to handle multi-class or multi-task or multi-label or multi-view/modal/source
+	      or multi-instance problems.
+	\item Propose a variant of top methods to address real-world problems in modern applications,
+	      such as missing feature values, imbalanced labels, large-scale sample space, high-dimensional feature space, and so on.
+	\item Solve clustering or dimensionality reduction problems by revising current unsupervised
+	      methods to handle semi-supervised or supervised applications.
+	\item Improve the popular optimization algorithms to prevent them from converging to the saddle point or local minimum.
+\end{itemize}
+
+In addition to the ideas listed above, you might also refer to some recent machine learning research papers. Two top-tier conferences in machine learning
+are \href{https://icml.cc/Conferences/2019/Schedule?type=Poster}{ICML} and \href{https://papers.nips.cc/book/advances-in-neural-information-processing-systems-32-2019}{NeurlIPS}.
+
+
+\section{After SI151}
+An excellent SI151 project will be publishable or nearly-publishable piece of work.
+After completing SI151, if you would like to continue working on your project along this direction as your graduation project,
+or submit your work to a machine learning (or other appropriate non-machine learning) conference or journal,
+please feel free to talk with me. I am happy to give you some guidance and support your further work.
+
+
+
+
+\appendix
+\section{Some Suggestions for Technical Writeups}
+The final writeup is an important part of the project, as well as the course learning exercise.
+Please spend enough time on completing your writeup
+so that it is well motivated, precisely described, and clearly presented.
+Typically, a technical report/paper comprises of four sections: introduction, methodology, experiment and conclusion.
+When writing these sections, it is better for you to keep the following ideas in mind.
+\begin{itemize}
+	\item The \textbf{introduction} section should set up the problem (e.g., why is it interesting? important?) and provide some
+	      context for what work has been done in the past (e.g., what is known? what is the open problem? what are the deficiencies of
+	      existing methods?).
+	\item The \textbf{methodology} and \textbf{experiment} sections should describe clearly what you did (e.g., enough details for someone to
+	      re-implement your algorithms, if needed.), and provide some summary tables or figures that illustrate your experimental results,
+	      along with some descriptive interpretations.
+	\item The \textbf{conclusion} section should concisely summarize your answers for the following questions:
+	      \begin{itemize}
+		      \item What is your problem?
+		      \item What have you done?
+		      \item Why did it work well? (or why didn't?)
+		      \item What might you do if you want to continue working on this project?
+	      \end{itemize}
+\end{itemize}
+
+\section{Some Data Repositories}
+\begin{itemize}
+	\item \href{https://archive.ics.uci.edu/ml/index.php}{UCL ML Repository}
+	\item \href{https://kdd.ics.uci.edu/}{UCL KDD Repository}
+	\item \href{https://www.cs.toronto.edu/~kriz/cifar.html}{CIFAR Dataset}
+	\item \href{http://www.vision.caltech.edu/Image_Datasets/Caltech101/}{Caltech 101 Dataset}
+	\item \href{https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html}{NUS-Wide Dataset}
+	\item \href{https://press.liacs.nl/mirflickr/}{MirFlickr Dataset}
+	\item \href{http://jmcauley.ucsd.edu/data/amazon/}{Amazon Dataset}
+	\item \href{https://grouplens.org/datasets/movielens/}{MovieLens Dataset}
+	\item \href{http://mulan.sourceforge.net/datasets-mlc.html}{Multi-Label Repository}
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,158 @@
+%!TEX program = xelatex
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{titlesec}
+\usepackage{xcolor}
+%\usepackage[shortlabels]{enumitem}
+\usepackage{enumerate}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{listings}
+\usetikzlibrary{arrows}
+\usepackage{subfigure}
+\usepackage{graphicx,booktabs,multirow}
+\usepackage[a4paper]{geometry}
+\usepackage{upquote}
+\usepackage{float}
+\usepackage{pdfpages}
+
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\lstset{language=Matlab}
+\lstset{breaklines}
+
+\input defs.tex
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\titleformat*{\section}{\centering\LARGE\scshape}
+\renewcommand{\thesection}{\Roman{section}}
+\lstset{language=Matlab,tabsize=4,frame=shadowbox,basicstyle=\footnotesize,
+keywordstyle=\color{blue!90}\bfseries,breaklines=true,commentstyle=\color[RGB]{50,50,50},stringstyle=\ttfamily,numbers=left,numberstyle=\tiny,
+  numberstyle={\color[RGB]{192,92,92}\tiny},backgroundcolor=\color[RGB]{245,245,244},inputpath=code}
+
+\begin{document}
+
+\date{}
+\title{Optimization and Machine Learning, Spring 2020 \\
+Homework 3\\
+\small (Due Tuesday, Apr. 28 at 11:59pm (CST))}
+\maketitle
+\begin{enumerate}[1.]
+	
+		\item
+		\begin{itemize}
+			\item[(a)] Consider the linear regression from a probabilistic perspective. Suppose we are given a set of $N$ observations of the input vector $ \textbf{x} $, which we denote collectively by a data matrix $ \textbf{X} $ whose $n$-th row is $ \textbf{x}^T_n $ with $ n = 1, \cdots, N $. The corresponding target values are $ \bm{t} = (t_1, \cdots, t_N)^T $. We can express uncertainty over the value of target variable using a probability distribution. Assume that given the data  $ \textbf{x}_n $ and  coefficient vector $ \textbf{w} $, the corresponding value of $ t_n $ has a Gaussian distribution with variance $ \sigma^2 $. If the data are assumed to be drawn
+			independently, then the likelihood function is given by
+			\begin{equation}\label{eq: q1a}
+			p(\textbf{t}\mid \textbf{X}, \textbf{w}, \sigma^2) = \prod_{n = 1}^{N} p(t_n \mid \textbf{x}_n, \textbf{w}, \sigma^2).
+			\end{equation}
+			Next we similarly introduce a prior distribution over the parameter vector \textbf{w}, we shall consider a zero-mean Gaussian prior with variance $ \alpha_i $ for each $ w_i $. Assume that the parameter variables are independent. Thus the parameter prior takes the form
+			\begin{equation}\label{eq: q1a1}
+			p(\textbf{w}\mid \alpha) = \prod_{n = 1}^{M}\mathcal{N} (w_i\mid 0, \alpha_i^{-1}).
+			\end{equation}
+			Draw a directed probabilistic graphical model corresponding to the relevance vector machine described by equations~\eqref{eq: q1a} and~\eqref{eq: q1a1}.~\defpoints{5}
+			
+			\item[(b)] Consider the model defined in (a). Suppose we are given a new input data $ \hat x $ and we wish to find the corresponding probability distribution for $ \hat t $ conditioned on the observed data.
+			The graphical model that describes this problem is shown in following Fig.~\ref{fig1}. Please give the corresponding joint distribution of all	of the random variables in this model and conditioned on the deterministic parameters, i.e., $ p(\hat t, \textbf{t}, \textbf{w} \mid \hat x, \textbf{x}, \alpha, \sigma^2) $.~\defpoints{5}
+			\begin{figure}[h!] 
+				\centering
+				\includegraphics[width=2in]{fig/2.jpg}
+				\caption{The graphical model.}
+				\label{fig1}
+			\end{figure}
+		\end{itemize} 
+	
+		\item According to the following Fig.~\ref{fig2}, use the D-separation to analyze the following cases:
+		\begin{itemize}
+			\item[(a)] Given $x_4$, $ \{x_1, x_2\} $ and $ \{x_6, x_7\} $ are conditionally independent.~\defpoints{5}
+			\item[(b)] Given $\{x_6, x_7\}$, $ x_3 $ and $ x_5 $ are conditionally independent.~\defpoints{5}
+		\end{itemize}
+		\begin{figure}[h!] 
+			\centering
+			\includegraphics[width=1.2in]{fig/3.png}
+			\label{fig2}
+			\caption{The Bayesian network for questions $2$ and $3$.}
+		\end{figure}
+	
+		\item According to the Fig.~\ref{fig2}, if all the nodes are observed and boolean variables, please complete the process of learning the parameter $ \theta_{x_4|i,j} $ by using \textbf{MLE}, where $ \theta_{x_4|i,j} = p(x_4 = 1\mid x_1 = i, x_2 = j), i,j \in \{ 0, 1\}$.~\defpoints{15}
+	
+		\item Define a Bayesian network with five discrete variables, represented by $\{F,A,S,H,N\}$. $\{F,A,H,N\}$ are $0/1$ binary variables and $S\in \{0,1,2\}$, as illustrated in~Fig.~3. Among them, $\{F,A,N\}$ are observed variables and $\{S,H\}$ are latent variables. Now we implement EM algorithm for this model.
+			\begin{itemize}
+				\item[(a)] If all five variables are observed, derive MLE of this model. You should state the close-form solution for each parameter you define.~\defpoints{5}
+				
+				\item[(b)] At least how many parameters should be defined for EM algorithm?~\defpoints{2}
+				
+				\item[(c)] Derive the E-step. You should enumerate each term.~\defpoints{4}
+				
+				\item[(d)] Derive the M-step.~\defpoints{4}
+ 			\end{itemize}
+ 				\begin{figure}[h!]
+		 			\centering
+		 			\includegraphics[width=2in]{fig/bn.jpg}
+		 			\label{fig3}
+		 			\caption{The Bayesian network for question $4$.}
+ 				\end{figure}
+		
+		\item Consider a set of K binary variables $x_i$, where $i=\{1,...,K\}$, each variable $x_i\sim Bern(\mu_i)$. So $P(\mathbf{x}|\boldsymbol{\mu})=\prod_{i=1}^{K}\mu_i^{x_i}(1-\mu_i)^{1-x_i}$, where $\mathbf{x}=(x_1,...,x_K)^T\ and\ \boldsymbol{\mu}=(\mu_1,...,\mu_K)^T$. The mean and covariance of this distribution are easily seen to be $\mathbb{E}[\mathbf{x}] =\boldsymbol{\mu}$ and $\operatorname{cov}[\mathbf{x}]=\operatorname{diag}\{\mu_{i}(1-\mu_{i})\}$.
+		
+		Now define a finite mixture of N Bernoullis given by $P(\mathbf{x}|\boldsymbol{\mu},\boldsymbol{\pi})=\sum_{n=1}^{N}\pi_nP(\mathbf{x}|\boldsymbol{\mu_n})$ where $\boldsymbol{\mu}=\{\boldsymbol{\mu_1},...,\boldsymbol{\mu_N}\}$, $\boldsymbol{\pi}=\{\pi_i,...,\pi_N\}$ and $P(\mathbf{x}|\boldsymbol{\mu_n})=\prod_{i=1}^{K}\mu_{ni}^{x_i}(1-\mu_{ni})^{1-x_i}$.\\
+			\begin{itemize}
+				\item[(a)] Derive the mean of the mixture distribution.~\defpoints{5}
+				
+				\item[(b)] Show the covariance of the mixture distribution equals $\sum_{n=1}^{N}\pi_n\{\boldsymbol{\Sigma_n}+\boldsymbol{\mu_n}\boldsymbol{\mu_n}^T\}-\mathbb{E}[\mathbf{x}]\mathbb{E}[\mathbf{x}]^T$, where $\boldsymbol{\Sigma_n}=\operatorname{diag}\{\mu_{ni}(1-\mu_{ni})$.~\defpoints{5}
+			\end{itemize}
+
+	
+		\item Derive EM algorithm for the mixture of Bernoulli distributions above. There are D data points in total, where $\mathbf{X}=\{\mathbf{x_1},...,\mathbf{x_D}\}$.~\defpoints{15}
+		
+		\item  Hoeffding’s inequality is a powerful technique—perhaps the most important inequality in learning theory for bounding the probability that sums of bounded random variables are too large or too small. Below are some related inequalities you are required to provide proof:
+			\begin{itemize}
+				\item[(a)] \textbf{(Markov's inequality).} Let $Z \geq 0$ be a non-negative random variable. Then for all $t\geq 0$, show that
+					\begin{equation}
+						\mathbb{P} (Z\geq t) \leq \frac{\mathbb{E}(Z)}{t},
+					\end{equation}
+					where $\mathbb{E}$ denotes the expectation operator.~\defpoints{6} 
+					
+				\item[(b)] \textbf{(Chebyshev’s inequality).} Let $Z \geq 0$ be a random variable with $\textrm{Var}(Z) < \infty$. Show that 
+					\begin{equation}
+						\mathbb{P}(Z \geq \mathbb{E}[Z] + t \textrm{~or~} Z\leq \mathbb{E}[Z] - t) \leq \frac{\textrm{Var}(Z)}{t^{2}},~\quad\textrm{~for~} t\geq 0,
+					\end{equation}
+				where  $\textrm{Var}(Z)$ denotes the variance of $Z$.~\defpoints{6}
+			\end{itemize}
+		
+		\item  Recall that to show VC dimension is $d$ for hypotheses $\mathcal{H}$ can be done via showing that $\textrm{VC~dim}(\mathcal{H}) \leq d$ and $\textrm{VC~dim}(\mathcal{H}) \geq d$. More specifically, to prove that $\textrm{VC~dim}(\mathcal{H}) \geq d$ it suffices to give $d$ examples that can be shattered; to prove $\textrm{VC~dim}(\mathcal{H}) \leq d$ one must show that no set $d+1$ examples can be shattered.
+		
+		For each one of the following function classes, find the VC dimension. State your reasoning based on the presented hint above. (\textcolor{red}{Note that: solutions with the correct answer but without adequate explanation will not earn marks.} )
+		\begin{itemize}		
+			\item[(a)]  \textbf{Halfspaces in $\mathbb{R}^{2}$}. Examples lying in or on the halfspace are labeled $+1$, and the remaining examples are labeled $-1$.~\defpoints{3}
+			
+			\item[(b)] \textbf{Axis-parallel rectangles in $\mathbb{R}^2$}. Points lying on or inside the target rectangle are labeled $+1$, and points lying outside the target rectangle are labeled $-1$.~\defpoints{3}
+			
+			\item[(c)] \textbf{Closed sets in $\mathbb{R}^2$}. All points lying in the set or on the boundary of the set are labeled $+1$, and all points lying outside the set are labeled $-1$.~\defpoints{3}
+				
+			\item[(d)] How many training examples suffice to assure with probability $0.9$ that a consistent learner using the function classes presented in (b) will learn the target function with accuracy of at least $0.95$?~\defpoints{4} \textcolor{red}{(Hint: we use the following bounds on sample complexity: $m \geq \tfrac{1}{\epsilon}(4\log_{2}(2/\delta) + 8\textrm{VC~dim}(\mathcal{H})\log_{2}(13/\epsilon))$).}
+			
+%			\item[(c)] What exactly does it mean in part (b) when we say the learner will succeed with probability $0.9$? Answer this question by describing a simple experiment which you could run repeatedly, for which the success rate is expected to be at least $0.9$.~\defpoints{3}
+		\end{itemize}
+
+			
+
+		
+
+\end{enumerate}
+% \appendix
+% \lstinputlisting{hw5.m}
+% \lstinputlisting{lasso_barrier.m}
+% \lstinputlisting{lasso_GaussSeidel.m}
+% \lstinputlisting{lasso_Jacobi.m}
+% \lstinputlisting{soft.m}
+
+%\bibliographystyle{ieeetr}
+%\bibliography{ref}
+
+\end{document}
+

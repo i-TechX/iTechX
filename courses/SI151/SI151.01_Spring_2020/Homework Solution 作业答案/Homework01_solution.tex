@@ -1,0 +1,584 @@
+%!TEX program = xelatex
+\documentclass[10pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{titlesec}
+\usepackage{xcolor}
+%\usepackage[shortlabels]{enumitem}
+\usepackage{enumerate}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{listings}
+\usetikzlibrary{arrows}
+\usepackage{subfigure}
+\usepackage{graphicx,booktabs,multirow}
+\usepackage[a4paper]{geometry}
+\usepackage{upquote}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{algorithm} 
+\usepackage{algpseudocode}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\lstset{language=Matlab}
+\lstset{breaklines}
+
+\input defs.tex
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\titleformat*{\section}{\centering\LARGE\scshape}
+\renewcommand{\thesection}{\Roman{section}}
+\lstset{language=Matlab,tabsize=4,frame=shadowbox,basicstyle=\footnotesize,
+keywordstyle=\color{blue!90}\bfseries,breaklines=true,commentstyle=\color[RGB]{50,50,50},stringstyle=\ttfamily,numbers=left,numberstyle=\tiny,
+  numberstyle={\color[RGB]{192,92,92}\tiny},backgroundcolor=\color[RGB]{245,245,244},inputpath=code}
+
+\begin{document}
+
+\date{\today}
+\title{Optimization and Machine Learning, Spring 2020 \\
+Homework 1\\
+\small (Due Wednesday, Mar. 18 at 11:59pm (CST))}
+\maketitle
+\begin{enumerate}[1.]
+
+		\item  Suppose that we have $N$ training samples, in which
+		each sample is composed of $p$ input variables and one continuous/binary response.
+		\begin{itemize}
+			\item[(a)] Please define the input and output variables, and show a linear relationship between them.~\defpoints{5}
+			
+			\textbf{Solution:} Define the input variable $X$ as a vector $x \in \mathbb{R}^p$, and the output variable $Y$ as a continuous value $y\in \mathbb{R}$ 
+			or a binary value $y \in \{0,\ 1\}$. Their linear relationship is $Y=\beta^TX$ where $\beta \in \mathbb{R}^p$ is a linear coefficient vector.\\
+			
+			
+			
+			\item[(b)] Please define a data matrix and corresponding response vector, and find your $i$-th ($i=1,...,N$) sample with its response.~\defpoints{5}
+			
+			\textbf{Solution:} Define a data matrix $\mathbf{X}=\left[\begin{array}{c}-x_{1}^{T}- \\ \vdots \\ -x_{N}^{T}-\end{array}\right]$, 
+			and corresponding response vector $\mathbf{y}=\left[\begin{array}{c}y_{1} \\ \vdots \\ y_{N}\end{array}\right]$. 
+				The $i$-th sample is the $i$-th row of $\mathbf{X}$ and its response is the $i$-th element of $\mathbf{y}$.\\
+			
+
+			\item[(c)] Please use the least squares to estimate the parameters of the linear model in (a) based on the dataset in (b), 
+			and explain in which case the solution is unique.~\defpoints{10}
+			
+			\textbf{Solution:} Using the least squares, our target is to minimize $$RSS(\beta)=(\mathbf{y}-\mathbf{X}\beta)^T(\mathbf{y}-\mathbf{X}\beta).$$ 
+			Differentiating with $\beta$ and set the derivative to 0, 
+			we have $$\mathbf{X}^T(\mathbf{y}-\mathbf{X}\beta)=0.$$
+			The unique solution $\hat{\beta}=(\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}$ 
+			is reachable if and only if $\mathbf{X}^T\mathbf{X}$ is invertible (nonsingular, full-ranked) 
+			[Note: other reasonable explanations are acceptable].\\
+			
+			
+			\item[(d)] Is there any way to get an unique closed-form solution? If yes, please show how do you obtain the solution.~\defpoints{5}
+			
+			\textbf{Solution:} Since there are cases that $\mathbf{X}^T\mathbf{X}$ is singular, 
+			we cannot get a unique closed-form solution. However we can add a regularization term 
+			into the original loss function, then it becomes 
+			$$\mathcal{L}(\beta)=(\mathbf{y}-\mathbf{X}\beta)^T(\mathbf{y}-\mathbf{X}\beta)+\lambda\beta^T\beta,$$ where $\lambda>0$. 
+			Differentiating with $\beta$, $$\frac{\partial\mathcal{L}(\beta)}{\partial \beta}=-2\mathbf{X}^T(\mathbf{y}-\mathbf{X}\beta)+2\lambda\beta,$$
+			Set the derivative into 0, the unique closed-form solution 
+			is $\hat{\beta}=(\mathbf{X}^T\mathbf{X}+\lambda\mathbf{I}_p)^{-1}\mathbf{X}^T\mathbf{y}$. 
+			It is always reachable because adding a full-ranked matrix $\lambda\mathbf{I}_p$ 
+			makes $\mathbf{X}^T\mathbf{X}+\lambda\mathbf{I}_p$ a full-ranked matrix, and any full-ranked matrix is invertible.\\
+			
+			
+			
+			
+			\item[(e)] How can you select the best model in (d) based only on your training data.~\defpoints{5}
+			
+			
+			\textbf{Solution:} For a set of $\lambda$, we can use $K$-fold cross validation method. 
+			Firstly, split the dataset into random $K$ folds, use $K-1$ folds to train the model and 
+			the rest one for validation. And then compute the average loss over the validation set 
+			using each $\lambda$ candidate, finally we pick the best $\lambda$ with the least average loss.
+			
+			
+			
+			
+		\end{itemize}
+               
+		\item  Given the input variables $X \in \mathbb{R}^p$ and response variable $Y \in \mathbb{R}$, the Expected Prediction Error (EPE) is defined by 
+		\begin{equation}
+		\text{EPE}(\hat{f}) = \mathbb{E}[L(Y,\hat{f}(X))],
+		\end{equation}
+		where $\mathbb{E}(\cdot)$ denotes the expectation over the joint distribution $\text{Pr}(X,Y)$, 
+		and $L(Y,\hat{f}(X))$ is a loss function measuring the difference between the estimated $\hat{f}(X)$ and observed $Y$.
+		\begin{itemize}
+			\item[(a)] Given the squared error loss $L(Y,\hat{f}(X))=(Y-\hat{f}(X))^2$, please derive the regression 
+			function $\hat{f}(x) = \mathbb{E}(Y|X=x)$ by minimizing $\text{EPE}(\hat{f})$ w.r.t. $\hat{f}$.~\defpoints{5} 
+			
+			\textbf{Solution:} Firstly, we rewrite $$EPE(\hat{f})=\mathbb{E}[L(Y,\hat{f}(X))]=\mathbb{E}_X[\mathbb{E}_{Y|X}[L(Y,\hat{f}(X))|X]],$$
+			 it is sufficient to minimize $h=\mathbb{E}_{Y|X}[L(Y,\hat{f}(X))|X]=\mathbb{E}_{Y|X}[(Y-f(X))^2|X]$, 
+			 that is $\hat{f}(x)=\argmin\limits_{f} \mathbb{E}_{Y|X}[(Y-f)^2|X=x]$. Then we show the detail.
+			 
+			 \begin{align*}
+			 \frac{\partial}{\partial f} \mathbb{E}_{Y|X}[(Y-f)^2|X=x]
+			 &= \frac{\partial}{\partial f} \int[y-f]^{2} \operatorname{Pr}(y | x) d y\\ 
+			 &=\int \frac{\partial}{\partial f}[y-f]^{2} \operatorname{Pr}(y | x) d y \\
+			 &\Rightarrow 2 \int y \operatorname{Pr}(y | x) d y=2 f \int \operatorname{Pr}(y | x) dy\\
+			 &\Rightarrow 2\mathbb{E}[Y|X=x] = 2f \\
+			  &\Rightarrow \hat{f}(x) = \mathbb{E}[Y|X=x].
+			 \end{align*}
+
+			
+			\item[(b)] Please explain why the nearest neighbors is an approximation to the regression function in (a).~\defpoints{5}
+			
+			\textbf{Solution:} The nearest neighbors method $\hat{f}(x)=\frac{1}{k}\sum_{x_i\in N_k(x)}y_i$ has two approximations. 
+			The first one is averaging over sample data to appoximate expectation, and 
+			the second one is conditioning on neighborhood to approximate conditioning on a point.\\
+			
+			
+			
+			
+			\item[(c)] Please explain how the least squares approximates the regression function in (a).~\defpoints{5}
+			
+			\textbf{Solution:} The least square method approximates the theoretical expectation by averaging over 
+			the observed data. Using $EPE$ in least squares, we can find the theoretical solution $\beta = \mathbb{E}(XX^T)^{-1}\mathbb{E}(XY)$, 
+			and the actual solution for least square is $\beta = \left(\mathbf{X}^{T} \mathbf{X}\right)^{-1} \mathbf{X}^{T} \mathbf{y}$ 
+			which is an approximation for theoretical value.\\
+			
+			
+			
+			
+			
+			\item[(d)] Please discuss the difference between the nearest neighbors and the least squares based on your results in (b) and (c).~\defpoints{5} 
+			
+			\textbf{Solution:} 
+			\begin{itemize}
+				\item The nearest neighbors (NN) method is a locally constant function, 
+			while the least square (LS) method is a globally linear function. 
+			NN relies more on local input, while LS considers whole input.
+			\item In terms of the number of effective parameters, LS and NN have $p$ and $N/k$ parameters, respectively,
+			where $N$ denotes the total number of training samples.
+			\item LS usually produces high-bias and low-variance results, due to its stringent assumption on the linearity;
+			in contrast, NN tends to make low-bias and high-variance predictions, as it has no assumption on the underlying model.
+			\end{itemize}
+			
+			
+			
+		\end{itemize}
+
+
+
+        \item  Given a set of observation pairs $(x_{1},y_{1})\cdots(x_{N},y_{N})$. By assuming the linear model is a reasonable approximation, we consider fitting the model via least squares approaches, in which we choose coefficients $\beta$ to minimize the residual sum of squares (RSS), 
+        \begin{equation*}\label{eq:1}
+        	\hat{\beta}_{0},~ \hat{\beta} = \argmin_{\beta_{0},~ \beta}~ \sum_{i=1}^{N}(y_{i} -\beta_{0}-\beta x_{i})^{2}.
+        \end{equation*} 
+        \begin{itemize}
+			\item[(a)] Show that 
+			\begin{equation}\label{eq:1-1}
+			\begin{aligned}
+			\hat{\beta} &= \tfrac{\sum_{i=1}^{N}(x_{i}-\bar{x})(y_{i}-\bar{y})}{\sum_{i=1}^{N}(x_{i}-\bar{x})^{2}},\\
+			\hat{\beta}_{0} &= \bar{y} -\hat{\beta}\bar{x},
+			\end{aligned}
+			\end{equation}
+			where $\bar{x} = \tfrac{1}{N}\sum_{i=1}^{N}x_{i}$ and $\bar{y} = \tfrac{1}{N}\sum_{i=1}^{N}y_{i}$ are the sample means.~\defpoints{3}
+			
+			
+			\textbf{Solution:} Firstly, we compute $\beta_0$
+			\begin{align*}
+				&\frac{\partial}{\partial\beta_0}\sum\limits_{i=1}^{N}(y_1-\beta_0-\beta x_i)^2 = \sum\limits_{i=1}^{N}-2(y_i-\beta_0-\beta x_i)=0\\
+				&\Rightarrow \sum\limits_{i=1}^{N}(y_i-\beta x_i) = \sum\limits_{i=1}^{N} \beta_0 = N\beta_0\\
+				&\Rightarrow \beta_0 = \frac{1}{N} \sum\limits_{i=1}^{N}(y_i-\beta x_i) = \frac{1}{N}\sum\limits_{i=1}^{N}y_i-\beta\frac{1}{N}\sum\limits_{i=1}^{N}x_i=\bar{y}-\beta\bar{x}\\
+				&\Rightarrow \hat{\beta_0} = \bar{y}-\hat{\beta}\bar{x}.
+			\end{align*}
+			Plug $\beta_0$ into $\sum\limits_{i=1}^{N}(y_1-\beta_0-\beta x_i)^2$ and differentiate with $\beta$,
+		
+		
+		
+			\begin{align*}
+			&\frac{\partial}{\partial\beta}\sum\limits_{i=1}^{N}(y_1-\beta_0-\beta x_i)^2 = \frac{\partial}{\partial\beta}\sum\limits_{i=1}^{N}(y_1-\bar{y}+\beta\bar{x}-\beta x_i)^2=\sum\limits_{i=1}^{N}2[y_i-\bar{y}+\beta(\bar{x}-x_i)](\bar{x}-x_i)=0 \\
+			&\Rightarrow \sum\limits_{i=1}^{N}(y_i-\bar{y})(\bar{x}-x_i)=-\beta\sum\limits_{i=1}^{N}(\bar{x}-x_i)^2\\
+			&\Rightarrow \hat{\beta} = \frac{\sum\limits_{i=1}^{N}(x_i-\bar{x})(y_i-\bar{y})}{\sum\limits_{i=1}^{N}(x_i-\bar{x})^2}.
+			\end{align*}
+			
+			In conclusion, $$\hat{\beta} = \frac{\sum\limits_{i=1}^{N}(x_i-\bar{x})(y_i-\bar{y})}{\sum\limits_{i=1}^{N}(x_i-\bar{x})^2},\ \hat{\beta_0} = \bar{y}-\hat{\beta}\bar{x}.$$
+		
+
+	
+			\item[(b)] Using~\eqref{eq:1-1}, argue that in the case of simple linear regression, the least squares line always passes through the point $(\bar{x},\bar{y})$.~\defpoints{2}
+			
+			\textbf{Solution:} We can plug $(\bar{x},\bar{y})$ into the equation $\hat{y}=\hat{\beta}x_i+\beta_0$, 
+			and we find $\bar{y}=\hat{\beta}\bar{x}+\bar{y}-\hat{\beta}\bar{x}=\bar{y}$ satisfies. So the least squares line always passes through the point $(\bar{x},\bar{y})$.
+			
+
+
+        \end{itemize}
+        
+        
+
+
+		\item  Given a set of training data $(x_{1},y_1),\cdots,(x_{N},y_N)$ from which to estimate the parameters $\beta$, 
+		where each $x_{i} = \left[x_{i1},\cdots,x_{ip} \right]^{T}$ denotes a vector of feature measurements 
+		for the $i$th sample. Consider a linear regression problem in which we want 
+		to \textquotedblleft weight\textquotedblright different training examples differently. Specifically, suppose we aim at minimizing
+        \begin{equation}\label{eq: 2-1}
+        	\textrm{RSS}(\beta) = \frac{1}{2}\sum_{i=1}^{N}w_{i}(y_{i} -x_{i}^{T}\beta)^{2}.
+        \end{equation}
+        \begin{itemize}
+        	\item[(a)] Show that $\textrm{RSS}(\beta) = (\mathbf{X}\beta - \mathbf{y})^{T}\mathbf{W}(\mathbf{X}\beta-\mathbf{y})$
+			for an appropriate diagonal matrix $\mathbf{W}$, and where $\mathbf{X} = \left[x_{1},\cdots,x_{N} \right]^{T}$ 
+			and $\mathbf{y} = \left[y_1,\cdots,y_N \right]^{T}$. State clearly what $\mathbf{W}$ is. ~\defpoints{1}
+        	
+        	
+			\textbf{Solution:} $\mathbf{W}$ is a diagonal matrix with its $i$-th diagonal element being $\frac{1}{2}w_i$. 
+			Suppose we have the predictions $\hat{\boldsymbol{y}}=\mathbf{X} \beta$, $\textrm{RSS}(\beta)$ is rewritten by
+			$$\operatorname{RSS}(\beta)=(\mathbf{X} \beta-\mathbf{y})^{T} \mathbf{W}(\mathbf{X} \beta-\mathbf{y})=(\mathbf{\hat{y}}-\mathbf{y})^T
+			\mathbf{W}(\mathbf{\hat{y}}-\mathbf{y})$$
+        	
+        	$$\left[\begin{array}{c}\hat{y}_{1}-y_{1} \\ \vdots \\ \hat{y}_{N}-y_{N}\end{array}\right]^T
+        	\left(                
+        	\begin{array}{ccccc}   
+        	\frac{1}{2}w_1 & 0 & \cdots & 0 & 0\\ 
+        	0 &  \frac{1}{2}w_2& \cdots &0 &0\\ 
+        	0 & 0& \ddots &0 &0\\
+        	0 & 0& 0 &\frac{1}{2}w_{N-1} &0\\
+        	0 & 0& 0 &0 &\frac{1}{2}w_N
+        	\end{array}
+        	\right)
+        	\left[\begin{array}{c}\hat{y}_{1}-y_{1} \\ \vdots \\ \hat{y}_{N}-y_{N}\end{array}\right]$$
+        	
+        	$$=\left[\begin{array}{c}\frac{1}{2}w_1(\hat{y}_{1}-y_{1}) \\ \vdots \\ \frac{1}{2}w_N(\hat{y}_{N}-y_{N})\end{array}\right]^T\left[\begin{array}{c}\hat{y}_{1}-y_{1} \\ \vdots \\ \hat{y}_{N}-y_{N}\end{array}\right]
+        	=\frac{1}{2} \sum_{i=1}^{N} w_{i}\left(y_{i}-x_{i}^{T} \beta \right)^{2}.
+        	$$
+        	
+        	
+        	
+			\item[(b)] By finding the derivative $\nabla_{\beta}\textrm{RSS}(\beta)$ and setting that to zero, 
+			write the normal equations to this weighted setting and 
+			give the value of $\beta$ that minimizes $\textrm{RSS}(\beta)$ 
+			in closed form as a function of $\mathbf{X}$, $\mathbf{W}$ and $\mathbf{y}$.~\defpoints{2}
+        	
+        	\textbf{Solution:} \begin{align*}
+        	\nabla_{\beta} \mathrm{RSS}(\beta)
+			&=\frac{\partial \operatorname{RSS}(\beta)}{\partial \beta} \\&=\frac{\partial}{\partial \beta}(\mathbf{X} \beta-\mathbf{y})^{T} 
+			\mathbf{W}(\mathbf{X} \beta-\mathbf{y})\\
+        		&= 2\mathbf{X}^T\mathbf{W}(\mathbf{X} \beta-\mathbf{y})\\
+        		&=0\\
+        		\Rightarrow \hat{\beta} &= (\mathbf{X}^T\mathbf{W}\mathbf{X})^{-1}\mathbf{X}^T\mathbf{W}\mathbf{y}.
+        	\end{align*}
+        	
+        	
+        	
+        	\item[(c)] Suppose the $y_{i}$'s were observed with differing variances. To be specific, suppose that
+        	\begin{equation}
+        		p(y_{i}|x_{i};\beta) = \frac{1}{\sqrt{2\pi}\sigma_{i}}\exp\left( -\frac{(y_{i}-x_{i}^{T}\beta)^{2}}{2\sigma_{i}^{2}}\right),
+        	\end{equation}
+		i.e., $y_{i}$ has mean $x_{i}^{T}\beta$ and variance $\sigma_{i}^{2}$, 
+		where the $\sigma_{i}$'s are fixed, known, constants). Show that finding the maximum likelihood 
+		estimate of $\beta$ is equivalent to solving a weight linear regression problem. State clearly what the $w_{i}$'s are in terms of the $\sigma_{i}$'s.~\defpoints{4}   
+		 
+		\textbf{Solution:}  The log likelihood function is 
+		$$\mathcal{L}(\beta)=\log \prod_{i=1}^{N} p\left(y_{i} | x_{i} ; \beta\right)=\log\{\frac{1}{\sqrt{2 \pi} \sigma_{i}} \exp 
+		\left(-\frac{\left(y_{i}-x_{i}^{T} \beta \right)^{2}}{2 \sigma_{i}^{2}}\right)\}\\
+		=\frac{-1}{\sqrt{2 \pi} \sigma_{i}} \sum_{i=1}^{N} \frac{\left(y_{i}-x_{i}^{\top} \beta\right)^{2}}{2 \sigma_{i}^{2}}.$$
+		Maximizing the likelihood is equivalent to minimizing 
+		$\sum\limits_{i=1}^{N} \frac{\left(y_{i}-x_{i}^{\top} \beta\right)^{2}}{2 \sigma_{i}^{2}}$. 
+		This is equivalent to solving a weigh linear regression problem with weight $w_i=\frac{1}{2\sigma_i^2}$.
+		
+		
+			
+		\end{itemize}
+		
+
+
+
+
+    	
+    	\item To perform variable selection, three classical approaches were introduced in class, including variable subset selection, forward stepwise selection and backward stepwise selection. 
+    	\begin{itemize}
+    		\item[(a)] To deepen your understanding of these approaches, please make a table to describe their key procedures as well as the pros and cons.~\defpoints{6}
+    		
+    		\item[(b)] Suppose we perform these three approaches on a single data set. For each approach, we obtain $p + 1$
+models, containing $0, 1, 2, \cdots, p$ predictors. \textbf{Explain} your answers:
+    		\begin{itemize}
+    			\item[$\bullet$] Which of the three models with $k$ predictors has the smallest
+training \textrm{RSS}? \defpoints{1}
+    			
+    			\item[$\bullet$] Which of the three models with $k$ predictors has the smallest test \textrm{RSS}? \defpoints{1}
+    		\end{itemize}
+    	(\textcolor{red}{Note that:} Solutions with the correct answer but without adequate explanation will not earn credit.)
+    	\end{itemize}
+    	 \sol 
+    	 \begin{itemize}
+ 			\item[(a)] We summarize the key procedures of three approaches as follows correspondingly:
+ 			\begin{algorithm}[t]
+ 				\caption{Best Subset Selection} 
+ 				\begin{algorithmic}[1]
+		 			\State Let $\mathcal{M}_{0}$ denote the null model, which contains no predictors. This
+model simply predicts the sample mean for each observation.
+		 			\For{$k=1,2\ldots,p$}
+		 			\State  Fit all $\left( \begin{array}{c}
+		 				p\\
+		 				k
+		 			\end{array}\right) $ models that contain exactly $k$ predictors.
+		 			\State Pick the best (e.g., in terms of the smallest RSS) among these $\left( \begin{array}{c}
+		 				p\\
+		 				k
+		 			\end{array}\right) $ models, and call it $\mathcal{M}_{k}$.
+		 			\EndFor
+		 			\State Select a single best model from among $\mathcal{M}_{0},\ldots,\mathcal{M}_{p}$ using cross-validated prediction error.
+	 			\end{algorithmic} 
+	 	\end{algorithm}
+ 	
+	\textbf{Pros}: 
+	\begin{itemize}
+		\item[$\bullet$] It is a simple and conceptually appealing approach.
+		
+		\item[$\bullet$] In practice, it can be instructive to observe how best-subset selection could be done for small problems.
+	\end{itemize}  
+	
+	 \textbf{Limitations}: 
+	 \begin{itemize}
+	 	\item[$\bullet$] In general,
+there are $2^{p}$ models that involve subsets of $p$ predictors. Consequently, best subset selection becomes computationally infeasible for values of $p$ greater than
+around $40$.
+	 \end{itemize}
+%====================================================================
+\begin{algorithm}[t]
+	\caption{Forward Stepwise Selection} 
+	\begin{algorithmic}[1]
+		\State Let $\mathcal{M}_{0}$ denote the null model, which contains no predictors.
+		\For{$k=1,2\ldots,p-1$}
+		\State  Consider all $p-k$ models that augment the predictors in $\mathcal{M}_{k}$ with one additional predictor.
+		\State Choose the best (e.g., in terms of the smallest RSS) among these $p-k$ models, and call it $\mathcal{M}_{k+1}$. 
+		\EndFor
+		\State Select a single best model from among $\mathcal{M}_{0},\ldots,\mathcal{M}_{p}$ using cross-validated prediction error.
+	\end{algorithmic} 
+\end{algorithm}
+
+	\textbf{Pros}: 
+\begin{itemize}
+	\item[$\bullet$] It is superior to the best subset
+selection in terms of computation efficiency.
+	
+	\item[$\bullet$] It can be applied even in the high-dimensional setting where $n<p$, and so is the only viable subset method when $p$ is very large.
+\end{itemize}  
+
+\textbf{Limitations}: 
+\begin{itemize}
+	\item[$\bullet$] It is not guaranteed to find the best possible model out of all $2^{p}$ models containing subsets of the $p$ predictors. 
+\end{itemize}    	 	
+%=====================================================================
+\begin{algorithm}[t]
+	\caption{Backward Stepwise Selection} 
+	\begin{algorithmic}[1]
+		\State Let $\mathcal{M}_{0}$ denote the full model, which contains all $p$ predictors.
+		\For{$k=p, p-1\ldots,1$}
+		\State  Consider all $k$ models that contain all but one of the predictors
+in $\mathcal{M}_{k}$, for a total of $k-1$ predictors.
+		\State Choose the best (e.g., in terms of the smallest RSS) among these $k$ models, and call it $\mathcal{M}_{k-1}$. 
+		\EndFor
+		\State Select a single best model from among $\mathcal{M}_{0},\ldots,\mathcal{M}_{p}$ using cross-validated prediction error.
+	\end{algorithmic} 
+\end{algorithm}
+
+	\textbf{Pros}: 
+\begin{itemize}
+	\item[$\bullet$] Like forward stepwise selection, the backward selection approach searches
+through only $1+p(p+1)/2$ models, and so can be applied in settings where
+$p$ is too large to apply best subset selection.
+\end{itemize}  
+
+\textbf{Limitations}: 
+\begin{itemize}
+	\item[$\bullet$] It requires that the number of samples $n$ is larger than
+the number of variables $p$.
+	
+	\item[$\bullet$] It is not guaranteed to yield the best
+model containing a subset of the $p$ predictors.
+\end{itemize}    
+
+    	 	\item[(b)] 
+    	 	\begin{itemize}
+    	 		\item[$\bullet$] Best subset will have the smallest train \textrm{RSS} because the models will optimize on the training \textrm{RSS} and best subset will try every model that forward and backward selection will try.
+    	 		
+    	 		\item[$\bullet$] The best test \textrm{RSS} model could be any of the three. Best subset could easily over-fitting if the data has large $p$ predictors relative to $n$ observations. Forward and backward selection might not converge on the same model but try the same number of models and hard to say which selection process would be better. 
+    	 	\end{itemize}
+    	 \end{itemize}
+        
+        \item Refer to~\cite[Ex. 3.5]{hastie2009elements}. Consider the ridge regression problem
+        \begin{equation}\label{eq: 4-1}
+        	\hat{\beta}^{\textrm{ridge}} = \argmin_{\beta}\left\lbrace\sum_{i=1}^{N}(y_i - \beta_{0} - \sum_{j=1}^{p}x_{ij}\beta_{j})^{2} + \lambda \sum_{j=1}^{p}\beta_{j}^{2}\right\rbrace, 
+        \end{equation}
+        where $\lambda \geq 0$ is a complexity parameter that controls the amount of shrinkage. Show that problem~\eqref{eq: 4-1} is equivalent to the problem
+        \begin{equation}\label{eq: 4-2}
+        	\hat{\beta}^{\textrm{c}} = \argmin_{\beta^{\textrm{c}}}\left\lbrace\sum_{i=1}^{N}(y_i - \beta_{0}^{\textrm{c}} - \sum_{j=1}^{p}(x_{ij}-\bar{x}_j)\beta_{j}^{\textrm{c}})^{2} + \lambda \sum_{j=1}^{p}(\beta_{j}^{\textrm{c}})^{2}\right\rbrace. 
+        \end{equation}
+        Give the correspondence between $\beta^{\textrm{c}}$ and the original $\beta$ in~\eqref{eq: 4-1}. Characterize the solution to this modified criterion. Moreover, show that a similar result holds for the least absolute shrinkage and selection operator (LASSO).~\defpoints{10}
+        
+        \sol
+        Consider that the ridge expression problem~\eqref{eq: 4-1} can be written as 
+        \begin{equation}\label{eq: ridge_rewrite}
+        	\sum_{i=1}^{N}\left( y_i - \beta_{0} - \sum_{j=1}^{p}\bar{x}_{j}\beta_{j}- \sum_{j=1}^{p}(x_{ij}-\bar{x}_{j})\beta_{j}\right) ^{2} + \lambda \sum_{j=1}^{p}\beta_{j}^{2}.
+        \end{equation}
+        By shifting that $x_{i}$'s to have zero mean we have translated all points to the origin. As such only the 'intercept' of the data or $\beta_0$ is modified the 'slope's' or $\beta_{j}^{\textrm{c}}$ for $i=1,2\ldots,p$ are not modified. Define 'centered' values of $\beta$ as
+        \begin{equation*}
+        	\begin{aligned}
+        		\beta_{0}^{\textrm{c}} &= \beta_{0} + \sum_{j=1}^{p}\bar{x}_{j}\beta_{j}\\
+        		\beta_{j}^{\textrm{c}} &= \beta_{i},\quad i= 1,2,\ldots,p,
+        	\end{aligned}
+        \end{equation*}
+        that the above can be recast as 
+        \begin{equation*}
+        	\sum_{i=1}^{N}\left( y_i - \beta_{0}^{\textrm{c}} - \sum_{j=1}^{p}(x_{ij}-\bar{x}_{j})\beta_{j}^{\textrm{c}}\right) ^{2} + \lambda \sum_{j=1}^{p}(\beta_{j}^{\textrm{c}})^{2}.
+        \end{equation*}
+        The equivalence of the minimization results from the fact that if $\beta_{i}$
+        minimizes its respective functional the $\beta_{i}^{\textrm{c}}$'s will do the same. We compute the value of $\beta_{0}^{\textrm{c}}$ in the above expression by setting the derivative with respect
+to this variable equal to zero (a consequence of the expression being at a minimum). We obtain
+        \begin{equation*}
+        	\sum_{i=1}^{N}\left( y_i - \beta_{0}^{\textrm{c}} - \sum_{j=1}^{p}(x_{ij}-\bar{x}_{j})\beta_{j}^{\textrm{c}}\right) = 0, 
+        \end{equation*}
+        which implies $\beta_{0}^{\textrm{c}} = \frac{1}{N}\left( \sum_{i=1}^{N}y_{i} - \sum_{i=1}^N\sum_{j=1}^{p}(x_{ij} - \bar{x}_{j})\beta_{j}^{\textrm{c}}\right) $. 
+        Moreover, the same argument above can be used to show that the minimization required for the LASSO can be written in the same way (i.e., replace $(\beta_{j}^{c})^{2}$ with $|\beta_{j}^{c}|$). The intercept in the centered case continues to be $\bar{\mathbf{y}}$.
+        
+        \item It is well-known that ridge regression tends to give similar coefficient values to correlated variables, whereas the LASSO may give quite different coefficient values to correlated variables. We will now explore this property in a very simple setting.
+        
+        Suppose that $n = 2$, $p = 2$, $x_{11} = x_{12}$, $x_{21} = x_{22}$. Furthermore,
+suppose that $y_1 +y_2 = 0$ and $x_{11} +x_{21} = 0$ and $x_{12} +x_{22} = 0$, so that
+the estimate for the intercept in a least squares, ridge regression, or LASSO model is zero: $\hat{\beta}_{0} = 0$.
+        
+        \begin{itemize}
+        	\item[(a)] Write out the ridge regression optimization problem in this setting.~\defpoints{2}
+        	 
+        	\item[(b)] Argue that in this setting, the ridge coefficient estimates satisfy $\hat{\beta}_{1} = \hat{\beta}_{2}$.~\defpoints{4}
+        	
+        	\item[(c)] Write out the LASSO optimization problem in this setting.~\defpoints{2}
+        	
+        	\item[(d)] Argue that in this setting, the LASSO coefficients $\hat{\beta}_{1}$ and $\hat{\beta}_{2}$ are not unique—in other words, there are many possible solutions to the optimization problem in (c). Describe these solutions.~\defpoints{2}
+        \end{itemize}
+    	\sol
+    	\begin{itemize}
+    		\item[(a)] In this setting, the ridge regression optimization problem reads
+    		\begin{equation}\label{eq: s7-1}
+    			\min_{\hat{\beta}}~f_{\textrm{ridge}}(\hat{\beta}) = (y_1 - \hat{\beta}_1x_{11} - \hat{\beta}_2x_{12})^2 + (y_2 - \hat{\beta}_1x_{21} - \hat{\beta}_2x_{22})^2 + \lambda (\hat{\beta}_1^2 + \hat{\beta}_2^2).
+    		\end{equation}
+    		
+    		\item[(b)] It takes the following steps to obtain the solution:
+    		\begin{itemize}
+    			\item[1)] Expanding the equation from~\eqref{eq: s7-1}:
+    			\begin{equation*}
+    			\begin{aligned}
+    				f_{\textrm{ridge}}(\hat{\beta}) &= (y_1^2 + \hat{\beta}_1^2 x_{11}^2 + \hat{\beta}_2^2 x_{12}^2 - 2 \hat{\beta}_1 x_{11} y_1 - 2 \hat{\beta}_2 x_{12} y_1 + 2 \hat{\beta}_1 \hat{\beta}_2 x_{11} x_{12}) \\
+    				&\quad+ (y_2^2 + \hat{\beta}_1^2 x_{21}^2 + \hat{\beta}_2^2 x_{22}^2 - 2 \hat{\beta}_1 x_{21} y_2 - 2 \hat{\beta}_2 x_{22} y_2 + 2 \hat{\beta}_1 \hat{\beta}_2 x_{21} x_{22}) 
+    				+ \lambda \hat{\beta}_1^2 + \lambda \hat{\beta}_2^2.
+    				\end{aligned}
+    			\end{equation*}
+    			\item[2)] Taking the partial derivative to $\hat{\beta}_1$ and setting equation to 0 to minimize:
+    			$$\frac{\partial f_{\textrm{ridge}}(\hat{\beta})}{\partial \hat{\beta}_1}= (2\hat{\beta}_1x_{11}^2-2x_{11}y_1+2\hat{\beta}_2x_{11}x_{12}) + (2\hat{\beta}_1x_{21}^2-2x_{21}y_2+2\hat{\beta}_2x_{21}x_{22}) + 2\lambda\hat{\beta}_1 = 0.$$
+    			
+    			\item[3)] Setting $x_{11}=x_{12}=x_{1}$ and $x_{21}=x_{22}=x_{2}$ and dividing both sides of the equation by $2$:
+    			$$(\hat{\beta}_1x_1^2-x_1y_1+\hat{\beta}_2x_1^2) + (\hat{\beta}_1x_2^2-x_2y_2+\hat{\beta}_2x_2^2) + \lambda\hat{\beta}_1 = 0,$$
+    			$$\Downarrow$$
+    			$$\hat{\beta}_1 (x_1^2+x_2^2) + \hat{\beta}_2 (x_1^2+x_2^2) + \lambda\hat{\beta}_1 = x_1y_1 + x_2y_2.$$
+    			
+    			\item[4)] Add $2\hat{\beta}_1x_1x_2$ and $2\hat{\beta}_2x_1x_2$ to both sides of the equation:
+    			\begin{equation*}
+    				\begin{aligned}
+	    				\hat{\beta}_1 (x_1^2 + x_2^2 + 2x_1x_2) + \hat{\beta}_2 (x_1^2 + x_2^2 + 2x_1x_2) + \lambda\hat{\beta}_1 &= x_1y_1 + x_2y_2 + 2\hat{\beta}_1x_1x_2 + 2\hat{\beta}_2x_1x_2 \\
+    				\end{aligned}
+    			\end{equation*}
+    			$$\Downarrow$$
+    			\begin{equation}\label{eq:7-b}
+    				\begin{aligned}
+    				\hat{\beta}_1 (x_1 + x_2)^2 + \hat{\beta}_2 (x_1 + x_2)^2 + \lambda\hat{\beta}_1 &= x_1y_1 + x_2y_2 + 2\hat{\beta}_1x_1x_2 + 2\hat{\beta}_2x_1x_2.
+    				\end{aligned}
+    			\end{equation}
+    			\item[5)] Because $x_1+x_2=0$, we can eliminate the first two terms in~\eqref{eq:7-b}:
+    			$$\lambda\hat{\beta}_1 = x_1y_1 + x_2y_2 + 2\hat{\beta}_1x_1x_2 + 2\hat{\beta}_2x_1x_2.$$
+    			
+    			\item[6)] Similarly by taking the partial deritive to $\hat{\beta}_2$, we can get the equation:
+    			$$\lambda\hat{\beta}_2 = x_1y_1 + x_2y_2 + 2\hat{\beta}_1x_1x_2 + 2\hat{\beta}_2x_1x_2.$$
+    			
+    			\item[7)] The left side of the equations for both $\lambda\hat{\beta}_1$ and $\lambda\hat{\beta}_2$ are the same so we have:
+    			$$\lambda\hat{\beta}_1 = \lambda\hat{\beta}_2,$$
+    			indicating
+    			$$\hat{\beta}_1 = \hat{\beta}_2.$$
+    		\end{itemize}
+    	
+    	\item[(c)] In this setting, the LASSO regression optimization problem reads
+    	\begin{equation*}
+    		\min_{\hat{\beta}}~ f_{\textrm{LASSO}}(\hat{\beta}) = (y_1 - \hat{\beta}_1x_{11} - \hat{\beta}_2x_{12})^2 + (y_2 - \hat{\beta}_1x_{21} - \hat{\beta}_2x_{22})^2 + \lambda (|\hat{\beta}_1| + |\hat{\beta}_2|).
+    	\end{equation*}
+    	
+    	\item[(d)] Following through the steps in $(b)$, we get:
+    	
+    	$$\lambda\frac{|\hat{\beta_1}|}{\hat{\beta_1}} = \lambda\frac{|\hat{\beta_2}|}{\hat{\beta_2}}.$$
+    	
+		So it seems that the LASSO just requires that $\hat{\beta_1}$ and $\hat{\beta_2}$ are both positive or both negative (ignoring possibility of 0...).
+		
+
+
+
+    	\end{itemize}
+		\item Refer to~\cite[Ex. 3.30]{hastie2009elements}. Consider the elastic-net optimization problem:
+		\begin{equation}
+			\min_{\beta}~\Vert\mathbf{y}-\mathbf{X}\beta\Vert^{2} + \lambda\left[ \alpha\Vert\beta\Vert_{2}^{2} + (1-\alpha)\Vert\beta\Vert_{1}\right]. 
+		\end{equation}
+		Show how one can turn this into a LASSO problem, using an augmented
+version of $\mathbf{X}$ and $\mathbf{y}$.~\defpoints{10} 
+\sol
+For this problem note that if we augment $\mathbf{X}$ with a multiple of the $p\times p$ identity to get
+\begin{equation}
+	\tilde{\mathbf{X}} = \left[ \begin{array}{c}
+	\mathbf{X}\\
+	\gamma\mathbf{I}\\
+	\end{array}\right],
+\end{equation} 
+then $\tilde{\mathbf{X}}\beta = \left[\begin{array}{c}
+\mathbf{X}\beta\\
+\gamma\beta\\
+\end{array} \right] $. If we next augment $\mathbf{y}$ with $p$ zeros as 
+\begin{equation*}
+	\tilde{\mathbf{y}} = \left[ \begin{array}{c}
+	\mathbf{y}\\
+	\mathbf{0}\\
+	\end{array}\right].
+\end{equation*}
+Then we have
+\begin{equation}\label{eq: s8-1}
+	\Vert\tilde{\mathbf{y}}-\tilde{\mathbf{X}}\beta\Vert_{2}^{2} = \left\| \left[ \begin{array}{c}
+	\mathbf{y}-\mathbf{X}\beta\\
+	\gamma\beta\\
+	\end{array}\right] \right\|_{2}^{2} = \Vert\mathbf{y}-\mathbf{X}\beta\Vert_{2}^{2} + \gamma^{2}\Vert\beta\Vert_{2}^{2}.
+\end{equation}
+Now in the this augmented space a lasso problem for $\beta$ is 
+\begin{equation*}
+	\hat{\beta} = \argmin_{\beta} \left( \Vert\tilde{\mathbf{y}}-\tilde{\mathbf{X}}\beta\Vert_{2}^{2} +\tilde{\lambda}\Vert\beta\Vert_{1}\right).
+\end{equation*}
+Writing this using~\eqref{eq: s8-1} we get in the original variables the following 
+\begin{equation*}
+\hat{\beta} = \argmin_{\beta} \left( \Vert\mathbf{y}-\mathbf{X}\beta\Vert_{2}^{2} + \gamma^{2}\Vert\beta\Vert_{2}^{2} +\tilde{\lambda}\Vert\beta\Vert_{1}\right).
+\end{equation*}
+To make this match the requested expression we take $\gamma^{2} = \lambda\alpha$ and $\tilde{\lambda} = \lambda(1-\alpha)$. Thus to solve the requested minimization problem given $\mathbf{y}$, $\mathbf{X}$, $\lambda$ and $\alpha$ perform the following steps
+\begin{itemize}
+	\item Augment $\mathbf{y}$ with $p$ additional zeros to get $\tilde{\mathbf{y}} = \left[ \begin{array}{c}
+	\mathbf{y}\\
+	\mathbf{0}\\
+	\end{array}\right]$.
+	
+	\item Augment $\mathbf{X}$ with the multiple of the $p\times p$ identity matrix $\sqrt{\lambda\alpha}\mathbf{I}$ to get $\tilde{\mathbf{X}} = \left[ \begin{array}{c}
+	\mathbf{X}\\
+	\gamma\mathbf{I}\\
+	\end{array}\right]$.
+	
+	\item Set $\tilde{\lambda} = \lambda(1-\alpha)$.
+	
+	\item Solve the LASSO minimization problem with input $\tilde{\mathbf{y}}$, $\tilde{\mathbf{X}}$ and $\tilde{\lambda}$.
+\end{itemize}
+\end{enumerate}
+% \appendix
+% \lstinputlisting{hw5.m}
+% \lstinputlisting{lasso_barrier.m}
+% \lstinputlisting{lasso_GaussSeidel.m}
+% \lstinputlisting{lasso_Jacobi.m}
+% \lstinputlisting{soft.m}
+
+\bibliographystyle{ieeetr}
+\bibliography{ref}
+
+\end{document}
+
