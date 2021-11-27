@@ -1,0 +1,262 @@
+\documentclass[10.5pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage[shortlabels]{enumitem}
+\usepackage{tikz}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{epsfig} %% for loading postscript figures
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage{graphics}
+\usepackage{titlesec}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{indentfirst}
+\usepackage{color}
+
+\renewcommand{\baselinestretch}{1.2}%Adjust Line Spacing
+%\geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}% Adjust Margins of the File
+\usepackage{tikz-qtree}
+\usetikzlibrary{graphs}
+\tikzset{every tree node/.style={minimum width=2em,draw,circle},
+	blank/.style={draw=none},
+	edge from parent/.style=
+	{draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+	level distance=1.2cm}
+\setlength{\parindent}{0pt}
+%\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{13.6pt}
+\newcommand\question[2]{\vspace{.25in}\hrule\textbf{#1: #2}\vspace{.5em}\hrule\vspace{.10in}}
+\renewcommand\part[1]{\vspace{.10in}\textbf{(#1)}}
+\newcommand\algorithm{\vspace{.10in}\textbf{Algorithm: }}
+\newcommand\correctness{\vspace{.10in}\textbf{Correctness: }}
+\newcommand\runtime{\vspace{.10in}\textbf{Running time: }}
+\pagestyle{fancyplain}
+% Create horizontal rule command with an argument of height
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+
+
+% Set the title here
+\title{
+	\normalfont \normalsize
+	\textsc{ShanghaiTech University} \\ [25pt]
+	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+	\huge CS101 Algorithms and Data Structures\\ % The assignment title
+	\LARGE Fall 2020\\
+	\LARGE Homework 8\\
+	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+% wrong usage of \author, never mind
+\author{}
+\date{Due date: 23:59, November 16, 2020}
+
+% set the header and footer
+\pagestyle{fancy}
+\lhead{CS101 Algorithms and Data Structures}
+\chead{Homework 8}
+\rhead{Due date: 23:59, November 16, 2020}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\newtheorem{Q}{Question}
+% special settings for the first page
+\fancypagestyle{firstpage}
+{
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyhf{}
+	\fancyfoot[C]{\thepage}
+}
+
+% Add the support for auto numbering
+% use \problem{title} or \problem[number]{title} to add a new problem
+% also \subproblem is supported, just use it like \subsection
+\newcounter{ProblemCounter}
+\newcounter{oldvalue}
+\newcommand{\problem}[2][-1]{
+	\setcounter{oldvalue}{\value{secnumdepth}}
+	\setcounter{secnumdepth}{0}
+	\ifnum#1>-1
+	\setcounter{ProblemCounter}{0}
+	\else
+	\stepcounter{ProblemCounter}
+	\fi
+	\section{Problem \arabic{ProblemCounter}: #2}
+	\setcounter{secnumdepth}{\value{oldvalue}}
+}
+\newcommand{\subproblem}[1]{
+	\setcounter{oldvalue}{\value{section}}
+	\setcounter{section}{\value{ProblemCounter}}
+	\subsection{#1}
+	\setcounter{section}{\value{oldvalue}}
+}
+
+% \setmonofont{Consolas}
+\definecolor{blve}{rgb}{0.3372549 , 0.61176471, 0.83921569}
+\definecolor{gr33n}{rgb}{0.29019608, 0.7372549 , 0.64705882}
+\makeatletter
+\lst@InstallKeywords k{class}{classstyle}\slshape{classstyle}{}ld
+\makeatother
+\lstset{language=C++,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blve}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{magenta}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#},
+	classstyle = \bfseries\color{gr33n}, 
+	tabsize=4
+}
+\lstset{basicstyle=\ttfamily}
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{firstpage}
+	%\newpage
+	\vspace{3ex}
+	
+	\begin{enumerate}
+		\item Please write your solutions in English. 
+		
+		\item Submit your solutions to gradescope.com.  
+		
+		\item Set your FULL NAME to your Chinese name and your STUDENT ID correctly in Account Settings. 
+		
+		\item If you want to submit a handwritten version, scan it clearly. Camscanner is recommended. 
+		
+		\item When submitting, match your solutions to the according problem numbers correctly. 
+		
+		\item No late submission will be accepted.
+		
+		\item Violations to any of the above may result in zero grade. 
+	\end{enumerate}
+	\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\question{1}{(4$\times$1') Single Choice}
+The following \textit{} questions are single choice questions, each question has \textbf{only one} correct answer. Select the correct answer.\\
+\textit{Note: You should write those answers in the box below.}
+
+\begin{table}[htbp]
+	\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+		\hline 
+		Question 1 & Question 2 & Question 3 & Question 4\\
+		\hline
+		& & & \\ 
+		\hline 
+	\end{tabular} 
+\end{table}
+
+
+
+    \begin{Q}
+Undirected Graph G = (V, E) is stored in an adjacency matrix A. We let A[i][j]=1 if and only if there is an edge between $V_i$ and $V_j$ in G, otherwise A[i][j]=0. We want to know whether there is a path \textbf{with length m} between $V_i$ and $V_j$ by visiting P[i][j]; if P[i][j]=0, then there is no such path. What should P be?
+\begin{enumerate}[(A)]
+	\item A
+	\item mA
+	\item $A^{m-1}$
+	\item $A^m$
+\end{enumerate}
+\end{Q}
+
+	\begin{Q}
+Which of following statements is \textbf{NOT} true?
+\begin{enumerate}[(A)]
+	\item In a directed simple graph, the maximal number of edges is $|V|(|V|-1)$.
+	\item If Graph G = (V, E) is a tree, then $|V|$ = $|E|$ $+$ 1.
+	\item  In BFS, let d(v) be the minimum number of edges between a vertex v and the start vertex. For any two vertices u, v in the fringe, $|d(u)-d(v)|$ is always less than 2.
+	\item If undirected Graph G = (V, E) is stored in an adjacency matrix A, then the degree of $V_i$ is $\sum_{i=1}^{|V|}$A[i][i].
+\end{enumerate} 
+\end{Q}
+
+	\begin{Q} A union tree, used in a disjoint set with only union-by-size optimization, has height 6. The number of nodes contained in that tree \textbf{can not} be \_\_\_\_\_.
+		\begin{enumerate}[(A)]
+			\item 32
+			\item 63
+			\item 64
+			\item 80
+		\end{enumerate}
+	\end{Q}
+	
+	\begin{Q}Which of the following statements is true?
+	\begin{enumerate}[(A)]
+			\item If a graph with n vertices has $n-1$ edges, it must be a tree.
+			\item A directed graph with n vertices has at least 2n edges to ensure the whole graph is strongly connected.
+			\item Both the time complexity of DFS and that of BFS are $\Theta(|V|+|E|)$ .
+			\item Every edge is visited exactly once in one iteration of DFS on a connected, undirected graph.
+		\end{enumerate}
+\end{Q}
+	
+\pagebreak
+
+% ======================================
+
+\question{2}{(2$\times$2') Disjoint set practice}
+        Given the following set of operations on a disjoint set, 
+show the final disjoint set tree for each of the following optimization strategies.\\
+$set\_union(A, D),\ set\_union(C, B),\ set\_union(F, E),\ set\_union (G, C),$\\
+$set\_union(D,G),\ find(A),\ set\_union(H, E),\ set\_union(E,G),\ find(E)$\\
+\\
+(1)(2') Only with union-by-size optimization. (When two trees have the same height, the set specified first in the union will be the root of the merged set.)\\
+\vspace{7cm}
+
+(2)(2') Only with path compression. (The set specified first in the union will always be
+the root of the merged set.)\\
+\\\\\\
+
+\pagebreak
+
+% =========================
+\question{3}{(2$\times$2') Graph Traversal}
+
+Run depth first search (DFS) and breadth first search (BFS) on the graph below, starting from node A. List the order in which each node is first visited. Whenever there is a choice of which node to visit next, follow the alphabetical order.
+
+\begin{center}\includegraphics[scale=0.5]{3.png}
+\end{center}
+
+(1)(2') DFS.\\
+\vspace{3cm}
+\\
+\\
+\\
+
+(2)(2') BFS.
+
+\pagebreak
+% =========================
+\question{4}{(4') DFS went wrong!}
+The following algorithm which runs DFS on a directed graph, but it contains an fatal error.
+\begin{lstlisting}
+    Create a stack.
+    Choose the initial vertex and mark it as visited.
+    Put the initial vertex onto the stack.
+    while the stack is not empty:
+        Pop a vertex V from the top of the stack.
+        for each neighbor of V:
+            if that neighbor is not marked as visited:
+                Mark that neighbor as visited.
+                Push that neighbor onto the stack.
+\end{lstlisting}
+
+Please give a graph as an counterexample and briefly explain why this algorithm is wrong. 
+\\
+
+
+
+\pagebreak
+
+% =========================
+\question{5}{(2$\times$2') Graph Algorithms}
+For each of the following two problems, design an algorithm to solve that problem efficiently.\\
+Give a worst case runtime bound in $\Theta$ notation in terms of V and E.
+\\
+(1) Determine whether there is a path between from node s to node t in a directed graph.\\
+
+\vspace{9cm}
+(2) Determine whether or not a cycle exists in a directed graph.
+	
+\end{document}

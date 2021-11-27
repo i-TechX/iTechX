@@ -1,0 +1,250 @@
+\documentclass[10.5pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage[shortlabels]{enumitem}
+\usepackage{tikz}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{epsfig} %% for loading postscript figures
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage{graphics}
+\usepackage{titlesec}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{indentfirst}
+\usepackage{color}
+
+\renewcommand{\baselinestretch}{1.2}%Adjust Line Spacing
+%\geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}% Adjust Margins of the File
+\usepackage{tikz-qtree}
+\usetikzlibrary{graphs}
+\tikzset{every tree node/.style={minimum width=2em,draw,circle},
+	blank/.style={draw=none},
+	edge from parent/.style=
+	{draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+	level distance=1.2cm}
+\setlength{\parindent}{0pt}
+%\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{13.6pt}
+\newcommand\question[2]{\vspace{.25in}\hrule\textbf{#1: #2}\vspace{.5em}\hrule\vspace{.10in}}
+\renewcommand\part[1]{\vspace{.10in}\textbf{(#1)}}
+\newcommand\algorithm{\vspace{.10in}\textbf{Algorithm: }}
+\newcommand\correctness{\vspace{.10in}\textbf{Correctness: }}
+\newcommand\runtime{\vspace{.10in}\textbf{Running time: }}
+\pagestyle{fancyplain}
+% Create horizontal rule command with an argument of height
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+
+
+% Set the title here
+\title{
+	\normalfont \normalsize
+	\textsc{ShanghaiTech University} \\ [25pt]
+	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+	\huge CS101 Algorithms and Data Structures\\ % The assignment title
+	\LARGE Fall 2020\\
+	\LARGE Homework 4\\
+	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+% wrong usage of \author, never mind
+\author{}
+\date{Due date: 23:59, October 12, 2020}
+
+% set the header and footer
+\pagestyle{fancy}
+\lhead{CS101 Algorithms and Data Structures}
+\chead{Homework 4}
+\rhead{Due date: 23:59, October 12, 2020}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\newtheorem{Q}{Question}
+% special settings for the first page
+\fancypagestyle{firstpage}
+{
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyhf{}
+	\fancyfoot[C]{\thepage}
+}
+
+% Add the support for auto numbering
+% use \problem{title} or \problem[number]{title} to add a new problem
+% also \subproblem is supported, just use it like \subsection
+\newcounter{ProblemCounter}
+\newcounter{oldvalue}
+\newcommand{\problem}[2][-1]{
+	\setcounter{oldvalue}{\value{secnumdepth}}
+	\setcounter{secnumdepth}{0}
+	\ifnum#1>-1
+	\setcounter{ProblemCounter}{0}
+	\else
+	\stepcounter{ProblemCounter}
+	\fi
+	\section{Problem \arabic{ProblemCounter}: #2}
+	\setcounter{secnumdepth}{\value{oldvalue}}
+}
+\newcommand{\subproblem}[1]{
+	\setcounter{oldvalue}{\value{section}}
+	\setcounter{section}{\value{ProblemCounter}}
+	\subsection{#1}
+	\setcounter{section}{\value{oldvalue}}
+}
+
+% \setmonofont{Consolas}
+\definecolor{blve}{rgb}{0.3372549 , 0.61176471, 0.83921569}
+\definecolor{gr33n}{rgb}{0.29019608, 0.7372549 , 0.64705882}
+\makeatletter
+\lst@InstallKeywords k{class}{classstyle}\slshape{classstyle}{}ld
+\makeatother
+\lstset{language=C++,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blve}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{magenta}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#},
+	classstyle = \bfseries\color{gr33n}, 
+	tabsize=4
+}
+\lstset{basicstyle=\ttfamily}
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{firstpage}
+	%\newpage
+	\vspace{3ex}
+	
+	\begin{enumerate}
+		\item Please write your solutions in English. 
+		
+		\item Submit your solutions to gradescope.com.  
+		
+		\item Set your FULL NAME to your Chinese name and your STUDENT ID correctly in Account Settings. 
+		
+		\item If you want to submit a handwritten version, scan it clearly. Camscanner is recommended. 
+		
+		\item When submitting, match your solutions to the according problem numbers correctly. 
+		
+		\item No late submission will be accepted.
+		
+		\item Violations to any of the above may result in zero grade. 
+	\end{enumerate}
+	\newpage
+
+\question{1}{(2'+2') Sorting Practice}
+Given array:
+$$1,   5,   3,   8,   7,   2,   4,   6$$
+we want to sort this array in ascending order in-place.
+
+Please \textbf{show your steps} taken by each type of sorting method on this array:
+\begin{Q} \textbf{Quicksort.}
+After each partition during the algorithm, write the ordering of the list, \textbf{circle} the pivot that was used for that partition, and \textbf{underline} the sub-array being partitioned. Assume that the pivot is always the first item in the sublist being sorted.
+\end{Q}
+
+\vspace{4cm}
+
+\begin{Q}\textbf{Merge sort}. Show the intermediate merging steps. In each merging step, circle the subarray that is to be merged.
+\end{Q}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\question{2}{(4$\times$1') Identifying Sorts}
+    Below you will find intermediate steps in performing various sorting algorithms that sort the input in ascending order on the same input list. The steps \textbf{do not necessarily represent consecutive steps in the algorithm} (that is, many steps are missing), but they are in the correct order. For each of them, \textbf{select the correct algorithm} \textbf{from the
+following choices}: insertion sort, bubble sort, quicksort (first element of sequence as pivot), and mergesort.
+\\\\
+\textbf{Input list}: 1557, 2200, 5500, 1086, 443, 556, 2800, 7777, 4396, 0, 999
+
+\begin{Q} \textcolor{white}{ }\\
+1557, 2200, 5500, 443, 1086, 556, 2800, 7777, 4396, 0, 999\\
+1557, 2200, 443, 1086, 5500, 556, 2800, 7777, 0, 999, 4396\\
+443, 1086, 1557, 2200, 5500, 0, 556, 999, 2800, 4396, 7777\\
+
+\vspace{1cm}
+\end{Q}
+
+\begin{Q}\textcolor{white}{ }\\
+1086, 443, 556, 0, 999, 1557, 2200, 5500, 2800, 7777, 4396\\
+443, 556, 0, 999, 1086, 1557, 2200, 5500, 2800, 7777, 4396\\
+0, 443, 556, 999, 1086, 1557, 2200, 2800, 7777, 4396, 5500\\
+
+\vspace{1cm}
+\end{Q}
+
+\begin{Q}\textcolor{white}{ }\\
+1086, 1557, 2200, 5500, 443, 556, 2800, 7777, 4396, 0, 999\\
+443, 1086, 1557, 2200, 5500, 556, 2800, 7777, 4396, 0, 999\\
+443, 556, 1086, 1557, 2200, 5500, 2800, 7777, 4396, 0, 999\\
+
+\vspace{1cm}
+\end{Q}
+
+\begin{Q}\textcolor{white}{ }\\
+1557, 2200, 1086, 5500, 443, 556, 2800, 7777, 4396, 0, 999\\
+1557, 2200, 1086, 443, 556, 2800, 5500, 4396, 0, 999, 7777\\
+1557, 2200, 443, 556, 1086, 2800, 5500, 4396, 0, 999, 7777\\
+
+\vspace{1cm}
+\end{Q}
+	
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\question{3}{(3$\times$1') Single Choice}
+The following \textit{} questions are single choice questions, each question has \textbf{only one} correct answer. Select the correct answer.\\
+\textit{Note: You should write those answers in the box below.}
+
+\begin{table}[htbp]
+	\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|}
+		\hline 
+		Question 7 & Question 8 & Question 9\\
+		\hline 
+		& & \\ 
+		\hline 
+	\end{tabular} 
+\end{table}
+
+    \begin{Q}
+		Consider the quicksort algorithm which sorts elements in ascending order using the first element as pivot. Then which of the following input sequence will require a maximum number of comparisons when this algorithm is applied on it?
+		\begin{enumerate}[(A)]
+			\item 22 25 56 67 89
+			\item 52 25 76 67 89
+			\item 22 52 67 25 76
+			\item 52 25 89 67 76
+		\end{enumerate}
+	\end{Q}
+	\vspace{0.5cm}
+	\begin{Q}
+		Which of the following statements is \textbf{NOT} true?
+		\begin{enumerate}[(A)]
+			\item The worst case time complexity of quicksort is $O(n^2)$.
+			\item The average case time complexity of quicksort is $O(nlogn)$.
+			\item On the same array, quicksort always performs faster than mergesort .
+			\item Comparing to quicksort, mergesort requires additional space complexity.
+		\end{enumerate}
+	\end{Q}
+	\vspace{0.5cm}
+	\begin{Q} Given extra information about the input array, we may design sorting algorithms that perform faster than $O(N log N)$. Which of the following prior knowledge will lead to worst time complexity \textbf{slower} than $O(N)$?
+		\begin{enumerate}[(A)]
+			\item Knowing the input array has no more than $N$ inversions.
+			\item Knowing the input array has exactly $(N^2-N)/2$ inversions.
+			\item Knowing the input array has less than $N$ pairs of numbers that are not inversions.
+			\item None of the above.
+		\end{enumerate}
+	\end{Q}
+	\pagebreak
+
+
+	\begin{Q}\textbf{(3')Stable sort}\\
+        We say a sort is ``stable'' if it \textbf{always} preserves the original order of equal elements in an array. For example, if we have an array: $4, 2, 3_a, 3_b, 1$, after sorting it has a chance to become $1, 2, 3_b, 3_a, 4$ ( $3_a$ and $3_b$ are equal when comparing), then this sorting algorithm is \textbf{NOT} stable.
+        
+        Among insertion sort, quicksort and mergesort, which of them are stable? (1') Briefly explain your answer. (2')
+	\end{Q}
+	
+\pagebreak
+	
+\end{document}

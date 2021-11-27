@@ -1,0 +1,258 @@
+\documentclass[10.5pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage[shortlabels]{enumitem}
+\usepackage{tikz}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{epsfig} %% for loading postscript figures
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage{graphics}
+\usepackage{titlesec}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{indentfirst}
+
+\renewcommand{\baselinestretch}{1.2}%Adjust Line Spacing
+%\geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}% Adjust Margins of the File
+\usepackage{tikz-qtree}
+\usetikzlibrary{graphs}
+\tikzset{every tree node/.style={minimum width=2em,draw,circle},
+	blank/.style={draw=none},
+	edge from parent/.style=
+	{draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+	level distance=1.2cm}
+\setlength{\parindent}{0pt}
+%\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{13.6pt}
+\newcommand\question[2]{\vspace{.25in}\hrule\textbf{#1: #2}\vspace{.5em}\hrule\vspace{.10in}}
+\renewcommand\part[1]{\vspace{.10in}\textbf{(#1)}}
+%\newcommand\algorithm{\vspace{.10in}\textbf{Algorithm: }}
+\newcommand\correctness{\vspace{.10in}\textbf{Correctness: }}
+\newcommand\runtime{\vspace{.10in}\textbf{Running time: }}
+\pagestyle{fancyplain}
+% Create horizontal rule command with an argument of height
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+
+
+% Set the title here
+\title{
+	\normalfont \normalsize
+	\textsc{ShanghaiTech University} \\ [25pt]
+	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+	\huge CS101 Algorithms and Data Structures\\ % The assignment title
+	\LARGE Fall 2020\\
+	\LARGE Homework 12\\
+	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+% wrong usage of \author, never mind
+\author{}
+\date{Due date: 23:59, December 14, 2020}
+
+% set the header and footer
+\pagestyle{fancy}
+\lhead{CS101 Algorithms and Data Structures}
+\chead{Homework 12}
+\rhead{Due date: 23:59, December 14, 2020}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\newtheorem{Q}{Question}
+% special settings for the first page
+\fancypagestyle{firstpage}
+{
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyhf{}
+	\fancyfoot[C]{\thepage}
+}
+
+% Add the support for auto numbering
+% use \problem{title} or \problem[number]{title} to add a new problem
+% also \subproblem is supported, just use it like \subsection
+\newcounter{ProblemCounter}
+\newcounter{oldvalue}
+\newcommand{\problem}[2][-1]{
+	\setcounter{oldvalue}{\value{secnumdepth}}
+	\setcounter{secnumdepth}{0}
+	\ifnum#1>-1
+	\setcounter{ProblemCounter}{0}
+	\else
+	\stepcounter{ProblemCounter}
+	\fi
+	\section{Problem \arabic{ProblemCounter}: #2}
+	\setcounter{secnumdepth}{\value{oldvalue}}
+}
+\newcommand{\subproblem}[1]{
+	\setcounter{oldvalue}{\value{section}}
+	\setcounter{section}{\value{ProblemCounter}}
+	\subsection{#1}
+	\setcounter{section}{\value{oldvalue}}
+}
+
+% \setmonofont{Consolas}
+\definecolor{blve}{rgb}{0.3372549 , 0.61176471, 0.83921569}
+\definecolor{gr33n}{rgb}{0.29019608, 0.7372549 , 0.64705882}
+\makeatletter
+\lst@InstallKeywords k{class}{classstyle}\slshape{classstyle}{}ld
+\makeatother
+\lstset{language=C++,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blve}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{magenta}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#},
+	classstyle = \bfseries\color{gr33n}, 
+	tabsize=4
+}
+\lstset{basicstyle=\ttfamily}
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{firstpage}
+	%\newpage
+	\vspace{3ex}
+	
+	\begin{enumerate}
+		\item Please write your solutions in English. 
+		
+		\item Submit your solutions to gradescope.com.  
+		
+		\item Set your FULL NAME to your Chinese name and your STUDENT ID correctly in Account Settings. 
+		
+		\item If you want to submit a handwritten version, scan it clearly. Camscanner is recommended. 
+		
+		\item When submitting, match your solutions to the according problem numbers correctly. 
+		
+		\item No late submission will be accepted.
+		
+		\item Violations to any of the above may result in zero grade.
+		
+		\item {\large\color{red}{In this homework, all the algorithm design part need the three part proof. The demand is in the next page. If you do not use the three part proof, you will not get any point.}}
+
+\item {\large\color{red}{In the algorithm design problem, you should design the correct algorithm whose running time is equal or smaller than the correct answer. If it's larger than the correct answer, you cannot get any point.}}
+	\end{enumerate}
+	\newpage
+	\section*{Demand of the Algorithm Design}
+All of your algorithm should need the three-part solution, this will help us to score your algorithm. You should include {\large\textbf{main idea,  proof of correctness and run time analysis.}} The detail is as below:
+\begin{enumerate}
+
+\item The {\textbf{main idea}} of your algorithm. You should correctly convey the idea of the algorithm in this part. It does not need to give all the details of your solutions or why it is correct. For example, in the dynamic programming questions, you should need to tell us the subproblems, the base case and the recursive formula in this part. If you do a good job here, the readers are more likely to be forgiving of small errors elsewhere. 
+
+You can also include the {\textbf{pseudocode}} in the answer, but this is not necessary. The purpose of pseudocode is to communicate concisely and clearly, so think about how to write your pseudocode to convey the idea to the
+reader.
+Note that pseudocode is meant to be written at a high level of abstraction. Executable code is
+not acceptable, as it is usually too detailed. Providing us with working C code or Java code
+is not acceptable. The sole purpose of pseudocode is to make it easy for the reader to follow
+along. Therefore, pseudocode should be presented at a higher level than source code (source
+code must be fit for computer consumption; pseudocode need not). Pseudocode can use
+standard data structures. For instance, pseudocode might refer to a set S, and in pseudocode
+you can write things like “add element $x$ to set $S$.” That would be unacceptable in source
+code; in source code, you would need to specify things like the structure of the linked list
+or hashtable used to store $S$, whereas pseudocode abstracts away from those implementation
+details. As another example, pseudocode might include a step like “for each edge $(u, v) \in E$”,
+without specifying the details of how to perform the iteration. 
+
+\item A {\textbf{proof of correctness}}.  You must prove that your algorithm work correctly, no matter
+what input is chosen.
+For iterative or recursive algorithms, often a useful approach is to find an invariant. A loop
+invariant needs to satisfy three properties: (1) it must be true before the first iteration of the
+loop; (2) if it is true before the $i$th iteration of the loop, it must be true before the $i$ + 1st
+iteration of the loop; (3) if it is true after the last iteration of the loop, it must follow that the output of your algorithm is correct. You need to prove each of these three properties holds.
+Most importantly, you must specify your invariant precisely and clearly.
+If you invoke an algorithm that was proven correct in class, you don’t need to re-prove its correctness.
+
+\item The asymptotic \textbf{running time} of your algorithm, stated using O(·) notation. And you should have your \textbf{running time analysis}, i.e., the justification for why your algorithm’s running time is
+as you claimed. Often this can be stated in a few sentences (e.g.: “the loop performs $|E|$
+iterations; in each iteration, we do $O(1)$ Find and Union operations; each Find and Union
+operation takes $O(\log|V|)$ time; so the total running time is $O(|E|\log|V|)$”). Alternatively, this
+might involve showing a recurrence that characterizes the algorithm’s running time and then
+solving the recurrence.
+\end{enumerate}
+\pagebreak
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\question{0}{Three Part Proof Example}
+Given a sorted array A of n (possibly negative) distinct integers, you want to find out whether
+there is an index $i$ for which $A[i] = i$. Devise a divide-and-conquer algorithm that runs in
+$O(\log n)$ time.\\
+{\color{blue}{
+\textbf{Main idea}:\\
+		To find the $i$, we use binary search, first we get the middle element of the list, if the middle of the element is $k$, then get the $i$. Or we seperate the list from middle and get the front list and the back list. If the middle element is smaller than $k$, we repeat the same method in the back list. And if the middle element is bigger than $k$, we repeat the same method in the front list. Until we cannot get the front or the back list we can say we cannot find it.\\
+		\begin{algorithm}
+			\caption{Binary Search(A)}
+			\label{alg2}
+			\color{blue}
+			\begin{algorithmic}
+				\STATE $low\gets 0$
+				\STATE $high\gets n-1$
+			  	\WHILE{$low < high$}
+			  		\STATE $mid \gets (low+high)/2$
+				\IF{$(k == A[mid])$}
+					\RETURN mid
+				\ELSIF{$k > A[mid]$}
+					\STATE $low\gets mid+1$
+				\ELSE
+					\STATE $high\gets mid-1$
+				\ENDIF
+				\ENDWHILE
+				\RETURN -1
+			\end{algorithmic}
+		\end{algorithm}\\
+	\textbf{Proof of Correctness}:\\
+		Since the list is sorted, and if the middle is $k$, then we find it. If the middle is less than $k$, then all the element in the front list is less than $k$, so we just look for the $k$ in the back list. Also, if the middle is greater than $k$, then all the element in the back list is greater than $k$, so we just look for the $k$ in the front list. And when there is no back list and front list, we can said the $k$ is not in the list, since every time we abandon the items that must not be $k$. And otherwise, we can find it.\\
+	\textbf{Running time analysis}:\\
+		The running time is $\Theta(\log n)$.\\
+		Since every iteration we give up half of the list. So the number of iteration is $\log_2 n= \Theta(\log n)$.}}
+\newpage
+\question{1}{(10') TENET}
+A TENET sequence is a nonempty string over some alphabet that reads the same forward and backward. For example, "civic", "bbbb" and all strings of length 1 are all TENET sequence. In this question, we want to find the longest TENET sequence that is a subsequence of a given input string. For example, given the input "character", your algorithm should return 5 (or "carac"). Note that the subsequence is different from substring, where subsequence may not be 
+consecutive. 
+
+Give an algorithm using dynamic programming, prove your algorithm and  show the running time complexity of your algorithm. 
+
+\textit{Hint: the running time complexity of your algorithm shouldn't be worse than $O(n^{2})$}
+	
+\pagebreak
+	
+\question{2}{(10') Subset Sum}
+Given a set of non-negative integers with length N, and a value W, determine if there is a subset of the given set with sum equal to given W. 
+
+Give a dynamic programming algorithm to solve this problem, prove your algorithm and show the running time complexity.
+
+\pagebreak
+\question{3}{(15') Greedy doesn't work}
+% TA Wang and Yuan are playing a game, where there are $n$ cards in a line. The cards are all face-up and numbered 2-9. Wang and Yuan take turns. Whoever's turn it is can take one card from either the right end and or the left end of the line. The goal for each player is to maximize the sum of the cards they've collected.
+
+Tom and Jerry are playing an interesting game, where there are $n$ cards in a line. All cards are faced-up and the number on every card is between 2-9. Tom and Jerry take turns. In anyone's turn, they can take one card from either the right end or the left end of the line. the goal for each player is to maximize the sum of the cards they have collected.
+
+\begin{enumerate}
+\item[(a)] Tom decides to use a greedy strategy: ``on my turn, I will take the larger of the two cards available to me." Show a small counterexample ($n\leq 5$) where Tom will lose if he plays this greedy strategy, assuming Tom goes first and Jerry plays optimally, but he could have won if he had played optimally.
+\item[(b)] Jerry decides to use dynamic programming to find an algorithm to maximize his score, assuming he is playing against Tom and Tom is using the greedy strategy from part (a). Help Jerry to develop the dynamic programming solution.
+\end{enumerate}
+\pagebreak
+
+\question{4}{(10') Propositional Parentheses}
+You are given a propositional logic formula using only $\land$, $\lor$, $\mathsf{T}$ and $\mathsf{F}$ that does not have parentheses. 
+% You want to find out how many different ways there are to correctly parenthesize the formula so that the resulting formula evaluates to true.
+A formula $X$ is correctly parenthesized if $X = \mathsf{T}, X = \mathsf{F}, X = (Y \land Z), X = (Y \lor Z)
+$ where $Y, Z$ are correctly parenthesized formulas. 
+
+You want to find out the number of different ways which the formula has the correct parentheses and the result of the formula should be true. For example, the formula $\mathsf{T}\lor\mathsf{F}\lor\mathsf{T}\land\mathsf{F}$ can be correctly parenthesized in 5 ways:
+\begin{align*}
+(\mathsf{T}\lor(\mathsf{F}\lor(\mathsf{T}\land\mathsf{F}))) \\
+(\mathsf{T}\lor((\mathsf{F}\lor\mathsf{T})\land\mathsf{F})) \\
+((\mathsf{T}\lor\mathsf{F})\lor(\mathsf{T}\land\mathsf{F})) \\
+((\mathsf{T}\lor\mathsf{F})\lor\mathsf{T})\land\mathsf{F}) \\
+((\mathsf{T}\lor(\mathsf{F}\lor\mathsf{T}))\land\mathsf{F})
+\end{align*}
+of which 3 evaluate to true: $((\mathsf{T}\lor\mathsf{F})\lor(\mathsf{T}\land\mathsf{F}))$, $(\mathsf{T}\lor((\mathsf{F}\lor\mathsf{T})\land\mathsf{F}))$ and $(\mathsf{T}\lor(\mathsf{F}\lor(\mathsf{T}\land\mathsf{F})))$.
+
+Give a dynamic programming algorithm to solve this problem. Describe your algorithm, including a clear statement of your recurrence, show that it is correct, and prove its running time.
+\end{document}

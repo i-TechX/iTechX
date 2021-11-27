@@ -171,6 +171,8 @@
         ],
         "teach-courses": [
             ["Spring", "2021", "CS243", "Introduction to Algorithmic Game Theory"],
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"],
+            ["Fall", "2019", "CS101", "Algorithms and Data Structures"],
             ["Fall", "2018", "CS101", "Algorithms and Data Structures"],
             ["Spring", "2017", "CS243", "Introduction to Algorithmic Game Theory"]
         ]
@@ -301,6 +303,7 @@
             ["envelope", "&#x7a;&#x68;&#x61;&#110;&#x67;&#x79;&#x79;&#x38;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;", "mailto:&#x7a;&#x68;&#x61;&#110;&#x67;&#x79;&#x79;&#x38;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;"]
         ],
         "teach-courses": [
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"],
             ["Fall", "2019", "CS101", "Algorithms and Data Structures"]
         ]
     },
@@ -313,6 +316,17 @@
         ],
         "teach-courses": [
             ["Fall", "2018", "CS101", "Algorithms and Data Structures"]
+        ]
+    },
+    "yangzhc": {
+        "name": "杨智策",
+        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yangzhc.jpg",
+        "info": [
+            ["envelope", "&#x79;&#97;&#x6e;&#x67;&#x7a;&#104;&#99;&#64;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;", "mailto:&#x79;&#97;&#x6e;&#x67;&#x7a;&#104;&#99;&#64;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;"],
+            ["home", "Home Page", "https://www.yangzhice.com/"]
+        ],
+        "teach-courses": [
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"]
         ]
     },
     "qiaowh": {
@@ -419,7 +433,8 @@
             ["envelope", "&#99;&#x68;&#x65;&#110;&#122;&#104;&#117;&#111;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;", "mailto:&#99;&#x68;&#x65;&#110;&#122;&#104;&#117;&#111;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;"]
         ],
         "ta-courses": [
-            ["Fall", "2021", "CS181", "Artificial Intelligence I"]
+            ["Fall", "2021", "CS181", "Artificial Intelligence I"],
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"]
         ]
     },
     "yangsl": {
@@ -907,7 +922,8 @@
             ["envelope", "&#120;&#x75;&#x74;&#101;&#110;&#x67;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;", "mailto:&#120;&#x75;&#x74;&#101;&#110;&#x67;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;"]
         ],
         "ta-courses": [
-            ["Spring", "2021", "CS110", "Computer Architecture I"]
+            ["Spring", "2021", "CS110", "Computer Architecture I"],
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"]
         ]
     },
     "yezhe": {
@@ -1003,6 +1019,7 @@
         "name": "宋泽",
         "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/songze.jpg",
         "ta-courses": [
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"],
             ["Spring", "2020", "CS110", "Computer Architecture I"]
         ]
     },
@@ -1127,6 +1144,7 @@
         ],
         "ta-courses": [
             ["Spring", "2021", "CS243", "Introduction to Algorithmic Game Theory"],
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"],
             ["Fall", "2019", "CS101", "Algorithms and Data Structures"],
             ["Fall", "2018", "CS101", "Algorithms and Data Structures"]
         ]
@@ -1184,7 +1202,8 @@
             ["envelope", "&#108;&#x69;&#x75;&#x68;&#108;&#50;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#101;&#99;&#x68;&#x2e;&#101;&#100;&#x75;&#x2e;&#x63;&#110;", "mailto:&#108;&#x69;&#x75;&#x68;&#108;&#50;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#101;&#99;&#x68;&#x2e;&#101;&#100;&#x75;&#x2e;&#x63;&#110;"]
         ],
         "ta-courses": [
-            ["Spring", "2021", "CS240", "Algorithm Design and Analysis"]
+            ["Spring", "2021", "CS240", "Algorithm Design and Analysis"],
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"]
         ]
     },
     "hejj1": {
@@ -1237,6 +1256,7 @@
     "xuwk": {
         "name": "许惟锴",
         "ta-courses": [
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"],
             ["Spring", "2020", "SI151", "Optimization and Machine Learning"],
             ["Spring", "2020", "CS240", "Algorithm Design and Analysis"],
             ["Fall", "2019", "CS101", "Algorithms and Data Structures"]
@@ -1291,7 +1311,8 @@
             ["envelope", "&#x67;&#x65;&#x79;&#120;&#64;&#x73;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#117;&#46;&#x63;&#110;", "mailto:&#x67;&#x65;&#x79;&#120;&#64;&#x73;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#117;&#46;&#x63;&#110;"]       
         ],
         "ta-courses": [
-            ["Fall", "2021", "CS240", "Algorithm Design and Analysis"]
+            ["Fall", "2021", "CS240", "Algorithm Design and Analysis"],
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"]
         ]
     },
     "congpsh": {
@@ -1468,6 +1489,7 @@
         ],
         "ta-courses": [
             ["Fall", "2021", "CS280", "Deep Learning"],
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"],
             ["Fall", "2019", "CS101", "Algorithms and Data Structures"]
         ]
     },
@@ -1641,6 +1663,33 @@
         "ta-courses": [
             ["Fall", "2019", "CS101", "Algorithms and Data Structures"],
             ["Fall", "2018", "CS101", "Algorithms and Data Structures"]
+        ]
+    },
+    "guanyh": {
+        "name": "关永航",
+        "info": [
+            ["envelope", "&#x67;&#x75;&#x61;&#110;&#x79;&#x68;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;", "mailto:&#x67;&#x75;&#x61;&#110;&#x79;&#x68;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"]
+        ]
+    },
+    "sheyn": {
+        "name": "佘以宁",
+        "info": [
+            ["envelope", "&#x73;&#104;&#101;&#x79;&#x6e;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#99;&#x6e;", "mailto:&#x73;&#104;&#101;&#x79;&#x6e;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"]
+        ]
+    },
+    "zhanglw2": {
+        "name": "张龙文",
+        "info": [
+            ["envelope", "&#122;&#104;&#x61;&#110;&#x67;&#108;&#119;&#50;&#64;&#115;&#104;&#97;&#110;&#103;&#x68;&#x61;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#x6e;", "mailto:&#122;&#104;&#x61;&#110;&#x67;&#108;&#119;&#50;&#64;&#115;&#104;&#97;&#110;&#103;&#x68;&#x61;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS101", "Algorithms and Data Structures"]
         ]
     }
 }
