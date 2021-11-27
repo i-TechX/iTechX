@@ -1,0 +1,40 @@
+{
+    "code": "CS101",
+    "name": "Algorithms and Data Structures",
+    "semesters": [
+        {
+            "course_id": "CS110.01",
+            "season": "Fall",
+            "year": "2019",
+            "mainpage": "https://i-techx.github.io/CS101/",
+            "teacher": [
+                "zhaodj", "zhangyy8"
+            ],
+            "ta": [
+                "zhangwen1", "zhangyao1", "wanglt", "shenyao", "xuwk", "yuanky", "wangyj2", "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming",
+            "evaluation": "Exams (45%, mid-term 25%, final 20%), Weekly Homework (20%), 4-5 Programming Tasks (20%), In-class Quizzes (15%)"
+        },
+        {
+            "course_id": "CS110.01",
+            "season": "Fall",
+            "year": "2018",
+            "mainpage": "https://i-techx.github.io/CS101/",
+            "teacher": [
+                "zhaodj", "yujingyi"
+            ],
+            "ta": [
+                "jingyzh", "shenyao", "zhangyao1", "zhangwen1", "yuanky", "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming",
+            "evaluation": "Exams (45%, mid-term 25%, final 20%), Weekly Homework (20%), 4 Programming Tasks (20%), In-class Quizzes (15%)"
+        }
+    ]
+}
