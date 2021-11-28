@@ -5,12 +5,44 @@
         {
             "course_id": "CS110.01",
             "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "zhaodj", "zhangyy8"
+            ],
+            "ta": [
+                "xuteng", "zhanglw2", "sheyn", "liuhx", "tujd", "lianyh", "wangshy3", "limiao", "litsh", "zhuqy", "zhengyt1", "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming",
+            "evaluation": "Exams (45%, mid-term 20%, final 25%), Weekly Homework (20%), 4 Programming Tasks (20%), In-class Quizzes (15%)"
+        },
+        {
+            "course_id": "CS110.02",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "zhaodj", "jiangzhh"
+            ],
+            "ta": [
+                "xuteng", "zhanglw2", "sheyn", "liuhx", "tujd", "lianyh", "wangshy3", "limiao", "litsh", "zhuqy", "zhengyt1", "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming",
+            "evaluation": "Exams (45%, mid-term 20%, final 25%), Weekly Homework (20%), 4 Programming Tasks (20%), In-class Quizzes (15%)"
+        },
+        {
+            "course_id": "CS110.01",
+            "season": "Fall",
             "year": "2020",
             "teacher": [
                 "zhaodj", "zhangyy8"
             ],
             "ta": [
-                "zhangyao1", "guanyh", "xuwk", "wangyj2", "xuteng", "geyx", "liuhl2", "songze", "chenzhuo", "sheyn", "zhanglw2"
+                "zhangyao1", "guanyh", "xuwk", "wangyj2", "xuteng", "geyx", "liuhx", "songze", "chenzhuo", "sheyn", "zhanglw2"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -26,7 +58,7 @@
                 "zhaodj", "yangzhc"
             ],
             "ta": [
-                "zhangyao1", "guanyh", "xuwk", "wangyj2", "xuteng", "geyx", "liuhl2", "songze", "chenzhuo", "sheyn", "zhanglw2"
+                "zhangyao1", "guanyh", "xuwk", "wangyj2", "xuteng", "geyx", "liuhx", "songze", "chenzhuo", "sheyn", "zhanglw2"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

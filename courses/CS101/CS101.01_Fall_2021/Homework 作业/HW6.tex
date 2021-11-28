@@ -1,0 +1,299 @@
+\documentclass[10.5pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage[shortlabels]{enumitem}
+\usepackage{tikz}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{epsfig} %% for loading postscript figures
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{subfigure}
+\usepackage{graphics}
+\usepackage{titlesec}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\renewcommand{\baselinestretch}{1.2}%Adjust Line Spacing
+%\geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}% Adjust Margins of the File
+\usepackage{tikz-qtree}
+\usetikzlibrary{graphs}
+\tikzset{every tree node/.style={minimum width=2em,draw,circle},
+	blank/.style={draw=none},
+	edge from parent/.style=
+	{draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+	level distance=1.2cm}
+\setlength{\parindent}{0pt}
+%\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{13.6pt}
+\newcommand\question[2]{\vspace{.25in}\hrule\textbf{#1: #2}\vspace{.5em}\hrule\vspace{.10in}}
+\renewcommand\part[1]{\vspace{.10in}\textbf{(#1)}}
+%\newcommand\algorithm{\vspace{.10in}\textbf{Algorithm: }}
+\newcommand\correctness{\vspace{.10in}\textbf{Correctness: }}
+\newcommand\runtime{\vspace{.10in}\textbf{Running time: }}
+\pagestyle{fancyplain}
+% Create horizontal rule command with an argument of height
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+
+
+% Set the title here
+\title{
+	\normalfont \normalsize
+	\textsc{ShanghaiTech University} \\ [25pt]
+	\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+	\huge CS101 Algorithms and Data Structures\\ % The assignment title
+	\LARGE Fall 2021\\
+	\LARGE Homework 6\\
+	\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+% wrong usage of \author, never mind
+\author{}
+\date{Due date: 23:59, November 7, 2021}
+
+% set the header and footer
+\pagestyle{fancy}
+\lhead{CS101 Algorithms and Data Structures}
+\chead{Homework 6}
+\rhead{Due date: 23:59, Nov. 7, 2021}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\newtheorem{Q}{Question}
+% special settings for the first page
+\fancypagestyle{firstpage}
+{
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyhf{}
+	\fancyfoot[C]{\thepage}
+}
+
+% Add the support for auto numbering
+% use \problem{title} or \problem[number]{title} to add a new problem
+% also \subproblem is supported, just use it like \subsection
+\newcounter{ProblemCounter}
+\newcounter{oldvalue}
+\newcommand{\problem}[2][-1]{
+	\setcounter{oldvalue}{\value{secnumdepth}}
+	\setcounter{secnumdepth}{0}
+	\ifnum#1>-1
+	\setcounter{ProblemCounter}{0}
+	\else
+	\stepcounter{ProblemCounter}
+	\fi
+	\section{Problem \arabic{ProblemCounter}: #2}
+	\setcounter{secnumdepth}{\value{oldvalue}}
+}
+\newcommand{\subproblem}[1]{
+	\setcounter{oldvalue}{\value{section}}
+	\setcounter{section}{\value{ProblemCounter}}
+	\subsection{#1}
+	\setcounter{section}{\value{oldvalue}}
+}
+
+% \setmonofont{Consolas}
+\definecolor{blve}{rgb}{0.3372549 , 0.61176471, 0.83921569}
+\definecolor{gr33n}{rgb}{0.29019608, 0.7372549 , 0.64705882}
+\makeatletter
+\lst@InstallKeywords k{class}{classstyle}\slshape{classstyle}{}ld
+\makeatother
+\lstset{language=C++,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blve}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{magenta}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#},
+	classstyle = \bfseries\color{gr33n}, 
+	tabsize=4
+}
+\lstset{basicstyle=\ttfamily}
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{firstpage}
+	%\newpage
+	\vspace{3ex}
+	
+	\begin{enumerate}
+		\item Please write your solutions in English. 
+		
+		\item Submit your solutions to gradescope.com.  
+		
+		\item Set your FULL NAME to your Chinese name and your STUDENT ID correctly in Account Settings. 
+		
+		\item If you want to submit a handwritten version, scan it clearly. Camscanner is recommended. 
+		
+		\item When submitting, match your solutions to the according problem numbers correctly. 
+		
+		\item No late submission will be accepted.
+		
+		\item Violations to any of the above may result in zero grade. 
+	\end{enumerate}
+	\newpage
+
+
+\question{1}{(12') Multiple Choices}
+	Each question has one or more correct answer(s). Select all the correct answer(s). For each question, you get $0$ point if you select one or more wrong answers, but you get $1$ point if you select a non-empty subset of the correct answers.\\
+\textit{Note that you should write you answers of section 1 in the table below.}
+
+\begin{table}[htbp]
+	\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+		\hline 
+		Question 1 & Question 2 & Question 3 & Question 4 & Question 5 & Question 6  \\ 
+		\hline 
+		&  & & & &  \\ 
+		\hline 
+	\end{tabular} 
+\end{table}
+
+\begin{Q}
+	Which of the followings are true? 
+	\begin{enumerate}[(A)]
+		\item For a min-heap, in-order traversal gives the elements in ascending order.
+		\item For a min-heap, pre-order traversal gives the elements in ascending order.
+		\item For a BST, in-order traversal gives the elements in ascending order.
+		\item For a BST, pre-order traversal gives the elements in ascending order.
+	\end{enumerate}
+\end{Q}
+
+\begin{Q}
+	For a Binary Search Tree (BST), which of the followings are true?
+	
+	\begin{enumerate}[(A)]
+		\item If we erase the root node with two children, then it will be replaced by the maximum object in its right sub-tree.
+		\item The cost for erasing the root node who has two children is $O(n)$. 
+		\item In a BST with N nodes, it always takes $O(\log N)$ to search for an specific element.
+		\item For a BST, the newly inserted node will always be a leaf node.
+	\end{enumerate}
+\end{Q}
+
+
+\begin{Q}
+	Suppose we want to use Huffman Coding Algorithm to encode a piece of text made of characters. Which of the following statements are true?
+	\begin{enumerate}[(A)]
+		\item Huffman Coding Algorithm will  compress the text data with some information loss.
+		\item The construction of binary Huffman Coding Tree using priority queue has time complexity $O(nlogn)$, where $n$ is the size of the character set of the text.
+		\item When inserting nodes into the priority queue, the higher the occurrence/frequency, the higher the priority in the queue.
+		\item The Huffman codes obtained must satisfy prefix-property, that is, no code is a prefix of another code.
+	\end{enumerate}
+\end{Q}
+
+	\begin{Q}
+		Which of the following statements are true for an AVL-tree?
+		\begin{enumerate}[(A)]
+			\item Inserting an item can unbalance non-consecutive nodes on the path from the root to the inserted item before the restructuring.
+			\item Inserting an item can cause at most one node imbalanced before the restructuring.
+			\item Removing an item in leaf nodes can cause at most one node imbalanced before the restructuring.
+			\item Only at most one node-restructuring has to be performed after inserting an item.
+		\end{enumerate}
+	\end{Q}
+	
+	\begin{Q}
+		Consider an AVL tree whose height is h, which of the following are true?
+		\begin{enumerate}[(A)]
+			\item This tree contains $\Omega(\alpha^h)$ nodes, where $\alpha = \dfrac{1+\sqrt{5}}{2}$.
+			\item This tree contains $\Theta(2^h)$ nodes.
+			\item This tree contains $O(h)$ nodes in the worst case.
+			\item None of the above.
+		\end{enumerate}
+	\end{Q}
+	
+	
+	\begin{Q}
+		Which of the following is TRUE?
+		\begin{enumerate}
+			\item[(A)] The cost of searching an AVL tree is $O(\log n)$ but that of a binary search tree is $O(n)$
+			\item[(B)] The cost of searching an AVL tree is $O(\log n)$ but that of a complete binary tree is $O(n \log n)$
+			\item[(C)] The cost of searching a binary search tree with height h is $O(h)$ but that of an AVL tree is $O(\log n)$
+			\item[(D)] The cost of searching an AVL tree is $O(n log n)$ but that of a binary search tree is $O(n)$
+		\end{enumerate}
+	\end{Q}
+\vspace{0.5cm}
+\pagebreak
+
+\question{2}{(3'+3'+2'+3') BST and AVL Tree}
+\begin{Q}
+Draw a valid BST of minimum height containing the keys 1, 2, 4, 6, 7, 9, 10.
+\vspace{5cm}
+
+\end{Q}
+	
+\begin{Q}
+	\begin{enumerate}[(1)]
+		\item 
+		Given an empty AVL tree, insert the sequence of integers $15, 20, 23, 10, 13, 7, 30, 25$ from left to right into the AVL tree. Draw the final AVL tree.\\
+		
+		\vspace{30ex}
+		
+		\item
+		For the final AVL tree in the question (1), delete $7$. Draw the AVL tree after deletion.\\
+		\vspace{30ex}
+		\item
+		For an AVL tree, define D = the number of left children - the number of right children,  for the root. Then what is the maximum of D for an AVL tree with height n ?\\
+		\vspace{30ex}
+	\end{enumerate}
+	
+	
+\end{Q}
+
+\newpage
+\question{3}{(3'+3') Huffman Coding}
+	
+    After you compress a text file using Huffman Coding Algorithm, you accidentally spilled some ink on it and you found that one word becomes unrecognizable. Now, you need to recover that word given the following information:\\
+    \textbf{Huffman-Encoded sequence of that word: } \\
+    000101001110110100\\
+    \textbf{Frequency table that stores the frequency of some characters: }
+    \begin{table}[!hbtp]
+    \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+    \hline
+    characters & a & b & e & g & l & o & r \\ \hline
+    frequency  & 2 & 3 & 3 & 4 & 1 & 4 & 2 \\ \hline
+    \end{tabular}
+    \end{table}
+	\begin{Q} Please construct the binary Huffman Coding Tree according to the given frequency table and draw the final tree below.\\
+	Note: The initial priority queue is given as below. When popping nodes out of the priority queue, the nodes with the same frequency follows ``First In First Out".
+	\end{Q}
+		
+	\begin{table}[!hbtp]
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+    \begin{tabular}[c]{@{}l@{}}l\\ 1\end{tabular} & \begin{tabular}[c]{@{}l@{}}a\\ 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}r\\ 2\end{tabular} & \begin{tabular}[c]{@{}l@{}}b\\ 3\end{tabular} & \begin{tabular}[c]{@{}l@{}}e\\ 3\end{tabular} & \begin{tabular}[c]{@{}l@{}}g\\ 4\end{tabular} & \begin{tabular}[c]{@{}l@{}}o\\ 4\end{tabular} \\ \hline
+    \end{tabular}
+    \end{table}
+
+	\vspace{3cm}
+	\begin{Q} Now you can ``decompress" the encoded sequence and recover the original word you lost. Please write the original word below.
+	\end{Q}
+	
+\newpage
+
+	
+	\question{4}{(9')Only-child}
+	We define that the node is only-child if its parent node only have one children(Note: The root does not qualify as an only child). And we define a function for any binary tree T : $OC(T)=$ the number of only-child node.
+	
+	
+	\begin{Q}
+		(3')Prove the conclusion that for any nonempty AVL tree T with n nodes, OC(T)$\leq\dfrac{1}{2}n$.
+	\end{Q}
+
+	\vspace{6cm}
+	\begin{Q}
+		(3') For any binary tree T with n nodes, Is it true that if $OC(T)\leq\dfrac{1}{2}n$ then $height(T)=O(\log n)$? If true, prove it. If not, give a counterexample.
+	\end{Q}
+
+	\vspace{6cm}
+	\begin{Q}
+		(3') For any binary tree T, Is it true that if there are $n_0$ only-children and they are all leaves, then $height(T)=O(\log {n_0})$?
+		If true, prove it. If not, give a counterexample.
+	\end{Q}
+
+
+
+\end{document}
