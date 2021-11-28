@@ -5244,7 +5244,7 @@ var axiosJSON = exports.axiosJSON = _axios2.default.create({
 });
 
 var axiosGithub = exports.axiosGithub = _axios2.default.create({
-  baseURL: 'https://api.github.com',
+  baseURL: 'https://githubapi.itechx.workers.dev',
   headers: {
     'Accept': 'application/json'
   }

@@ -47,7 +47,7 @@ layui.define(['jquery', 'util', 'element', 'rate'], function(exports){
 
         options = assign({
             proxy: 'https://ghproxy.com/',
-            baseURL: 'https://api.github.com',
+            baseURL: 'https://githubapi.itechx.workers.dev',
         }, options);
 
         var accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
