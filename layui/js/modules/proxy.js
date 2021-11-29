@@ -25,6 +25,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 "^https?://raw.githubusercontent.com(/([^/]*)/([^/]*)/([^/]*)(.*\\.(?:(?:mdx)|(?:md)|(?:htmlx)|(?:json))))$", 
                 {
                     "jsdelivr": ["https://cdn.jsdelivr.net/gh/$2/$3@$4/$5", "jsDelivr 代理（默认）"],
+                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理"],
                     "none": ["$&", "无代理"],
                 }
@@ -34,6 +35,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 "^https?://raw.githubusercontent.com(/([^/]*)/([^/]*)/([^/]*)(.*\\.(?:(?:ppt)|(?:pptx)|(?:doc)|(?:docx)|(?:xls)|(?:xlsx))))$", 
                 {
                     "preview": ["http://view.officeapps.live.com/op/view.aspx?src=$&", "无代理-在线预览（默认）"],
+                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理-下载"],
                     "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理-下载"],
                     "fastgit": ["https://raw.fastgit.org$1", "FastGit 代理-下载"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理-下载"],
@@ -45,11 +47,23 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 "^https?://raw.githubusercontent.com(/([^/]*)/([^/]*)/([^/]*)(.*\\.(?:(?:pdf))))$", 
                 {
                     "plain-preview": ["https://mozilla.github.io/pdf.js/web/viewer.html?file=$&", "无代理-在线预览"],
-                    "itechx-preview": ["https://mozilla.github.io/pdf.js/web/viewer.html?file=https://githubraw.itechx.workers.dev$1", "iTechX 临时代理-在线预览（默认）"],
+                    "ghucs-preview": ["https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontents.com$1", "GHUCS 代理-下载（默认）"],
+                    "itechx-preview": ["https://mozilla.github.io/pdf.js/web/viewer.html?file=https://githubraw.itechx.workers.dev$1", "iTechX 临时代理-在线预览"],
+                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理-下载"],
                     "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理-下载"],
                     "fastgit": ["https://raw.fastgit.org$1", "FastGit 代理-下载"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理-下载"],
                     "none": ["$&", "无代理-下载"],
+                }
+            ],[
+                'Images', 
+                '加载图片文件，如课程封面、人物头像等，对raw.githubusercontent.com进行代理', 
+                "^https?://raw.githubusercontent.com(/([^/]*)/([^/]*)/([^/]*)(.*\\.(?:(?:jpg))))$", 
+                {
+                    "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理（默认）"],
+                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理"],
+                    "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理"],
+                    "none": ["$&", "无代理"],
                 }
             ],[
                 'Files', 
@@ -57,6 +71,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 "^https?://raw.githubusercontent.com(/([^/]*)/([^/]*)/([^/]*)(.*))$", 
                 {
                     "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理（默认）"],
+                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理"],
                     "fastgit": ["https://raw.fastgit.org$1", "FastGit 代理"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理"],
                     "none": ["$&", "无代理"],
@@ -75,7 +90,8 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
         const DEFAULT_RULE = {
             'Reader': 'jsdelivr',
             'Microsoft': 'preview',
-            'PDF': 'itechx-preview',
+            'PDF': 'ghucs-preview',
+            'Images': 'ghproxy',
             'Files': 'ghproxy',
             'API': 'none'
         };
