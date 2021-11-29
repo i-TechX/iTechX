@@ -1,7 +1,8 @@
-layui.define(['jquery', 'form'], function(exports){
+layui.define(['jquery', 'form', 'proxy'], function(exports){
 
     var $ = layui.jquery,
-        form = layui.form;
+        form = layui.form,
+        proxy = layui.proxy({});
 
     var select = (function(options){
         var assign = function(defaultValue, value){
@@ -36,8 +37,8 @@ layui.define(['jquery', 'form'], function(exports){
           }
 
         options = assign({
-            proxy: 'https://ghproxy.com/',
-            baseURL: 'https://githubapi.itechx.workers.dev',
+            proxy: '',
+            baseURL: 'https://api.github.com',
         }, options);
 
         var accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
@@ -61,7 +62,7 @@ layui.define(['jquery', 'form'], function(exports){
 
             loadCourses: function() {
                 $.ajax({
-                    url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/courses",
+                    url: proxy.parse(options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/courses"),
                     type: "GET",
                     data: {
                         'ref': 'file-base'
@@ -101,7 +102,7 @@ layui.define(['jquery', 'form'], function(exports){
 
             loadIds: function(course_code) {
                 $.ajax({
-                    url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/courses/" + course_code + "/meta.json",
+                    url: proxy.parse(options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/courses/" + course_code + "/meta.json"),
                     type: "GET",
                     data: {
                         'ref': 'file-base'
@@ -140,8 +141,26 @@ layui.define(['jquery', 'form'], function(exports){
             },
 
             loadFolders: function(course_code, semester) {
+                const DEFAULT_FOLDERS = [
+                    "Discussion 讨论课",
+                    "Exam 考试",
+                    "Homework 作业",
+                    "Homework Solution 作业答案",
+                    "Labs 实验",
+                    "Lecture Notes 教学笔记",
+                    "Lecture Slides 教学课件",
+                    "Project 课程设计",
+                    "Quiz 随堂测验",
+                    "Quiz Solution 随堂测验答案",
+                    "Readings 文献阅读",
+                    "Resources 课程资源",
+                    "Schedule 教学安排",
+                    "Tutorials 习题课",
+                    "[Community] Cheat sheet [社区] 速查清单"
+                ];
+
                 $.ajax({
-                    url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/courses/" + course_code + "/" + semester,
+                    url: proxy.parse(options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/courses/" + course_code + "/" + semester),
                     type: "GET",
                     data: {
                         'ref': 'file-base'
@@ -149,10 +168,10 @@ layui.define(['jquery', 'form'], function(exports){
                     headers: headers,
                     success: function (data) {
                         if (data) {
-                            var folders = new Array();
+                            var folders = DEFAULT_FOLDERS.slice();
                             for (var idx in data) {
                                 var file = data[idx];
-                                if (file.type == "dir") {
+                                if (file.type == "dir" && folders.indexOf(file.name) == -1) {
                                     folders.push(file.name);
                                 }
                             }
@@ -171,6 +190,18 @@ layui.define(['jquery', 'form'], function(exports){
                     },
                     error: function(err) {
                         console.log(err);
+                        if (err.hasOwnProperty('responseJSON') && err.responseJSON.message == "Not Found") {
+                            var folders = DEFAULT_FOLDERS.slice();
+
+                            var e = $("[lay-filter="+options.folder+"]")[0];
+                            var s = '<option value=""></option>';
+                            for (idx in folders) {
+                                var folder = folders[idx];
+                                s += '<option value="' + folder + '">' + folder + '</option>';
+                            }
+                            e.innerHTML = s;
+                            form.render('select');
+                        }
                     }
                 })
             },
@@ -179,7 +210,7 @@ layui.define(['jquery', 'form'], function(exports){
                 selectComponent.getUserInfo(function(){
                     selectComponent.getUserRepo(function(){
                         const user = selectComponent.userInfo.login;
-                        var url = options.baseURL + "/repos/" + user + "/" + options.repo + "/contents/courses/" + field[options.course_code] + "/" + field[options.course_id] + "/" + field[options.folder] + "/" + field["file_name"];
+                        var url = proxy.parse(options.baseURL + "/repos/" + user + "/" + options.repo + "/contents/courses/" + field[options.course_code] + "/" + field[options.course_id] + "/" + field[options.folder] + "/" + field["file_name"]);
                         var upload = options.upload;
                         upload.config.url = url;
                         var allDone = upload.config.done;
@@ -221,7 +252,7 @@ layui.define(['jquery', 'form'], function(exports){
                 accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
                 if (!accessToken) return;
                 $.ajax({
-                    url: options.baseURL + "/user",
+                    url: proxy.parse(options.baseURL + "/user"),
                     type: "GET",
                     headers: headers,
                     success: function (data) {
@@ -237,7 +268,7 @@ layui.define(['jquery', 'form'], function(exports){
             getUserRepo: function (callback, error) {
                 const user = selectComponent.userInfo.login;
                 $.ajax({
-                    url: options.baseURL + "/repos/" + user + "/" + options.repo,
+                    url: proxy.parse(options.baseURL + "/repos/" + user + "/" + options.repo),
                     type: "GET",
                     headers: headers,
                     success: function (data) {
@@ -254,7 +285,7 @@ layui.define(['jquery', 'form'], function(exports){
             forkUserRepo: function (callback) {
                 const user = selectComponent.userInfo.login;
                 $.ajax({
-                    url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/forks",
+                    url: proxy.parse(options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/forks"),
                     type: "POST",
                     headers: headers,
                     success: function (data) {
@@ -270,7 +301,7 @@ layui.define(['jquery', 'form'], function(exports){
             makePullRequest: function (callback) {
                 const user = selectComponent.userInfo.login;
                 $.ajax({
-                    url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/pulls",
+                    url: proxy.parse(options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/pulls"),
                     type: "POST",
                     data: JSON.stringify({
                         "title": "Add new file",

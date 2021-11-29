@@ -1,8 +1,9 @@
-layui.define(['jquery', 'element', 'layer'], function(exports){
+layui.define(['jquery', 'element', 'layer', 'proxy'], function(exports){
 
     var $ = layui.jquery,
         element = layui.element,
-        layer = layui.layer;
+        layer = layui.layer,
+        proxy = layui.proxy({});
 
     var nav = (function(options){
         var assign = function(defaultValue, value){
@@ -38,7 +39,7 @@ layui.define(['jquery', 'element', 'layer'], function(exports){
 
         options = assign({
             proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
-            baseURL: 'https://githubapi.itechx.workers.dev',
+            baseURL: 'https://api.github.com',
             page: 'none',
         }, options);
 
@@ -90,7 +91,7 @@ layui.define(['jquery', 'element', 'layer'], function(exports){
                 accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
                 if (!accessToken) {if (callback) callback();return;};
                 $.ajax({
-                    url: options.baseURL + "/user",
+                    url: proxy.parse(options.baseURL + "/user"),
                     type: "GET",
                     headers: {
                         'Accept': 'application/json',
@@ -117,7 +118,7 @@ layui.define(['jquery', 'element', 'layer'], function(exports){
                 }
                 if (query.course_code) {
                     $.ajax({
-                        url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/courses/" + query.course_code + "/meta.json",
+                        url: proxy.parse(options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/courses/" + query.course_code + "/meta.json"),
                         type: "GET",
                         data: {
                             'ref': 'file-base'
@@ -176,15 +177,21 @@ layui.define(['jquery', 'element', 'layer'], function(exports){
                 }
 
                 if (page == "dashboard") {
-                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 24em;"><a href="dashboard">课程面板</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 30em;"><a href="dashboard">课程面板</a></li>';
                 } else {
-                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 24em;"><a href="dashboard">课程面板</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 30em;"><a href="dashboard">课程面板</a></li>';
                 }
 
                 if (page == "help") {
-                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 18em;"><a href="help">帮助</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 24em;"><a href="help">帮助</a></li>';
                 } else {
-                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 18em;"><a href="help">帮助</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 24em;"><a href="help">帮助</a></li>';
+                }
+
+                if (page == "settings") {
+                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 18em;"><a href="settings">设置</a></li>';
+                } else {
+                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 18em;"><a href="settings">设置</a></li>';
                 }
 
                 tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 10em;"><a href="https://i-techx.github.io/dashboard">返回旧版</a></li>';

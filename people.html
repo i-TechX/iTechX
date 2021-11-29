@@ -84,9 +84,10 @@
 <script>
     layui.config({
         base: 'layui/js/modules/'
-    }).use(['form', 'jquery', 'nav'], function(){
+    }).use(['form', 'jquery', 'nav', 'proxy'], function(){
         var $ = layui.$,
-            form = layui.form;
+            form = layui.form,
+            proxy = layui.proxy({});
 
         const options = {
             page: "people",
@@ -94,7 +95,7 @@
             repo: "iTechX",
             clientID: "2de790a6c048f147f91d",
             clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
-            baseURL: 'https://githubapi.itechx.workers.dev'
+            baseURL: 'https://api.github.com'
         };
         
         var nav = layui.nav(options);
@@ -134,24 +135,28 @@
         }
 
         $.ajax({
-            url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/people/meta.json",
+            url: proxy.parse("https://raw.githubusercontent.com" + "/" + options.owner + "/" + options.repo + "/file-base/people/meta.json"),
             type: "GET",
-            data: {
-                'ref': 'file-base'
-            },
-            headers: headers,
             success: function (data) {
-                if (data && data.content) {
-                    var string = decodeURIComponent(escape(window.atob(data.content.replace(/[\r\n]/g,""))));
-                    var content = JSON.parse(string);
+                if (data) {
+                    var content = data;
                     var info = content[pid];
                     
                     document.title = 'iTechX | ' + info.name;
 
+                    var getImage = function(url, pid) {
+                        if (url == true) {
+                            url = "https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/" + pid + ".jpg";
+                        } else if (!url) {
+                            url = "layui/images/teacher.jpg";
+                        }
+                        return proxy.parse(url);
+                    }
+
                     /* render info bar */
                     var html = "";
                     html += '<div style="margin-bottom: 10px; text-align: center;">\
-                        <img src="'+(info.image?info.image:"layui/images/teacher.jpg")+'" style="border-radius: 50%; width: 200px; height: 200px;">\
+                        <img src="'+getImage(info.image, pid)+'" style="border-radius: 50%; width: 200px; height: 200px;">\
                     </div>\
                     <h1 style="text-align: center;">\
                         <span style="font-family: \'等线 Light\', Helvetica, \'Hiragino Sans GB\', \'Microsoft Yahei\', \'微软雅黑\', Arial, sans-serif;">'+info.name+'</span>\
@@ -218,18 +223,12 @@
         });
 
         $.ajax({
-            url: options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/people/pages/" + pid + ".md",
+            url: proxy.parse("https://raw.githubusercontent.com" + "/" + options.owner + "/" + options.repo + "/file-base/people/pages/" + pid + ".md"),
             type: "GET",
-            data: {
-                'ref': 'file-base'
-            },
-            headers: headers,
             success: function (data) {
-                if (data && data.content) {
-                    var s = decodeURIComponent(escape(window.atob(data.content.replace(/[\r\n]/g,""))));
-
+                if (data) { 
                     var converter = new showdown.Converter({tables: true, literalMidWordUnderscores: true, extensions: mdext()});
-                    ans = converter.makeHtml(s);
+                    ans = converter.makeHtml(data);
                     ans = '<div class="markdown-body">' + ans + '</div>'
                     document.getElementById('test-out').innerHTML=ans;
                     renderEditIcon();

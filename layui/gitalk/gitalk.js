@@ -5244,7 +5244,7 @@ var axiosJSON = exports.axiosJSON = _axios2.default.create({
 });
 
 var axiosGithub = exports.axiosGithub = _axios2.default.create({
-  baseURL: 'https://githubapi.itechx.workers.dev',
+  baseURL: 'https://api.github.com',
   headers: {
     'Accept': 'application/json'
   }
@@ -13352,14 +13352,15 @@ var GitalkComponent = function (_Component) {
       var _this$options = _this.options,
           clientID = _this$options.clientID,
           clientSecret = _this$options.clientSecret,
-          perPage = _this$options.perPage;
+          perPage = _this$options.perPage,
+          baseURL = _this$options.baseURL;
       var page = _this.state.page;
 
 
       return _this.getIssue().then(function (issue) {
         if (!issue) return;
 
-        return _util.axiosGithub.get(issue.comments_url, {
+        return _util.axiosJSON.get(baseURL+issue.comments_url.replace("https://api.github.com", ""), {
           headers: {
             Accept: 'application/vnd.github.v3.full+json'
           },
@@ -13490,11 +13491,14 @@ var GitalkComponent = function (_Component) {
     };
 
     _this.handleCommentPreview = function (e) {
+      var _this$options = _this.options,
+          baseURL = _this$options.baseURL;
+      
       _this.setState({
         isPreview: !_this.state.isPreview
       });
 
-      _util.axiosGithub.post('/markdown', {
+      _util.axiosJSON.post(baseURL+'/markdown', {
         text: _this.state.comment
       }, {
         headers: _this.accessToken && { Authorization: 'token ' + _this.accessToken }
@@ -13572,6 +13576,7 @@ var GitalkComponent = function (_Component) {
       createIssueManually: false,
       distractionFreeMode: false,
       proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+      baseURL: 'https://api.github.com',
       flipMoveOptions: {
         staggerDelayBy: 150,
         appearAnimation: 'accordionVertical',
@@ -13680,12 +13685,15 @@ var GitalkComponent = function (_Component) {
     value: function getUserInfo() {
       var _this3 = this;
 
+      var _options = this.options,
+          baseURL = _options.baseURL;
+
       if (!this.accessToken) {
         return new _promise2.default(function (resolve) {
           resolve();
         });
       }
-      return _util.axiosGithub.get('/user', {
+      return _util.axiosJSON.get(baseURL+'/user', {
         headers: {
           Authorization: 'token ' + this.accessToken
         }
@@ -13705,12 +13713,13 @@ var GitalkComponent = function (_Component) {
           repo = _options.repo,
           number = _options.number,
           clientID = _options.clientID,
-          clientSecret = _options.clientSecret;
+          clientSecret = _options.clientSecret,
+          baseURL = _options.baseURL;
 
       var getUrl = '/repos/' + owner + '/' + repo + '/issues/' + number;
 
       return new _promise2.default(function (resolve, reject) {
-        _util.axiosGithub.get(getUrl, {
+        _util.axiosJSON.get(baseURL+getUrl, {
           auth: {
             username: clientID,
             password: clientSecret
@@ -13745,10 +13754,11 @@ var GitalkComponent = function (_Component) {
           id = _options2.id,
           labels = _options2.labels,
           clientID = _options2.clientID,
-          clientSecret = _options2.clientSecret;
+          clientSecret = _options2.clientSecret,
+          baseURL = _options2.baseURL;
 
 
-      return _util.axiosGithub.get('/repos/' + owner + '/' + repo + '/issues', {
+      return _util.axiosJSON.get(baseURL + '/repos/' + owner + '/' + repo + '/issues', {
         auth: {
           username: clientID,
           password: clientSecret
@@ -13808,9 +13818,10 @@ var GitalkComponent = function (_Component) {
           body = _options3.body,
           id = _options3.id,
           labels = _options3.labels,
-          url = _options3.url;
+          url = _options3.url,
+          baseURL = _options3.baseURL;
 
-      return _util.axiosGithub.post('/repos/' + owner + '/' + repo + '/issues', {
+      return _util.axiosJSON.post(baseURL + '/repos/' + owner + '/' + repo + '/issues', {
         title: title,
         labels: labels.concat(id),
         body: body || url + ' \n\n ' + ((0, _util.getMetaContent)('description') || (0, _util.getMetaContent)('description', 'og:description') || '')
@@ -13845,7 +13856,7 @@ var GitalkComponent = function (_Component) {
 
 
       return this.getIssue().then(function (issue) {
-        return _util.axiosGithub.post(issue.comments_url, {
+        return _util.axiosJSON.post(this.options.baseURL + issue.comments_url.replace("https://api.github.com", ""), {
           body: comment
         }, {
           headers: {
@@ -13874,12 +13885,13 @@ var GitalkComponent = function (_Component) {
 
       var _options4 = this.options,
           owner = _options4.owner,
-          repo = _options4.repo;
+          repo = _options4.repo,
+          baseURL = _options4.baseURL;
       var user = this.state.user;
       var comments = this.state.comments;
 
 
-      _util.axiosGithub.post('/repos/' + owner + '/' + repo + '/issues/comments/' + comment.id + '/reactions', {
+      _util.axiosJSON.post(baseURL + '/repos/' + owner + '/' + repo + '/issues/comments/' + comment.id + '/reactions', {
         content: 'heart'
       }, {
         headers: {
@@ -13941,7 +13953,7 @@ var GitalkComponent = function (_Component) {
         };
       };
 
-      _util.axiosGithub.post('/graphql', getQL(comment.gId), {
+      _util.axiosJSON.post(this.options.baseURL + '/graphql', getQL(comment.gId), {
         headers: {
           Authorization: 'bearer ' + this.accessToken
         }
@@ -62386,12 +62398,13 @@ function getComments(issue) {
       repo = _options.repo,
       perPage = _options.perPage,
       pagerDirection = _options.pagerDirection,
-      defaultAuthor = _options.defaultAuthor;
+      defaultAuthor = _options.defaultAuthor,
+      baseURL = _options.baseURL;
   var _state = this.state,
       cursor = _state.cursor,
       comments = _state.comments;
 
-  return _util.axiosGithub.post('/graphql', getQL({
+  return _util.axiosJSON.post(baseURL + '/graphql', getQL({
     owner: owner,
     repo: repo,
     id: issue.number,
