@@ -47,7 +47,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 "^https?://raw.githubusercontent.com(/([^/]*)/([^/]*)/([^/]*)(.*\\.(?:(?:pdf))))$", 
                 {
                     "plain-preview": ["https://mozilla.github.io/pdf.js/web/viewer.html?file=$&", "无代理-在线预览"],
-                    "ghucs-preview": ["https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontents.com$1", "GHUCS 代理-下载（默认）"],
+                    "ghucs-preview": ["https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontents.com$1", "GHUCS 代理-在线预览（默认）"],
                     "itechx-preview": ["https://mozilla.github.io/pdf.js/web/viewer.html?file=https://githubraw.itechx.workers.dev$1", "iTechX 临时代理-在线预览"],
                     "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理-下载"],
                     "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理-下载"],
