@@ -5,6 +5,22 @@
         {
             "course_id": "CS172.01",
             "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "gaoshh"
+            ],
+            "ta": [
+                "zhongzm", "zhaozb", "huangbb", "yanxh", "yujp1", "wangry3", "wangchy8", "wuxh", "lijp", "qianych", "jinlei"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Linear algebra, basic calculus, and probability, Calculus, Programing",
+            "evaluation": "Homework 10%, Quiz 10%, Final exam 60%, Project 20%"
+        },
+        {
+            "course_id": "CS172.01",
+            "season": "Fall",
             "year": "2020",
             "mainpage": "https://i-techx.github.io/CS172/index.html",
             "teacher": [
