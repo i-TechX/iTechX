@@ -4,7 +4,7 @@
     },
     "jiangjh": {
         "name": "姜嘉骅",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/jiangjh.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#106;&#x69;&#97;&#110;&#x67;&#106;&#104;&#x40;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#104;&#46;&#101;&#100;&#117;&#46;&#99;&#110;", "mailto:&#106;&#x69;&#97;&#110;&#x67;&#106;&#104;&#x40;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#104;&#46;&#101;&#100;&#117;&#46;&#99;&#110;"],
             ["home", "Home Page", "https://sist.shanghaitech.edu.cn/2020/0707/c7499a58298/page.htm"]
@@ -15,7 +15,7 @@
     },
     "zhanglf": {
         "name": "张良峰",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhanglf.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#122;&#x68;&#97;&#110;&#103;&#108;&#x66;&#64;&#115;&#x68;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#x6e;", "mailto:&#122;&#x68;&#97;&#110;&#103;&#108;&#x66;&#64;&#115;&#x68;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#x6e;"],
             ["home", "Home Page", "https://sist.shanghaitech.edu.cn/2020/0707/c7499a53860/page.htm"]
@@ -49,7 +49,7 @@
     },
     "tukw": {
         "name": "屠可伟",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/tukw.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x74;&#117;&#107;&#x77;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#x61;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#x2e;&#x63;&#110;", "mailto:&#x74;&#117;&#107;&#x77;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#x61;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#x2e;&#x63;&#110;"],
             ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/"]
@@ -65,7 +65,7 @@
     },
     "hexm": {
         "name": "何旭明",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/hexm.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#104;&#101;&#120;&#x6d;&#x40;&#x73;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#99;&#110;", "mailto:&#104;&#101;&#120;&#x6d;&#x40;&#x73;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#99;&#110;"],
             ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/hexm/index.html"]
@@ -78,7 +78,7 @@
     },
     "wangyang4": {
         "name": "汪阳",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wangyang4.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#119;&#97;&#110;&#103;&#121;&#97;&#x6e;&#103;&#52;&#64;&#x73;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#99;&#104;&#46;&#x65;&#100;&#117;&#46;&#99;&#110;", "mailto:&#119;&#97;&#110;&#103;&#121;&#97;&#x6e;&#103;&#52;&#64;&#x73;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#99;&#104;&#46;&#x65;&#100;&#117;&#46;&#99;&#110;"],
             ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/wangyang/web/people/yangwang.html"],
@@ -91,7 +91,7 @@
     },
     "borish": {
         "name": "Boris Houska",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/borish.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x62;&#111;&#114;&#105;&#115;&#104;&#64;&#115;&#104;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;", "mailto:&#x62;&#111;&#114;&#105;&#115;&#104;&#64;&#115;&#104;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;"],
             ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/boris/"]
@@ -106,7 +106,7 @@
     },
     "yinshu": {
         "name": "殷树",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yinshu.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#121;&#105;&#110;&#115;&#104;&#117;&#64;&#115;&#104;&#x61;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#x68;&#46;&#101;&#100;&#117;&#46;&#99;&#110;", "mailto:&#121;&#105;&#110;&#115;&#104;&#117;&#64;&#115;&#104;&#x61;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#x68;&#46;&#101;&#100;&#117;&#46;&#99;&#110;"],
             ["home", "Home Page", "https://lion.sist.shanghaitech.edu.cn/people.html"],
@@ -121,7 +121,7 @@
     },
     "xietao": {
         "name": "谢涛",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/xietao.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x67;&#x61;&#x72;&#121;&#120;&#x69;&#101;&#x32;&#48;&#64;&#x79;&#97;&#x68;&#x6f;&#111;&#46;&#x63;&#111;&#109;", "mailto:&#x67;&#x61;&#x72;&#121;&#120;&#x69;&#101;&#x32;&#48;&#64;&#x79;&#97;&#x68;&#x6f;&#111;&#46;&#x63;&#111;&#109;"],
             ["home", "Home Page", "https://sist.shanghaitech.edu.cn/2020/0706/c7493a53774/page.htm"]
@@ -132,7 +132,7 @@
     },
     "soerensch": {
         "name": "Sören Schwertfeger",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/soerensch.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x73;&#111;&#x65;&#x72;&#101;&#x6e;&#x73;&#x63;&#x68;&#x40;&#115;&#104;&#97;&#x6e;&#x67;&#104;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;", "mailto:&#x73;&#111;&#x65;&#x72;&#101;&#x6e;&#x73;&#x63;&#x68;&#x40;&#115;&#104;&#97;&#x6e;&#x67;&#104;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;"],
             ["home", "Home Page", "http://s-schwertfeger.eu/"],
@@ -149,7 +149,7 @@
     },
     "wangchd": {
         "name": "王春东",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wangchd.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#119;&#x61;&#x6e;&#x67;&#99;&#104;&#x64;&#x40;&#x73;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;", "mailto:&#119;&#x61;&#x6e;&#x67;&#99;&#104;&#x64;&#x40;&#x73;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;"],
             ["flask", "Lab Page", "https://toast-lab.sist.shanghaitech.edu.cn/"]
@@ -163,7 +163,7 @@
     },
     "zhaodj": {
         "name": "赵登吉",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhaodj.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x7a;&#104;&#97;&#111;&#100;&#x6a;&#64;&#x73;&#x68;&#x61;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;", "mailto:&#x7a;&#104;&#97;&#111;&#100;&#x6a;&#64;&#x73;&#x68;&#x61;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;"],
             ["home", "Home Page", "http://dengji-zhao.net/"],
@@ -179,7 +179,7 @@
     },
     "fanrui": {
         "name": "范睿",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/fanrui.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#102;&#x61;&#110;&#114;&#x75;&#x69;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#x68;&#46;&#101;&#100;&#117;&#46;&#99;&#110;", "mailto:&#102;&#x61;&#110;&#114;&#x75;&#x69;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#x68;&#46;&#101;&#100;&#117;&#46;&#99;&#110;"],
             ["home", "Home Page", "https://sist.shanghaitech.edu.cn/2020/0707/c7499a53905/page.htm"]
@@ -191,7 +191,7 @@
     },
     "liquan": {
         "name": "李权",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/liquan.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x6c;&#x69;&#113;&#x75;&#x61;&#110;&#x40;&#x73;&#x68;&#97;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#x68;&#46;&#x65;&#100;&#117;&#46;&#99;&#110;", "mailto:&#x6c;&#x69;&#113;&#x75;&#x61;&#110;&#x40;&#x73;&#x68;&#97;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#x68;&#46;&#x65;&#100;&#117;&#46;&#99;&#110;"],
             ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/liquan/"]
@@ -202,7 +202,7 @@
     },
     "zhouyi": {
         "name": "周熠",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhouyi.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#121;&#x7a;&#104;&#x6f;&#117;&#x40;&#x62;&#x73;&#98;&#105;&#105;&#46;&#x63;&#x6e;", "mailto:&#121;&#x7a;&#104;&#x6f;&#117;&#x40;&#x62;&#x73;&#98;&#105;&#105;&#46;&#x63;&#x6e;"],
             ["home", "Home Page", "https://www.bsbii.cn/website/h5/77/content/2019/1575364477723.html"]
@@ -213,7 +213,7 @@
     },
     "wanghao1": {
         "name": "王浩",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wanghao1.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#119;&#x61;&#110;&#x67;&#x68;&#x61;&#111;&#x31;&#64;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#x65;&#100;&#x75;&#x2e;&#99;&#110;", "mailto:&#119;&#x61;&#110;&#x67;&#x68;&#x61;&#111;&#x31;&#64;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#x65;&#100;&#x75;&#x2e;&#99;&#110;"],
             ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/wanghao/"]
@@ -224,7 +224,7 @@
     },
     "yangsb": {
         "name": "杨思蓓",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yangsb.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x79;&#x61;&#x6e;&#103;&#x73;&#x62;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#x68;&#x2e;&#101;&#100;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#x79;&#x61;&#x6e;&#103;&#x73;&#x62;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#x68;&#x2e;&#101;&#100;&#117;&#x2e;&#x63;&#x6e;"],
             ["home", "Home Page", "https://sibeiyang.github.io/"]
@@ -235,7 +235,7 @@
     },
     "xulan1": {
         "name": "许岚",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/xulan1.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x78;&#117;&#108;&#x61;&#110;&#x31;&#64;&#x73;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#x74;&#101;&#99;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#110;", "mailto:&#x78;&#117;&#108;&#x61;&#110;&#x31;&#64;&#x73;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#x74;&#101;&#99;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#110;"],
             ["home", "Home Page", "http://xu-lan.com/"]
@@ -247,7 +247,7 @@
     },
     "sunlu1": {
         "name": "孙露",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/sunlu1.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#115;&#x75;&#110;&#108;&#x75;&#x31;&#64;&#115;&#x68;&#97;&#110;&#103;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;", "mailto:&#115;&#x75;&#110;&#108;&#x75;&#x31;&#64;&#115;&#x68;&#97;&#110;&#103;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;"],
             ["home", "Home Page", "https://lusun912.github.io/"]
@@ -261,7 +261,7 @@
     },
     "zhaoziping": {
         "name": "赵子平",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhaoziping.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#122;&#104;&#97;&#x6f;&#122;&#105;&#112;&#x69;&#110;&#103;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;", "mailto:&#122;&#104;&#97;&#x6f;&#122;&#105;&#112;&#x69;&#110;&#103;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;"],
             ["home", "Home Page", "http://www.zipingzhao.com/"]
@@ -272,7 +272,7 @@
     },
     "shiym": {
         "name": "石远明",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/shiym.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#115;&#x68;&#105;&#x79;&#109;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#101;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;", "mailto:&#115;&#x68;&#105;&#x79;&#109;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#101;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;"],
             ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/shiym/home.html"]
@@ -286,7 +286,7 @@
     },
     "shiye": {
         "name": "石野",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/shiye.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x73;&#104;&#105;&#121;&#x65;&#x40;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#110;", "mailto:&#x73;&#104;&#105;&#121;&#x65;&#x40;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#110;"],
             ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/shiye/"]
@@ -298,7 +298,7 @@
     },
     "zhangyy8": {
         "name": "张玉瑶",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhangyy8.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x7a;&#x68;&#x61;&#110;&#x67;&#x79;&#x79;&#x38;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;", "mailto:&#x7a;&#x68;&#x61;&#110;&#x67;&#x79;&#x79;&#x38;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;"]
         ],
@@ -309,7 +309,7 @@
     },
     "yujingyi": {
         "name": "虞晶怡",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yujingyi.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#121;&#x75;&#x6a;&#105;&#x6e;&#103;&#121;&#105;&#x40;&#115;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#104;&#46;&#101;&#x64;&#117;&#46;&#99;&#x6e;", "mailto:&#121;&#x75;&#x6a;&#105;&#x6e;&#103;&#121;&#105;&#x40;&#115;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#104;&#46;&#101;&#x64;&#117;&#46;&#99;&#x6e;"],
             ["flask", "Lab Page", "https://vic.shanghaitech.edu.cn/vrvc/en/"]
@@ -320,7 +320,7 @@
     },
     "yangzhc": {
         "name": "杨智策",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yangzhc.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x79;&#97;&#x6e;&#x67;&#x7a;&#104;&#99;&#64;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;", "mailto:&#x79;&#97;&#x6e;&#x67;&#x7a;&#104;&#99;&#64;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;"],
             ["home", "Home Page", "https://www.yangzhice.com/"]
@@ -331,13 +331,25 @@
     },
     "jiangzhh": {
         "name": "江智浩",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/jiangzhh.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#106;&#105;&#x61;&#110;&#x67;&#x7a;&#x68;&#104;&#64;&#x73;&#104;&#x61;&#110;&#103;&#104;&#97;&#x69;&#x74;&#x65;&#x63;&#x68;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;", "mailto:&#106;&#105;&#x61;&#110;&#x67;&#x7a;&#x68;&#104;&#64;&#x73;&#104;&#x61;&#110;&#103;&#104;&#97;&#x69;&#x74;&#x65;&#x63;&#x68;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;"],
             ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/jiangzhh/"]
         ],
         "teach-courses": [
             ["Fall", "2021", "CS101", "Algorithms and Data Structures"]
+        ]
+    },
+    "gaoshh": {
+        "name": "高盛华",
+        "image": true,
+        "info": [
+            ["envelope", "&#103;&#x61;&#x6f;&#x73;&#x68;&#104;&#x40;&#115;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#116;&#x65;&#x63;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;", "mailto:&#103;&#x61;&#x6f;&#x73;&#x68;&#104;&#x40;&#115;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#116;&#x65;&#x63;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;"],
+            ["flask", "Lab Page", "https://svip-lab.github.io/index.html"]
+        ],
+        "teach-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"],
+            ["Fall", "2019", "CS172", "Computer Vision I"]
         ]
     },
     "qiaowh": {
@@ -460,7 +472,7 @@
     },
     "chents": {
         "name": "陈天素",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/chents.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#99;&#x68;&#x65;&#110;&#116;&#115;&#x40;&#115;&#104;&#x61;&#110;&#103;&#104;&#97;&#x69;&#x74;&#101;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#46;&#99;&#110;", "mailto:&#99;&#x68;&#x65;&#110;&#116;&#115;&#x40;&#115;&#104;&#x61;&#110;&#103;&#104;&#97;&#x69;&#x74;&#101;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#46;&#99;&#110;"]
         ],
@@ -471,7 +483,7 @@
     },
     "jiangchy": {
         "name": "蒋承越",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/jiangchy.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#106;&#x69;&#97;&#110;&#103;&#x63;&#x68;&#121;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#117;&#46;&#99;&#x6e;", "mailto:&#106;&#x69;&#97;&#110;&#103;&#x63;&#x68;&#121;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#117;&#46;&#99;&#x6e;"],
             ["home", "Home Page", "https://jeffchy.github.io/"]
@@ -503,7 +515,7 @@
     },
     "zhanggl1": {
         "name": "张甘霖",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhanggl1.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#122;&#104;&#97;&#110;&#103;&#103;&#108;&#49;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#104;&#97;&#x69;&#116;&#101;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#99;&#110;", "mailto:&#122;&#104;&#97;&#110;&#103;&#103;&#108;&#49;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#104;&#97;&#x69;&#116;&#101;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#99;&#110;"]
         ],
@@ -522,7 +534,7 @@
     },
     "shenyao": {
         "name": "沈尧",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/shenyao.jpg",
+        "image": true,
         "ta-courses": [
             ["Fall", "2019", "CS181", "Artificial Intelligence I"],
             ["Fall", "2019", "CS101", "Algorithms and Data Structures"],
@@ -543,7 +555,7 @@
     },
     "yuxp": {
         "name": "余肖鹏",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yuxp.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#121;&#x75;&#120;&#112;&#64;&#115;&#104;&#97;&#110;&#103;&#x68;&#97;&#105;&#116;&#101;&#99;&#104;&#x2e;&#101;&#100;&#x75;&#x2e;&#99;&#110;", "mailto:&#121;&#x75;&#120;&#112;&#64;&#115;&#104;&#97;&#110;&#103;&#x68;&#97;&#105;&#116;&#101;&#99;&#104;&#x2e;&#101;&#100;&#x75;&#x2e;&#99;&#110;"]
         ],
@@ -604,7 +616,7 @@
     },
     "limzh": {
         "name": "李敏章",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/limzh.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#108;&#105;&#x6d;&#x7a;&#104;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#x69;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#110;", "mailto:&#108;&#105;&#x6d;&#x7a;&#104;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#x69;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#110;"]
         ],
@@ -614,7 +626,7 @@
     },
     "zhaochf": {
         "name": "赵乘风",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhaochf.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#122;&#104;&#97;&#111;&#x63;&#104;&#102;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#x61;&#105;&#x74;&#101;&#99;&#104;&#x2e;&#101;&#100;&#x75;&#x2e;&#99;&#110;", "mailto:&#122;&#104;&#97;&#111;&#x63;&#104;&#102;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#x61;&#105;&#x74;&#101;&#99;&#104;&#x2e;&#101;&#100;&#x75;&#x2e;&#99;&#110;"]
         ],
@@ -624,7 +636,7 @@
     },
     "ligch": {
         "name": "李冠呈",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/ligch.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#108;&#105;&#103;&#x63;&#104;&#64;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#46;&#99;&#110;", "mailto:&#108;&#105;&#103;&#x63;&#104;&#64;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#46;&#99;&#110;"]
         ],
@@ -653,7 +665,7 @@
     },
     "songyj": {
         "name": "宋延杰",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/songyj.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#115;&#x6f;&#110;&#x67;&#x79;&#x6a;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;", "mailto:&#115;&#x6f;&#110;&#x67;&#x79;&#x6a;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;"]
         ],
@@ -666,7 +678,7 @@
     },
     "zhangqh": {
         "name": "张起豪",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhangqh.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#122;&#x68;&#x61;&#x6e;&#103;&#113;&#104;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#110;", "mailto:&#122;&#x68;&#x61;&#x6e;&#103;&#113;&#104;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#110;"]       
         ],
@@ -678,7 +690,7 @@
     },
     "linzhy": {
         "name": "林仲岳",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/linzhy.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x6c;&#x69;&#x6e;&#x7a;&#104;&#x79;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;", "mailto:&#x6c;&#x69;&#x6e;&#x7a;&#104;&#x79;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"]
         ],
@@ -707,7 +719,7 @@
     },
     "wuhp": {
         "name": "吴翰培",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wuhp.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#119;&#x75;&#x68;&#x70;&#x40;&#x73;&#104;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#46;&#x63;&#x6e;", "mailto:&#119;&#x75;&#x68;&#x70;&#x40;&#x73;&#104;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#46;&#x63;&#x6e;"]
         ],
@@ -718,7 +730,7 @@
     },
     "wuty": {
         "name": "吴天元",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wuty.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x77;&#x75;&#116;&#121;&#64;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#97;&#x69;&#x74;&#101;&#x63;&#x68;&#46;&#x65;&#100;&#x75;&#x2e;&#x63;&#x6e;", "mailto:&#x77;&#x75;&#116;&#121;&#64;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#97;&#x69;&#x74;&#101;&#x63;&#x68;&#46;&#x65;&#100;&#x75;&#x2e;&#x63;&#x6e;"]
         ],
@@ -739,7 +751,7 @@
     },
     "jingyzh": {
         "name": "荆玉琢",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/jingyzh.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#106;&#x69;&#110;&#103;&#121;&#x7a;&#x68;&#64;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;", "mailto:&#106;&#x69;&#110;&#103;&#121;&#x7a;&#x68;&#64;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;"]
         ],
@@ -760,7 +772,7 @@
     },
     "yechn": {
         "name": "叶崇南",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yechn.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x79;&#101;&#x63;&#x68;&#x6e;&#64;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#101;&#100;&#117;&#x2e;&#99;&#110;", "mailto:&#x79;&#101;&#x63;&#x68;&#x6e;&#64;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#101;&#100;&#117;&#x2e;&#99;&#110;"]
         ],
@@ -771,7 +783,7 @@
     },
     "wangyh1": {
         "name": "王奕涵",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wangyh1.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#119;&#97;&#x6e;&#x67;&#121;&#104;&#49;&#x40;&#115;&#104;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#x6e;", "mailto:&#119;&#97;&#x6e;&#x67;&#121;&#104;&#49;&#x40;&#115;&#104;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#x6e;"]
         ],
@@ -781,7 +793,7 @@
     },
     "yangzhj": {
         "name": "杨之杰",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yangzhj.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x79;&#97;&#x6e;&#103;&#122;&#104;&#106;&#64;&#115;&#x68;&#x61;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#110;", "mailto:&#x79;&#97;&#x6e;&#103;&#122;&#104;&#106;&#64;&#115;&#x68;&#x61;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#110;"]
         ],
@@ -791,7 +803,7 @@
     },
     "dengtl": {
         "name": "邓通亮",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/dengtl.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#100;&#x65;&#110;&#x67;&#x74;&#108;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;", "mailto:&#100;&#x65;&#110;&#x67;&#x74;&#108;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;"]
         ],
@@ -802,7 +814,7 @@
     },
     "xiezhq": {
         "name": "谢志强",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/xiezhq.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x78;&#x69;&#101;&#x7a;&#x68;&#x71;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#x65;&#99;&#104;&#46;&#101;&#x64;&#x75;&#x2e;&#x63;&#x6e;", "mailto:&#x78;&#x69;&#101;&#x7a;&#x68;&#x71;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#x65;&#99;&#104;&#46;&#101;&#x64;&#x75;&#x2e;&#x63;&#x6e;"]
         ],
@@ -812,7 +824,7 @@
     },
     "zouyl": {
         "name": "邹彦良",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zouyl.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x7a;&#x6f;&#x75;&#121;&#108;&#x40;&#115;&#104;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;", "mailto:&#x7a;&#x6f;&#x75;&#121;&#108;&#x40;&#115;&#104;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;"]
         ],
@@ -822,7 +834,7 @@
     },
     "chenchen": {
         "name": "陈宸",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/chenchen.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x63;&#x68;&#101;&#x6e;&#x63;&#x68;&#101;&#110;&#x40;&#115;&#x68;&#97;&#110;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;", "mailto:&#x63;&#x68;&#101;&#x6e;&#x63;&#x68;&#101;&#110;&#x40;&#115;&#x68;&#97;&#110;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;"]
         ],
@@ -841,7 +853,7 @@
     },
     "nianzhl": {
         "name": "念中林",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/nianzhl.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x6e;&#105;&#x61;&#x6e;&#x7a;&#104;&#x6c;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#x6e;", "mailto:&#x6e;&#105;&#x61;&#x6e;&#x7a;&#104;&#x6c;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#x6e;"]
         ],
@@ -872,7 +884,7 @@
     },
     "daiqy": {
         "name": "戴启元",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/daiqy.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x64;&#x61;&#x69;&#113;&#x79;&#64;&#x73;&#x68;&#97;&#110;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#x64;&#x61;&#x69;&#113;&#x79;&#64;&#x73;&#x68;&#97;&#110;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;"]
         ],
@@ -882,7 +894,7 @@
     },
     "diaozh": {
         "name": "刁子豪",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/diaozh.jpg",
+        "image": true,
         "info": [
             ["home", "Home Page", "https://ericdiao.com/"]
         ],
@@ -908,7 +920,7 @@
     },
     "wangchy4": {
         "name": "王辰昱",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wangchy4.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x77;&#97;&#x6e;&#103;&#99;&#104;&#121;&#x34;&#64;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;", "mailto:&#x77;&#97;&#x6e;&#103;&#99;&#104;&#121;&#x34;&#64;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;"]   
         ],
@@ -918,7 +930,7 @@
     },
     "wangjr": {
         "name": "王锦瑞",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wangjr.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#119;&#97;&#x6e;&#103;&#106;&#x72;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;", "mailto:&#119;&#97;&#x6e;&#103;&#106;&#x72;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;"]
         ],
@@ -929,7 +941,7 @@
     },
     "xuteng": {
         "name": "许腾",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/xuteng.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#120;&#x75;&#x74;&#101;&#110;&#x67;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;", "mailto:&#120;&#x75;&#x74;&#101;&#110;&#x67;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;"]
         ],
@@ -941,7 +953,7 @@
     },
     "yezhe": {
         "name": "叶者",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yezhe.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x79;&#x65;&#122;&#x68;&#x65;&#x40;&#115;&#104;&#x61;&#110;&#103;&#x68;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#x79;&#x65;&#122;&#x68;&#x65;&#x40;&#115;&#104;&#x61;&#110;&#103;&#x68;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;"]
         ],
@@ -951,7 +963,7 @@
     },
     "yuzy": {
         "name": "俞子逸",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yuzy.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#121;&#x75;&#122;&#121;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#104;&#97;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#110;", "mailto:&#121;&#x75;&#122;&#121;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#104;&#97;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#110;"]
         ],
@@ -961,7 +973,7 @@
     },
     "zhangchb1": {
         "name": "张驰斌",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhangchb1.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x7a;&#104;&#x61;&#x6e;&#x67;&#99;&#x68;&#x62;&#x31;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#x68;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#110;", "mailto:&#x7a;&#104;&#x61;&#x6e;&#x67;&#99;&#x68;&#x62;&#x31;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#x68;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#110;"]
         ],
@@ -971,7 +983,7 @@
     },
     "zhengyt1": {
         "name": "郑瑜婷",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhengyt1.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#122;&#x68;&#x65;&#x6e;&#x67;&#121;&#116;&#x31;&#64;&#115;&#104;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#99;&#104;&#46;&#101;&#100;&#117;&#46;&#99;&#110;", "mailto:&#122;&#x68;&#x65;&#x6e;&#x67;&#121;&#116;&#x31;&#64;&#115;&#104;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#99;&#104;&#46;&#101;&#100;&#117;&#46;&#99;&#110;"] 
         ],
@@ -982,7 +994,7 @@
     },
     "pangaq": {
         "name": "庞安琪",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/pangaq.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#112;&#x61;&#110;&#103;&#x61;&#113;&#64;&#115;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#105;&#116;&#101;&#x63;&#x68;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;", "mailto:&#112;&#x61;&#110;&#103;&#x61;&#113;&#64;&#115;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#105;&#116;&#101;&#x63;&#x68;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;"]
         ],
@@ -992,7 +1004,7 @@
     },
     "yucheng": {
         "name": "郁程",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yucheng.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x79;&#x75;&#x63;&#x68;&#x65;&#110;&#103;&#64;&#x73;&#104;&#97;&#110;&#103;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#110;", "mailto:&#x79;&#x75;&#x63;&#x68;&#x65;&#110;&#103;&#64;&#x73;&#104;&#97;&#110;&#103;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#110;"]
         ],
@@ -1002,7 +1014,7 @@
     },
     "suhang": {
         "name": "苏杭",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/suhang.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#115;&#117;&#x68;&#97;&#x6e;&#x67;&#x40;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#x2e;&#99;&#x6e;", "mailto:&#115;&#117;&#x68;&#97;&#x6e;&#x67;&#x40;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#x2e;&#99;&#x6e;"]
         ],
@@ -1013,7 +1025,7 @@
     },
     "wumy1": {
         "name": "邬梦莹",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wumy1.jpg",
+        "image": true,
         "ta-courses": [
             ["Spring", "2021", "CS240", "Algorithm Design and Analysis"],
             ["Spring", "2020", "CS110", "Computer Architecture I"]
@@ -1021,7 +1033,7 @@
     },
     "wangph": {
         "name": "王培豪",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wangph.jpg",
+        "image": true,
         "info": [
             ["github-alt", "Github", "https://github.com/peihaowang"]
         ],
@@ -1031,7 +1043,7 @@
     },
     "songze": {
         "name": "宋泽",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/songze.jpg",
+        "image": true,
         "ta-courses": [
             ["Fall", "2020", "CS101", "Algorithms and Data Structures"],
             ["Spring", "2020", "CS110", "Computer Architecture I"]
@@ -1039,7 +1051,7 @@
     },
     "caizhy": {
         "name": "蔡中一",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/caizhy.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#99;&#x61;&#x69;&#122;&#x68;&#121;&#64;&#115;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#99;&#x61;&#x69;&#122;&#x68;&#121;&#64;&#115;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;"]
         ],
@@ -1061,14 +1073,14 @@
     },
     "qinxin": {
         "name": "覃昕",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/qinxin.jpg",
+        "image": true,
         "ta-courses": [
             ["Spring", "2017", "CS110", "Computer Architecture I"]
         ]
     },
     "jiafr": {
         "name": "贾斐然",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/jiafr.jpg",
+        "image": true,
         "ta-courses": [
             ["Spring", "2017", "CS110", "Computer Architecture I"]
         ]
@@ -1081,7 +1093,7 @@
     },
     "yangych": {
         "name": "杨贇晨",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yangych.jpg",
+        "image": true,
         "ta-courses": [
             ["Spring", "2017", "CS110", "Computer Architecture I"]
         ]
@@ -1094,14 +1106,14 @@
     },
     "dongyb": {
         "name": "董艳兵",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/dongyb.jpg",
+        "image": true,
         "ta-courses": [
             ["Spring", "2016", "CS110", "Computer Architecture I"]
         ]
     },
     "wumy": {
         "name": "吴旻烨",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/wumy.jpg",
+        "image": true,
         "ta-courses": [
             ["Spring", "2016", "CS110", "Computer Architecture I"]
         ]
@@ -1114,7 +1126,7 @@
     },
     "xuqw": {
         "name": "徐晴雯",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/xuqw.jpg",
+        "image": true,
         "ta-courses": [
             ["Spring", "2017", "CS110", "Computer Architecture I"],
             ["Spring", "2016", "CS110", "Computer Architecture I"]
@@ -1122,7 +1134,7 @@
     },
     "zhuchen": {
         "name": "朱晨",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhuchen.jpg",
+        "image": true,
         "info": [
             ["home", "Home Page", "https://zhuchen03.github.io/"]
         ],
@@ -1132,7 +1144,7 @@
     },
     "zhangty": {
         "name": "张天一",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhangty.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#122;&#104;&#97;&#110;&#x67;&#116;&#121;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;", "mailto:&#122;&#104;&#97;&#110;&#x67;&#116;&#121;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;"]
         ],
@@ -1142,7 +1154,7 @@
     },
     "yangty2": {
         "name": "杨天易",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/yangty2.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x79;&#x61;&#110;&#x67;&#x74;&#121;&#50;&#x40;&#x73;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#x6e;", "mailto:&#x79;&#x61;&#110;&#x67;&#x74;&#121;&#50;&#x40;&#x73;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#x6e;"]
         ],
@@ -1152,7 +1164,7 @@
     },
     "zhangyao1": {
         "name": "张尧",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhangyao1.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#122;&#104;&#97;&#110;&#103;&#121;&#97;&#x6f;&#x31;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;", "mailto:&#122;&#104;&#97;&#110;&#103;&#121;&#97;&#x6f;&#x31;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;"]
         ],
@@ -1165,7 +1177,7 @@
     },
     "lianxy": {
         "name": "连新远",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/lianxy.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#108;&#105;&#97;&#x6e;&#120;&#121;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#46;&#101;&#100;&#x75;&#x2e;&#99;&#110;", "mailto:&#108;&#105;&#97;&#x6e;&#120;&#121;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#46;&#101;&#100;&#x75;&#x2e;&#99;&#110;"]
         ],
@@ -1175,7 +1187,7 @@
     },
     "gexu": {
         "name": "葛煦",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/gexu.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#x67;&#x65;&#x78;&#117;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#x67;&#x65;&#x78;&#117;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;"]
         ],
@@ -1662,7 +1674,7 @@
     },
     "zhangwen1": {
         "name": "张雯",
-        "image": "https://ghproxy.com/https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/zhangwen1.jpg",
+        "image": true,
         "info": [
             ["envelope", "&#122;&#104;&#x61;&#110;&#103;&#119;&#x65;&#x6e;&#x31;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#110;", "mailto:&#122;&#104;&#x61;&#110;&#103;&#119;&#x65;&#x6e;&#x31;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#110;"]
         ],
@@ -1760,6 +1772,186 @@
         ],
         "ta-courses": [
             ["Fall", "2021", "CS101", "Algorithms and Data Structures"]
+        ]
+    },
+    "xieling": {
+        "name": "谢泠",
+        "image": true,
+        "info": [
+            ["envelope", "&#120;&#x69;&#101;&#x6c;&#105;&#110;&#x67;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#x68;&#46;&#x65;&#100;&#117;&#46;&#x63;&#110;", "mailto:&#120;&#x69;&#101;&#x6c;&#105;&#110;&#x67;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#x68;&#46;&#x65;&#100;&#117;&#46;&#x63;&#110;"],
+            ["home", "Home Page", "https://jack12xl.netlify.com"]
+        ],
+        "ta-courses": [
+            ["Fall", "2019", "CS172", "Computer Vision I"]
+        ]
+    },
+    "tuzhi": {
+        "name": "涂治",
+        "image": true,
+        "info": [
+            ["envelope", "&#116;&#117;&#122;&#x68;&#x69;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#110;", "mailto:&#116;&#117;&#122;&#x68;&#x69;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#110;"],
+            ["github-alt", "Github", "https://github.com/Garfield-Finch"]
+        ],
+        "ta-courses": [
+            ["Fall", "2019", "CS172", "Computer Vision I"]
+        ]
+    },
+    "xujl1": {
+        "name": "许家乐",
+        "image": true,
+        "info": [
+            ["envelope", "&#120;&#x75;&#106;&#108;&#x31;&#x40;&#x73;&#x68;&#x61;&#110;&#103;&#x68;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#120;&#x75;&#106;&#108;&#x31;&#x40;&#x73;&#x68;&#x61;&#110;&#103;&#x68;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"],
+            ["Fall", "2019", "CS172", "Computer Vision I"]
+        ]
+    },
+    "jinlei": {
+        "name": "金磊",
+        "image": true,
+        "info": [
+            ["envelope", "&#106;&#105;&#x6e;&#108;&#101;&#x69;&#64;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#116;&#x65;&#x63;&#104;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#110;", "mailto:&#106;&#105;&#x6e;&#108;&#101;&#x69;&#64;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#116;&#x65;&#x63;&#104;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"],
+            ["Fall", "2019", "CS172", "Computer Vision I"]
+        ]
+    },
+    "qianshh": {
+        "name": "钱深瀚",
+        "image": true,
+        "info": [
+            ["envelope", "&#x71;&#105;&#97;&#110;&#x73;&#104;&#104;&#x40;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#x71;&#105;&#97;&#110;&#x73;&#104;&#104;&#x40;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2019", "CS172", "Computer Vision I"]
+        ]
+    },
+    "zhoukang": {
+        "name": "周康",
+        "image": true,
+        "info": [
+            ["envelope", "&#122;&#x68;&#x6f;&#x75;&#x6b;&#97;&#x6e;&#103;&#x40;&#x73;&#x68;&#x61;&#110;&#103;&#x68;&#x61;&#105;&#116;&#101;&#x63;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;", "mailto:&#122;&#x68;&#x6f;&#x75;&#x6b;&#97;&#x6e;&#103;&#x40;&#x73;&#x68;&#x61;&#110;&#103;&#x68;&#x61;&#105;&#116;&#101;&#x63;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;"],
+            ["home", "Home Page", "http://zhoukang.pro/"]
+        ],
+        "ta-courses": [
+            ["Fall", "2019", "CS172", "Computer Vision I"]
+        ]
+    },
+    "lijing1": {
+        "name": "李晶",
+        "image": true,
+        "info": [
+            ["envelope", "&#x6c;&#105;&#x6a;&#x69;&#110;&#x67;&#x31;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#104;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#110;", "mailto:&#x6c;&#105;&#x6a;&#x69;&#110;&#x67;&#x31;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#104;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#110;"]       
+        ],
+        "ta-courses": [
+            ["Fall", "2019", "CS172", "Computer Vision I"]
+        ]
+    },
+    "hujh": {
+        "name": "胡俊豪",
+        "image": true,
+        "info": [
+            ["envelope", "&#x68;&#117;&#x6a;&#x68;&#x40;&#x73;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;", "mailto:&#x68;&#117;&#x6a;&#x68;&#x40;&#x73;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2019", "CS172", "Computer Vision I"]
+        ]
+    },
+    "xiaoyt": {
+        "name": "肖宇廷",
+        "image": true,
+        "info": [
+            ["envelope", "&#x78;&#x69;&#x61;&#111;&#x79;&#116;&#x40;&#115;&#104;&#x61;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#100;&#117;&#x2e;&#99;&#110;", "mailto:&#x78;&#x69;&#x61;&#111;&#x79;&#116;&#x40;&#115;&#104;&#x61;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#100;&#117;&#x2e;&#99;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2019", "CS172", "Computer Vision I"]
+        ]
+    },
+    "yuzh": {
+        "name": "余泽浩",
+        "image": true,
+        "info": [
+            ["envelope", "&#121;&#x75;&#x7a;&#104;&#64;&#x73;&#x68;&#97;&#110;&#x67;&#104;&#97;&#x69;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#x64;&#x75;&#46;&#99;&#110;", "mailto:&#121;&#x75;&#x7a;&#104;&#64;&#x73;&#x68;&#97;&#110;&#x67;&#104;&#97;&#x69;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#x64;&#x75;&#46;&#99;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2019", "CS172", "Computer Vision I"]
+        ]
+    },
+    "zhongzm": {
+        "name": "钟子明",
+        "info": [
+            ["envelope", "&#122;&#x68;&#x6f;&#x6e;&#x67;&#122;&#x6d;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#116;&#x65;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#x6e;", "mailto:&#122;&#x68;&#x6f;&#x6e;&#x67;&#122;&#x6d;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#116;&#x65;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"]
+        ]
+    },
+    "zhaozb": {
+        "name": "赵子伯",
+        "image": true,
+        "info": [
+            ["envelope", "&#x7a;&#x68;&#97;&#111;&#x7a;&#x62;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#110;", "mailto:&#x7a;&#x68;&#97;&#111;&#x7a;&#x62;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"]
+        ]
+    },
+    "zhiyh": {
+        "name": "智轶浩",
+        "image": true,
+        "info": [
+            ["envelope", "&#122;&#104;&#105;&#x79;&#x68;&#64;&#x73;&#104;&#97;&#110;&#103;&#x68;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#122;&#104;&#105;&#x79;&#x68;&#64;&#x73;&#104;&#97;&#110;&#103;&#x68;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"]
+        ]
+    },
+    "huangbb": {
+        "name": "黄彬彬",
+        "info": [
+            ["envelope", "&#104;&#x75;&#97;&#110;&#103;&#98;&#x62;&#64;&#x73;&#x68;&#97;&#110;&#103;&#104;&#97;&#105;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;", "mailto:&#104;&#x75;&#97;&#110;&#103;&#98;&#x62;&#64;&#x73;&#x68;&#97;&#110;&#103;&#104;&#97;&#105;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"]
+        ]
+    },
+    "qianych": {
+        "name": "钱一成",
+        "info": [
+            ["envelope", "&#x71;&#105;&#x61;&#110;&#121;&#99;&#x68;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#99;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#x6e;", "mailto:&#x71;&#105;&#x61;&#110;&#121;&#99;&#x68;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#99;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"]
+        ]
+    },
+    "liuwen": {
+        "name": "刘闻",
+        "info": [
+            ["envelope", "&#108;&#x69;&#117;&#x77;&#x65;&#110;&#x40;&#115;&#x68;&#97;&#110;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#110;", "mailto:&#108;&#x69;&#117;&#x77;&#x65;&#110;&#x40;&#115;&#x68;&#97;&#110;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"]
+        ]
+    },
+    "liandz": {
+        "name": "廉东泽",
+        "image": true,
+        "info": [
+            ["envelope", "&#108;&#x69;&#97;&#x6e;&#x64;&#x7a;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#101;&#100;&#117;&#x2e;&#99;&#x6e;", "mailto:&#108;&#x69;&#97;&#x6e;&#x64;&#x7a;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#101;&#100;&#117;&#x2e;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"]
+        ]
+    },
+    "chenxn1": {
+        "name": "陈夏宁",
+        "info": [
+            ["envelope", "&#x63;&#x68;&#x65;&#110;&#120;&#x6e;&#49;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#100;&#117;&#46;&#x63;&#x6e;", "mailto:&#x63;&#x68;&#x65;&#110;&#120;&#x6e;&#49;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#100;&#117;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2020", "CS172", "Computer Vision I"]
         ]
     }
 }

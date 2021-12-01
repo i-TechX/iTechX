@@ -1,0 +1,40 @@
+{
+    "code": "CS172",
+    "name": "Computer Vision I",
+    "semesters": [
+        {
+            "course_id": "CS172.01",
+            "season": "Fall",
+            "year": "2020",
+            "mainpage": "https://i-techx.github.io/CS172/index.html",
+            "teacher": [
+                "gaoshh"
+            ],
+            "ta": [
+                "zhongzm", "zhaozb", "jinlei", "zhiyh", "huangbb", "qianych", "liuwen", "liandz", "xujl1", "chenxn1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Linear algebra, basic calculus, and probability, Calculus, Programing",
+            "evaluation": "Homework 20%, Quiz 10%, Final exam 70%"
+        },
+        {
+            "course_id": "CS172.01",
+            "season": "Fall",
+            "year": "2019",
+            "mainpage": "https://i-techx.github.io/CS172/index.html",
+            "teacher": [
+                "gaoshh"
+            ],
+            "ta": [
+                "xieling", "tuzhi", "xujl1", "jinlei", "qianshh", "zhoukang", "lijing1", "hujh", "xiaoyt", "yuzh"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Linear algebra, basic calculus, and probability",
+            "evaluation": "Homework 20%, Quiz 10%, Course project 10%, Final exam 60%"
+        }
+    ]
+}
