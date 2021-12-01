@@ -146,7 +146,7 @@
 
                     var getImage = function(url, pid) {
                         if (url == true) {
-                            url = "https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/" + pid + ".jpg";
+                            url = "https://raw.githubusercontent.com/" + options.owner + "/" + options.repo + "/file-base/people/images/" + pid + ".jpg";
                         } else if (!url) {
                             url = "layui/images/teacher.jpg";
                         }

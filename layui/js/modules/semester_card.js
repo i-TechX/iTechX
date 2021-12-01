@@ -174,7 +174,7 @@ layui.define(['jquery', 'util', 'element', 'rate', 'proxy'], function(exports){
 
                     var getImage = function(url, pid) {
                         if (url == true) {
-                            url = "https://raw.githubusercontent.com/i-TechX/iTechX/file-base/people/images/" + pid + ".jpg";
+                            url = "https://raw.githubusercontent.com/" + options.owner + "/" + options.repo + "/file-base/people/images/" + pid + ".jpg";
                         } else if (!url) {
                             url = "layui/images/teacher.jpg";
                         }
@@ -220,7 +220,7 @@ layui.define(['jquery', 'util', 'element', 'rate', 'proxy'], function(exports){
                             cards += '                                          \
                             <div class="instructor'+(cnt<5?'':(' layui-hide '+clsid))+'">                            \
                                 <a href="people?pid='+semester.ta[pid]+'">                         \
-                                <div><img src="' + getImage(pinfo.image, semester.teacher[pid]) + '" style="border-radius: 50%; width: 60px; height: 60px;"></div> \
+                                <div><img src="' + getImage(pinfo.image, semester.ta[pid]) + '" style="border-radius: 50%; width: 60px; height: 60px;"></div> \
                                 <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' + pinfo.name + '</div>                   \
                                 </a>                                            \
                             </div>                                              \
