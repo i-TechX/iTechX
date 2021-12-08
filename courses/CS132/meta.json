@@ -1,0 +1,71 @@
+{
+    "code": "CS132",
+    "name": "Software Engineering",
+    "semesters": [
+        {
+            "course_id": "CS132.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "tangyt1"
+            ],
+            "ta": [
+                "hepl", "caohch1", "chenyang"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "Homework: 4*5%, Midterm: 20%, Final Project: 60%"
+        },
+        {
+            "course_id": "CS132.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "jiangzhh", "tangyt1"
+            ],
+            "ta": [
+                "wangshy3", "shuzheng", "sheyn", "caizhy", "chenshy2", "chengy2", "lichq", "xuzj"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "Homework: 4*5%, Midterm: 20%, Final Project: 60%"
+        },
+        {
+            "course_id": "CS132.01",
+            "season": "Spring",
+            "year": "2020",
+            "mainpage": "https://i-techx.github.io/CS132/index.html",
+            "teacher": [
+                "jiangzhh"
+            ],
+            "ta": [
+                "yuanky", "fangzhx", "laimc"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "Homework: 4*5%, Midterm: 20%, Final Project: 60%"
+        },
+        {
+            "course_id": "CS132.01",
+            "season": "Spring",
+            "year": "2019",
+            "teacher": [
+                "jiangzhh"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        }
+    ]
+}
