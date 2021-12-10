@@ -1,0 +1,102 @@
+{
+    "code": "CS121",
+    "name": "Parallel Computing",
+    "semesters": [
+        {
+            "course_id": "CS121.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "fanrui"
+            ],
+            "ta": [
+                "luqh"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Problem sets 20%, Labs 20%, Reading project 15%, Course project 15%, Midterm exam 10%, Final exam 20%, Attendance"
+        },
+        {
+            "course_id": "CS121.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "fanrui"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Problem sets 20%, Labs 20%, Reading project 15%, Course project 15%, Midterm exam 10%, Final exam 20%, Attendance"
+        },
+        {
+            "course_id": "CS121.01",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "fanrui"
+            ],
+            "ta": [
+                "wanglsh"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Problem sets 20%, Labs 20%, Reading project 20%, Course project 20%, Final exam 20%, Class participation May move borderline grades up half a letter grade (e.g. B+ to A-)"
+        },
+        {
+            "course_id": "CS121.01",
+            "season": "Spring",
+            "year": "2019",
+            "teacher": [
+                "fanrui"
+            ],
+            "ta": [
+                "guanjw"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Problem sets 25%, Labs 15%, Project 25%, Midterm = 10%, Final exam 25%"
+        },
+        {
+            "course_id": "CS121.01",
+            "season": "Spring",
+            "year": "2018",
+            "teacher": [
+                "fanrui"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Problem sets 30%, Paper presentation 15%, 2 labs and presentation 15% each = 30%, Midterm = 10%, Final exam 30%"
+        },
+        {
+            "course_id": "CS121.01",
+            "season": "Spring",
+            "year": "2017",
+            "teacher": [
+                "fanrui"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Problem sets 0%, Paper presentation 15%, 2 labs and presentation 15% each = 30%, 2 quizzes 5% each = 10%, Final exam 45%"
+        }
+    ]
+}

@@ -185,8 +185,14 @@
             ["home", "Home Page", "https://sist.shanghaitech.edu.cn/2020/0707/c7499a53905/page.htm"]
         ],
         "teach-courses": [
+            ["Fall", "2021", "CS121", "Parallel Computing"],
             ["Spring", "2021", "CS240", "Algorithm Design and Analysis"],
-            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"]
+            ["Spring", "2021", "CS121", "Parallel Computing"],
+            ["Spring", "2020", "CS240", "Algorithm Design and Analysis"],
+            ["Spring", "2020", "CS121", "Parallel Computing"],
+            ["Spring", "2019", "CS121", "Parallel Computing"],
+            ["Spring", "2018", "CS121", "Parallel Computing"],
+            ["Spring", "2017", "CS121", "Parallel Computing"]
         ]
     },
     "liquan": {
@@ -2104,6 +2110,33 @@
         ],
         "ta-courses": [
             ["Fall", "2021", "CS132", "Software Engineering"]
+        ]
+    },
+    "guanjw": {
+        "name": "官加文",
+        "info": [
+            ["envelope", "&#103;&#117;&#97;&#x6e;&#106;&#119;&#64;&#x73;&#104;&#x61;&#x6e;&#x67;&#104;&#97;&#x69;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#100;&#117;&#46;&#x63;&#x6e;", "mailto:&#103;&#117;&#97;&#x6e;&#106;&#119;&#64;&#x73;&#104;&#x61;&#x6e;&#x67;&#104;&#97;&#x69;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#100;&#117;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2019", "CS121", "Parallel Computing"]
+        ]
+    },
+    "wanglsh": {
+        "name": "王乐山",
+        "info": [
+            ["envelope", "&#x77;&#x61;&#110;&#x67;&#108;&#101;&#115;&#104;&#97;&#110;&#49;&#57;&#x39;&#x36;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;", "mailto:&#x77;&#x61;&#110;&#x67;&#108;&#101;&#115;&#104;&#97;&#110;&#49;&#57;&#x39;&#x36;&#64;&#x6f;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2020", "CS121", "Parallel Computing"]
+        ]
+    },
+    "luqh": {
+        "name": "陆启衡",
+        "info": [
+            ["envelope", "&#x6c;&#x75;&#113;&#x68;&#x40;&#x73;&#104;&#97;&#x6e;&#x67;&#104;&#97;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#46;&#x63;&#x6e;", "mailto:&#x6c;&#x75;&#113;&#x68;&#x40;&#x73;&#104;&#97;&#x6e;&#x67;&#104;&#97;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#46;&#x63;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2021", "CS121", "Parallel Computing"]
         ]
     }
 }
