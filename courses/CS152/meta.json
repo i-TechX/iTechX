@@ -1,0 +1,23 @@
+{
+    "code": "CS152",
+    "name": "Applied Cryptography",
+    "semesters": [
+        {
+            "course_id": "CS152.01",
+            "season": "Fall",
+            "year": "2020",
+            "mainpage": "https://i-techx.github.io/CS152/index.html",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "liujing1", "chenxin3", "fengshuai", "kepzh", "qinqi"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework: 50%, Midterm: 20%, Final Exam: 20%, Attendance: 10%"
+        }
+    ]
+}
