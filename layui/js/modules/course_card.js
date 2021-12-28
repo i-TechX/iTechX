@@ -79,6 +79,7 @@ layui.define(['jquery', 'util', 'layer', 'proxy'], function(exports){
                             d.className = 'layui-row';
                             var d1 = document.createElement('div');
                             d1.className = 'layui-col-sm9';
+                            d1.innerHTML = '&nbsp;';
                             var d2 = document.createElement('div');
                             d2.className = 'layui-col-sm3';
                             d.appendChild(d1);
@@ -93,6 +94,13 @@ layui.define(['jquery', 'util', 'layer', 'proxy'], function(exports){
                                     d1.appendChild(d);
                                 }
                             }
+
+                            if (options.hasOwnProperty('boardLabel')) {
+                                var d = document.createElement('div');
+                                cardComponent.getAnnouncements(options['boardLabel'], d);
+                                d2.appendChild(d);
+                            }
+
                             layer.close(index);
                         } else {
                             console.log('data error:', data);
@@ -140,9 +148,9 @@ layui.define(['jquery', 'util', 'layer', 'proxy'], function(exports){
                                 d.classList.add("card-shadow");
                                 if (elem.hasOwnProperty("status") && elem.status == "activate"){
                                     d.classList.add("activate");
-                                    cardHTML = '<div class="layui-card" style="border-radius: 10px; padding-bottom: 15px;"><div class="layui-card-body"><div class="layui-row"><div class="layui-col-md3" style="display: flex; justify-content: center;"><a href="courses?course_code='+ elem.code +'"><img class="shadow" src="'+ elem.cover +'"style="width:210px;"></a></div><div class="layui-col-md9"><div style="margin: 5px 1em;"><div style="font-family: Quicksand; font-weight: bold; text-align: left; font-size: 2em; height: 1em;"><a href="courses?course_code='+ elem.code +'">'+ elem.name +'</a></div><div class="layui-row"><div class="layui-col-md9"><p style="padding-top: 1%; text-align: left; font-family: Quicksand; font-weight: bold; font-size: 1.2em; margin-bottom: 0.2em; color:#8FBC8F;">ACTIVATE</p></div></div><div class="layui-row"><div class="layui-col-md9"><p style="padding-top: 7%; text-align: left; font-size: 1.2em; margin-bottom: 0.2em;">'+ elem.code +'</p><p style="text-align: left; font-size: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">'+ semester_strings.join(', ') +'</p></div><div class="layui-col-md3" style="padding-top: 5%; text-align: center;"><a href="courses?course_code='+ elem.code +'" class="layui-btn layui-btn-lg layui-btn-violet" style="font-weight: normal;">查看课程</a></div></div></div></div></div></div></div>';
+                                    cardHTML = '<div class="layui-card" style="border-radius: 10px; padding-bottom: 15px;"><div class="layui-card-body"><div class="layui-row"><div class="layui-col-md3" style="display: flex; justify-content: center;"><a href="courses?course_code='+ elem.code +'"><img class="shadow" src="'+ elem.cover +'"style="max-height:15em; max-width:100%"></a></div><div class="layui-col-md9"><div style="margin: 5px 1em;"><div style="font-family: Quicksand; font-weight: bold; text-align: left; font-size: 2em; min-height: 1em;"><a href="courses?course_code='+ elem.code +'">'+ elem.name +'</a></div><div class="layui-row"><div class="layui-col-md9"><p style="padding-top: 1%; text-align: left; font-family: Quicksand; font-weight: bold; font-size: 1.2em; margin-bottom: 0.2em; color:#8FBC8F;">ACTIVATE</p></div></div><div class="layui-row"><div class="layui-col-md9"><p style="padding-top: 7%; text-align: left; font-size: 1.2em; margin-bottom: 0.2em;">'+ elem.code +'</p><p style="text-align: left; font-size: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">'+ semester_strings.join(', ') +'</p></div><div class="layui-col-md3" style="padding-top: 5%; text-align: center;"><a href="courses?course_code='+ elem.code +'" class="layui-btn layui-btn-lg layui-btn-violet" style="font-weight: normal;">查看课程</a></div></div></div></div></div></div></div>';
                                 } else {
-                                    cardHTML = '<div class="layui-card" style="border-radius: 10px; margin-bottom: 15px;"><div class="layui-card-body"><div class="layui-row"><div class="layui-col-md3" style="display: flex; justify-content: center;"><a href="courses?course_code='+ elem.code +'"><img class="shadow" src="'+ elem.cover +'"style="width:210px;"></a></div><div class="layui-col-md9"><div style="margin: 5px 1em;"><div style="font-family: Quicksand; font-weight: bold; text-align: left; font-size: 2em; height: 1em;"><a href="courses?course_code='+ elem.code +'">'+ elem.name +'</a></div><div class="layui-row"><div class="layui-col-md9"><p style="padding-top: 14%; text-align: left; font-size: 1.2em; margin-bottom: 0.2em;">'+ elem.code +'</p><p style="text-align: left; font-size: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">'+ semester_strings.join(', ') +'</p></div><div class="layui-col-md3" style="padding-top: 12%; text-align: center;"><a href="courses?course_code='+ elem.code +'" class="layui-btn layui-btn-lg layui-btn-violet" style="font-weight: normal;">查看课程</a></div></div></div></div></div></div></div>';
+                                    cardHTML = '<div class="layui-card" style="border-radius: 10px; margin-bottom: 15px;"><div class="layui-card-body"><div class="layui-row"><div class="layui-col-md3" style="display: flex; justify-content: center;"><a href="courses?course_code='+ elem.code +'"><img class="shadow" src="'+ elem.cover +'"style="max-height:15em; max-width:100%"></a></div><div class="layui-col-md9"><div style="margin: 5px 1em;"><div style="font-family: Quicksand; font-weight: bold; text-align: left; font-size: 2em; min-height: 1em;"><a href="courses?course_code='+ elem.code +'">'+ elem.name +'</a></div><div class="layui-row"><div class="layui-col-md9"><p style="padding-top: 14%; text-align: left; font-size: 1.2em; margin-bottom: 0.2em;">'+ elem.code +'</p><p style="text-align: left; font-size: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">'+ semester_strings.join(', ') +'</p></div><div class="layui-col-md3" style="padding-top: 12%; text-align: center;"><a href="courses?course_code='+ elem.code +'" class="layui-btn layui-btn-lg layui-btn-violet" style="font-weight: normal;">查看课程</a></div></div></div></div></div></div></div>';
                                 }
 
                                 d.innerHTML = cardHTML;
@@ -158,6 +166,78 @@ layui.define(['jquery', 'util', 'layer', 'proxy'], function(exports){
                     error: function(err) {
                         console.log(err);
                         element.children[1].children[0].innerHTML = "Loading failed. Please try again.";
+                    }
+                })
+            },
+
+            getAnnouncements: function(label, element) {
+                var d = document.createElement('div');
+                d.style.margin = "2em";
+                d.innerHTML = '\
+                    <p><b>Announcements 公告板</b></p>\
+                    <div style="text-align: center;"><i class="layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop" style="font-size: 2em; color: #b4b4b4;"></i></div>\
+                ';
+                element.appendChild(d);
+
+                $.ajax({
+                    url: proxy.parse(options.baseURL + '/repos/' + options.owner + '/' + options.repo + '/issues'),
+                    type: "GET",
+                    data: {
+                        labels: label,
+                        t: Date.now()
+                    },
+                    headers: headers,
+                    success: function (data) {
+                        if (data) {
+                            issue = data[0];
+                            d.innerHTML = '<p><b>Announcements 公告板</b></p>';
+                            cardComponent.loadAnnouncements(options.baseURL + issue.comments_url.replace("https://api.github.com", ""), d);
+                        } else {
+                            console.log('data error:', data);
+                        }
+                    },
+                    error: function(err) {
+                        console.log(err);
+                        d.innerHTML = '<p><b>Announcements 公告板</b></p>\
+                        <div style="text-align: center;">Unexpected error occurs.</div>\
+                        ';
+                    }
+                })
+            },
+
+            loadAnnouncements: function(url, element) {
+                $.ajax({
+                    url: proxy.parse(url),
+                    type: "GET",
+                    data: {
+                        t: Date.now()
+                    },
+                    headers: headers,
+                    success: function (data) {
+                        if (data) {
+                            for (var i = 0; i < data.length; i++) {
+                                var elem = data[i];
+                                console.log(elem);
+                                var text = elem['body'];
+                                var time = '<i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;' + dayjs(elem['created_at']).fromNow();
+                                var user = '<a href="' + elem['user']['html_url'] + '">' + elem['user']['login'] + '</a>';
+                                var link = '<a href="' + elem['html_url'] + '">' + '<i class="fa fa-link" aria-hidden="true"></i>' + '</a>';
+                                texts = text.split('\n');
+                                title = texts[0];
+                                text = texts.slice(1).join('<br>');
+                                var d = document.createElement('div');
+                                d.innerHTML = '<blockquote class="layui-elem-quote">' + 
+                                '<p style="font-weight: bold; margin-bottom: 0;">' + title + '&nbsp;&nbsp;' + link + '</p>' +
+                                '<p style="font-size: 4pt; margin-bottom: 10px;">' + time + '</p>' +
+                                '<p>' + text + '</p>' + '</blockquote>';
+                                element.appendChild(d);
+                            }
+                        } else {
+                            console.log('data error:', data);
+                        }
+                    },
+                    error: function(err) {
+                        console.log(err);
                     }
                 })
             },

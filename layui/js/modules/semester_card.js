@@ -37,13 +37,13 @@ layui.define(['jquery', 'util', 'element', 'rate', 'proxy'], function(exports){
           }
 
         const randomString = (len = 32) => {
-        　　var chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz';
-        　　var maxPos = chars.length;
-        　　var pwd = '';
-        　　for (i = 0; i < len; i++) {
-        　　　　pwd += chars.charAt(Math.floor(Math.random() * maxPos));
-        　　}
-        　　return pwd;
+            var chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz';
+            var maxPos = chars.length;
+            var pwd = '';
+            for (i = 0; i < len; i++) {
+                pwd += chars.charAt(Math.floor(Math.random() * maxPos));
+            }
+            return pwd;
         }
 
         options = assign({
@@ -179,14 +179,31 @@ layui.define(['jquery', 'util', 'element', 'rate', 'proxy'], function(exports){
                             url = "layui/images/teacher.jpg";
                         }
                         return proxy.parse(url);
-                    }
+                    };
 
+                    var elemPerRow = function(width) {
+                        if (width >= 2313) return 7;
+                        else if (width >= 2015) return 6;
+                        else if (width >= 1719) return 5;
+                        else if (width >= 1421) return 4;
+                        else if (width >= 1124) return 3;
+                        else if (width >= 992) return 2;
+                        else if (width >= 889) return 4;
+                        else if (width >= 768) return 3;
+                        else if (width >= 706) return 4;
+                        else if (width >= 582) return 3;
+                        else if (width >= 458) return 2;
+                        else return 1;
+                    };
+
+                    var threshold = Math.max(1, Math.floor(elemPerRow(window.innerWidth)/2)) * 2 - 1;
                     var cnt = 0, clsid = randomString(8);
+                    if (semester.teacher.length <= threshold + 1) { cnt = -2; }
                     for (const pid in semester.teacher) {
                         if (Object.hasOwnProperty.call(this.people, semester.teacher[pid])) {
                             const pinfo = this.people[semester.teacher[pid]];
                             cards += '                                          \
-                            <div class="instructor'+(cnt<2?'':(' layui-hide '+clsid))+'">                            \
+                            <div class="instructor'+(cnt<threshold?'':(' layui-hide '+clsid))+'">                            \
                                 <a href="people?pid='+semester.teacher[pid]+'">                         \
                                 <div><img src="' + getImage(pinfo.image, semester.teacher[pid]) + '" style="border-radius: 50%; width: 60px; height: 60px;"></div> \
                                 <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' + pinfo.name + '</div>                   \
@@ -196,7 +213,7 @@ layui.define(['jquery', 'util', 'element', 'rate', 'proxy'], function(exports){
                             cnt++;
                         }
                     }
-                    if (cnt>2) {
+                    if (cnt>threshold) {
                         var clsidmore = randomString(8);
                         cards += '\
                             <div class="instructor '+clsidmore+'">\
@@ -213,12 +230,14 @@ layui.define(['jquery', 'util', 'element', 'rate', 'proxy'], function(exports){
                         </div>                                  \
                     ';
 
+                    threshold = elemPerRow(window.innerWidth) * 2 - 1;
                     cnt = 0, clsid = randomString(8);
+                    if (semester.ta.length <= threshold + 1) { cnt = -2; }
                     for (const pid in semester.ta) {
                         if (Object.hasOwnProperty.call(this.people, semester.ta[pid])) {
                             const pinfo = this.people[semester.ta[pid]];
                             cards += '                                          \
-                            <div class="instructor'+(cnt<5?'':(' layui-hide '+clsid))+'">                            \
+                            <div class="instructor'+(cnt<threshold?'':(' layui-hide '+clsid))+'">                            \
                                 <a href="people?pid='+semester.ta[pid]+'">                         \
                                 <div><img src="' + getImage(pinfo.image, semester.ta[pid]) + '" style="border-radius: 50%; width: 60px; height: 60px;"></div> \
                                 <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' + pinfo.name + '</div>                   \
@@ -228,7 +247,7 @@ layui.define(['jquery', 'util', 'element', 'rate', 'proxy'], function(exports){
                             cnt++;
                         }
                     }
-                    if (cnt>5) {
+                    if (cnt>threshold) {
                         var clsidmore = randomString(8);
                         cards += '\
                             <div class="instructor '+clsidmore+'">\
