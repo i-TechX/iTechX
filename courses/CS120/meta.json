@@ -1,0 +1,88 @@
+{
+    "code": "CS120",
+    "name": "Computer Networks",
+    "semesters": [
+        {
+            "course_id": "CS120.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "yangzhc"
+            ],
+            "ta": [
+                "yanyh", "yanyl", "zhaogh", "liaosi"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "4 Homework (5% * 4 = 20%), Final Exam (35%), Course Project (45%, 4 subprojects * 10% + finish all the four projects 5%), Bonus Score (up to 30%, optional parts of Course Project)"
+        },
+        {
+            "course_id": "CS120.01",
+            "season": "Fall",
+            "year": "2020",
+            "mainpage": "https://i-techx.github.io/CS120/index.html",
+            "teacher": [
+                "yangzhc"
+            ],
+            "ta": [
+                "wangzhw", "yanyh", "wumy1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "4 Homework (5% * 4 = 20%), Final Exam (35%), Course Project (45%, 4 subprojects * 10% + finish all the four projects 5%), Bonus Score (up to 30%, optional parts of Course Project)"
+        },
+        {
+            "course_id": "CS120.01",
+            "season": "Fall",
+            "year": "2019",
+            "mainpage": "https://i-techx.github.io/CS120/index.html",
+            "teacher": [
+                "yangzhc"
+            ],
+            "ta": [
+                "chenpzh", "lilei1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "4 Homework (5% * 4 = 20%), Final Exam (30%), Course Project (50%, 4 subprojects * 10% + finish all the four projects 10%), Bonus Score (up to 30%, optional parts of Course Project)"
+        },
+        {
+            "course_id": "CS120.01",
+            "season": "Fall",
+            "year": "2018",
+            "teacher": [
+                "yangzhc"
+            ],
+            "ta": [
+                "zhunzh", "lixin1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "4 Homework (5% * 4 = 20%), Final Exam (30%), Course Project (50%, 4 subprojects * 10% + finish all the four projects 10%), Bonus Score (up to 30%, optional parts of Course Project); Use sqrt(your real score)*10 to calculate the final score."
+        },
+        {
+            "course_id": "CS120.01",
+            "season": "Spring",
+            "year": "2018",
+            "teacher": [
+                "yangzhc"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "未知"
+        }
+    ]
+}
