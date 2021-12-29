@@ -90,7 +90,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
         const DEFAULT_RULE = {
             'Reader': 'jsdelivr',
             'Microsoft': 'preview',
-            'PDF': 'ghucs-preview',
+            'PDF': 'ghucs',
             'Images': 'ghproxy',
             'Files': 'ghproxy',
             'API': 'itechx'
@@ -178,22 +178,22 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 layui.link('layui/js/modules/step.css');
 
                 var layerTips = function (obj,close) {
-                    var msg = $(obj).attr('data-tips');
-                    if(!close && msg){
-                        layer.tips(msg, obj, {
-                            tipsMore: true,
-                            time: 0,
-                            tips: 3
-                        });
-                    }else{
-                        layer.close(layer.index);
-                    }
-                }
-                $(document).on('mouseenter', '.layui-layer-tips', function () {
-                    layerTips(this,false);
-                }).on('mouseleave', '.layui-layer-tips', function () {
-                    layerTips(this,true);
-                });
+                    var msg = $(obj).attr('data-tips');
+                    if(!close && msg){
+                        layer.tips(msg, obj, {
+                            tipsMore: true,
+                            time: 0,
+                            tips: 3
+                        });
+                    }else{
+                        layer.close(layer.index);
+                    }
+                }
+                $(document).on('mouseenter', '.layui-layer-tips', function () {
+                    layerTips(this,false);
+                }).on('mouseleave', '.layui-layer-tips', function () {
+                    layerTips(this,true);
+                });
 
                 form.on('submit(proxy-setting)', function (data) {
                     document.getElementById('proxy-set-success').classList.remove('layui-hide');
