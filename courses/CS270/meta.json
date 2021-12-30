@@ -1,0 +1,118 @@
+{
+    "code": "CS270",
+    "name": "Digital Image Processing",
+    "semesters": [
+        {
+            "course_id": "CS270.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "renww"
+            ],
+            "ta": [
+                "huyx", "lill", "chenlx1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework (3*15%=45%) + Quiz (3*5%=15%) + Final Project (40%)"
+        },
+        {
+            "course_id": "CS270.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "zhangyy8"
+            ],
+            "ta": [
+                "hechy1", "liujm1", "liuji", "wangyj2", "zhangjz", "zhangshx1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework assignment (10%*3=30%), Quiz (10%), Discussions (10%), Final Project (50%)"
+        },
+        {
+            "course_id": "CS270.02",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "caixr"
+            ],
+            "ta": [
+                "hechy1", "liujm1", "liuji", "wangyj2", "zhangjz", "zhangshx1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework assignment (10%*3=30%), Quiz (10%), Discussions (10%), Final Project (50%)"
+        },
+        {
+            "course_id": "CS270.01",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "zhangyy8"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "CS270.01",
+            "season": "Fall",
+            "year": "2019",
+            "teacher": [
+                "zhengrui"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "CS270.01",
+            "season": "Spring",
+            "year": "2019",
+            "teacher": [
+                "zhangyy8"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "CS270.01",
+            "season": "Fall",
+            "year": "2018",
+            "teacher": [
+                "zhengrui"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Digital Signal Processing, Calculus",
+            "evaluation": "Homework (5%*6=30%), Midterm (25%), Quiz (10%), Final Project (35%)"
+        }
+    ]
+}
