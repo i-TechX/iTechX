@@ -1,0 +1,519 @@
+// -------------------------------
+// example-1
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A() :m_i(10) { cout << "A::A()" << endl; }
+	~A() { cout << "A::~A()" << endl; }
+
+	virtual void print(){
+	//void print() {
+		cout << "A::print() i = " << m_i << endl;
+	}
+
+	void set(int i) { m_i = i; }
+private:
+	int m_i;
+};
+
+class B : public A {
+public:
+	B() : A() { cout << "B::B()" << endl; }
+	~B() { cout << "B::~B()" << endl; }
+
+	void print() {
+		cout << "B::print()" << endl;
+	}
+};
+
+int main(void) {
+	B b;
+	b.set(10);
+	b.print();
+	
+	A *pA = (A*)&b;
+	pA->print();
+
+	return 0;
+}
+
+// -------------------------------
+// example-2
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class Shape {
+
+public:
+	Shape() :m_i(10){ cout << "Shape::Shape()" << endl; }
+	virtual ~Shape(){ cout << "Shape::~Shape()" << endl; }
+
+	virtual void render() { cout << "Shape::render()" << endl; }
+
+protected:
+	int m_i;
+};
+
+class Ellipe : public Shape {
+public:
+	Ellipe(float _major, float _minor): major_axis(_major), minor_axis(_minor)
+		{ cout << "Ellipe::Ellipe()" << endl; }
+
+	virtual void render() { cout << "Ellipe::render()" << endl; }
+
+protected:
+	float major_axis;
+	float minor_axis;
+
+};
+
+class Circle : public Ellipe {
+public:
+	Circle(float radius): Ellipe(radius, radius){ cout << "Circle::Circle()" << endl; }
+
+	virtual void render() { cout << "Circle::render()" << endl; }
+};
+
+
+void render(Shape *p) {
+	p->render();
+}
+
+
+int main(void) {
+
+	Ellipe ell(10, 20);
+	ell.render();
+	cout << "---------------" << endl;
+
+	Circle circ(200);
+	circ.render();
+
+	cout << "---------------" << endl;
+
+	render(&ell);
+	render(&circ);
+
+	return 0;
+}
+
+// -------------------------------
+// example-3
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A():m_i(20) {}
+	virtual void f() { cout << "A::f() m_i = " << m_i << endl; }
+	int m_i;
+};
+
+int main(void) {
+
+	A a;
+	a.f();
+	cout << "sizeof(a)" << sizeof(a) << endl;
+
+	int *p = (int *)&a;
+	// p++;
+	cout << "*p = " << *p << endl;
+
+	return 0;
+}
+
+
+
+
+// -------------------------------
+// example-4
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A():m_i(20) {}
+	virtual void f() { cout << "A::f() m_i = " << m_i << endl; }
+	int m_i;
+};
+
+int main(void) {
+
+	A a, b;
+	a.f();
+	cout << "sizeof(a)" << sizeof(a) << endl;
+
+	int *p = (int *)&a;
+	int *q = (int *)&b;
+	
+	cout << "*p = " << *p << endl;
+	cout << "*q = " << *q << endl;
+
+	return 0;
+}
+
+
+// -------------------------------
+// example-5
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A():m_i(20) {}
+	virtual void f() { cout << "A::f() m_i = " << m_i << endl; }
+	int m_i;
+};
+
+class B : public A {
+public:
+	B() : m_j(30) { m_i = 300; }
+	virtual void f() { cout << "B::f() m_j = " << m_j << endl; }
+	int m_j;
+};
+
+
+int main(void) {
+
+	A a;
+	B b;
+	
+
+	A* p = &b;
+	p->f();
+	
+	a = b; 
+	a.f();
+
+	p = &a;
+	p->f();
+
+	return 0;
+}
+
+// -------------------------------
+// example-6
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A():m_i(20) {}
+	virtual void f() { cout << "A::f() m_i = " << m_i << endl; }
+	int m_i;
+};
+
+class B : public A {
+public:
+	B() : m_j(30) { m_i = 300; }
+	virtual void f() { cout << "B::f() m_j = " << m_j << endl; }
+	int m_j;
+};
+
+
+int main(void) {
+
+	A a;
+	B b;
+	
+
+	A* p = &a;
+
+	int* r = (int*)&a;
+	int* t = (int *)&b;
+	*r = *t;
+
+	p->f();
+
+	return 0;
+}
+
+
+// -------------------------------
+// example-7
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+	virtual void foo2() { cout << "A" << endl; }  // virtual function
+public:
+	void foo() { foo2(); } // non virtual function calling the virtual one 
+};
+class B : public A {
+	void foo2() { cout << "B" << endl; }  // overriding virtual
+};
+class C : public B {
+public:
+	void foo() { cout << "C" << endl; }   // ignore the virtual and override the non virtual function :-) 
+};
+
+int main(void) {
+
+	A a;
+	B b;
+	C c;
+
+	A* p = &a;
+	p->foo();
+	a.foo();
+
+	cout << "-------------------" << endl;
+
+	p = &b;
+	p->foo();
+	b.foo();
+
+	cout << "-------------------" << endl;
+	
+	p = &c;
+	p->foo();
+	c.foo();
+
+	return 0;
+}
+
+
+// -------------------------------
+// example-8
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	virtual void foo() { cout << "A" << endl; }
+};
+class B : public A {
+public:
+	void foo() { cout << "B" << endl; }
+};
+class C : public B {
+public:
+	void foo() { cout << "C" << endl; }
+};
+class EH {   // Helper class, does not derive from A 
+public:      // so foo() is non virtual here
+	void foo() { cout << "EH!" << endl; }
+};
+class E : public B, public EH { // inherits the virtual foo and the non virtual one
+public:
+	using EH::foo;     // We just say to use the non virtual one
+};
+
+class F : public E {
+public:
+	void foo() { cout << "F" << endl; }
+};
+
+int main(void) {
+
+	E e;
+	e.foo();          // calls the non virtual function EH::foo(); => EH!
+	B* pb2 = &e;
+	pb2->foo();       // calls the original virtual function B::foo() => B
+
+	cout << "-------------------" << endl;
+
+	F f;
+	f.foo();
+	B* pb3 = &f;
+	pb3->foo();
+
+	cout << "-------------------" << endl;
+
+	C c;
+	B* pb = &c;
+	pb->foo();         // uses the virtual function
+	pb->B::foo();      // but you can force to use the function, ignoring the virtuality.
+
+
+	return 0;
+}
+
+// -------------------------------
+// example-9
+// reference
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class X {
+public:
+	X(int &_i):m_i(_i){}
+
+	int &m_i;
+};
+
+int main(void) {
+	int test = 100;
+	X x(test);
+	// X x(10);
+
+	return 0;
+}
+
+
+// -------------------------------
+// example-10
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+void f(const int&i) {
+	cout << "i = " << i << endl;
+}
+
+int main(void) {
+	int i = 3;
+	f(i);
+	f(3 * i);
+
+	return 0;
+}
+
+
+// -------------------------------
+// example-11
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+static int objectCount = 0;
+static int deleteCount = 0;
+class HowMany {
+public:
+	HowMany() { 
+		objectCount++;
+		cout << "HowMany::HowMany(): " <<
+			objectCount << endl;
+	}
+
+	HowMany(int i) {
+		objectCount++;
+		cout << "HowMany::HowMany(int): " <<
+			objectCount << endl;
+	}
+
+	~HowMany() {
+		objectCount--;
+		deleteCount++;
+		cout << "HowMany::~HowMany(): " <<
+			objectCount << endl;
+
+		cout << "deleteCount =  " <<
+			deleteCount << endl;
+	}
+
+};
+
+HowMany f(HowMany x) {
+	cout << "begin of f" << endl;
+	return x;
+}
+
+int main(void) {
+	HowMany h;
+	
+	HowMany h2 = 10;
+	//HowMany h2 = f(h);
+	// HowMany h2 = h;
+
+	return 0;
+}
+
+// -------------------------------
+// example-12
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+static int objectCount = 0;
+static int deleteCount = 0;
+class HowMany {
+public:
+	HowMany() { 
+		objectCount++;
+		cout << "HowMany::HowMany(): " <<
+			objectCount << endl;
+	}
+
+	HowMany(const HowMany & _tmp) {
+		objectCount++;
+		cout << "HowMany::const HowMany(&): " <<
+			objectCount << endl;
+	}
+
+	~HowMany() {
+		objectCount--;
+		deleteCount++;
+		cout << "HowMany::~HowMany(): " <<
+			objectCount << endl;
+
+		cout << "deleteCount =  " <<
+			deleteCount << endl;
+	}
+
+};
+
+HowMany f(HowMany x) {
+	cout << "begin of f" << endl;
+	return x;
+}
+
+int main(void) {
+	HowMany h;
+
+	HowMany h2 = f(h);
+	//HowMany h2 = h;
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

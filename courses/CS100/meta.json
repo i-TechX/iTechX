@@ -1,0 +1,56 @@
+{
+    "code": "CS100",
+    "name": "Introduction to Programming",
+    "semesters": [
+        {
+            "course_id": "CS100.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "lkneip", "xulan1"
+            ],
+            "ta": [
+                "jiangyh2", "zhanglw2", "wuty", "liuyq2", "zhanggl1", "suhang", "liumy2", "chenjy1", "gaoling", "liuzx", "shenjd", "yuanrz", "xuht1", "xiehf"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Regular Homework (72% = 4*7%+4*11%), Midterm Exam (22%), Quizzes (4%), Recitation Attendance (2%)"
+        },
+        {
+            "course_id": "CS100.01",
+            "season": "Fall",
+            "year": "2019",
+            "mainpage": "https://i-techx.github.io/CS100/index.html",
+            "teacher": [
+                "lkneip", "liuxp"
+            ],
+            "ta": [
+                "youch", "yangfm", "wuty", "wangjr", "liuyq2", "lvchy", "diaozh", "yangjq", "wangph", "shenjd", "wudq1", "yaocl", "xiehf", "wengrs", "xuzj", "caosh", "wuhy1", "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework (76% = Summer Homework (4%) + Regular Homework (4*7%+4*11%=72%)), Midterm Exam (18%), Quizzes (4%), Recitation Attendance (2%)"
+        },
+        {
+            "course_id": "CS100.01",
+            "season": "Fall",
+            "year": "2018",
+            "mainpage": "https://i-techx.github.io/CS100/index.html",
+            "teacher": [
+                "zhengjie", "lkneip", "songfu"
+            ],
+            "ta": [
+                "zhouyy1", "zhangyd1", "huangjx", "hujy", "xiehf", "chenjy1", "wangxy1", "xudfy", "shenhz", "caoyf", "qinyi1", "wanghe", "zengxy", "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Final Exam: 50%, Midterm Exam: 20%, 6 Homeworks: 24%, 2 Quizzes: 6%"
+        }
+    ]
+}

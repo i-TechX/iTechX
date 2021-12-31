@@ -1,0 +1,223 @@
+// example-1
+// reference
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class X {
+public:
+	X(int &_i):m_i(_i){}
+
+	int &m_i;
+};
+
+int main(void) {
+	int test = 100;
+	X x(test);
+	// X x(10);
+
+	return 0;
+}
+
+
+// -------------------------------
+// example-2
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+void f(const int&i) {
+	cout << "i = " << i << endl;
+}
+
+int main(void) {
+	int i = 3;
+	f(i);
+	f(3 * i);
+
+	return 0;
+}
+
+
+// -------------------------------
+// example-3
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+static int objectCount = 0;
+static int deleteCount = 0;
+class HowMany {
+public:
+	HowMany() { 
+		objectCount++;
+		cout << "HowMany::HowMany(): " <<
+			objectCount << endl;
+	}
+
+	HowMany(int i) {
+		objectCount++;
+		cout << "HowMany::HowMany(int): " <<
+			objectCount << endl;
+	}
+
+	~HowMany() {
+		objectCount--;
+		deleteCount++;
+		cout << "HowMany::~HowMany(): " <<
+			objectCount << endl;
+
+		cout << "deleteCount =  " <<
+			deleteCount << endl;
+	}
+
+};
+
+HowMany f(HowMany x) {
+	cout << "begin of f" << endl;
+	return x;
+}
+
+int main(void) {
+	HowMany h;
+	
+	HowMany h2 = 10;
+	//HowMany h2 = f(h);
+	// HowMany h2 = h;
+
+	return 0;
+}
+
+
+
+// -------------------------------
+// example-4
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+static int objectCount = 0;
+static int deleteCount = 0;
+class HowMany {
+public:
+	HowMany() { 
+		objectCount++;
+		cout << "HowMany::HowMany(): " <<
+			objectCount << endl;
+	}
+
+	HowMany(const HowMany & _tmp) {
+		objectCount++;
+		cout << "HowMany::const HowMany(&): " <<
+			objectCount << endl;
+	}
+
+	~HowMany() {
+		objectCount--;
+		deleteCount++;
+		cout << "HowMany::~HowMany(): " <<
+			objectCount << endl;
+
+		cout << "deleteCount =  " <<
+			deleteCount << endl;
+	}
+
+};
+
+HowMany f(HowMany x) {
+	cout << "begin of f" << endl;
+	return x;
+}
+
+int main(void) {
+	HowMany h;
+
+	HowMany h2 = f(h);
+	//HowMany h2 = h;
+
+	return 0;
+}
+
+// -------------------------------
+// example-5
+#include<stdio.h>
+#include"Person.h"
+
+int main(void) {
+	Person p1("Jane");
+	Person p2(p1);
+
+	printf("p1.name = %p...\n", p1.name);
+	printf("p2.name = %p...\n", p2.name);
+
+	return 0;
+}
+
+// -------------------------------
+// example-6
+#include<stdio.h>
+#include"Person.h"
+
+Person f() {
+#if 0
+	Person ip("123");
+	ip.print();
+	return ip;
+#else
+	return Person("123");
+#endif
+}
+
+int main(void) {
+	Person p = f();
+
+	return 0;
+}
+
+
+// -------------------------------
+// example-7
+#include<stdio.h>
+#include<iostream>
+
+using namespace std;
+class A {
+public:
+	A() { m_i = 0; };
+	// A() :m_i(300) { m_i = 0; };
+	void  print() { cout << m_i << endl; }
+	void set(int _i) { this->m_i = _i; }
+private:
+	static int m_i;
+};
+
+int A::m_i = 300;
+// static int A::m_i;
+
+int main(void) {
+	A a, b;
+	a.set(100);
+	b.print();
+
+	/*cout << a.m_i << endl;
+	cout << A::m_i << endl;*/
+
+	return 0;
+}
+
+
+// -------------------------------
+// example-8
+
+
+
+
+

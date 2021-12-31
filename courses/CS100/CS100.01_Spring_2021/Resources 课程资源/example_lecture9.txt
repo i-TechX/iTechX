@@ -1,0 +1,229 @@
+//-------------------------------------------------
+// example-1
+struct date {
+	int year;
+	int month;
+	int day;
+};
+
+int main(int argc, char const *argv[]) 
+{
+	struct date today;
+
+	today.year = 2021;
+	today.month = 3;
+	today.day = 24;
+	
+	
+	struct date today2 = { 2100,03,24 };
+	struct date test;
+	test = { 100,1 };
+
+	printf("today is %d-%d-%d ...\n",
+		today.year, today.month, today.day);
+
+	printf("test is %d-%d-%d ...\n",
+		test.year, test.month, test.day);
+
+	test = today2;
+	test.year = 100;
+	
+	printf("test2 is %d-%d-%d ...\n",
+		test.year, test.month, test.day);
+	
+	printf("today2 is %d-%d-%d ...\n",
+		today2.year, today2.month, today2.day);
+
+	return 0;
+}
+
+
+//-------------------------------------------------
+// example-2
+#include<stdio.h>
+
+struct point {
+	int x;
+	int y;
+};
+
+void getPoint(struct point p);
+void output(struct point p);
+
+struct point getPoint(void);
+
+int main(int argc, char const *argv[]) 
+{
+	struct point p = { 100,90 };
+
+	getPoint(p);
+	p = getPoint();
+	output(p);
+
+	return 0;
+}
+
+void getPoint(struct point p)
+{
+	scanf("%d", &p.x);
+	scanf("%d", &p.y);
+	printf("get: %d, %d ...\n", p.x, p.y);
+}
+void output(struct point p)
+{
+	printf("output: %d, %d ...\n", p.x, p.y);
+}
+
+struct point getPoint(void)
+{
+	struct point p;
+	scanf("%d", &p.x);
+	scanf("%d", &p.y);
+	printf("get2: %d, %d ...\n", p.x, p.y);
+
+	return p;
+}
+
+//-------------------------------------------------
+// example-3
+#include<stdio.h>
+
+struct point {
+	int x;
+	int y;
+};
+
+
+void output(struct point p);
+struct point* getPoint(struct point* pPoint);
+void print(const struct point* pPoint);
+
+int main(int argc, char const *argv[]) 
+{
+	struct point p = { 100,90 };
+	getPoint(&p);
+	output(p);
+
+	output(*getPoint(&p));
+	print(getPoint(&p));
+
+	getPoint(&p)->x = 0;
+	print(&p);
+
+	*getPoint(&p) = { 1, 2 };
+	print(&p);
+
+	return 0;
+}
+
+void output(struct point p)
+{
+	printf("output: %d, %d ...\n", p.x, p.y);
+}
+
+struct point* getPoint(struct point* pPoint)
+{
+	scanf("%d", &pPoint->x);
+	scanf("%d", &pPoint->y);
+	printf("get: %d, %d ...\n", pPoint->x, pPoint->y);
+	return pPoint;
+}
+
+void print(const struct point* pPoint)
+{
+	printf("print: %d, %d ...\n", pPoint->x, pPoint->y);
+}
+
+
+
+//-------------------------------------------------
+// example-4
+struct point {
+	int x;
+	int y;
+};
+
+struct rect {
+	struct point p1;
+	struct point p2;
+};
+
+void print(struct rect r) {
+	printf("<%d, %d> - <%d, %d> ...\n",
+		r.p1.x, r.p1.y, r.p2.x, r.p2.y);
+}
+
+int main(int argc, char const *argv[]) 
+{
+	struct rect rlist[] = {1, 2, 3, 4, 5, 6, 7, 8};
+	struct rect rlist2[] = { 
+		{{1, 2}, {3, 4}}, 
+		{{5, 6}, {7, 8}} 
+	};
+
+	for (int i = 0; i < 2; i++)
+		print(rlist[i]);
+
+	for (int i = 0; i < 2; i++)
+		print(rlist2[i]);
+
+	return 0;
+}
+
+
+//-------------------------------------------------
+// example-5
+// union
+
+typedef union {
+	int i;
+	char ch[sizeof(int)];
+} CHI;
+
+
+int main(int argc, char const *argv[]) 
+{
+	CHI chi;
+	chi.i = 1234;
+	for (int  i = 0; i < sizeof(int); i++){
+		printf("%02hhX", chi.ch[i]);
+	}
+
+	printf("\n");
+
+	return 0;
+}
+
+
+//-------------------------------------------------
+// example-6
+// sizeof
+struct A {
+	char a;
+	//int b;
+	char c;
+};
+int main(void) {
+
+	// struct A test = { 'c', 123, 'b' };
+	struct A test = { 'c', 'b' };
+
+	printf("sizeof A = %d...\n", sizeof(A));
+	printf("sizeof test = %d...\n", sizeof(test));
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

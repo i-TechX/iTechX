@@ -1,0 +1,197 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define ARRAY_INCREMENT_SIZE 128
+
+struct ARRAY
+{
+	int size;
+	int count;
+	float* data;
+};
+
+bool create_array(int, ARRAY*);
+void destroy_array(ARRAY*);
+bool array_add_element(ARRAY* p_array, float element_value);
+
+int get_array_count(const ARRAY* p_array)
+{
+	return p_array->count;
+}
+
+int get_array_size(const ARRAY* p_array)
+{
+	return p_array->size;
+}
+
+float& get_array_element(int i, const ARRAY* p_array)
+{
+	return p_array->data[i];
+}
+
+void set_array_element(int i, float data_value, ARRAY* p_array)
+{
+	p_array->data[i] = data_value;
+}
+
+
+void print_array(const ARRAY* p_array)
+{
+	for (int i = 0; i < get_array_count(p_array) - 1; i++)
+		printf("%.2f, ", get_array_element(i, p_array));
+
+	printf("%.2f\n", get_array_element(
+		get_array_count(p_array) - 1, p_array));
+}
+
+void swap_data(float* a, float* b)
+{
+	float t = *a;
+	*a = *b;
+	*b = t;
+}
+
+int quick_sort_array_partition(ARRAY*p_array, int low, int high)
+{
+	float pivot = get_array_element(high, p_array);
+	int i = low - 1;
+
+	for (int j = low; j < high; j++)
+	{
+		if (get_array_element(j, p_array) < pivot)
+		{
+			i++;
+			if (i != j)
+				swap_data(&get_array_element(i, p_array),
+					&get_array_element(j, p_array));
+		}
+	}
+	swap_data(&get_array_element(i + 1, p_array),
+		&get_array_element(high, p_array));
+
+	return i + 1;
+}
+
+
+bool quick_sort_array(ARRAY* p_array_in_out, int low, int high)
+{
+	if (low < high)
+	{
+		int partition_index =
+			quick_sort_array_partition(p_array_in_out, low, high);
+
+		quick_sort_array(p_array_in_out, low, partition_index - 1);
+		quick_sort_array(p_array_in_out, partition_index + 1, high);
+
+		return true;
+	}
+	else
+		return false;
+}
+
+void test_array_sort()
+{
+	ARRAY a;
+	if (!create_array(20, &a))
+	{
+		printf("unable to create the array!\n");
+		return;
+	}
+
+	printf("Please input the array elements:\n");
+
+	while (1)
+	{
+		char str[32];
+		scanf("%s", str);
+		if (strcmp(str, "quit") == 0)
+			break;
+		array_add_element(&a, (float)atof(str));
+	}
+	printf("Your input ARRAY is:\n");
+	print_array(&a);
+
+	printf("\nSorting the whole array...\n");
+	quick_sort_array(&a, 0, get_array_count(&a) - 1);
+	printf("Your sorted array is:\n");
+	print_array(&a);
+
+	destroy_array(&a);//don't forget to destroy the array
+
+}
+
+
+int main(void) 
+{	
+	test_array_sort();
+	return 0;
+}
+
+
+bool create_array(int size , ARRAY* p_array_out)
+{
+	if (size <= 0)
+		return false;
+
+	if (p_array_out != NULL)
+	{
+		p_array_out->data = (float*)malloc(sizeof(float) * size);
+		if (p_array_out->data == NULL)
+			return false;
+
+		p_array_out->size = size;
+		p_array_out->count = 0;
+
+		return true;
+	}
+	else
+		return true;
+
+
+}
+
+void destroy_array(ARRAY* p_array)
+{
+	if (p_array != NULL)
+	{
+		if (p_array->data != NULL)
+			free(p_array->data);
+
+		p_array->size = 0;
+		p_array->count = 0;
+	}
+
+}
+
+bool array_add_element(ARRAY* p_array, float element_value)
+{
+	if (p_array == NULL || p_array->data == NULL
+		|| p_array->count < 0 || p_array->size <= 0)
+		return false;
+
+	if (p_array->count + 1 <= p_array->size)
+	{
+		p_array->count++;
+		p_array->data[p_array->count - 1] = element_value;
+		return true;
+	}
+	else
+	{
+		float* data_prev = p_array->data;
+		p_array->data = (float*)realloc(data_prev, p_array->size
+			+ ARRAY_INCREMENT_SIZE);
+		if (p_array->data == NULL)
+			return false;
+
+		p_array->size += ARRAY_INCREMENT_SIZE;
+
+		p_array->count++;
+		p_array->data[p_array->count - 1] = element_value;
+		return true;
+	}
+
+
+	return true;
+}
+

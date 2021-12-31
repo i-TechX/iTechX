@@ -1,0 +1,171 @@
+// -------------------------------------------------
+// example-1
+#include<stdio.h>
+
+int g_a = 10;
+int test = g_a;
+
+int f(void) {
+	printf("in %s g_a = %d \n", __func__, g_a);
+	g_a += 2;
+	printf("again in %s g_a = %d \n", __func__, g_a);
+	return g_a;
+}
+
+int main(void) {
+	printf("in %s g_a = %d \n", __func__, g_a);
+	f();
+	test = 2;
+
+	printf("again in %s g_a = %d \n", __func__, g_a);
+	return 0;
+}
+
+// -------------------------------------------------
+// example-2
+#include<stdio.h>
+
+int f(void) {
+	static int s_a = 1;
+	printf("in %s s_a = %d \n", __func__, s_a);
+	s_a += 2;
+	printf("again in %s s_a = %d \n", __func__, s_a);
+	return s_a;
+}
+
+int main(void) {
+	
+	f();
+	f();
+	f();
+	//printf("again in %s g_a = %d \n", __func__, s_a);
+	return 0;
+}
+
+// -------------------------------------------------
+// example-3
+#include<stdio.h>
+#include<stdlib.h>
+
+int g_1 = 10;
+int g_2 = 20;
+
+void f(void) {
+	int k = 10;
+	int t1 = 1;
+	int t2 = 1;
+	int t3 = 1;
+	int t4 = 1;
+	printf("------------------------\n ");
+	printf("addr of k = %p \n ", &k);
+	printf("addr of t1 = %p \n ", &t1);
+	printf("addr of t2 = %p \n ", &t2);
+	printf("addr of t3 = %p \n ", &t3);
+	printf("addr of t4 = %p \n ", &t4);
+	printf("------------------------\n ");
+}
+
+
+int main(void) {
+	f();
+	int l_1 = 1;
+	int l_2 =2;
+	static int s_1;
+	static int s_2 = 100;
+	const char *str1 = "abcd";
+	char str2[] = "abcd";
+	int *p1_ma = (int *)malloc(sizeof(int) * 100);
+	int *p2_ma = (int *)malloc(sizeof(int) * 1);
+
+
+	printf("addr of main = %p \n ", main);
+	printf("addr of f = %p \n ", f);
+	printf("addr of str1 = %p \n ", str1);
+	printf("addr of str2 = %p \n ", str2);
+	printf("addr of g_1 = %p \n ", &g_1);
+	printf("addr of g_2 = %p \n ", &g_2);
+	printf("addr of s_1 = %p \n ", &s_1);
+	printf("addr of s_2 = %p \n ", &s_2);
+	printf("addr of l_1 = %p \n ", &l_1);
+	printf("addr of l_2 = %p \n ", &l_2);
+	printf("addr of p1_ma = %p \n ", p1_ma);
+	printf("addr of p2_ma = %p \n ", p2_ma);
+
+	f();
+
+	free(p1_ma);
+	free(p2_ma);
+
+	return 0;
+}
+
+// -------------------------------------------------
+// example-4
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(void) {
+
+	int *p1_ma = (int *)malloc(sizeof(int) * 1);
+	int *p2_ma = (int *)malloc(sizeof(int) * 1);
+
+	printf("stack: %p --> %p \n ", &p1_ma, &p2_ma);
+	printf("heap: %p --> %p \n ", p1_ma, p2_ma);
+	free(p1_ma);
+	free(p2_ma);
+
+	return 0;
+}
+
+// -------------------------------------------------
+// example-5
+#include<stdio.h>
+
+#define TRI(x) (x * 3.0)
+#define TRI2(x) ((x) * 3.0)
+
+int main(void) {
+	printf("TRI: %f\n", TRI(5+2));
+	printf("TRI2: %f\n", TRI2(5 + 2));
+
+	return 0;
+}
+
+// -------------------------------------------------
+// example-6
+#include<stdio.h>
+#define PRT(msg) printf(msg)
+
+int main(void) {
+
+	int n = 10;
+
+	if (n < 10)
+		PRT("n<10...");
+	else
+		PRT("n>=10...");
+
+	return 0;
+}
+
+// -------------------------------------------------
+// example-7
+#include<stdio.h>
+#include"max.h"
+//#include "min.h"
+
+int main(void) {
+
+	int a = 5;
+	int b = 6;
+	printf("%f", max(a, max(b, G_A)));
+
+	return 0;
+}
+
+
+
+
+
+
+
