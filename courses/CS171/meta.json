@@ -1,0 +1,71 @@
+{
+    "code": "CS171",
+    "name": "Computer Graphics I",
+    "semesters": [
+        {
+            "course_id": "CS171.01",
+            "season": "Fall",
+            "year": "2021",
+            "mainpage": "https://faculty.sist.shanghaitech.edu.cn/faculty/liuxp/course/cs171.01/index.html",
+            "teacher": [
+                "liuxp"
+            ],
+            "ta": [
+                "xuht1", "liumy1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Programming (C/C++), Mathematics (Calculus, Linear Algebra, Probability), Data Structures and Algorithms",
+            "evaluation": "5 Programming assignments (55%), Paper presentation (5%), Written examination (15% = mid-term (10%) + 5 quizzes (5%)), Final project (25% = accomplishment (18%) + presentation (5%) + report (2%))"
+        },
+        {
+            "course_id": "CS171.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "liuxp"
+            ],
+            "ta": [
+                "luoochq", "yhwang21"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "CS171.01",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "liuxp"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "CS171.01",
+            "season": "Spring",
+            "year": "2018",
+            "teacher": [
+                "liuxp"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        }
+    ]
+}

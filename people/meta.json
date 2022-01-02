@@ -456,10 +456,15 @@
         "image": true,
         "info": [
             ["envelope", "&#x6c;&#105;&#x75;&#x78;&#x70;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;", "mailto:&#x6c;&#105;&#x75;&#x78;&#x70;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;"],
-            ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/liuxp/"]
+            ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/liuxp/"],
+            ["flask", "Lab Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/liuxp/flare/index.html"]
         ],
         "teach-courses": [
-            ["Fall", "2019", "CS100", "Introduction to Programming"]
+            ["Fall", "2021", "CS171", "Computer Graphics I"],
+            ["Spring", "2021", "CS171", "Computer Graphics I"],
+            ["Fall", "2019", "CS100", "Introduction to Programming"],
+            ["Spring", "2020", "CS171", "Computer Graphics I"],
+            ["Spring", "2018", "CS171", "Computer Graphics I"]
         ]
     },
     "qiaowh": {
@@ -1158,7 +1163,9 @@
         "name": "王培豪",
         "image": true,
         "info": [
-            ["github-alt", "Github", "https://github.com/peihaowang"]
+            ["envelope", "&#119;&#97;&#110;&#103;&#112;&#101;&#105;&#104;&#x61;&#111;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;", "mailto:&#119;&#97;&#110;&#103;&#112;&#101;&#105;&#104;&#x61;&#111;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;"],
+            ["github-alt", "Github", "https://github.com/peihaowang"],
+            ["home", "Home Page", "http://peihaowang.github.io/"]
         ],
         "ta-courses": [
             ["Spring", "2020", "CS110", "Computer Architecture I"],
@@ -2622,10 +2629,12 @@
     },
     "xuht1": {
         "name": "徐鸿图",
+        "image": true,
         "info": [
             ["envelope", "&#120;&#117;&#x68;&#x74;&#49;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#110;", "mailto:&#120;&#117;&#x68;&#x74;&#49;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#110;"]
         ],
         "ta-courses": [
+            ["Fall", "2021", "CS171", "Computer Graphics I"],
             ["Spring", "2021", "CS100", "Introduction to Programming"]
         ]
     },
@@ -2637,6 +2646,38 @@
         "ta-courses": [
             ["Spring", "2021", "CS100", "Introduction to Programming"],
             ["Fall", "2019", "CS100", "Introduction to Programming"],
+            ["Fall", "2018", "CS100", "Introduction to Programming"]
+        ]
+    },
+    "liumy1": {
+        "name": "刘梦云",
+        "image": true,
+        "info": [
+            ["envelope", "&#108;&#x69;&#x75;&#109;&#x79;&#x31;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;", "mailto:&#108;&#x69;&#x75;&#109;&#x79;&#x31;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2021", "CS171", "Computer Graphics I"]
+        ]
+    },
+    "luoochq": {
+        "name": "罗宸麒",
+        "info": [
+            ["envelope", "&#x6c;&#x75;&#111;&#x6f;&#x63;&#104;&#113;&#x40;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#99;&#x6e;", "mailto:&#x6c;&#x75;&#111;&#x6f;&#x63;&#104;&#113;&#x40;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#99;&#x6e;"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS171", "Computer Graphics I"]
+        ]
+    },
+    "yhwang21": {
+        "name": "王悦豪",
+        "image": true,
+        "info": [
+            ["envelope", "&#x79;&#104;&#x77;&#x61;&#110;&#x67;&#x32;&#x31;&#64;&#x63;&#x73;&#101;&#x2e;&#x63;&#x75;&#x68;&#107;&#x2e;&#101;&#100;&#117;&#x2e;&#x68;&#x6b;", "mailto:&#x79;&#104;&#x77;&#x61;&#110;&#x67;&#x32;&#x31;&#64;&#x63;&#x73;&#101;&#x2e;&#x63;&#x75;&#x68;&#107;&#x2e;&#101;&#100;&#117;&#x2e;&#x68;&#x6b;"],
+            ["github-alt", "Github", "https://github.com/yuehaowang"],
+            ["home", "Home Page", "http://yuehaolab.com/"]
+        ],
+        "ta-courses": [
+            ["Spring", "2021", "CS171", "Computer Graphics I"],
             ["Fall", "2018", "CS100", "Introduction to Programming"]
         ]
     }
