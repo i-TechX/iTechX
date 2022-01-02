@@ -136,6 +136,9 @@
 
         $.ajax({
             url: proxy.parse("https://raw.githubusercontent.com" + "/" + options.owner + "/" + options.repo + "/file-base/people/meta.json"),
+            data: {
+                t: Date.now()
+            },
             type: "GET",
             success: function (data) {
                 if (data) {
@@ -224,6 +227,9 @@
 
         $.ajax({
             url: proxy.parse("https://raw.githubusercontent.com" + "/" + options.owner + "/" + options.repo + "/file-base/people/pages/" + pid + ".md"),
+            data: {
+                t: Date.now()
+            },
             type: "GET",
             success: function (data) {
                 if (data) { 
