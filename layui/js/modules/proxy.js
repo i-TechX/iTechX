@@ -61,8 +61,8 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 '加载图片文件，如课程封面、人物头像等，对raw.githubusercontent.com进行代理', 
                 "^https?://raw.githubusercontent.com(/([^/]*)/([^/]*)/([^/]*)(.*\\.(?:(?:jpg))))$", 
                 {
-                    "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理（默认）"],
-                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理"],
+                    "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理"],
+                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理（默认）"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理"],
                     "none": ["$&", "无代理"],
                 }
@@ -92,7 +92,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
             'Reader': 'jsdelivr',
             'Microsoft': 'preview',
             'PDF': 'nbviewer-preview',
-            'Images': 'ghproxy',
+            'Images': 'ghucs',
             'Files': 'ghproxy',
             'API': 'itechx'
         };
