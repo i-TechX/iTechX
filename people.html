@@ -135,14 +135,17 @@
         }
 
         $.ajax({
-            url: proxy.parse("https://raw.githubusercontent.com" + "/" + options.owner + "/" + options.repo + "/file-base/people/meta.json"),
+            url: proxy.parse("https://api.github.com/repos" + "/" + options.owner + "/" + options.repo + "/contents/people/meta.json"),
             data: {
+                ref: 'file-base',
                 t: Date.now()
             },
             type: "GET",
+            headers: headers,
             success: function (data) {
-                if (data) {
-                    var content = data;
+                if (data && data.content) {
+                    var string = decodeURIComponent(escape(window.atob(data.content.replace(/[\r\n]/g,""))));
+                    var content = JSON.parse(string);
                     var info = content[pid];
                     
                     document.title = 'iTechX | ' + info.name;
