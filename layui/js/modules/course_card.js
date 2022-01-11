@@ -215,7 +215,7 @@ layui.define(['jquery', 'util', 'layer', 'proxy'], function(exports){
                     headers: headers,
                     success: function (data) {
                         if (data) {
-                            for (var i = 0; i < data.length; i++) {
+                            for (var i = data.length-1; i >= 0; i--) {
                                 var elem = data[i];
                                 console.log(elem);
                                 var text = elem['body'];
