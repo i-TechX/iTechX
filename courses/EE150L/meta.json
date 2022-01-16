@@ -1,0 +1,54 @@
+{
+    "code": "EE150L",
+    "name": "Signals and Systems Lab",
+    "semesters": [
+        {
+            "course_id": "EE150L.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "luly"
+            ],
+            "ta": [
+                "zhangyx5", "luojw", "zhanghzh", "songrb", "zhengyn"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "1",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "Lab 1: 10%, Lab 2-6: 4% pre-lab + 14% lab each"
+        },
+        {
+            "course_id": "EE150L.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "luly"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "1",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "Lab 1: 10%, Lab 2-6: 4% pre-lab + 14% lab each"
+        },
+        {
+            "course_id": "EE150L.01",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "luly"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "1",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "Lab 1: 10%, Lab 2-6: 18% each"
+        }
+    ]
+}
