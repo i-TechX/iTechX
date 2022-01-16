@@ -1,0 +1,38 @@
+{
+    "code": "SI252",
+    "name": "Reinforcement Learning",
+    "semesters": [
+        {
+            "course_id": "SI252.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "shaozy"
+            ],
+            "ta": [
+                "huangxi", "wangshsh2", "huangtao1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "SI252.01",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "shaozy"
+            ],
+            "ta": [
+                "huangxi", "gaoxin", "zhujg"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "6 Homework: 60%, Final project: 40%"
+        }
+    ]
+}
