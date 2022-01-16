@@ -1,0 +1,119 @@
+{
+    "code": "EE150",
+    "name": "Signals and Systems",
+    "semesters": [
+        {
+            "course_id": "EE150.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "xulin1"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Complex numbers, Important geometric series, Zeros of a complex equation",
+            "evaluation": "Homework: 20%, Mid-Term Exam: 30%, Final Exam: 50%; All in English, otherwise *0.8, Sign in every lecture, -2 /absence, Plagiarism: zero."
+        },
+        {
+            "course_id": "EE150.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "zhouyong"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "EE150.02",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "xulin1"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Complex numbers, Important geometric series, Zeros of a complex equation",
+            "evaluation": "Homework: 20%, Mid-Term Exam: 30%, Final Exam: 50%; All in English, otherwise the grade reduced by 0.8, -5 per absence, Plagiarism: zero."
+        },
+        {
+            "course_id": "EE150.01",
+            "season": "Spring",
+            "year": "2020",
+            "mainpage": "https://i-techx.github.io/EE150/index.html",
+            "teacher": [
+                "louxin", "zhaoziping", "xulin1", "zhouyong"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework: 20%, Mid-Term Exam: 30%, Final Exam: 50%"
+        },
+        {
+            "course_id": "EE150.01",
+            "season": "Spring",
+            "year": "2018",
+            "teacher": [
+                "gengyl"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "analysis, linear algebra",
+            "evaluation": "Homework: 20%, Lab: 15%, Mid-Term Exam: 30%, Final Exam: 35%"
+        },{
+            "course_id": "EE150.01",
+            "season": "Spring",
+            "year": "2017",
+            "mainpage": "https://faculty.sist.shanghaitech.edu.cn/faculty/luoxl/class/2017Spr_EE150/SignalsAndSystems.htm",
+            "teacher": [
+                "luoxl"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "linear circuits, differential equations, linear algebra, calculus",
+            "evaluation": "Weekly Homework: 20%, 4 Quizzes: 10%, Midterm: 30%, Final: 30%, Lab: 5%, Final Project: 10%, Your Final Score = min(Your Total Score, 100)"
+        },{
+            "course_id": "EE150.01",
+            "season": "Spring",
+            "year": "2016",
+            "mainpage": "https://faculty.sist.shanghaitech.edu.cn/faculty/luoxl/class/2016Spr_EE150/SignalsAndSystems.htm",
+            "teacher": [
+                "luoxl"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "linear circuits, differential equations, linear algebra, calculus",
+            "evaluation": "Weekly Homework: 20%, 4 Quizzes: 15%, Midterm: 30%, Final: 35%"
+        }
+    ]
+}

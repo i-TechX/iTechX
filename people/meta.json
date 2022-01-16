@@ -275,7 +275,8 @@
             ["home", "Home Page", "http://www.zipingzhao.com/"]
         ],
         "teach-courses": [
-            ["Fall", "2021", "CS182", "Introduction to Machine Learning"]
+            ["Fall", "2021", "CS182", "Introduction to Machine Learning"],
+            ["Spring", "2020", "EE150", "Signals and Systems"]
         ]
     },
     "shiym": {
@@ -477,6 +478,62 @@
         "teach-courses": [
             ["Spring", "2021", "SI252", "Reinforcement Learning"],
             ["Spring", "2020", "SI252", "Reinforcement Learning"]
+        ]
+    },
+    "gengyl": {
+        "name": "耿艳林",
+        "image": true,
+        "info": [
+            ["envelope", "&#103;&#x65;&#x6e;&#x67;&#x79;&#108;&#64;&#115;&#104;&#97;&#110;&#x67;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;", "mailto:&#103;&#x65;&#x6e;&#x67;&#x79;&#108;&#64;&#115;&#104;&#97;&#110;&#x67;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;"]
+        ],
+        "teach-courses": [
+            ["Spring", "2018", "EE150", "Signals and Systems"]
+        ]
+    },
+    "luoxl": {
+        "name": "罗喜良",
+        "image": true,
+        "info": [
+            ["envelope", "&#108;&#117;&#111;&#120;&#x6c;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#x6e;", "mailto:&#108;&#117;&#111;&#120;&#x6c;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#x6e;"],
+            ["flask", "Lab Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/luoxl/index.htm"]
+        ],
+        "teach-courses": [
+            ["Spring", "2017", "EE150", "Signals and Systems"],
+            ["Spring", "2016", "EE150", "Signals and Systems"]
+        ]
+    },
+    "louxin": {
+        "name": "娄鑫",
+        "image": true,
+        "info": [
+            ["envelope", "&#108;&#111;&#x75;&#x78;&#x69;&#x6e;&#x40;&#x73;&#x68;&#x61;&#x6e;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#110;", "mailto:&#108;&#111;&#x75;&#x78;&#x69;&#x6e;&#x40;&#x73;&#x68;&#x61;&#x6e;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#110;"]
+        ],
+        "teach-courses": [
+            ["Spring", "2020", "EE150", "Signals and Systems"]
+        ]
+    },
+    "xulin1": {
+        "name": "徐林",
+        "image": true,
+        "info": [
+            ["envelope", "&#120;&#117;&#x6c;&#105;&#x6e;&#49;&#64;&#x73;&#104;&#97;&#110;&#x67;&#104;&#97;&#x69;&#116;&#x65;&#99;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#x6e;", "mailto:&#120;&#117;&#x6c;&#105;&#x6e;&#49;&#64;&#x73;&#104;&#97;&#110;&#x67;&#104;&#97;&#x69;&#116;&#x65;&#99;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#x6e;"]
+        ],
+        "teach-courses": [
+            ["Fall", "2021", "EE150", "Signals and Systems"],
+            ["Spring", "2021", "EE150", "Signals and Systems"],
+            ["Spring", "2020", "EE150", "Signals and Systems"]
+        ]
+    },
+    "zhouyong": {
+        "name": "周勇",
+        "image": true,
+        "info": [
+            ["envelope", "&#x7a;&#x68;&#x6f;&#117;&#x79;&#111;&#x6e;&#103;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#x68;&#46;&#x65;&#100;&#117;&#46;&#x63;&#110;", "mailto:&#x7a;&#x68;&#x6f;&#117;&#x79;&#111;&#x6e;&#103;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#x68;&#46;&#x65;&#100;&#117;&#46;&#x63;&#110;"],
+            ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/zhouyong/"]
+        ],
+        "teach-courses": [
+            ["Spring", "2021", "EE150", "Signals and Systems"],
+            ["Spring", "2020", "EE150", "Signals and Systems"]
         ]
     },
     "qiaowh": {
