@@ -1,0 +1,230 @@
+{
+    "code": "EE111",
+    "name": "Electric Circuits",
+    "semesters": [
+        {
+            "course_id": "EE111.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "zouxb"
+            ],
+            "ta": [
+                "shity", "huangzy1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "8 Homework: 24%, Midterm: 30%, Final: 40%, Quizzes + Attendence: 6%"
+        },
+        {
+            "course_id": "EE111.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "yechf"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework + Attendence + Quizzes: 30%, Midterm: 20%, Final: 50%"
+        },
+        {
+            "course_id": "EE111.01",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "yechf"
+            ],
+            "ta": [
+                "zhaowl", "fankm", "wangyx4"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework: 30%, 1 Midterm: 20%, 1 Final: 50%"
+        },
+        {
+            "course_id": "EE111.02",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "liuyu"
+            ],
+            "ta": [
+                "yilh", "zhangty2", "hurt"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework: 30%, 1 Midterm: 20%, 1 Final: 50%"
+        },
+        {
+            "course_id": "EE111.03",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "zouxb"
+            ],
+            "ta": [
+                "chenjx2", "zhuyk", "quhl"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework: 30%, 1 Midterm: 20%, 1 Final: 50%"
+        },
+        {
+            "course_id": "EE111.04",
+            "season": "Spring",
+            "year": "2020",
+            "teacher": [
+                "wanghy"
+            ],
+            "ta": [
+                "zhangjz", "liangjw", "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework: 30%, 1 Midterm: 20%, 1 Final: 50%"
+        },
+        {
+            "course_id": "EE111.01",
+            "season": "Spring",
+            "year": "2019",
+            "teacher": [
+                "liuyu"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "9 Homework: 20%, 2 Midterms (20% x 2) + 1 Final (35%), 5 Quizzes: 5%"
+        },
+        {
+            "course_id": "EE111.02",
+            "season": "Spring",
+            "year": "2019",
+            "teacher": [
+                "yechf"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "9 Homework: 20%, 2 Midterms (20% x 2) + 1 Final (35%), 5 Quizzes: 5%"
+        },
+        {
+            "course_id": "EE111.03",
+            "season": "Spring",
+            "year": "2019",
+            "teacher": [
+                "zouxb"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "9 Homework: 20%, 2 Midterms (20% x 2) + 1 Final (35%), 5 Quizzes: 5%"
+        },
+        {
+            "course_id": "EE111.01",
+            "season": "Spring",
+            "year": "2018",
+            "teacher": [
+                "zouxb"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "10 Homework: 20%, 8 Labs: 25%, 2 Midterms (15% x 2) + 1 Final (20%), Quizzes: 5%"
+        },
+        {
+            "course_id": "EE111.02",
+            "season": "Spring",
+            "year": "2018",
+            "teacher": [
+                "yechf"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "10 Homework: 20%, 8 Labs: 25%, 2 Midterms (15% x 2) + 1 Final (20%), Quizzes: 5%"
+        },
+        {
+            "course_id": "EE111.01",
+            "season": "Fall",
+            "year": "2017",
+            "teacher": [
+                "zhoupq"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "EE111.01",
+            "season": "Fall",
+            "year": "2016",
+            "teacher": [
+                "zhoupq"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "EE111.01",
+            "season": "Fall",
+            "year": "2015",
+            "teacher": [
+                "zhoupq"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        }
+    ]
+}
