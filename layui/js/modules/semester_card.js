@@ -182,10 +182,10 @@ layui.define(['jquery', 'util', 'element', 'rate', 'proxy'], function(exports){
                     };
 
                     var elemPerRow = function(width) {
-                        if (width >= 2313) return 7;
+                        /*if (width >= 2313) return 7;
                         else if (width >= 2015) return 6;
                         else if (width >= 1719) return 5;
-                        else if (width >= 1421) return 4;
+                        else*/ if (width >= 1421) return 4;
                         else if (width >= 1124) return 3;
                         else if (width >= 992) return 2;
                         else if (width >= 889) return 4;
