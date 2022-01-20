@@ -1,0 +1,86 @@
+{
+    "code": "CS252",
+    "name": "Cryptography",
+    "semesters": [
+        {
+            "course_id": "CS252.01",
+            "season": "Fall",
+            "year": "2021",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "liujing1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Attendance: 10%, Homework: 60%, Exam: 30%"
+        },
+        {
+            "course_id": "CS252.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Attendance: 10%, Homework: 60%, Exam: 30%"
+        },
+        {
+            "course_id": "CS252.01",
+            "season": "Fall",
+            "year": "2019",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "liujing1", "chenxin3", "liwm", "zenghao"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Attendance: 10%, Homework: 60%, Exam: 30%"
+        },
+        {
+            "course_id": "CS252.01",
+            "season": "Fall",
+            "year": "2018",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Attendance: 10%, Homework: 60%, Exam: 30%"
+        },
+        {
+            "course_id": "CS252.01",
+            "season": "Spring",
+            "year": "2018",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Attendance: 10%, Homework: 70%, Exam: 20%"
+        }
+    ]
+}

@@ -21,9 +21,14 @@
             ["home", "Home Page", "https://sist.shanghaitech.edu.cn/2020/0707/c7499a53860/page.htm"]
         ],
         "teach-courses": [
+            ["Fall", "2021", "CS252", "Cryptography"],
+            ["Spring", "2021", "CS252", "Cryptography"],
             ["Fall", "2020", "CS152", "Applied Cryptography"],
             ["Spring", "2020", "SI120", "Discrete Mathematics"],
+            ["Fall", "2019", "CS252", "Cryptography"],
             ["Spring", "2019", "SI120", "Discrete Mathematics"],
+            ["Fall", "2018", "CS252", "Cryptography"],
+            ["Spring", "2018", "CS252", "Cryptography"],
             ["Spring", "2018", "SI120", "Discrete Mathematics"],
             ["Spring", "2017", "SI120", "Discrete Mathematics"]
         ]
@@ -2406,7 +2411,9 @@
             ["envelope", "&#x6c;&#105;&#x75;&#x6a;&#x69;&#x6e;&#x67;&#49;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#x2e;&#x63;&#110;", "mailto:&#x6c;&#105;&#x75;&#x6a;&#x69;&#x6e;&#x67;&#49;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#x2e;&#x63;&#110;"]
         ],
         "ta-courses": [
-            ["Fall", "2020", "CS152", "Applied Cryptography"]
+            ["Fall", "2021", "CS252", "Cryptography"],
+            ["Fall", "2020", "CS152", "Applied Cryptography"],
+            ["Fall", "2019", "CS252", "Cryptography"]
         ]
     },
     "chenxin3": {
@@ -2415,7 +2422,8 @@
             ["envelope", "&#99;&#x68;&#x65;&#110;&#x78;&#105;&#x6e;&#x33;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#105;&#116;&#x65;&#99;&#x68;&#46;&#101;&#100;&#x75;&#46;&#x63;&#x6e;", "mailto:&#99;&#x68;&#x65;&#110;&#x78;&#105;&#x6e;&#x33;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#105;&#116;&#x65;&#99;&#x68;&#46;&#101;&#100;&#x75;&#46;&#x63;&#x6e;"] 
         ],
         "ta-courses": [
-            ["Fall", "2020", "CS152", "Applied Cryptography"]
+            ["Fall", "2020", "CS152", "Applied Cryptography"],
+            ["Fall", "2019", "CS252", "Cryptography"]
         ]
     },
     "fengshuai": {
@@ -3018,6 +3026,21 @@
         ],
         "ta-courses": [
             ["Fall", "2021", "EE111", "Electric Circuits"]
+        ]
+    },
+    "liwm": {
+        "name": "李文明",
+        "ta-courses": [
+            ["Fall", "2019", "CS252", "Cryptography"]
+        ]
+    },
+    "zenghao": {
+        "name": "曾昊",
+        "info": [
+            ["envelope", "&#x7a;&#101;&#x6e;&#103;&#x68;&#x61;&#x6f;&#64;&#115;&#104;&#x61;&#x6e;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#x63;&#110;", "mailto:&#x7a;&#101;&#x6e;&#103;&#x68;&#x61;&#x6f;&#64;&#115;&#104;&#x61;&#x6e;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#x63;&#110;"]
+        ],
+        "ta-courses": [
+            ["Fall", "2019", "CS252", "Cryptography"]
         ]
     }
 }
