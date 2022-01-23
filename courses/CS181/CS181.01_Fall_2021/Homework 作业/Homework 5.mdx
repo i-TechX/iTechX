@@ -1,0 +1,502 @@
+«««
+code: CS181
+name: Artificial Intelligence I
+semester: Fall 2021
+category: Homework 作业
+title: Homework 5
+»»»
+
+# Homework 5
+
+## Page 1 (question)
+
+@ Problem - custom
+
+title: "Question 1 - Value Iteration"
+content: """
+<p>Consider the gridworld where Left and Right actions are successful 100% of the time. Specifically, the available actions in each state are to move to the neighboring grid squares. From state $a$, there is also an exit action available, which results in going to the terminal state and collecting a reward of 10. Similarly, in state <em>e</em>, the reward for the exit action is 4. Exit actions are successful 100% of the time.</p>
+<p><img width="567" height="228" src="./image/hw5/xid-1591168_1"></p>
+<p>Let the discount factor $\gamma = 0.5$. Fill in the following quantities.</p>
+"""
+choice: """
+<div class="question q1 q-text" answer="{'10': 2}">
+    <p style="display: inline;">$V^*(a) = V_{\infty}(a) =$</p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'5': 2}">
+    <p style="display: inline;">$V^*(b) = V_{\infty}(b) =$</p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q3 q-text" answer="{'2.5': 2}">
+    <p style="display: inline;">$V^*(c) = V_{\infty}(c) =$</p>
+    <input type="text" name="q3" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q4 q-text" answer="{'2': 2}">
+    <p style="display: inline;">$V^*(d) = V_{\infty}(d) =$</p>
+    <input type="text" name="q4" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q5 q-text" answer="{'4': 2}">
+    <p style="display: inline;">$V^*(e) = V_{\infty}(e) =$</p>
+    <input type="text" name="q5" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+
+
+@ Problem - custom
+
+title: "Question 2 - Value Iteration Convergence"
+content: """
+<p>We will consider a simple MDP that has six states, A, B, C, D, E, and F. Each state has a single action, <em>go</em>. An arrow from a state x to a state y indicates that it is possible to transition from state x to next state y when <em>go</em>&nbsp;is taken. If there are multiple arrows leaving a state x, transitioning to each of the next states is equally likely. The state F has no outgoing arrows: once you arrive in F, you stay in F for all future times. The reward is one for all transitions, with one exception: staying in F gets a reward of zero. Assume a discount factor = 0.7. We assume that we initialize the value of each state to 0. (Note: you should not need to explicitly run value iteration to solve this problem.)</p>
+<p><img width="316" height="156" src="./image/hw5/xid-1240141_1"></p>
+"""
+choice: """
+<div class="question q1 q-text" answer="{'3': 5}">
+    <p>After how many iterations of value iteration will the value for state C have become exactly equal to the true optimum? (Enter inf if the values will never become equal to the true optimal but only converge to the true optimal.)</p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'4': 5}">
+    <p>How many iterations of value iteration will it take for the values of all states to converge to the true optimal values? (Enter inf if the values will never become equal to the true optimal but only converge to the true optimal.)</p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+
+
+@ Problem - custom
+
+title: "Question 3 - Policy Iteration"
+content: """
+<p>Consider the following transition diagram, transition function and reward function for an MDP.</p>
+<p><img width="254" height="225" src="./image/hw5/xid-1240142_1"> <img width="247" height="417" src="./image/hw5/xid-1240143_1"></p>
+<p>Suppose we are doing policy evaluation, by following the policy given by the left-hand side table below. Our current estimates (at the end of some iteration of policy evaluation) of the value of states when following the current policy is given in the right-hand side table.</p>
+<p><img width="469" height="120" src="./image/hw5/xid-1240144_1"></p>
+<p><span style="color: #ff0000;">Answers should keep 3 decimals.</span></p>
+"""
+choice: """
+<div class="question q1 q-text" answer="{'-1.928':2.5}">
+    <p><img width="111" height="23" src="./image/hw5/xid-1240145_1"></p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<p><img width="462" height="105" src="./image/hw5/xid-1240146_1"></p>
+<div class="question q2 q-text" answer="{'1.638':2.5}">
+    <p><img width="155" height="15" src="./image/hw5/xid-1240147_1"></p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q3 q-text" answer="{'-2.053':2.5}">
+    <p><img width="210" height="17" src="./image/hw5/xid-1240148_1"></p>
+    <input type="text" name="q3" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q4 q-text" answer="{'clockwise':2.5}">
+    <p>What is the updated action for state C? Enter clockwise or counterclockwise.</p>
+    <input type="text" name="q4" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+
+
+@ Problem - custom
+
+title: "Question 4 - Model Based RL"
+content: """
+<p><img width="438" height="219" src="./image/hw5/xid-1240149_1"></p>
+"""
+choice: """
+<div class="question q1 q-text" answer="{'1':2.5}">
+    <p style="display: inline;">T(A, south, C) = </p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'1':2.5}">
+    <p style="display: inline;">T(B, east, C) = </p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q3 q-text" answer="{'0.75':2.5}">
+    <p style="display: inline;">T(C, south, E) = </p>
+    <input type="text" name="q3" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q4 q-text" answer="{'0.25':2.5}">
+    <p style="display: inline;">T(C, south, D) = </p>
+    <input type="text" name="q4" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+
+
+@ Problem - custom
+
+title: "Question 5 - Model Free RL"
+content: """
+<p>Consider an MDP with 3 states, A, B and C; and 2 actions Clockwise and Counterclockwise. We do not know the transition function or the reward function for the MDP, but instead, we are given with samples of what an agent actually experiences when it interacts with the environment (although, we do know that we do not remain in the same state after taking an action).</p>
+<p>In this problem, instead of first estimating the transition and reward functions, we will directly estimate the Q function using Q-learning. Assume, the discount factor, $\gamma$ is 0.5 and the step size for Q-learning, $\alpha$ is 0.5. Our current Q function, $Q(s,a)$, is as follows.</p>
+<p><img height="400" src="./image/hw5/xid-1240150_1"></p>
+<p>Answers should keep 3 decimals.</p>
+"""
+choice: """
+<div class="question q1 q-text" answer="{'0.661':1.6}" style="display: inline; margin-right: 1em;">
+    <p style="display: inline;">Clockwise: A</p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'-2.938':1.6}" style="display: inline; margin-right: 1em;">
+    <p style="display: inline;">B</p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q3 q-text" answer="{'-0.692':1.7,'-0.693':1.7,'-0.613':1.7}" style="display: inline; margin-right: 1em;">
+    <p style="display: inline;">C</p>
+    <input type="text" name="q3" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<br>
+<div class="question q4 q-text" answer="{'0.344':1.7}" style="display: inline; margin-right: 1em;">
+    <p style="display: inline;">Counterclockwise: A</p>
+    <input type="text" name="q4" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q5 q-text" answer="{'2.135':1.7,'2.214':1.7}" style="display: inline; margin-right: 1em;">
+    <p style="display: inline;">B</p>
+    <input type="text" name="q5" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q6 q-text" answer="{'0.063':1.7}" style="display: inline; margin-right: 1em;">
+    <p style="display: inline;">C</p>
+    <input type="text" name="q6" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<br>
+"""
+
+## Page 2 (question)
+
+@ Problem - text
+
+title: "Question 6 - MDPs and RL Part 1"
+content: """
+The agent is in a $2 \times 4$ gridworld as shown in the figure. We start from square 1 and finish in square 8. When square
+8 is reached, we receive a reward of +10 at the game end. For anything else, we receive a constant reward of -1
+(you can think of this as a time penalty).
+
+|||||
+|:--:|:--:|:--:|:--:|
+|1|2|3|4|
+|5|6|7|8|
+
+The actions in this MDP include: up, down, left and right. The agent cannot take actions that take them off the
+board. In the table below, we provide initial non-zero estimates of Q values (Q values for invalid actions are left as blanks):
+
+|state\action| up | down | left | right |
+|:--:|:--:|:--:|:--:|:--:|
+|1||Q(1,down)=4||Q(1,right)=3|
+|2||Q(2, down)=6|Q(2, left)=4|Q(2, right)=5|
+|3||Q(3, down)=8|Q(3, left)=5|Q(3, right)=7|
+|4||Q(4, down)=9|Q(4, left)=6||
+|5|Q(5, up)=5|||Q(5, right)=6|
+|6|Q(6, up)=4||Q(6, left)=5|Q(6, right)=7|
+|7|Q(7, up)=6||Q(7, left)=6|Q(7, right)=8|
+
+In this question, please use 3 decimal points as the final answer. E.g. 0.300, 1.524.
+
+**(a)** Your friend Adam guesses that the actions in this MDP are fully deterministic (e.g. taking down from 2 will
+land you in 6 with probability 1 and everywhere else with probability 0). Since we have full knowledge of *T*
+and *R*, we can thus use the Bellman equation to improve (i.e., further update) the initial Q estimates.
+
+Adam tells you to use the following update rule for Q values, where he assumes that your policy is greedy and
+thus does $\max_a Q(s, a)$. The update rule he prescribes is as follows:
+
+<center>$Q_{k+1}(s, a) = \sum_{s'} T(s, a, s')[R(s, a, s') + \gamma \max_{a'} Q_k(s', a')]$</center>
+
+**(i)**  Perform one update of Q(3, left) using the equation above, where $\gamma = 0.9$. You may break ties in
+any way.
+"""
+answer: "4.400"
+points: "5"
+
+
+
+@ Problem - text
+
+title: "Question 7 - MDPs and RL Part 2"
+content: """
+**(ii)**  Perform one update of Q(3, down) using the equation above, where $\gamma = 0.9$.
+"""
+answer: "6.200"
+points: "5"
+
+
+
+@ Problem - checkbox
+
+title: "Question 8 - MDPs and RL Part 3"
+content: """
+**(b)** After observing the agent for a while, Adam realized that his assumption of *T* being deterministic is wrong
+in one specific way: **when the agent tries to legally move down, it occasionally ends up moving left instead** (except from grid 1 where moving left results in out-of-bound). All other movements are still deterministic.
+
+Suppose we have run the Q updates outlined in the equation above until convergence, to get $Q^\*\_{wrong}(s, a)$ under the original assumption of the wrong (deterministic) *T*. Suppose $Q^\*\_{correct}(s, a)$ denotes the Q values under the new correct *T*. Note that you don't explicitly know the exact probabilities associated with this new *T*, but you know that it qualitatively differs in the way described above. As prompted below, list the set of $(s, a)$ pairs where $Q^\*\_{wrong}(s, a)$ is either an over-estimate or under-estimate of $Q^\*\_{correct}(s, a)$.
+
+**(i)** Select all $(s, a)$ where $Q^*_{wrong}(s, a)$ is an over-estimate.
+"""
+choice: """
+(1, down)
+(1, right)
+(2, down)
+(2, left)
+(2, right)
+(3, down)
+(3, left)
+(3, right)
+(4, down)
+(4, left)
+(5, up)
+(5, right)
+(6, up)
+(6, left)
+(6, right)
+(7, up)
+(7, left)
+(7, right)
+None of the above
+"""
+answer: "BCEFGHIJMP"
+points: "10"
+
+
+
+@ Problem - checkbox
+
+title: "Question 9 - MDPs and RL Part 4"
+content: """
+**(ii)** Select all $(s, a)$ where $Q^*_{wrong}(s, a)$ is an under-estimate.
+"""
+choice: """
+(1, down)
+(1, right)
+(2, down)
+(2, left)
+(2, right)
+(3, down)
+(3, left)
+(3, right)
+(4, down)
+(4, left)
+(5, up)
+(5, right)
+(6, up)
+(6, left)
+(6, right)
+(7, up)
+(7, left)
+(7, right)
+None of the above
+"""
+answer: "S"
+points: "10"
+
+
+
+@ Problem - radio
+
+title: "Question 10 - MDPs and RL Part 5"
+content: """
+**(c)** Suppose that we have a mysterious oracle that can give us either all the correct Q-values $Q(s, a)$ or all
+the correct state values $V(s)$. Which one do you prefer to be given if you want to use it to find the optimal
+policy?
+"""
+choice: """
+Q-values
+State values
+"""
+answer: "A"
+points: "5"
+
+
+
+@ Problem - custom
+
+title: "Question 11 - MDPs and RL Part 6"
+content: """
+**(d)**  Suppose that you perform actions in this grid and observe the following episode: 3, right, 4, down, 8 (terminal).
+
+With learning rate $\alpha = 0.2$, discount $\gamma = 0.9$, perform an update of $Q(3, right)$ and $Q(4, down)$. Note that
+here, we update Q values based on the sampled actions as in TD learning, rather than the greedy actions.
+"""
+choice: """
+<div class="question q1 q-text" answer="{'7.020': 5}">
+    <p style="display: inline;">$Q'(3, right) = $</p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'9.200': 5}">
+    <p style="display: inline;">$Q'(4, down) = $</p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+
+
+@ Problem - custom
+
+title: "Question 12 - MDPs and RL Part 7"
+content: """
+**(e)** One way to encourage an agent to perform more exploration in the world is known as the "$\epsilon$-greedy"
+algorithm. For any given policy $\pi(s)$, this algorithm says to take the original action $a = \pi(s)$ with probability
+$(1-\epsilon)$, and to take a random action (drawn from a uniform distribution over all legal actions) with probability
+$\epsilon$. If $\epsilon$ can be tuned, would you assign it to be a high or low value at the beginning of training? What about
+at the end of the training?
+"""
+choice: """
+<div class="question q1 q-radio" answer="{'A': 2.5}">
+    <p>at the beginning of the training </p>
+    <input type="radio" name="q1" value="A" title="a high value">
+    <input type="radio" name="q1" value="B" title="a low value">
+    <p class="tick-label"></p>
+</div>
+<div class="question q2 q-radio" answer="{'B': 2.5}">
+    <p>at the end of the training </p>
+    <input type="radio" name="q2" value="A" title="a high value">
+    <input type="radio" name="q2" value="B" title="a low value">
+    <p class="tick-label"></p>
+</div>
+"""
+
+
+
+@ Problem - custom
+
+title: "Question 13 - MDPs and RL Part 8"
+content: """
+**(f)** Instead of using the "$\epsilon$-greedy" algorithm, we will now do some interesting exploration with softmax. We
+first introduce a new type of policy: A stochastic policy $\pi(a|s)$ represents the probability of action *a* being
+prescribed, conditioned on the current state. In other words, the policy is now a distribution over possible
+actions, rather than a function that outputs a deterministic action.
+
+Let's define a new policy as follows:
+
+$\pi(a|s) = \frac{e^{Q(s,a)}}{\sum_{a'}e^{Q(s,a')}}$
+
+**(i)** Suppose we are at square 3 in the grid and we want to use the originally provided Q values from
+the table. What is the probability that this policy will tell us to go right? What is the probability that
+this policy will tell us to go left? Note that the sum over actions prescribed above refers to a sum over
+legal actions.
+"""
+choice: """
+<div class="question q1 q-text" answer="{'0.259': 5}">
+    <p style="display: inline;">The probability that this policy will tell us to go right:</p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'0.035': 5}">
+    <p style="display: inline;">The probability that this policy will tell us to go left:</p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+
+
+@ Problem - checkbox
+
+title: "Question 14 - MDPs and RL Part 9"
+content: """
+**(ii)** Which of the following statements are corrent?
+"""
+choice: """
+$\epsilon$-greedy algorithm is <b>guaranteed</b> to converge to optimal Q function if every $(s, a)$ is visited infinitely often and $\alpha$ is chosen to decay according to standard stochastic approximation requirements.
+
+Softmax algorithm is <b>guaranteed</b> to converge to optimal Q function if every $(s, a)$ is visited infinitely often and $\alpha$ is chosen to decay according to standard stochastic approximation requirements.
+
+In practice, softmax algorithm always shows better performance than $\epsilon$-greedy algorithm and converges faster.
+
+None of the above.
+"""
+answer: "AB"
+points: "10"
+
+
+
+@ Problem - text
+
+title: "Question 14 - MDPs and RL Part 9"
+content: """
+**(g)** Your friend Cody argues that we could still explicitly calculate Q updates (like Adam's approach in part (a))
+even if we don't know the true underlying transition function $T(s, a, s')$, because he believes that our *T* can be
+roughly approximated from samples.
+
+Suppose you collect 1,000 transitions from *s* = 3, *a* = Down, in the form of $(s_{start}, a, s_{end})$. Use these samples to compute $T_{approx}(s = 3, a = Down, s')$, which is an approximation of the true underlying (unknown) $T(s, a, s')$.
+
+|$(s = 3, a = Down, s'= 6)$|$(s = 3, a = Down, s'=7)$|
+|:--:|:--:|
+|99|901|
+
+Perform one step of q-value iteration based on your transition model computed above.
+
+$Q'(3, down) = $
+"""
+answer: "6.111"
+points: "5"
+
+
+## Page 3 (question)
+
+@ Problem - custom
+
+title: "Question 15 - Feature-Based Representation"
+content: """
+<img width="818" height="554" src="./image/hw5/xid-1240153_1">
+"""
+choice: """
+<div class="question q1 q-text" answer="{'31':1.25}">
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<p><img width="130" height="21" style="font-size: 13px;" src="./image/hw5/xid-1240154_1"> </p>
+<div class="question q2 q-text" answer="{'11':1.25}">
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<p><img width="856" height="406" src="./image/hw5/xid-1240155_1"> </p>
+<div class="question q3 q-text" answer="{'11':1.25}">
+    <input type="text" name="q3" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<p><img width="129" height="25" src="./image/hw5/xid-1240156_1"> </p>
+<div class="question q4 q-text" answer="{'11':1.25}">
+    <input type="text" name="q4" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<p><img width="323" height="60" src="./image/hw5/xid-1240157_1"> </p>
+<div class="question q5 q-text" answer="{'20':1.25}">
+    <input type="text" name="q5" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<p><img width="433" height="112" src="./image/hw5/xid-1240158_1"> </p>
+<div class="question q6 q-text" answer="{'-11':1.25}">
+    <input type="text" name="q6" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<p><img width="298" height="35" src="./image/hw5/xid-1240159_1"> </p>
+<div class="question q7 q-text" answer="{'-4.5':1.25}">
+    <input type="text" name="q7" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<p><img width="305" height="33" src="./image/hw5/xid-1240160_1"> </p>
+<div class="question q8 q-text" answer="{'-6.5':1.25}">
+    <input type="text" name="q8" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""

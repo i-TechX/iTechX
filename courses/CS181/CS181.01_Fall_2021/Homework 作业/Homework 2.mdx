@@ -1,0 +1,317 @@
+«««
+code: CS181
+name: Artificial Intelligence I
+semester: Fall 2021
+category: Homework 作业
+title: Homework 2
+»»»
+
+# Homework 2
+
+## Page 1 (question)
+
+@ Problem - radio
+
+title: "Question 1 - Satisfiability"
+content: """
+$(A \Rightarrow B) \lor (\neg B)$ (A and B are propositions) is satisfiable.
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - radio
+
+title: "Question 2 - Unsatisfiability"
+content: """
+The sentence: $A \Rightarrow \neg A$ (A is a proposition) is unsatisfiable.
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "B"
+
+
+
+@ Problem - radio
+
+title: "Question 3 - Equivalence Part 1"
+content: """
+$\neg (A \land \neg B) \equiv \neg A \lor B$
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - radio
+
+title: "Question 4 - Equivalence Part 1"
+content: """
+$(A \lor \neg B \lor \neg C) \equiv (B \land C \Rightarrow A)$
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - radio
+
+title: "Question 5 - Equivalence Part 3"
+content: """
+<img src="./image/hw2/xid-1240198_1" height="200">
+
+These 4 sentences are all equivalent to each other
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - radio
+
+title: "Question 6 - CNF form"
+content: """
+The expression: $(A \lor B) \land C \land \neg D \land (E \lor F)$ is in CNF form.
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - radio
+
+title: "Question 7 - Horn form"
+content: """
+The clauses in the expression: $(A \lor B) \land \neg C \land \neg D$ are all in Horn form.
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "B"
+
+
+
+@ Problem - radio
+
+title: "Question 8 - Entailment Part 1"
+content: """
+Sentence: $ Sunny \lor Monday$ entails Sunny
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "B"
+
+
+
+@ Problem - radio
+
+title: "Question 9 - Entailment Part 2"
+content: """
+Sentence: $ \text{False entails True}$ is correct.
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - checkbox
+
+title: "Question 10 - Entailment Part 3"
+content: """
+Choose all the correct options:
+"""
+choice: """
+A is valid if and only if True entails A
+$ A \equiv B$ if and only if $ (A \Leftrightarrow B)$ is valid
+A entails B if and only if $ (A \Rightarrow B)$ is valid
+A entails B if and only if $ A \land \neg B$ is unsatisfiable
+If A entails $ (B \land C)$ , then A entails B and A entails C
+"""
+points: "10"
+answer: "ABCDE"
+
+
+
+@ Problem - radio
+
+title: "Question 11 - FOL Syntax Part 1"
+content: """
+Consider the sentence in first order logic: HeightOf(X) (where X is a variable). Is the syntax of the expression correct in first order logic? Yes or No
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "B"
+
+
+
+@ Problem - radio
+
+title: "Question 12 - FOL Syntax Part 2"
+content: """
+Consider the expression in first order logic: Grade(Sister(Jane)). In this case "Sister(.)" represents a: Function or Unary relation.
+
+If it is Function, please select Yes. Else, please select No,
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - radio
+
+title: "Question 13 - FOL Part 1"
+content: """
+The sentence in first order logic capture the English meaning: "Any small orange costs less than any large orange": 
+
+$\forall x \forall y , [Orange(x) \land Small(x) \land Orange(y) \land Large(y)] \Rightarrow <(Cost(x), Cost(y))$
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - radio
+
+title: "Question 14 - FOL Part 2"
+content: """
+The sentence in first order logic capture the English meaning: "There is an animal that is cute and lazy":
+
+$\exists x , Animal(x) \Rightarrow [Cute(x) \land Lazy(x)]$
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "B"
+
+
+
+@ Problem - radio
+
+title: "Question 15 - FOL Part 3"
+content: """
+The sentence in first order logic capture the English meaning: "All the pandas are cute and lazy":
+
+$\forall x , Panda(x) \Rightarrow [Cute(x) \land Lazy(x)]$
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - radio
+
+title: "Question 16 - FOL Part 4"
+content: """
+The sentence in first order logic capture the English meaning: 
+
+ "Every student in your school has a computer or has a friend who has a computer."   
+    
+ (The domain for both x and y consists of all students in your school.)
+
+$\forall x(HasComputer(x) \lor \exists y (HasComputer(y) \land Friend(x,y)))$
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - radio
+
+title: "Question 17 - FOL Part 5"
+content: """
+The sentence in first order logic capture the English meaning: "There is a cat that has white hair":
+
+$\exists x, Cat(x) \Rightarrow HasWriteHair(x)$
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "B"
+
+
+
+@ Problem - radio
+
+title: "Question 18 - Resolution"
+content: """
+Use resolution to solve the following problem: 
+The knowledge base:
+
+$B \land C \Rightarrow A$
+
+$B$
+
+$D \land E \Rightarrow C$
+
+$E \lor F$
+
+$D \land \neg F$
+
+The query:
+
+$A$
+
+Does the knowledge base entail the query?
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "A"
