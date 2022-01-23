@@ -5,6 +5,23 @@
         {
             "course_id": "CS110.01",
             "season": "Spring",
+            "year": "2022",
+            "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/22s/",
+            "teacher": [
+                "soerensch", "wangchd"
+            ],
+            "ta": [
+                "xuky", "gouby", "tujd", "wangjr", "wuty", "wuwq", "wuyh3", "xubw", "yanghd", "youch", "zhangzhr2", "zhaoyb1", "zhaoyd1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
+            "evaluation": "Projects: 33%, Homework: 19%, Lab: 5%, Exams: 40% (Midterm 1: 10%, Midterm 2: 10%, Final: 20%), Participation: 3%"
+        },
+        {
+            "course_id": "CS110.01",
+            "season": "Spring",
             "year": "2021",
             "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/21s/",
             "teacher": [
