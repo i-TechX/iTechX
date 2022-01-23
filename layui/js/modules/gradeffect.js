@@ -51,7 +51,7 @@ layui.define(['layer', 'form', 'element', 'laytpl', 'laydate', 'util', 'laypage'
                                                 }
                                             }
                                             answers[problemID][1][questionName] = [maxPoints, answer];
-                                            if (maxPoints > answers[problemID][0]) answers[problemID][0] = maxPoints;
+                                            answers[problemID][0] += maxPoints;
                                         }
                                     }
                                 }

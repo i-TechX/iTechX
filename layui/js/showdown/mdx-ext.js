@@ -224,6 +224,8 @@ var mdxext = function () {
                 } else if (problem_type == 'text') {
                     whole_template = '<div class="problem">\n<hr>\n<div class="problem-title">{0mAGiccOde}</div>\n<div class="problem-grade" id="{2mAGiccOde}">?/? point (graded)</div>\n<div class="problem-content">{1mAGiccOde}</div>\n<form class="layui-form" action="" lay-filter="{2mAGiccOde}">\n    <div class="layui-form-item">\n        <div class="question q1 q-{5mAGiccOde}" answer="{6mAGiccOde}">{3mAGiccOde}<p class="tick-label" style="display: inline;"></p>\n        </div>{4mAGiccOde}\n        <button class="layui-btn layui-btn-lg layui-btn-violet" lay-submit>提交</button>\n    </div>\n</form>\n</div>';
                     choices_template = '<input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">';
+                } else if (problem_type == 'custom') {
+                    whole_template = '<div class="problem">\n<hr>\n<div class="problem-title">{0mAGiccOde}</div>\n<div class="problem-grade" id="{2mAGiccOde}">?/? point (graded)</div>\n<div class="problem-content">{1mAGiccOde}</div>\n<form class="layui-form" action="" lay-filter="{2mAGiccOde}">\n    <div class="layui-form-item">\n        {3mAGiccOde}{4mAGiccOde}\n        <button class="layui-btn layui-btn-lg layui-btn-violet" lay-submit>提交</button>\n    </div>\n</form>\n</div>';
                 }
                 content = (typeof(properties['content']) == 'string') ? properties['content'] : properties['content'].join('\n');
                 content = convert(content);
@@ -236,6 +238,8 @@ var mdxext = function () {
                         choice_value = String.fromCharCode(choice_value.charCodeAt()+1);
                     }
                     choices_code = choices_list.join('\n');
+                } else if (problem_type == 'custom') {
+                    choices_code = properties['choice'].join('\n');
                 } else {
                     choices_code = choices_template;
                 }
@@ -293,6 +297,38 @@ var mdext = function () {
       type: 'output',
       regex: /<table>/g,
       replace: '<table class=\"layui-table\">'
+    };
+    return [myext1];
+};
+
+// Resolve relative path
+var resolverel = function (baseURL) {
+    var myext1 = {
+        type: 'output',
+        filter: function (text, converter) {
+            var d = document.createElement('div');
+            d.innerHTML = text;
+
+            var reg = /^(?!(?:\w*\:?\/\/)|(?:\/))/;
+            
+            var eles = d.getElementsByTagName('a');
+            for(j = 0; j < eles.length; j++) {
+                var elem = eles[j];
+                if (reg.test(elem.getAttribute('href'))) {
+                    elem.href = baseURL + elem.getAttribute('href');
+                }
+            }
+
+            var eles = d.getElementsByTagName('img');
+            for(j = 0; j < eles.length; j++) {
+                var elem = eles[j];
+                if (reg.test(elem.getAttribute('src'))) {
+                    elem.src = baseURL + elem.getAttribute('src');
+                }
+            }
+            
+            return d.innerHTML;
+        }
     };
     return [myext1];
 };

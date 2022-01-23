@@ -45,11 +45,13 @@
 
                 <div id="content" style="text-align: center;"></div>
 
-                <div class="main-content" id="test-out" style="margin: 1em 5%;">
-                    <div style="text-align: center;">
-                        <i class="layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop" style="margin: 5rem 0 0 0; font-size: 5em; color: #b4b4b4;"></i>
-                        <h1 style="text-align: center; font-size: 3em; line-height: 1.3em; margin: 1rem 0 3rem 0; padding: 0; text-shadow: 0 0 1rem #fefefe; font-family: Quicksand, Arial; color: #b4b4b4;">Loading...</h1>
-                        
+                <div style="margin:auto; max-width: 120rem;">
+                    <div class="main-content" id="test-out" style="margin: 1em 5%;">
+                        <div style="text-align: center;">
+                            <i class="layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop" style="margin: 5rem 0 0 0; font-size: 5em; color: #b4b4b4;"></i>
+                            <h1 style="text-align: center; font-size: 3em; line-height: 1.3em; margin: 1rem 0 3rem 0; padding: 0; text-shadow: 0 0 1rem #fefefe; font-family: Quicksand, Arial; color: #b4b4b4;">Loading...</h1>
+                            
+                        </div>
                     </div>
                 </div>
 
@@ -104,7 +106,7 @@
                     var converter = new showdown.Converter({metadata: true, tables: true, literalMidWordUnderscores: true, extensions: mdxext()});
                     ans = converter.makeHtml(s);
                     metadata = converter.getMetadata();
-                    var converter = new showdown.Converter({tables: true, literalMidWordUnderscores: true, extensions: mdext()});
+                    var converter = new showdown.Converter({tables: true, literalMidWordUnderscores: true, extensions: [mdext()[0], resolverel(queryParse()['url']+'/../')[0]]});
                     ans = converter.makeHtml(ans);
                     document.getElementById('test-out').innerHTML=ans;
 
