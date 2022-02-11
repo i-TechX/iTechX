@@ -454,7 +454,10 @@
             ["home", "Home Page", "https://faculty.sist.shanghaitech.edu.cn/faculty/songfu/"]
         ],
         "teach-courses": [
-            ["Fall", "2018", "CS100", "Introduction to Programming"]
+            ["Fall", "2018", "CS100", "Introduction to Programming"],
+            ["Spring", "2017", "CS131", "Programming Languages and Compilers"],
+            ["Fall", "2019", "CS131", "Programming Languages and Compilers"],
+            ["Spring", "2021", "CS131", "Programming Languages and Compilers"]
         ]
     },
     "liuxp": {
