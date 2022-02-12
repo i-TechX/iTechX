@@ -13852,11 +13852,12 @@ var GitalkComponent = function (_Component) {
       var _state = this.state,
           comment = _state.comment,
           localComments = _state.localComments,
-          comments = _state.comments;
+          comments = _state.comments,
+          baseURL = this.options.baseURL;
 
 
       return this.getIssue().then(function (issue) {
-        return _util.axiosJSON.post(this.options.baseURL + issue.comments_url.replace("https://api.github.com", ""), {
+        return _util.axiosJSON.post(baseURL + issue.comments_url.replace("https://api.github.com", ""), {
           body: comment
         }, {
           headers: {
