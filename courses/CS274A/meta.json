@@ -1,0 +1,22 @@
+{
+    "code": "CS274A",
+    "name": "Natural Language Processing",
+    "semesters": [
+        {
+            "course_id": "CS274A.01",
+            "season": "Spring",
+            "year": "2022",
+            "teacher": [
+                "tukw"
+            ],
+            "ta": [
+                "wuhy1", "jiangchy", "yangsl", "louchao"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "48",
+            "prerequisite": "CS: Programming, Data Structures and Algorithms; Math: Calculus, Probability and Statistics, Linear Algebra; Artificial Intelligence I (recommended)",
+            "evaluation": "4 Homework (10%), Midterm (40%), Final (40%), Project (10%)"
+        }
+    ]
+}
