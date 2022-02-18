@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>iTechX | Playground</title>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/style.css">
+    
+</head>
+<body>
+
+<div id="navigator" class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav" lay-filter="">
+            <a class="logo" href="dashboard">
+                <img src="layui/images/iTechX.png" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">
+            </a>
+            <li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 8em;"><a href="dashboard">课程面板</a></li>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 2em;"><a href="help">帮助</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="layui-fluid" style="margin: 2em 20px;">
+
+    <div class="layui-tab-content" style="height: auto;">
+        <h1 style="font-family: Quicksand; font-weight: bold; font-size: 2.5em;">Playground 自由个人空间</h1>
+        <hr>
+
+        <div class="layui-row layui-col-space15" style="max-width: 1000px; margin: auto;  display: flex; align-items: center; padding-top: 3rem;">
+            <div class="layui-col-md8">
+            <div class="layui-card">
+                <img alt="new-course" src="layui/images/sample1.png" style="width: 100%;">
+            </div>
+            </div>
+            <div class="layui-col-md4">
+            <div class="layui-card">
+                <div style="padding: 30px; font-family: 'Microsoft Yahei', '微软雅黑', '等线 Light', Helvetica, 'Hiragino Sans GB', Arial, sans-serif;">
+                    <h2>创建自己喜爱的课程</h2>
+                    <hr>
+                    <p>直接在网页端创建自己的课程，弥补主站课程数量太少的缺憾。</p>
+                    <p>想要部署课程网站，又不想学习复杂繁琐的网页技术？直接在iTechX开辟空间，支持ACTIVE标识！</p>
+                    <p>结课之后课程资料不再经常使用，不想占据电脑空间，又怕以后要用？通过iTechX上传到个人空间，有序归档、记录你的学习经历。只有你有权限编辑你的个人空间。</p>
+                </div>
+            </div>   
+            </div>
+        </div>
+
+        <div class="layui-row layui-col-space15" style="max-width: 1000px; margin: auto;  display: flex; align-items: center; padding-top: 3rem;">
+            <div class="layui-col-md4">
+            <div class="layui-card">
+                <div style="padding: 30px; font-family: 'Microsoft Yahei', '微软雅黑', '等线 Light', Helvetica, 'Hiragino Sans GB', Arial, sans-serif;">
+                    <h2>向数据库添加人物</h2>
+                    <hr>
+                    <p>没有出现在人物数据库中？自己来添加！</p>
+                    <p>轻松构建个人主页，向他人展示你的风采。（使用Markdown生成单页个人主页）</p>
+                </div>
+            </div>   
+            </div>
+            <div class="layui-col-md8">
+            <div class="layui-card">
+                <img alt="new-course" src="layui/images/sample2.png" style="width: 100%;">
+            </div>
+            </div>
+        </div>
+
+        <div class="layui-row layui-col-space15" style="max-width: 1000px; margin: auto;  display: flex; align-items: center; padding-top: 3rem;">
+            <div class="layui-col-md8">
+            <div class="layui-card">
+                <img alt="new-course" src="layui/images/sample3.png" style="width: 100%;">
+            </div>
+            </div>
+            <div class="layui-col-md4">
+            <div class="layui-card">
+                <div style="padding: 30px; font-family: 'Microsoft Yahei', '微软雅黑', '等线 Light', Helvetica, 'Hiragino Sans GB', Arial, sans-serif;">
+                    <h2>上传全新的课程资料</h2>
+                    <hr>
+                    <p>上传自己的课程资料，方便随时取用。</p>
+                    <p>向社区做出一份贡献，将更多有用的资料带给其他人。右上角下拉框一键发起主站合并请求。</p>
+                    <p>你的贡献会被iTechX社区永远铭记！</p>
+                </div>
+            </div>   
+            </div>
+        </div>
+
+        <div style="max-width: 1000px; margin: auto; padding: 5rem 0 1rem; text-align: center;">
+            <h2 style="font-family: 'Microsoft Yahei', '微软雅黑', '等线 Light', Helvetica, 'Hiragino Sans GB', Arial, sans-serif;">你的个人空间已经准备就绪。准备好开始了吗？</h2>
+            <div id="progress-info" style="margin: 2rem 0;"></div>
+            <div style="margin: 2rem 0;">
+                <button id="open-button" type="button" class="layui-btn layui-btn-violet">立即开启</button>
+            </div>
+        </div>
+
+        <div class="layui-footer" style="margin-top: 2em;">
+            <!-- 底部固定区域 -->
+            <p style="display:flex; justify-content: center;">© 2020-2022 iTechX - MIT license.</p>
+        </div>
+    </div>
+</div>
+
+<script src="layui/layui.js"></script>
+<script>
+    layui.config({
+        base: 'layui/js/modules/'
+    }).use(['layer', 'element', 'nav', 'select'], function(){
+        var $ = layui.$;
+
+        const options = {
+            page: "none",
+            owner: "i-TechX",
+            repo: "iTechX",
+            clientID: "2de790a6c048f147f91d",
+            clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+        };
+
+        var nav = layui.nav(options);
+        nav.render("navigator");
+
+        var select = layui.select({
+            repo: options.repo,
+            owner: options.owner,
+        });
+        
+        var main = function() {
+            accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
+            if (!accessToken) {
+                $('#progress-info')[0].innerHTML = '<div style="padding: 1rem 0;"><i class="layui-icon layui-icon-close" style="font-size: 30px; color: #666;"></i></div><p>出错了！请刷新重试，或右上角下拉框点击“有话要说”，向管理员反馈。</p><p>错误内容：请先登录!</p>';
+                return;
+            }
+            select.getUserInfo(function(){
+                select.getUserRepo(function(){
+                    $('#progress-info')[0].innerHTML = '<div style="padding: 1rem 0;"><i class="layui-icon layui-icon-ok" style="font-size: 30px; color: #666;"></i></div><p>您已成功开启个人空间！马上跳转...</p>';
+                    setTimeout(function(){
+                        window.location.href = './p/dashboard';
+                    }, 3000);
+                }, function(err){
+                    if (select.forked == undefined && err.responseJSON.message == "Not Found") {
+                        $('#progress-info')[0].innerHTML = '<div style="padding: 1rem 0;"><i class="layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop" style="font-size: 30px; color: #666;"></i></div><p>正在创建主站副本...</p>';
+                        select.forkUserRepo(function(){
+                            select.forked = true;
+                            setTimeout(function(){
+                                main();
+                            }, 2000);
+                        });
+                    } else if (select.forked) {
+                        setTimeout(function(){
+                            main();
+                        }, 2000);
+                    }
+                });
+            });
+        };
+
+        $('#open-button')[0].onclick = function(){
+            $('#progress-info')[0].innerHTML = '<div style="padding: 1rem 0;"><i class="layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop" style="font-size: 30px; color: #666;"></i></div><p>正在启动...</p>';
+            main();
+        };
+        
+    });
+</script> 
+</body>
+<!-- Default Statcounter code for iTechX http://i-techx.github.io -->
+<script type="text/javascript">
+var sc_project=12677699; 
+var sc_invisible=1; 
+var sc_security="383d59f5"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/12677699/0/383d59f5/1/" alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</html>

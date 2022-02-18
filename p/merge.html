@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>iTechX | Merge to Main Site</title>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/style.css">
+    
+    <style type="text/css">
+        .layui-input {
+            width: 100%;
+            height: 38px;
+            margin-bottom: 0;
+        }
+        .layui-input:hover {
+            box-shadow: none;
+        }
+        .layui-form-label {
+            opacity: 1;
+            position: relative;
+            float: left;
+            display: block;
+            padding: 9px 15px;
+            width: 80px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<div id="navigator" class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav" lay-filter="">
+            <a class="logo" href="dashboard">
+                <img src="layui/images/iTechX.png" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">
+            </a>
+            <li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 8em;"><a href="dashboard">课程面板</a></li>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 2em;"><a href="help">帮助</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="layui-fluid" style="margin: 2em 20px;">
+
+    <div class="layui-tab-content" style="height: auto;">
+        <h1 style="font-family: Quicksand; font-weight: bold; font-size: 2.5em;">Merge 合并至主站</h1>
+        <hr>
+
+        <div class="layui-card" style="max-width: 1000px; margin: auto;">
+            <div style="padding: 30px; font-family: 'Microsoft Yahei', '微软雅黑', '等线 Light', Helvetica, 'Hiragino Sans GB', Arial, sans-serif;">
+                <p style="text-align: center; color: gray;">感谢您为iTechX作出的贡献！填写标题并简要描述您所作的改动，将有助于我们更快地将您的页面展示给所有人。</p>
+                <form class="layui-form" lay-filter="merge" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">标题</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" lay-verify="required" lay-reqtext="标题为必填项" placeholder="请概括您的贡献，如add CS274A" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">描述</label>
+                        <div class="layui-input-block">
+                          <textarea name="body" placeholder="请简要描述您的改动" class="layui-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                          <button type="submit" class="layui-btn layui-btn-violet" lay-submit="" lay-filter="demo1">立即提交</button>
+                          <button type="reset" class="layui-btn layui-btn-primary-violet">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="layui-footer" style="margin-top: 2em;">
+            <!-- 底部固定区域 -->
+            <p style="display:flex; justify-content: center;">© 2020-2022 iTechX - MIT license.</p>
+        </div>
+    </div>
+</div>
+
+<script src="layui/layui.js"></script>
+<script>
+    layui.config({
+        base: 'layui/js/modules/'
+    }).use(['layer', 'element', 'nav', 'form'], function(){
+        const options = {
+            page: "none",
+            owner: "i-TechX",
+            repo: "iTechX",
+            clientID: "2de790a6c048f147f91d",
+            clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+        };
+
+        var nav = layui.nav(options),
+            $ = layui.$;
+        
+        nav.render("navigator", function(){
+            layui.form.on('submit(merge)', function(data){
+
+                data.elem.classList.add('layui-btn-disabled');
+                var user = nav.login;
+
+                $.ajax({
+                    url: proxy.parse(options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/pulls"),
+                    type: "POST",
+                    data: JSON.stringify({
+                        "title": data.field.title,
+                        "body": data.field.body,
+                        "head" : user + ":" + "file-base",
+                        "base" : "file-base",
+                        "maintainer_can_modify": true
+                    }),
+                    headers: headers,
+                    success: function (data) {
+                        console.log(data);
+                        layer.msg("成功提交请求！即将跳转至请求页面...", {icon: 1, time: 1000}, function(){
+                            window.location.href = data.url;
+                        });
+                    },
+                    error: function(err) {
+                        console.log(err);
+                        layer.msg("提交请求失败！", {icon: 2, time: 1000});
+                        data.form.innerHTML += err;
+                    }
+                })
+
+                return false;
+            });
+            
+        });
+
+    });
+</script> 
+</body>
+<!-- Default Statcounter code for iTechX Playground
+http://i-techx.github.io/iTechX/p/ -->
+<script type="text/javascript">
+var sc_project=12719911; 
+var sc_invisible=1; 
+var sc_security="fdecba45"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12719911/0/fdecba45/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>iTechX</title>
+    
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/style.css">
+
+    <link rel="stylesheet" href="layui/gitalk/gitalk.css">
+    <style type="text/css">
+        .semester{width: 7em;background:white;text-align:center;position:relative;margin:auto;}
+        .semester .semester_season{line-height: 2em; font-family: Quicksand; font-weight: bold; font-size: 1.8em;color:#8f63e9; background-color:#fff;transition:all 0.4s ease-in-out;border: 1px solid #dfe0e2;border-bottom: 0;}
+        .semester .semester_year{line-height: 2em; font-family: Quicksand; font-weight: bold; font-size: 1.8em; color:#fff; background-color:#b99ef0;}
+        .instructor {
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            margin-right: 20px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .layui-card {
+            border-radius: 10px 10px 0 0; margin-bottom: 0; border: 1px solid #d6d1e0; border-bottom: 0;
+        }
+        .layui-card:last-child {
+            border-bottom: 1px solid #d6d1e0;
+            border-radius: 10px;
+        }
+
+        .icon-gear{
+            transition: all 0.2s ease-in-out;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+        }
+        .layui-btn:hover .icon-gear{
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+        }
+        .layui-input:hover {
+            box-shadow: none;
+        }
+        .layui-form-label {
+            opacity: 1;
+            position: relative;
+            float: left;
+            display: block;
+            padding: 9px 15px;
+            width: 80px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: right;
+        }
+        [type=checkbox] {
+            opacity: 1;
+            position: static;
+            width: auto;
+            height: auto;
+        }
+    </style>
+    
+</head>
+<body>
+
+<div id="navigator" class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav" lay-filter="">
+            <a class="logo" href="dashboard">
+                <img src="layui/images/iTechX.png" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">
+            </a>
+            <li style="font-family:sans-serif; position:relative;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;line-height:60px">
+                <div class="layui-hide" id="courseHeader">
+                    <span style="color:#fff;">{{courseInfo.code}}</span>
+                    <span style="color:rgba(255,255,255,.7);">{{courseInfo.name}}</span>
+                </div>
+            </li>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 8em;"><a href="dashboard">课程面板</a></li>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 2em;"><a href="help">帮助</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="layui-fluid" style="margin: 2em auto; max-width: 100rem;">
+    <div style="margin: 3em;" id="semester-cards">
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            <!-- <p style="display:flex; justify-content: center;">© 2020-2022 iTechX - MIT license.</p> -->
+        </div>
+    </div> 
+    
+</div>
+
+<script  src="layui/accordion.js"></script>
+<script src="layui/layui.js"></script>
+<script src="layui/gitalk/gitalk.js"></script>
+
+<script>
+    layui.config({
+        base: 'layui/js/modules/'
+    }).use(['layer', 'element', 'nav', 'semester_card'], function(){
+        var nav = layui.nav({
+            page: "course",
+            owner: "i-TechX",
+            repo: "iTechX",
+            clientID: "2de790a6c048f147f91d",
+            clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+        });
+        nav.render("navigator", function(){
+            if (nav.course_code && nav.course_name)
+            document.title = 'iTechX | ' + nav.course_code + ' ' + nav.course_name;
+
+            var card = layui.semester_card({
+                clientID: "2de790a6c048f147f91d",
+                clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+                repo: 'iTechX-1',
+                owner: nav.login,
+                admin: ['why-in-Shanghaitech'],
+            });
+            card.render("semester-cards");
+        });
+    });
+</script>
+<!-- Default Statcounter code for iTechX Playground
+http://i-techx.github.io/iTechX/p/ -->
+<script type="text/javascript">
+var sc_project=12719911; 
+var sc_invisible=1; 
+var sc_security="fdecba45"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12719911/0/fdecba45/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>

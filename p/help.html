@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>iTechX | Help</title>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/style.css">
+
+</head>
+<body>
+
+<div id="navigator" class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav" lay-filter="">
+            <a class="logo" href="dashboard">
+                <img src="layui/images/iTechX.png" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">
+            </a>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 8em;"><a href="dashboard">课程面板</a></li>
+            <li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 2em;"><a href="help">帮助</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="layui-fluid" style="margin: 2em 20px;">
+
+    <div class="layui-tab-content" style="height: auto;">
+        <h1 style="font-family: Quicksand; font-weight: bold; font-size: 2.5em;">Help 帮助</h1>
+        <hr>
+
+        <div class="layui-row" style="margin: 0 12em;">
+            <!-- 目录 -->
+            <div class="container menu">
+                <details>
+                    <summary>iTechX在公测？这会带来什么影响？</summary>
+                    <div class="details-wrapper">
+                    <div class="details-styling">
+                        <p>在Beta期间，iTechX将持续保持开发状态。这意味着您可能随时遇到网页显示异常、加载异常、崩溃等情况。请不要慌张。首先请<a href="https://www.baidu.com/s?wd=%E6%B8%85%E9%99%A4%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98">清除浏览器缓存</a>，然后刷新重试。请耐心等待页面加载完成（需约15-30秒）。如仍无法访问，请考虑访问我们的镜像站点（见下），或者使用合适的代理。</p>
+                        <p>同时也欢迎通过<a href="https://github.com/i-TechX/iTechX/discussions">Github Discussions</a>来向我们反馈意见。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>什么是iTechX？</summary>
+                    <div class="details-wrapper">
+                    <div class="details-styling">
+                        <p>iTechX是一个开源的学习资源共享平台。许多高校（<a href="https://github.com/openFudan/fudan-coursera">复旦</a>，<a href="https://github.com/c-hj/SJTU-Courses">上交</a>，<a href="https://github.com/USTC-Resource/USTC-Course">中科大</a>，<a href="https://github.com/HuangCongQing/UCAS_Course_2019">国科大</a>）均有自己的开源共享资源，但均作为Github仓库部署。iTechX希望将资源结构化存储与展示，并由此延拓功能，以满足学生自主学习的需求。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>我是否可以放心地使用iTechX？</summary>
+                    <div class="details-wrapper">
+                    <div class="details-styling">
+                        <p>是的。与其他部署于私人服务器的网站不同，iTechX部署基于github page等公有服务。这意味着iTechX不可能获取您的任何个人信息--您的信息安全性将由您的github账户保证。在您登录的过程中，所有口令将保存在您的浏览器中，其他人无从知晓。</p>
+                        <p>使用公有服务也增强了服务的稳定性。iTechX的稳定性将由github保证。如果您遇到访问困难的情况，请考虑访问我们的镜像站点（见下），或者使用合适的代理。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>我应该如何选择课程？</summary>
+                    <div class="details-wrapper">
+                    <div class="details-styling">
+                        <p>任意页面中的右上方，选择“课程面板”即可跳转至课程选择页面。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>课程具有有效期吗？</summary>
+                    <div class="details-wrapper">
+                    <div class="details-styling">        
+                        <p>我们希望学习是不受限制的，因此会尽可能不设置课程有效期。</p>
+                        <p>您如果担心课程失效，可以使用git clone下载整个网站的内容。但注意本地不再能够渲染、浏览部分页面。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>页面似乎有一些地方看起来少了一些公式之类的，怎么回事？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>网页中的所有公式均由MathJax渲染。若您发现网页有任何异常加载状况，请尝试刷新重试。
+                        </p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>填空题可以键入表达式吗？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>当然可以！大部分填空题会通过Java Script中的<code>eval</code>函数处理，再进行评判。</p>
+                        <p>但出于准确性考虑，作业中关于小数点后精确度的要求仍会在问题中呈现。答案均为课程提供的原始答案。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>为什么没有课程视频？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>上课没有录像，当然也就没有课程视频咯。</p>
+                        <p>由于疫情原因，Spring 2020学期的课程将包含部分或全部课程视频。这些资料将仅用于教学目的，不得随意传播。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>我的页面出现了奇奇怪怪的错误！怎么回事？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>这很正常。网页本来就是我写着玩玩的，并没有考虑到兼容各个浏览器与平台。如果有好的建议，可以到github discussions进行讨论。</p>
+                        <p>这也可能是因为同时更新了js脚本和html网页，但您的浏览器缓存了旧的js脚本。请尝试清空浏览器的所有缓存并重试。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>刚才还好好的，怎么突然访问不了了？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>新版网页采用github api动态渲染文件内容。网页无法访问，可能是api请求失败造成的，可以尝试刷新网页。如果您刷新若干次仍无法解决问题， 则可能达到了该小时github api调用上限。您可以通过连接热点的方式更换IP地址，从而获得额外的api调用次数；或登录github获取大量api调用许可。注意：使用校园网或代理服务可能会共享IP地址，很容易达到频率上限，造成网页无法访问。登录后即恢复正常。</p>
+                        <p>除此之外，github对未登录用户还会有其他限制，故我们鼓励您登录查看内容。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>这文件怎么打不开？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>这可能是不合适的代理设置导致的。请到设置中更换代理后重试。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>这网站有的时候打得开，有的时候打不开，怎么回事？什么是代理设置？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>您可能处于受限制的地区。部分地区访问Github相关资源会受到限制，出现不稳定的情况。请尝试在设置中选择合适的代理。</p>
+                        <p>加载网页主要使用Github API请求。如果登录后网页仍无法加载，您可以尝试将API代理设置为iTechX临时代理。</p>
+                        <p>其他资源默认采用最佳代理，您也可以根据需要进行调整。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>有没有镜像站点？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>有。镜像站点为<a href="https://itechx.netlify.app">itechx.netlify.app</a>。旧版镜像站点为<a href="https://i-techx.netlify.app">i-techx.netlify.app</a>。镜像站点提供加速服务，不过我们目前不单独维护镜像站点。且页面内链接仍为原站点链接。如发现异常，可以及时通过Discussion向我们反馈。登录用户将鼠标悬停至右上方头像，在下拉框中点击“有话要说”即可进入Discussions页面。</p>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>我在页面上看到了明文电子邮箱，这是否会有被抓取的风险？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>不会。新版网页采用github api动态渲染文件内容。爬取的任何网页都不包含任何课程或人物数据。此外，电子邮箱由HTML实体随机编码，即便被抓取到，也无法看出这是电子邮箱地址。</p>
+                        <p>例如，iTechX的电子邮箱<code>&#x69;&#116;&#101;&#x63;&#x68;&#120;&#64;&#122;&#x6f;&#x68;&#111;&#x2e;&#x63;&#x6f;&#x6d;&#46;&#99;&#x6e;</code>可能由以下代码编码：</p>
+                        <pre>&amp;#x69;&amp;#116;&amp;#101;&amp;#x63;&amp;#x68;&amp;#120;&amp;#64;&amp;#122;&amp;#x6f;&amp;#x68;&amp;#111;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#x6d;&amp;#46;&amp;#99;&amp;#x6e;</pre>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>iTechX内容是否受到许可保护？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>是的。iTechX的内容来自授课教师、学生和相关人员。我们在共享资源的同时支持许可保护。</p>
+                        <p>所有内容均受到<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>的保护。具体内容若有进一步要求，按内容所述为准。
+                        </p>
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+                    </div>
+                    </div>
+                </details>
+                <details>
+                    <summary>我有话要说！怎样反馈我的意见呢？</summary>
+                    <div class="details-wrapper">   
+                    <div class="details-styling">        
+                        <p>很高兴你愿意向我们反馈意见！我们目前采用Github Discussions来收集反馈与进行讨论。登录用户将鼠标悬停至右上方头像，在下拉框中点击“有话要说”即可进入Discussions页面。</p>
+                    </div>
+                    </div>
+                </details>
+            </div>
+            <!-- 目录 结束 -->
+        </div>
+        
+        <hr>
+        <h1 style="font-family: Quicksand; font-weight: bold; font-size: 2.5em; padding-top: 1em;">User Authority  用户权限</h1>
+
+        <div class="layui-row" style="margin: auto 30px;">
+            <div class="layui-col-md4">
+                <div class="layui-card" style="border-radius: 18px; box-shadow: 0.2em 1em 2em -1em #d6d1e0; border: 1px solid #d6d1e0; margin: 10px;">
+                    <div style="flex: 1 1 auto; padding: 1rem 1rem;">
+                        <h5 style="font-size: 1.5rem; margin: 0; text-align: center; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica Neue,Tahoma,PingFang SC,Microsoft Yahei,Arial,Hiragino Sans GB,sans-serif;">访客</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看所有课程内容</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>约60个请求/小时（单个页面包含多个请求）</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>查看、参与课程评分</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>发表评论</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>上传课程资料</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>审核已上传的课程资料</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>管理、屏蔽用户评论</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>添加、修改课程基本信息</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+                <div class="layui-card" style="border-radius: 18px; box-shadow: 0.2em 1em 2em -1em #d6d1e0; border: 1px solid #d6d1e0; margin: 10px;">
+                    <div style="flex: 1 1 auto; padding: 1rem 1rem;">
+                        <h5 style="font-size: 1.5rem; margin: 0; text-align: center; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica Neue,Tahoma,PingFang SC,Microsoft Yahei,Arial,Hiragino Sans GB,sans-serif;">登录用户</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看所有课程内容</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>按最新到最旧排序查看评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>约5000个请求/小时（单个页面包含多个请求）</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看、参与课程评分</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>发表评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>上传课程资料</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>审核已上传的课程资料</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>管理、屏蔽用户评论</li>
+                          <li style="margin-bottom: 1rem; --bs-text-opacity: 1; color: #9e9e9e;" class="text-muted"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-close"></i></span>添加、修改课程基本信息</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+                <div class="layui-card" style="border-radius: 18px; box-shadow: 0.2em 1em 2em -1em #d6d1e0; border: 1px solid #d6d1e0; margin: 10px;">
+                    <div style="flex: 1 1 auto; padding: 1rem 1rem;">
+                        <h5 style="font-size: 1.5rem; margin: 0; text-align: center; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica Neue,Tahoma,PingFang SC,Microsoft Yahei,Arial,Hiragino Sans GB,sans-serif;">管理员</h5>
+                        <hr>
+                        <ul class="fa-ul">
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看、编辑所有课程内容</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>按最新到最旧排序查看评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>约5000个请求/小时（单个页面包含多个请求）</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>查看、参与课程评分</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>以高亮背景发表评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>上传课程资料</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>审核已上传的课程资料</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>管理、屏蔽用户评论</li>
+                          <li style="margin-bottom: 1rem;"><span style="left: -2em; position: absolute; text-align: center; width: 2em; line-height: inherit;"><i class="layui-icon layui-icon-ok"></i></span>添加、修改课程基本信息</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="layui-footer" style="margin-top: 2em;">
+            <!-- 底部固定区域 -->
+            <p style="display:flex; justify-content: center;">© 2020-2022 iTechX - MIT license.</p>
+        </div>
+    </div>
+</div>
+
+<script  src="layui/accordion.js"></script>
+<script src="layui/layui.js"></script>
+<script>
+    layui.config({
+        base: 'layui/js/modules/'
+    }).use(['layer', 'element', 'nav'], function(){
+        var nav = layui.nav({
+            page: "index",
+            owner: "i-TechX",
+            repo: "iTechX",
+            clientID: "2de790a6c048f147f91d",
+            clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+        });
+
+        nav.render("navigator");
+    });
+</script>
+<script>
+
+    {var makeMePretty = document.querySelector(".menu");
+    var accordion = new Collapse(makeMePretty, { accordion: false }).init();}
+
+    layui.use(['layer', 'element'], function(){
+        var layer = layui.layer
+            ,element = layui.element
+            ,$ = layui.$;
+    });
+</script>
+<!-- Default Statcounter code for iTechX Playground
+http://i-techx.github.io/iTechX/p/ -->
+<script type="text/javascript">
+var sc_project=12719911; 
+var sc_invisible=1; 
+var sc_security="fdecba45"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12719911/0/fdecba45/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>

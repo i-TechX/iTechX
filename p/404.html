@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>iTechX | 404 Not Found</title>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/style.css">
+    
+</head>
+<body>
+
+<div id="navigator" class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav" lay-filter="">
+            <a class="logo" href="dashboard">
+                <img src="layui/images/iTechX.png" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">
+            </a>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 8em;"><a href="dashboard">课程面板</a></li>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 2em;"><a href="help">帮助</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="layui-fluid" style="margin: 2em 20px;">
+
+    <div class="layui-tab-content" style="height: auto;">
+        <h1 style="font-family: Quicksand; font-weight: bold; font-size: 2.5em;">404 Not Found</h1>
+        <hr>
+
+        <div class="layui-row">
+            <p style="text-align: center; font-family: Quicksand;  font-size: 1.4em;">
+                Oops! iTechX cannot find the requested file...
+            </p>
+            <p style="text-align: center; font-family: Quicksand;  font-size: 1.4em;">
+                You may <a href="javascript:history.go(-1)">go back</a> or <a id="default" href="dashboard">view the dashboard</a>.
+            </p>
+        </div>
+
+        <div class="layui-footer" style="margin-top: 2em;">
+            <!-- 底部固定区域 -->
+            <p style="display:flex; justify-content: center;">© 2020-2022 iTechX - MIT license.</p>
+        </div>
+    </div>
+</div>
+
+<script src="layui/layui.js"></script>
+<script>
+    window.onload=function(){
+        s = 10;
+        setInterval(function (){
+            if (s < 0) {
+                document.getElementById("default").click();
+            } else {
+                document.getElementById("default").innerText = "view the dashboard (" + s + ")";
+                s -= 1;
+            }
+        },1000);
+    };
+</script>
+<script>
+    layui.config({
+        base: 'layui/js/modules/'
+    }).use(['layer', 'element', 'nav'], function(){
+        var nav = layui.nav({
+            page: "index",
+            owner: "i-TechX",
+            repo: "iTechX",
+            clientID: "2de790a6c048f147f91d",
+            clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+        });
+
+        nav.render("navigator");
+    });
+</script>
+<!-- Default Statcounter code for iTechX Playground
+http://i-techx.github.io/iTechX/p/ -->
+<script type="text/javascript">
+var sc_project=12719911; 
+var sc_invisible=1; 
+var sc_security="fdecba45"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12719911/0/fdecba45/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>

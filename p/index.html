@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>iTechX | Welcome to iTechX!</title>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/style.css">
+    
+    <style type="text/css">
+        /* .site-banner {
+            position: relative;
+            height: 600px;
+            text-align: center;
+            overflow: hidden;
+            background-color: #393D49;
+        } */
+        /* .site-banner::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #000;
+            z-index: 0;
+            opacity: .3;
+        } */
+        .layui-btn-primary:hover {
+            border-color: #000;
+        }
+        @media screen and (max-width: 992px) {
+            .site-banner {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="navigator" class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav" lay-filter="">
+            <a class="logo" href="dashboard">
+                <img src="layui/images/iTechX.png" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">
+            </a>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 8em;"><a href="dashboard">课程面板</a></li>
+            <li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 2em;"><a href="help">帮助</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="site-banner">
+    <div id="banner-bg" style="background-size: cover; position: absolute; left: 0; top: 0; width: 100%; height: 100%;"></div>
+    <div id="banner-content" class="layui-hide" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-align: center;">
+        <h2 style="font-family: Quicksand; font-size: 64px; text-transform: uppercase; font-weight: 900; letter-spacing: 1px; margin-top: 3em; color:#000">Hi!&nbsp;&nbsp; iTechX</h2>
+        <div style="-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0,0,0,0);font-size: 14px;line-height: 1.42857143;font-family: 'Open Sans', sans-serif;text-align: center;box-sizing: border-box;width: 60px;height: 3px;background-color: #000;margin: 25px auto;"></div>
+        <span id='welcome-text' style="-webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: rgba(0,0,0,0); line-height: 1.42857143; font-family: Quicksand, 'Open Sans', sans-serif; color: #000; text-align: center; box-sizing: border-box; font-size: 18px; text-transform: uppercase; font-weight: 300; letter-spacing: 1px;"></span>
+        <div style="margin: auto; padding-top: 2em;">
+            <a style="background: 0 0; color: #333;" href="dashboard" class="layui-btn layui-btn-primary layui-btn-violet">即刻前往</a>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="layui-fluid" style="margin: 2em 20px;">
+    <div class="layui-tab-content" style="height: auto;">
+        <div class="layui-footer" style="margin-top: 2em;">
+            <p style="display:flex; justify-content: center;">© 2020-2022 iTechX - MIT license.</p>
+        </div>
+    </div>
+</div> -->
+
+<script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
+<script>
+    var now = new Date(), hour = now.getHours();
+    var pColor = 'Purples';
+    if (5 < hour && hour <= 9)
+        pColor = 'YlOrBr';
+    else if (9 < hour && hour <= 13)
+        pColor = 'Greens';
+    else if (13 < hour && hour <= 17)
+        pColor = 'Blues';
+    const pattern = trianglify({
+        width: window.innerWidth,
+        height: window.innerHeight,
+        cellSize: 75,
+        variance: 0.6,
+        xColors: pColor,
+        yColors: 'match',
+    })
+    var dataurl = pattern.toCanvas().toDataURL();
+    document.getElementById('banner-bg').style['background-image'] = 'url('+dataurl+')';
+
+    // var welcome_text = [
+    //     "Say 'Hi' to a brand new world",
+    //     "Learning is so easy",
+    //     "Looking for cheat-sheet for the coming exam?",
+    //     "Want the previous homework?",
+    //     "Find comments to all kinds of courses",
+    //     "iTechX always with you"
+    // ];
+    var welcome_text = [
+        "向一个崭新的世界说“你好”",
+        "学习是如此简单",
+        "在为即将到来的考试寻找cheat-sheet？",
+        "想要往年的作业和习题？",
+        "查看一切课程的历史评价",
+        "无论在哪里，iTechX陪着你"
+    ];
+    var index = Math.floor((Math.random()*(welcome_text.length)));
+    document.getElementById('welcome-text').innerText = welcome_text[index];
+
+    document.getElementById('banner-content').classList.add('layui-anim');
+    document.getElementById('banner-content').classList.add('layui-anim-upbit');
+    document.getElementById('banner-content').classList.remove('layui-hide');
+</script>
+<script src="layui/layui.js"></script>
+<script>
+    layui.config({
+        base: 'layui/js/modules/'
+    }).use(['layer', 'element', 'nav'], function(){
+        var nav = layui.nav({
+            page: "index",
+            owner: "i-TechX",
+            repo: "iTechX",
+            clientID: "2de790a6c048f147f91d",
+            clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+        });
+
+        nav.render("navigator");
+    });
+</script>
+<!-- Default Statcounter code for iTechX Playground
+http://i-techx.github.io/iTechX/p/ -->
+<script type="text/javascript">
+var sc_project=12719911; 
+var sc_invisible=1; 
+var sc_security="fdecba45"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12719911/0/fdecba45/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</body>
+</html>

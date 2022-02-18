@@ -1,0 +1,217 @@
+
+/**
+ @ Author：needahouse
+ */
+ 
+
+ .tagsInputAutoComplete-input-wraper {
+         align-items: baseline;
+         outline: none;
+         border: 1px solid #e6e6e6;
+         border-radius: 2px;
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+         -ms-flex-wrap:wrap;
+         flex-wrap:wrap;
+ }
+ .tagsInputAutoComplete-input-wraper .layui-input {
+         border:0px !important;
+ }
+ .tagsInputAutoComplete-input-wraper input {
+        -webkit-box-flex:1;
+        -ms-flex:1;flex:1;
+ }
+ .tagsInputAutoComplete-input-wraper-focus {
+        border-color: #C9C9C9!important
+}
+.tagsInputAutoComplete-spans-clickable {
+        cursor: pointer;
+}
+.tagsInputAutoComplete-spans {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        margin: 2px 3px 2px 2px;
+        padding: 0 8px;
+        border: 1px solid #e8eaec;
+        border-radius: 3px;
+        background: #f7f7f7;
+        font-size: inherit;
+        vertical-align: middle;
+        opacity: 1;
+        overflow: hidden;
+}
+.tagsInputAutoComplete-spans span.tagsInputAutoComplete-span{
+        color:#515a6e;
+        vertical-align: middle;
+}
+.tagsInputAutoComplete-spans i{
+        cursor: pointer;
+        vertical-align: middle;
+        font-size: 14px;
+         color: #515a6e;
+}
+.tagsInputAutoComplete-spans i:hover{
+         color: #aaaaaa;
+}
+.tagsInputAutoComplete-dropdown-hidden {
+        display: none;
+}
+.tagsInputAutoComplete-dropdown-hidden .tagsInputAutoComplete-dropdown-item {
+        display: none;
+}
+.tagsInputAutoComplete-dropdown .tagsInputAutoComplete-dropdown-item {
+        position: relative;
+    display: block;
+    padding: 5px 12px;
+    overflow: hidden;
+    color: rgba(0,0,0,0.65);
+    font-weight: normal;
+    line-height: 22px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+/* .tagsInputAutoComplete-dropdown .tagsInputAutoComplete-dropdown-item:first-child {
+        border-radius: 4px 4px 0 0;
+}
+.tagsInputAutoComplete-dropdown .tagsInputAutoComplete-dropdown-item:last-child {
+        border-radius: 0 0 4px 4px;
+} */
+.tagsInputAutoComplete-dropdown-item.tagsInputAutoComplete-dropdown-item-selected {
+        background-color: #fafafa;
+}
+.tagsInputAutoComplete-dropdown-item.tagsInputAutoComplete-dropdown-item-active{
+background-color: #ecf5f8;
+}
+.tagsInputAutoComplete-dropdown-group {
+border-bottom: 1px solid #F6F6F6;
+}
+.tagsInputAutoComplete-dropdown-group-title {
+        font-family: inherit;
+        font-weight: bold;
+        padding: 0 8px;
+        height: 20px;
+        line-height: 20px;
+}
+/* .tagsInputAutoComplete-dropdown-item:hover {
+background-color: #ecf5f8;
+} */
+.tagsInputAutoComplete-dropdown {
+        animation: forwards .5s;
+        max-height:400px;
+        opacity: 0;
+        /* -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: transform 0.2s;
+    transition: transform 0.2s; */
+        /* transition: max-height  .1s, opacity .6s; */
+        /* width: inherit;
+         */
+        margin: 5px 0;
+        padding: 5px 0;
+        overflow: auto;
+        /* background-color: #fff;
+        box-sizing: border-box;
+        border-radius: 4px;
+        box-shadow: 0 1px 6px rgba(0,0,0,.2);
+        position: absolute;
+        z-index: 900; */
+        /* margin: 0;
+        padding: 0; */
+        color: rgba(0,0,0,0.65);
+        font-variant: tabular-nums;
+        line-height: 1.5;
+        list-style: none;
+        -webkit-font-feature-settings: 'tnum';
+        font-feature-settings: 'tnum';
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        z-index: 1050;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-variant: initial;
+        background-color: #fff;
+        border-radius: 4px;
+        outline: none;
+        -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.tagsInputAutoComplete-dropdown-in {
+        -webkit-animation-name: antSlideUpIn;
+        animation-name: antSlideUpIn;
+}
+.tagsInputAutoComplete-dropdown-out {
+        -webkit-animation-name: antSlideUpOut;
+        animation-name: antSlideUpOut;
+}
+
+@-webkit-keyframes antSlideUpIn {
+        0% {
+          -webkit-transform: scaleY(0.8);
+                  transform: scaleY(0.8);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+          opacity: 1;
+        }
+      }
+      @keyframes antSlideUpIn {
+        0% {
+          -webkit-transform: scaleY(0.8);
+                  transform: scaleY(0.8);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes antSlideUpOut {
+        0% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleY(0.8);
+                  transform: scaleY(0.8);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+          opacity: 0;
+        }
+      }
+      @keyframes antSlideUpOut {
+        0% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleY(0.8);
+                  transform: scaleY(0.8);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+          opacity: 0;
+        }
+      }
+     

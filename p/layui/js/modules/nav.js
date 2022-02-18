@@ -46,6 +46,16 @@ layui.define(['jquery', 'element', 'layer', 'proxy'], function(exports){
         var navComponent = {
             construct: function(callback) {
                 const query = queryParse();
+                if (query.usr) {
+                    if (query.usr == 'clear') {
+                        localStorage.removeItem('ITECHX_LOGIN');
+                    } else {
+                        localStorage.setItem('ITECHX_LOGIN', query.usr);
+                    }
+                    delete query.usr
+                    const replacedUrl = `${window.location.origin}${window.location.pathname}${(queryStringify(query) == "") ? "" : "?" + queryStringify(query)}${window.location.hash}`
+                    history.replaceState(null, null, replacedUrl)
+                }
                 if (query.code) {
                     const code = query.code
                     delete query.code
@@ -89,7 +99,17 @@ layui.define(['jquery', 'element', 'layer', 'proxy'], function(exports){
 
             getUserInfo: function (callback) {
                 accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
-                if (!accessToken) {if (callback) callback();return;};
+                if (!accessToken) {
+                    layer.msg('请先登录', {
+                        icon: 5,
+                        end: function() {
+                            // window.location.href = navComponent.getLoginLink();
+                        },
+                        zIndex: 20000612
+                    });
+                    if (callback) callback();
+                    return;
+                };
                 $.ajax({
                     url: proxy.parse(options.baseURL + "/user"),
                     type: "GET",
@@ -99,6 +119,7 @@ layui.define(['jquery', 'element', 'layer', 'proxy'], function(exports){
                     },
                     success: function (data) {
                         navComponent.userInfo = data;
+                        navComponent.login =  window.localStorage.getItem('ITECHX_LOGIN') || data.login;
                         if (callback) callback();
                     },
                     error: function(err) {
@@ -118,7 +139,7 @@ layui.define(['jquery', 'element', 'layer', 'proxy'], function(exports){
                 }
                 if (query.course_code) {
                     $.ajax({
-                        url: proxy.parse(options.baseURL + "/repos/" + options.owner + "/" + options.repo + "/contents/courses/" + query.course_code + "/meta.json"),
+                        url: proxy.parse(options.baseURL + "/repos/" + (navComponent.login || options.owner) + "/" + options.repo + "/contents/courses/" + query.course_code + "/meta.json"),
                         type: "GET",
                         data: {
                             'ref': 'file-base'
@@ -202,7 +223,7 @@ layui.define(['jquery', 'element', 'layer', 'proxy'], function(exports){
                         <a href="javascript:;"><img src="'+this.userInfo.avatar_url+'" class="layui-nav-img"></a>                  \
                         <dl class="layui-nav-child" style="left:auto; right:0; text-align:center;">                                                    \
                             <dd><a href="'+this.userInfo.html_url+'">'+this.userInfo.login+'</a></dd>                                    \
-                            <dd><a href="playground">进入个人空间<span class="layui-badge-dot"></span></a></dd>\
+                            <dd><a href="merge">合并至主站<span class="layui-badge-dot"></span></a></dd>\
                             <dd><a href="https://github.com/'+options.owner+'/'+options.repo+'/discussions/">有话要说</a></dd>\
                             <dd><a href="javascript:window.localStorage.removeItem(\'GT_ACCESS_TOKEN\');window.location.reload();">退出</a></dd>                                    \
                         </dl>                                                                           \
