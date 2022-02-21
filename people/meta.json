@@ -1264,6 +1264,12 @@
         ],
         "teach-courses": [
             [
+                "Spring",
+                "2021",
+                "CS131",
+                "Programming Languages and Compilers"
+            ],
+            [
                 "Fall",
                 "2018",
                 "CS100",
@@ -1278,12 +1284,6 @@
             [
                 "Fall",
                 "2019",
-                "CS131",
-                "Programming Languages and Compilers"
-            ],
-            [
-                "Spring",
-                "2021",
                 "CS131",
                 "Programming Languages and Compilers"
             ]
@@ -1835,6 +1835,12 @@
                 "2021",
                 "CS130",
                 "Operating Systems I"
+            ],
+            [
+                "Spring",
+                "2021",
+                "CS131",
+                "Programming Languages and Compilers"
             ],
             [
                 "Spring",
@@ -6931,10 +6937,26 @@
     },
     "yangyw": {
         "name": "杨易为",
-        "image": true
+        "image": true,
+        "ta-courses": [
+            [
+                "Spring",
+                "2021",
+                "CS131",
+                "Programming Languages and Compilers"
+            ]
+        ]
     },
     "jlAndres": {
         "name": "季杨彪",
-        "image": true
+        "image": true,
+        "ta-courses": [
+            [
+                "Spring",
+                "2021",
+                "CS131",
+                "Programming Languages and Compilers"
+            ]
+        ]
     }
 }
