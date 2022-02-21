@@ -6948,9 +6948,14 @@
         ],
         "info": [
             [
-                "",
+                "fa-envelope",
                 "yangyw@shanghaitech.edu.cn",
-                "https://victoryang00.cb"
+                "mailto:yangyw@shanghaitech.edu.cn"
+            ],
+            [
+                "fa-file",
+                "https://victoryang00.cn",
+                "https://victoryang00.cn"
             ]
         ]
     },
