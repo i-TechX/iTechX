@@ -5699,7 +5699,8 @@
                 "CS152",
                 "Applied Cryptography"
             ]
-        ]
+        ],
+        "image": true
     },
     "zhunzh": {
         "name": "祝宁之",
