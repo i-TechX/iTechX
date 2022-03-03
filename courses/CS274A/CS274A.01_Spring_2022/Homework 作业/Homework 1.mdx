@@ -1,0 +1,258 @@
+«««
+code: CS274A
+name: Natural Language Processing
+semester: Spring 2022
+category: Homework 作业
+title: Homework 1
+»»»
+
+# Homework 1
+
+## Page 1 (question)
+
+@ Problem - checkbox
+
+title: "Question 1 - Text normalization"
+content: """
+Select all correct statements:
+"""
+choice: """
+We can tokenize a sentence by matching all delimiter strings(like spaces) instead of all possible tokens.
+Lemmatization chops off affixes crudely.
+Assume a BPE tokenizer with vocab {w, i, d, e, r, er, er_, wi, wid, der, der_} in the learned order, "wider" will be tokenized into "wi" "der_".
+"""
+points: "11"
+answer: "A"
+
+
+@ Problem - radio
+
+title: "Question 2 - Regular expression"
+content: """
+Which regular expression can match simple English contractions "XXXn't"?
+
+Please ignore cases of letters and all punctuations except the single quotation mark "'".
+
+The "\b" in choices represents the word boundaries, which is a special token in RE like "\s" and "\w".
+
+Examples:  
+
+|Input|Output|Explanation|
+|:--|:--|:--|
+|I don't know|don't| |
+|I can't|can't| |
+|I ca n't|- (no output)|n't has no preceeding XXX.|
+|I can'tdo|- (no output)|n't is not the end of a word.|
+|I c9n't|- (no output)|an English word does not contain digits.|
+
+The outputs are obtained by the python statement: `re.search(r"pattern", "testcase", flags=re.IGNORECASE)`. Do not forget the `r` before the pattern string.
+"""
+choice: """
+\b\w*n't\b
+\b[a-z]*n't\b
+\b[a-z]+n't\b
+\b[a-z]|[a-z]*n't\b
+"""
+points: "10"
+answer: "C"
+
+
+## Page 2 (question)
+
+@ Problem - checkbox
+
+title: "Question 3 - Dense word vectors"
+content: """
+Select all correct statements.
+"""
+choice: """
+Word2vec Skip-grams learns to predict center words using context words.
+In the skip-gram model, we calculate the similarity score of two vectors by dot-product.
+We use a negative sampling strategy to avoid computing softmax function.
+We need two vectors for each word w, one for w appearing as context, another one for w appearing as a center word.
+Intrinsic evaluation is enough to judge the quality of word embeddings.
+"""
+points: "11"
+answer: "BCD"
+
+
+
+@ Problem - checkbox
+
+title: "Question 4 - Sparse and dense word representations"
+content: """
+Select all correct statements.
+"""
+choice: """
+One-hot word vectors are unable to capture word similarity.
+A word-word co-occurrence matrix captures some word similarity.
+PPMI matrix is sparse, but it can produce dense word embeddings after applying SVD decomposition.
+Word-word PPMI matrix, one-hot vectors , and Word2vec assign a fixed embedding for each word independent of contexts.
+"""
+points: "11"
+answer: "ABCD"
+
+
+@ Problem - custom
+
+title: "Question 5 - PPMI matrix"
+content: """
+Given a term-context (word-word) co-occurrence matrix:
+
+puppy and panda are words, (pet, cute, china) are contexts
+
+|co-occurrence|pet|cute|china|
+|:--:|:--:|:--:|:--:|
+|puppy|5|10|0|
+|panda|0|15|20|
+
+"""
+choice: """
+<div class="question q1 q-text" answer="{'50': 2, '50.00': 2}">
+    <p style="display: inline;">Calculate the number of all occurrences: </p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'0.4': 2, '0.40': 2}">
+    <p style="display: inline;">Calculate p(word=panda, context=china): </p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q3 q-text" answer="{'0.51': 2}">
+    <p style="display: inline;">Calculate the PMI(panda, china). use log2, not weighted, and use two decimal places,  (e.g., 0.37). </p>
+    <input type="text" name="q3" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q4 q-text" answer="{'0': 2, '0.00': 2}">
+    <p style="display: inline;">Calculate the PPMI(panda, cute). use log2, not weighted, and use two decimal places,  (e.g., 0.37). </p>
+    <input type="text" name="q4" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q5 q-text" answer="{'0.51': 2}">
+    <p style="display: inline;">Calculate the PPMI(panda, china). use log2, not weighted, and use two decimal places,  (e.g., 0.37). </p>
+    <input type="text" name="q5" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q6 q-text" answer="{'0.47': 2}">
+    <p style="display: inline;">Calculate the add-2 smoothed PPMI(panda, china). use log2, not weighted, and use two decimal places. </p>
+    <input type="text" name="q6" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+## Page 3 (question)
+
+@ Problem - radio
+
+title: "Question 6 - Sigmoid and softmax"
+content: """
+Sigmoid is a generalization of Softmax.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 7 - Precision, recall and F-score"
+content: """
+A Logistic Regression classifier with precision > recall, we are likely to get a better f1-score if we increase the threshold (0.5 in P31 of Slide 04).
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - custom
+
+title: "Question 8 - Train naive bayes"
+content: """
+Train a multinomial naive Bayes with add-1 smoothing, on the following document counts for key sentiment words, with positive or negative class assigned as noted.
+
+Note: the vocabulary consists of three words: good, poor and great. All other words are ignored.
+
+|doc|"good"|"poor"|"great"|(class)|
+|:--|:--|:--|:--|:--|
+|d1.|3|0|3|pos|
+|d2.|0|1|2|pos|
+|d3.|1|3|0|neg|
+|d4.|1|5|2|neg|
+|d5.|0|2|0|neg|
+
+Use both naive Bayes models to analysis sentence:
+
+```
+A good, good plot and great characters, but poor acting.
+```
+
+Recall that with naive Bayes text classification, we simply ignore (throw out) any word that never occurred in the training document. (We don't throw out words that appear in some classes but not others; that's what add-1 smoothing is for.) 
+
+The score(prior*likelihood) that the multinomial naive Bayes assign it to class positive is [Q1].
+
+The score that the multinomial naive Bayes assign it to class negative is [Q2].
+
+All answers should be irreducible fractions, e.g., 1/2.
+"""
+choice: """
+<div class="question q1 q-text" answer="{'1/270': 5}">
+    <p style="display: inline;">Q1: </p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'891/417605': 5}">
+    <p style="display: inline;">Q2: </p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+## Page 4 (question)
+
+@ Problem - checkbox
+
+title: "Question 9 - Distance measure"
+content: """
+Which of the following clustering algorithms require(s) a distance measure?
+"""
+choice: """
+K-means
+Hierarchical Agglomerative Clustering (HAC)
+Expectation-maximization with Mixture of Gaussian (MoG)
+"""
+points: "11"
+answer: "AB"
+
+
+@ Problem - radio
+
+title: "Question 10 - Expectation Maximization 1"
+content: """
+In Expectation Maximization (EM) algorithm, we revise each cluster model based on its (proportionately) assigned points in E step and assign data instances proportionately to different models in M step.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 11 - Expectation Maximization 2"
+content: """
+The Expectation Maximization (EM) algorithm is an optimization algorithm. It will converge to a local optimum, but not necessarily global optimum.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "A"
