@@ -174,6 +174,16 @@ layui.define(['jquery', 'util', 'layer', 'proxy'], function(exports){
                 var d = document.createElement('div');
                 d.style.margin = "2em";
                 d.innerHTML = '\
+                    <p><b>Status 网站状态</b></p>\
+                    <div style="margin:0.5rem;"><img src="https://img.shields.io/github/issues-raw/' + options.owner + '/' + options.repo + '/Gitalk?color=green&label=courses%20online&style=flat-square"></img></div>\
+                    <div style="margin:0.5rem;"><img src="https://img.shields.io/github/repo-size/' + options.owner + '/' + options.repo + '?style=flat-square&label=database%20size"></img></div>\
+                    <div style="margin:0.5rem;"><img src="https://img.shields.io/github/last-commit/' + options.owner + '/' + options.repo + '/file-base?color=8f63e9&style=flat-square&label=last%20update"></img></div>\
+                ';
+                element.appendChild(d);
+
+                var d = document.createElement('div');
+                d.style.margin = "2em";
+                d.innerHTML = '\
                     <p><b>Announcements 公告板</b></p>\
                     <div style="text-align: center;"><i class="layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop" style="font-size: 2em; color: #b4b4b4;"></i></div>\
                 ';
