@@ -1,0 +1,102 @@
+<svg width="246" height="206" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1">
+ <!---->
+
+ <g>
+  <title>Layer 1</title>
+  <!---->
+  <g id="svg_67">
+   <g id="shape_tQYEIpY8ii" transform="translate(287.052 191.975) scale(1 1)">
+    <g id="svg_19">
+     <rect fill="rgba(0,0,0,0)" width="245.89602" height="110.07721" x="-287.052" y="-191.97533" id="svg_20"/>
+     <svg version="1.1" id="svg_17" x="-277.052" y="-181.97533" viewBox="0 0 241 96.1" xml:space="preserve" width="225.89602" height="90.07721" class="style-removed" preserveAspectRatio="none" data-parent="shape_tQYEIpY8ii" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <g id="svg_18">
+       <path d="m133.9,46.7c0.5,-0.5 1.1,-1 1.6,-1.5c-4.1,-3.4 -9.3,-5.4 -15,-5.4c-5.7,0 -11,2 -15,5.4c0.6,0.5 1.1,1 1.6,1.5c9.2,9.2 9.2,24.1 0,33.3c-0.5,0.5 -1.1,1 -1.6,1.5c4.1,3.4 9.3,5.4 15,5.4c5.7,0 11,-2 15,-5.4c-0.6,-0.5 -1.1,-1 -1.6,-1.5c-9.2,-9.2 -9.2,-24.1 0,-33.3z" fill="#06B6B8" stroke-width="0" id="svg_78"/>
+       <circle cx="120.5" cy="14.4" r="14.4" fill="#06B6B8" stroke-width="0" id="svg_77"/>
+       <path d="m96.9,63.3c0,-7.3 3.3,-13.8 8.5,-18.2c-9.3,-7.7 -23,-7.2 -31.7,1.5c-1.1,1.1 -2.1,2.3 -2.9,3.5c9.3,3.1 16.1,11.9 16.1,22.3c0,4.9 -1.5,9.4 -4,13.2c7.6,2.5 16.1,1.2 22.5,-4.2c-5.2,-4.2 -8.5,-10.8 -8.5,-18.1z" fill="#ADDB33" stroke-width="0" id="svg_76"/>
+       <path d="m107.1,46.7c-0.5,-0.5 -1.1,-1 -1.6,-1.5c-5.2,4.3 -8.5,10.9 -8.5,18.2c0,7.3 3.3,13.8 8.5,18.2c0.6,-0.5 1.1,-1 1.6,-1.5c9.2,-9.3 9.2,-24.2 0,-33.4z" fill="#049C25" stroke-width="0" id="svg_75"/>
+       <circle cx="55.8" cy="28.7" r="14.4" fill="#ADDB33" stroke-width="0" id="svg_74"/>
+       <path d="m170.1,50.2c-0.8,-1.2 -1.8,-2.4 -2.9,-3.5c-8.7,-8.7 -22.4,-9.2 -31.7,-1.5c5.2,4.3 8.5,10.9 8.5,18.2c0,7.3 -3.3,13.8 -8.5,18.2c6.4,5.3 15,6.7 22.5,4.2c-2.5,-3.8 -4,-8.3 -4,-13.2c0.1,-10.5 6.8,-19.3 16.1,-22.4z" fill="#42CD9A" stroke-width="0" id="svg_73"/>
+       <path d="m144.1,63.3c0,-7.3 -3.3,-13.8 -8.5,-18.2c-0.6,0.5 -1.1,1 -1.6,1.5c-9.2,9.2 -9.2,24.1 0,33.3c0.5,0.5 1.1,1 1.6,1.5c5.1,-4.2 8.5,-10.8 8.5,-18.1z" fill="#02926F" stroke-width="0" id="svg_72"/>
+       <circle cx="185.2" cy="28.7" r="14.4" fill="#42CD9A" stroke-width="0" id="svg_71"/>
+       <path d="m177.6,48.9c-2.6,0 -5.2,0.5 -7.5,1.2c6.2,9.2 5.2,21.7 -2.9,29.8c-2.7,2.7 -5.8,4.5 -9.2,5.7c4.2,6.3 11.4,10.4 19.6,10.4c13,0 23.6,-10.6 23.6,-23.6s-10.5,-23.5 -23.6,-23.5z" fill="#EE5E0C" stroke-width="0" id="svg_70"/>
+       <path d="m170.1,50.2c-9.3,3.1 -16.1,11.9 -16.1,22.3c0,4.9 1.5,9.4 4,13.2c3.3,-1.1 6.5,-3 9.2,-5.7c8.1,-8.1 9.1,-20.7 2.9,-29.8z" fill="#3E4C07" stroke-width="0" id="svg_69"/>
+       <ellipse transform="matrix(0.3827 -0.9239 0.9239 0.3827 72.8787 254.0719)" cx="226.6" cy="72.5" rx="14.4" ry="14.4" fill="#EE5E0C" stroke-width="0" id="svg_68"/>
+       <path d="m70.8,50.2c-2.4,-0.8 -4.9,-1.2 -7.5,-1.2c-13,0 -23.6,10.6 -23.6,23.6s10.6,23.6 23.6,23.6c8.2,0 15.3,-4.1 19.6,-10.4c-3.3,-1.1 -6.5,-3 -9.2,-5.7c-8.1,-8.2 -9,-20.8 -2.9,-29.9z" fill="#FCD02F" stroke-width="0" id="svg_66"/>
+       <path d="m70.8,50.2c-6.2,9.2 -5.2,21.7 2.9,29.8c2.7,2.7 5.8,4.5 9.2,5.7c2.5,-3.8 4,-8.3 4,-13.2c0,-10.4 -6.7,-19.2 -16.1,-22.3z" fill="#ABB309" stroke-width="0" id="svg_35"/>
+       <circle cx="14.4" cy="72.5" r="14.4" fill="#FCD02F" stroke-width="0" id="svg_21"/>
+      </g>
+     </svg>
+    </g>
+   </g>
+   <g id="shape_iLLhM9yM8V" transform="translate(315.009 363.053) scale(1 1)">
+    <g id="svg_36">
+     <rect fill="rgba(0,0,0,0)" width="34.88994" height="34.88994" x="-287.052" y="-191.97533" id="svg_37"/>
+     <svg version="1.1" id="svg_79" x="-277.052" y="-181.97533" width="14.88994" height="14.88994" viewBox="1 1 100 100" xml:space="preserve" class="style-removed" preserveAspectRatio="none" data-parent="shape_iLLhM9yM8V" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <circle cx="51" cy="51" r="50" fill="#03e2ac" stroke-width="0" id="svg_80"/>
+     </svg>
+    </g>
+   </g>
+   <g id="shape_aLJiBIwCCr" transform="translate(340.928 363.053) scale(1 1)">
+    <g id="svg_39">
+     <rect fill="rgba(0,0,0,0)" width="34.88994" height="34.88994" x="-287.052" y="-191.97533" id="svg_40"/>
+     <svg version="1.1" id="svg_81" x="-277.052" y="-181.97533" width="14.88994" height="14.88994" viewBox="1 1 100 100" xml:space="preserve" class="style-removed" preserveAspectRatio="none" data-parent="shape_aLJiBIwCCr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <circle cx="51" cy="51" r="50" fill="#03e2ac" stroke-width="0" id="svg_82"/>
+     </svg>
+    </g>
+   </g>
+   <g id="shape_bu9RK9bojo" transform="translate(395.761 363.053) scale(1 1)">
+    <g id="svg_42">
+     <rect fill="rgba(0,0,0,0)" width="34.88994" height="34.88994" x="-287.052" y="-191.97533" id="svg_43"/>
+     <svg version="1.1" id="svg_83" x="-277.052" y="-181.97533" width="14.88994" height="14.88994" viewBox="1 1 100 100" xml:space="preserve" class="style-removed" preserveAspectRatio="none" data-parent="shape_bu9RK9bojo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <circle cx="51" cy="51" r="50" fill="#bad80a" stroke-width="0" id="svg_84"/>
+     </svg>
+    </g>
+   </g>
+   <g id="shape_fv2878oNnm" transform="translate(369.842 363.053) scale(1 1)">
+    <g id="svg_45">
+     <rect fill="rgba(0,0,0,0)" width="34.88994" height="34.88994" x="-287.052" y="-191.97533" id="svg_46"/>
+     <svg version="1.1" id="svg_85" x="-277.052" y="-181.97533" width="14.88994" height="14.88994" viewBox="1 1 100 100" xml:space="preserve" class="style-removed" preserveAspectRatio="none" data-parent="shape_fv2878oNnm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <circle cx="51" cy="51" r="50" fill="#bad80a" stroke-width="0" id="svg_86"/>
+     </svg>
+    </g>
+   </g>
+   <g id="shape_scviAojQ8v" transform="translate(421.366 363.053) scale(1 1)">
+    <g id="svg_48">
+     <rect fill="rgba(0,0,0,0)" width="34.88994" height="34.88994" x="-287.052" y="-191.97533" id="svg_49"/>
+     <svg version="1.1" id="svg_87" x="-277.052" y="-181.97533" width="14.88994" height="14.88994" viewBox="1 1 100 100" xml:space="preserve" class="style-removed" preserveAspectRatio="none" data-parent="shape_scviAojQ8v" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <circle cx="51" cy="51" r="50" fill="#bad80a" stroke-width="0" id="svg_88"/>
+     </svg>
+    </g>
+   </g>
+   <g id="shape_8DfBY2qaMA" transform="translate(476.592 363.053) scale(1 1)">
+    <g id="svg_51">
+     <rect fill="rgba(0,0,0,0)" width="34.88994" height="34.88994" x="-287.052" y="-191.97533" id="svg_52"/>
+     <svg version="1.1" id="svg_89" x="-277.052" y="-181.97533" width="14.88994" height="14.88994" viewBox="1 1 100 100" xml:space="preserve" class="style-removed" preserveAspectRatio="none" data-parent="shape_8DfBY2qaMA" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <circle cx="51" cy="51" r="50" fill="#03e2ac" stroke-width="0" id="svg_90"/>
+     </svg>
+    </g>
+   </g>
+   <g id="shape_lwVJtr76Wv" transform="translate(450.673 363.053) scale(1 1)">
+    <g id="svg_54">
+     <rect fill="rgba(0,0,0,0)" width="34.88994" height="34.88994" x="-287.052" y="-191.97533" id="svg_55"/>
+     <svg version="1.1" id="svg_91" x="-277.052" y="-181.97533" width="14.88994" height="14.88994" viewBox="1 1 100 100" xml:space="preserve" class="style-removed" preserveAspectRatio="none" data-parent="shape_lwVJtr76Wv" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <circle cx="51" cy="51" r="50" fill="#03e2ac" stroke-width="0" id="svg_92"/>
+     </svg>
+    </g>
+   </g>
+   <g id="shape_C4V42wBDKu" transform="translate(206.22 61.7125) scale(1 1)">
+    <svg version="1.1" width="531.12" height="516.68" viewBox="0 0 531.12 516.6800000000001" data-parent="shape_C4V42wBDKu" id="svg_93" x="-277.052" y="-181.97533" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+     <rect fill="rgba(0,0,0,0)" width="244" height="86" x="71.78" y="215.34" id="svg_101"/>
+     <g data-width="242.75996" id="svg_94">
+      <path d="m77.07002,283.34l0,-34.96l9.61,0l0,34.96l-9.61,0zm9.61,-38.55l-9.61,0l0,-9.33l9.61,0l0,9.33z" fill="#306856" stroke="rgb(2, 146, 111)" stroke-width="0.12" data-glyph-w="19.09348" data-glyph-h="71.78" data-glyph-ascender="61.65902" data-glyph-descender="-10.12098" id="svg_100"/>
+      <path d="m106.9935,283.34l0,-39.34l-15.21,0l0,-8.54l41.27,0l0,8.54l-15.86,0l0,39.34l-10.2,0z" fill="#306856" stroke="rgb(2, 146, 111)" stroke-width="0.12" data-glyph-w="41.91952" data-glyph-h="71.78" data-glyph-ascender="61.65902" data-glyph-descender="-10.12098" id="svg_99"/>
+      <path d="m157.03302,235.46l17.15,0l0,8.54l-13.28,0q-5.17,0 -7.54,0.72q-2.36,0.72 -3.94,2.8l0,0q-1.08,1.44 -1.47,2.87q-0.4,1.44 -0.69,4.88l0,0l26.92,0l0,8.55l-26.92,0q0.58,6.17 3.66,8.57q3.09,2.41 10.48,2.41l0,0l12.78,0l0,8.54l-13.28,0q-5.38,0 -9.47,-0.65l0,0q-6.46,-1.07 -10.27,-5.67l0,0q-5.45,-6.6 -5.45,-17.87l0,0q0,-12.49 7.68,-19.45l0,0q2.65,-2.37 5.63,-3.3q2.98,-0.94 8.01,-0.94l0,0z" fill="#306856" stroke="rgb(2, 146, 111)" stroke-width="0.12" data-glyph-w="43.92936" data-glyph-h="71.78" data-glyph-ascender="61.65902" data-glyph-descender="-10.12098" id="svg_98"/>
+      <path d="m203.97238,274.8l14.64,0l0,8.54l-16.72,0q-4.74,0 -7.25,-0.5l0,0q-8.83,-1.73 -12.56,-9.84l0,0q-2.44,-5.45 -2.44,-13.49l0,0q0,-9.62 3.73,-15.65l0,0q2.73,-4.38 7.29,-6.39q4.55,-2.01 11.73,-2.01l0,0l16.22,0l0,8.54l-15.07,0q-6.82,0 -9.98,3.67l0,0q-2.65,3.01 -2.65,10.91l0,0q0,10.62 4.09,13.92l0,0q2.87,2.3 8.97,2.3l0,0z" fill="#306856" stroke="rgb(2, 146, 111)" stroke-width="0.12" data-glyph-w="43.49868" data-glyph-h="71.78" data-glyph-ascender="61.65902" data-glyph-descender="-10.12098" id="svg_97"/>
+      <path d="m254.43106,235.46l10.12,0l0,47.88l-10.12,0l0,-19.81l-18.52,0l0,19.81l-10.19,0l0,-47.88l10.19,0l0,19.53l18.52,0l0,-19.53z" fill="#306856" stroke="rgb(2, 146, 111)" stroke-width="0.12" data-glyph-w="48.59506" data-glyph-h="71.78" data-glyph-ascender="61.65902" data-glyph-descender="-10.12098" id="svg_96"/>
+      <path d="m269.72612,283.34l16.29,-24.19l-15.72,-23.69l12.49,0l9.4,15.79l10.2,-15.79l12.34,0l-16.22,23.69l16.22,24.19l-11.98,0l-10.56,-16.44l-10.33,16.44l-12.13,0z" fill="#306856" stroke="rgb(2, 146, 111)" stroke-width="0.12" data-glyph-w="45.72386" data-glyph-h="71.78" data-glyph-ascender="61.65902" data-glyph-descender="-10.12098" id="svg_95"/>
+     </g>
+    </svg>
+   </g>
+  </g>
+ </g>
+</svg>

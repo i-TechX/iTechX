@@ -217,7 +217,7 @@ layui.define(['jquery', 'element', 'layer', 'proxy'], function(exports){
                 node.innerHTML = '<div class="layui-header">                                                                                                                        \
                     <ul class="layui-nav" lay-filter="">                                                                                                                            \
                         <a class="logo" href="index">                                                                                                                                    \
-                            <img src="layui/images/iTechX.png" height="30px" style="position: relative; bottom: -15px; float: left; margin-right: 2%;" alt="iTechX">      \
+                            <img src="layui/images/logo/logo-nav.svg" height="50px" style="position: relative; bottom: -5px; float: left; margin-right: 2%;" alt="iTechX">      \
                         </a>                                                                                                                                                        \
                         ' + tabs + ' \
                     </ul>                                                                                                                                                           \
