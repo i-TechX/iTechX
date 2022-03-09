@@ -56,7 +56,10 @@
             "year": "2020",
             "mainpage": "https://i-techx.github.io/EE150/index.html",
             "teacher": [
-                "louxin", "zhaoziping", "xulin1", "zhouyong"
+                "louxin",
+                "zhaoziping",
+                "xulin1",
+                "zhouyong"
             ],
             "ta": [
                 "unknown"
@@ -82,7 +85,8 @@
             "hours": "64",
             "prerequisite": "analysis, linear algebra",
             "evaluation": "Homework: 20%, Lab: 15%, Mid-Term Exam: 30%, Final Exam: 35%"
-        },{
+        },
+        {
             "course_id": "EE150.01",
             "season": "Spring",
             "year": "2017",
@@ -98,7 +102,8 @@
             "hours": "64",
             "prerequisite": "linear circuits, differential equations, linear algebra, calculus",
             "evaluation": "Weekly Homework: 20%, 4 Quizzes: 10%, Midterm: 30%, Final: 30%, Lab: 5%, Final Project: 10%, Your Final Score = min(Your Total Score, 100)"
-        },{
+        },
+        {
             "course_id": "EE150.01",
             "season": "Spring",
             "year": "2016",
