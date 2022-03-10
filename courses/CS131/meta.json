@@ -1,0 +1,54 @@
+{
+    "code": "CS131",
+    "name": "Programming Languages and Compilers",
+    "semesters": [
+        {
+            "course_id": "CS131.01",
+            "season": "Spring",
+            "year": "2021",
+            "teacher": [
+                "songfu"
+            ],
+            "ta": [
+                "yangyw", "jiyb", "youch"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "Homework: 4*5%, Midterm: 20%, Quiz: 10%, Project: 25%, Midterm: 20%, Final: 25%"
+        },
+        {
+            "course_id": "CS131.01",
+            "season": "Fall",
+            "year": "2019",
+            "teacher": [
+                "songfu"
+            ],
+            "ta": [
+                "qinqi", "cailw"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "Homework: 4*5%, Midterm: 20%, Quiz: 10%, Project: 25%, Midterm: 20%, Final: 25%"
+        },
+        {
+            "course_id": "CS131.01",
+            "season": "Spring",
+            "year": "2017",
+            "teacher": [
+                "songfu"
+            ],
+            "ta": [
+                "cailw", "unknown"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "Homework: 4*5%, Midterm: 20%, Quiz: 10%, Project: 25%, Midterm: 20%, Final: 25%"
+        }
+    ]
+}
