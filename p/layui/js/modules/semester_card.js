@@ -1299,6 +1299,9 @@ layui.define(['jquery', 'util', 'element', 'proxy', 'tagsInputAutoComplete', 'av
                       if(!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)){
                         return 'ID不能有特殊字符';
                       }
+                      if(!new RegExp("^[a-z0-9_]+$").test(value)){
+                        return 'ID仅允许小写字符、数字、下划线，优先使用邮箱前缀或姓名缩写';
+                      }
                       if(value in cardComponent.people){
                         return 'ID在数据库中已存在';
                       }
