@@ -1,8 +1,9 @@
-layui.define(['jquery', 'util', 'layer', 'proxy'], function(exports){
+layui.define(['jquery', 'util', 'layer', 'proxy', 'form'], function(exports){
 
     var $ = layui.jquery,
         util = layui.util,
         layer = layui.layer,
+        form = layui.form,
         proxy = layui.proxy({});
 
     var course_card = (function(options){
@@ -90,9 +91,25 @@ layui.define(['jquery', 'util', 'layer', 'proxy'], function(exports){
                                 var file = data[idx];
                                 if (file.type == "dir") {
                                     var d = document.createElement('div');
+                                    d.classList.add('search-opts');
+                                    d.setAttribute('search-key', file.name);
                                     cardComponent.loadDetails(d, file.name);
                                     d1.appendChild(d);
                                 }
+                            }
+
+                            {
+                                var d = document.createElement('div');
+                                d.classList.add('layui-hide');
+                                d.setAttribute('id', 'search-no-result');
+                                d.innerHTML = '<p style="text-align: center; color: #999;">No course found.</p>';
+                                d1.appendChild(d);
+                            }
+
+                            {
+                                var d = document.createElement('div');
+                                cardComponent.getSearchElement(d);
+                                d2.appendChild(d);
                             }
 
                             if (options.hasOwnProperty('boardLabel')) {
@@ -154,6 +171,7 @@ layui.define(['jquery', 'util', 'layer', 'proxy'], function(exports){
                                 }
 
                                 d.innerHTML = cardHTML;
+                                element.setAttribute('search-key', elem.code + ' ' + elem.name + ' ' + semester_strings.join(', '));
                                 element.appendChild(d);
                             } else {
                                 console.log('data error:', data);
@@ -168,6 +186,53 @@ layui.define(['jquery', 'util', 'layer', 'proxy'], function(exports){
                         element.children[1].children[0].innerHTML = "Loading failed. Please try again.";
                     }
                 })
+            },
+
+            getSearchElement: function(element) {
+                var d = document.createElement('div');
+                d.style.margin = "2em";
+                d.innerHTML = '\
+                    <p><b>Search 搜索课程</b></p>\
+                    <form class="layui-form" action="" lay-filter="search-bar">\
+                    <div class="layui-form-item">\
+                    <div class="layui-input-block" style="margin-left: 0;">\
+                        <input type="text" name="title" required  lay-verify="required" placeholder="搜一搜" autocomplete="off" class="layui-input">\
+                    </div>\
+                    <button type="button" class="layui-btn layui-hide" lay-submit lay-filter="search-bar">立即提交</button>\
+                    </div>\
+                </form>';
+
+                form.on('submit(search-bar)', function(data){
+                    return false;
+                });
+
+                d.children[1].children[0].children[0].children[0].oninput = function() {
+                    var query = d.children[1].children[0].children[0].children[0].value;
+                    var cards = document.getElementsByClassName('search-opts');
+                    if (query.length > 0) {
+                        var flag = true;
+                        for (var i = 0; i < cards.length; i++) {
+                            var attr = cards[i].getAttribute('search-key');
+                            if (attr.toLowerCase().includes(query.toLowerCase())) {
+                                cards[i].classList.remove('layui-hide');
+                                flag = false;
+                            } else {
+                                cards[i].classList.add('layui-hide');
+                            }
+                        }
+                        if (flag) {
+                            document.getElementById('search-no-result').classList.remove('layui-hide');
+                        } else {
+                            document.getElementById('search-no-result').classList.add('layui-hide');
+                        }
+                    } else {
+                        for (var i = 0; i < cards.length; i++) {
+                            cards[i].classList.remove('layui-hide');
+                        }
+                    }
+                }
+
+                element.appendChild(d);
             },
 
             getAnnouncements: function(label, element) {
