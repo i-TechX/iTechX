@@ -781,6 +781,12 @@
         ],
         "teach-courses": [
             [
+                "Spring",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ],
+            [
                 "Fall",
                 "2021",
                 "CS150A",
@@ -7266,12 +7272,36 @@
         ]
     },
     "linwj": {
-        "name": "林维嘉"
+        "name": "林维嘉",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
     },
     "wangxy6": {
-        "name": "王欣奕"
+        "name": "王欣奕",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
     },
     "yangzj": {
-        "name": "杨子健"
+        "name": "杨子健",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
     }
 }
