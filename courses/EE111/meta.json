@@ -3,6 +3,23 @@
     "name": "Electric Circuits",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "EE111.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Midterm(30%), Final Exam(40%), Homework&Attendance(30%)",
+            "teacher": [
+                "yechf"
+            ],
+            "ta": [
+                "zhengtk",
+                "longcai"
+            ]
+        },
+        {
             "course_id": "EE111.01",
             "season": "Fall",
             "year": "2021",
@@ -10,7 +27,8 @@
                 "zouxb"
             ],
             "ta": [
-                "shity", "huangzy1"
+                "shity",
+                "huangzy1"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -42,7 +60,9 @@
                 "yechf"
             ],
             "ta": [
-                "zhaowl", "fankm", "wangyx4"
+                "zhaowl",
+                "fankm",
+                "wangyx4"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -58,7 +78,9 @@
                 "liuyu"
             ],
             "ta": [
-                "yilh", "zhangty2", "hurt"
+                "yilh",
+                "zhangty2",
+                "hurt"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -74,7 +96,9 @@
                 "zouxb"
             ],
             "ta": [
-                "chenjx2", "zhuyk", "quhl"
+                "chenjx2",
+                "zhuyk",
+                "quhl"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -90,7 +114,9 @@
                 "wanghy"
             ],
             "ta": [
-                "zhangjz", "liangjw", "unknown"
+                "zhangjz",
+                "liangjw",
+                "unknown"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
