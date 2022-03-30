@@ -143,13 +143,16 @@
                     success: function (data) {
                         console.log(data);
                         layer.msg("成功提交请求！即将跳转至请求页面...", {icon: 1, time: 1000}, function(){
-                            window.location.href = data.url;
+                            window.location.href = data.html_url;
                         });
                     },
                     error: function(err) {
                         console.log(err);
                         if (err.hasOwnProperty('responseJSON') && err.responseJSON.hasOwnProperty('message')) {
                             data.form.innerHTML += err.responseJSON.message;
+                            if (err.responseJSON.hasOwnProperty('errors') && err.responseJSON.errors[0]) {
+                                data.form.innerHTML += err.responseJSON.errors[0].message;
+                            }
                         } else {
                             data.form.innerHTML += err;
                         }
