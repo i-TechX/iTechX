@@ -60,7 +60,7 @@
         <div class="layui-card" style="max-width: 1000px; margin: auto;">
             <div style="padding: 30px; font-family: 'Microsoft Yahei', '微软雅黑', '等线 Light', Helvetica, 'Hiragino Sans GB', Arial, sans-serif;">
                 <p style="text-align: center; color: gray;">感谢您为iTechX作出的贡献！填写标题并简要描述您所作的改动，将有助于我们更快地将您的页面展示给所有人。</p>
-                <form class="layui-form" lay-filter="merge" action="">
+                <form class="layui-form" action="">
                     <div class="layui-form-item">
                         <label class="layui-form-label">标题</label>
                         <div class="layui-input-block">
@@ -75,7 +75,7 @@
                     </div>
                     <div class="layui-form-item">
                         <div class="layui-input-block">
-                          <button type="submit" class="layui-btn layui-btn-violet" lay-submit="" lay-filter="demo1">立即提交</button>
+                          <button type="submit" class="layui-btn layui-btn-violet" lay-submit="" lay-filter="merge">立即提交</button>
                           <button type="reset" class="layui-btn layui-btn-primary-violet">重置</button>
                         </div>
                     </div>
@@ -91,22 +91,39 @@
 </div>
 
 <script src="layui/layui.js"></script>
-<script>
+<script type="text/javascript">
     layui.config({
         base: 'layui/js/modules/'
-    }).use(['layer', 'element', 'nav', 'form'], function(){
+    }).use(['layer', 'element', 'nav', 'form', 'proxy'], function(){
         const options = {
             page: "none",
             owner: "i-TechX",
             repo: "iTechX",
             clientID: "2de790a6c048f147f91d",
             clientSecret: '85bb4453b24a688daa937fbbdc55d6e7e4dd4027',
+            baseURL: 'https://api.github.com'
         };
 
         var nav = layui.nav(options),
-            $ = layui.$;
+            $ = layui.$,
+            proxy = layui.proxy({});
         
+        var index = layui.layer.load(2, {
+            content:"<p style='position: relative; left: -10px;'><br><br>Loading...</p>",
+            shade:0.3
+        });
+
+        var accessToken = options.accessToken || window.localStorage.getItem('GT_ACCESS_TOKEN');
+        var headers = {
+            'Accept': 'application/json',
+        }
+        if (accessToken) {
+            headers['Authorization'] = 'token ' + accessToken;
+        }
+
         nav.render("navigator", function(){
+            layer.close(index);
+
             layui.form.on('submit(merge)', function(data){
 
                 data.elem.classList.add('layui-btn-disabled');
@@ -131,8 +148,13 @@
                     },
                     error: function(err) {
                         console.log(err);
+                        if (err.hasOwnProperty('responseJSON') && err.responseJSON.hasOwnProperty('message')) {
+                            data.form.innerHTML += err.responseJSON.message;
+                        } else {
+                            data.form.innerHTML += err;
+                        }
                         layer.msg("提交请求失败！", {icon: 2, time: 1000});
-                        data.form.innerHTML += err;
+                        data.elem.classList.remove('layui-btn-disabled');
                     }
                 })
 
@@ -143,7 +165,6 @@
 
     });
 </script> 
-</body>
 <!-- Default Statcounter code for iTechX Playground
 http://i-techx.github.io/iTechX/p/ -->
 <script type="text/javascript">
@@ -178,4 +199,5 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
     })();
 </script>
 <!-- End of Session Code -->
+</body>
 </html>
