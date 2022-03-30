@@ -1652,6 +1652,12 @@
         "teach-courses": [
             [
                 "Spring",
+                "2022",
+                "EE111",
+                "Electric Circuits"
+            ],
+            [
+                "Spring",
                 "2021",
                 "EE111",
                 "Electric Circuits"
@@ -7305,9 +7311,25 @@
         ]
     },
     "zhengtk": {
-        "name": "郑天阔"
+        "name": "郑天阔",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE111",
+                "Electric Circuits"
+            ]
+        ]
     },
     "longcai": {
-        "name": "龙偲"
+        "name": "龙偲",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE111",
+                "Electric Circuits"
+            ]
+        ]
     }
 }
