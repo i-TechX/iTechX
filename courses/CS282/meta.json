@@ -3,6 +3,23 @@
     "name": "Machine Learning",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "CS282",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Probability and Statistics,Calculus(Mathematical Analysis I& II ), Linear Algebra, CS182",
+            "evaluation": "exam (40%) + assignments/quiz (30%) + project (30%)",
+            "teacher": [
+                "wanghao1"
+            ],
+            "ta": [
+                "wangshsh2",
+                "gaoxin"
+            ]
+        },
+        {
             "course_id": "CS282.01",
             "season": "Fall",
             "year": "2021",
@@ -10,7 +27,10 @@
                 "yangsb"
             ],
             "ta": [
-                "tianpch", "suhang", "longjf1", "shicheng"
+                "tianpch",
+                "suhang",
+                "longjf1",
+                "shicheng"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
