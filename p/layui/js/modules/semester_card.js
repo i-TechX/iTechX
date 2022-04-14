@@ -621,16 +621,19 @@ layui.define(['jquery', 'util', 'element', 'proxy', 'tagsInputAutoComplete', 'av
                                 addAs(e, 'ta');
                             });
         
-                            let slist = cardComponent.content.semesters || [];
-                            if (slist == []) cardComponent.content.semesters = slist;
-                            let insert_idx = slist.length;
-                            for (let i = 0; i < slist.length; i++) {
-                                const item1 = [semester.season, semester.year, semester.course_id, ''];
-                                const item2 = [slist[i].season, slist[i].year, slist[i].course_id, ''];
-                                if (cmpItem(item1, item2) == 0) return;
-                                if (cmpItem(item1, item2) == 1) {insert_idx = i; break;}
+                            if (!cardComponent.content.semesters) {
+                                cardComponent.content.semesters = [semester];
+                            } else {
+                                let slist = cardComponent.content.semesters;
+                                let insert_idx = slist.length;
+                                for (let i = 0; i < slist.length; i++) {
+                                    const item1 = [semester.season, semester.year, semester.course_id, ''];
+                                    const item2 = [slist[i].season, slist[i].year, slist[i].course_id, ''];
+                                    if (cmpItem(item1, item2) == 0) return;
+                                    if (cmpItem(item1, item2) == 1) {insert_idx = i; break;}
+                                }
+                                slist.splice(insert_idx, 0, semester);
                             }
-                            slist.splice(insert_idx, 0, semester);
         
                             cardComponent.loadContent({
                                 path: "/contents/people/meta.json"
