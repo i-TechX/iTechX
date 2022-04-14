@@ -787,6 +787,12 @@
         ],
         "teach-courses": [
             [
+                "Spring",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ],
+            [
                 "Fall",
                 "2021",
                 "CS150A",
@@ -1656,6 +1662,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE111",
+                "Electric Circuits"
+            ],
             [
                 "Spring",
                 "2021",
@@ -7298,6 +7310,61 @@
                 "2022",
                 "CS110",
                 "Computer Architecture I"
+            ]
+        ]
+    },
+    "linwj": {
+        "name": "林维嘉",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "wangxy6": {
+        "name": "王欣奕",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "yangzj": {
+        "name": "杨子健",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "zhengtk": {
+        "name": "郑天阔",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE111",
+                "Electric Circuits"
+            ]
+        ]
+    },
+    "longcai": {
+        "name": "龙偲",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE111",
+                "Electric Circuits"
             ]
         ]
     },
