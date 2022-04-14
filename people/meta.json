@@ -7335,12 +7335,36 @@
         ]
     },
     "brian": {
-        "name": "Brian Cox"
+        "name": "Brian Cox",
+        "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "ARTS1303",
+                "Unity Game Development"
+            ]
+        ]
     },
     "liuzhch1": {
-        "name": "刘志成"
+        "name": "刘志成",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "ARTS1303",
+                "Unity Game Development"
+            ]
+        ]
     },
     "mingyt": {
-        "name": "明钰涛"
+        "name": "明钰涛",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "ARTS1303",
+                "Unity Game Development"
+            ]
+        ]
     }
 }
