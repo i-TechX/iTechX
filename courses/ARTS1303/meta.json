@@ -1,4 +1,24 @@
 {
     "code": "ARTS1303",
-    "name": "Unity Game Development"
+    "name": "Unity Game Development",
+    "semesters": [
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "ARTS1303",
+            "department": "创意与艺术学院",
+            "credit": "2",
+            "hours": "32",
+            "prerequisite": "无",
+            "evaluation": "未知",
+            "teacher": [
+                "brian"
+            ],
+            "ta": [
+                "liuzhch1",
+                "mingyt"
+            ],
+            "mainpage": "https://briancox.be/?page=unity"
+        }
+    ]
 }
