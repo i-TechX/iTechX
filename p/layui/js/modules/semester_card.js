@@ -622,6 +622,7 @@ layui.define(['jquery', 'util', 'element', 'proxy', 'tagsInputAutoComplete', 'av
                             });
         
                             let slist = cardComponent.content.semesters || [];
+                            if (slist == []) cardComponent.content.semesters = slist;
                             let insert_idx = slist.length;
                             for (let i = 0; i < slist.length; i++) {
                                 const item1 = [semester.season, semester.year, semester.course_id, ''];
