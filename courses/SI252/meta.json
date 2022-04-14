@@ -3,6 +3,23 @@
     "name": "Reinforcement Learning",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "SI252",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "shaozy"
+            ],
+            "ta": [
+                "wangshsh2",
+                "gaoxin"
+            ]
+        },
+        {
             "course_id": "SI252.01",
             "season": "Spring",
             "year": "2021",
@@ -10,7 +27,9 @@
                 "shaozy"
             ],
             "ta": [
-                "huangxi", "wangshsh2", "huangtao1"
+                "huangxi",
+                "wangshsh2",
+                "huangtao1"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -26,7 +45,9 @@
                 "shaozy"
             ],
             "ta": [
-                "huangxi", "gaoxin", "zhujg"
+                "huangxi",
+                "gaoxin",
+                "zhujg"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

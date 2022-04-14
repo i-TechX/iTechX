@@ -698,6 +698,12 @@
         "teach-courses": [
             [
                 "Spring",
+                "2022",
+                "CS282",
+                "Machine Learning"
+            ],
+            [
+                "Spring",
                 "2021",
                 "CS282",
                 "Machine Learning"
@@ -1382,6 +1388,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "SI252",
+                "Reinforcement Learning"
+            ],
             [
                 "Spring",
                 "2021",
@@ -4019,6 +4031,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2022",
+                "CS282",
+                "Machine Learning"
+            ],
+            [
                 "Fall",
                 "2021",
                 "CS240",
@@ -4123,6 +4141,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS282",
+                "Machine Learning"
+            ],
             [
                 "Fall",
                 "2021",
@@ -6639,6 +6663,12 @@
         "ta-courses": [
             [
                 "Spring",
+                "2022",
+                "SI252",
+                "Reinforcement Learning"
+            ],
+            [
+                "Spring",
                 "2020",
                 "SI252",
                 "Reinforcement Learning"
@@ -6666,6 +6696,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "SI252",
+                "Reinforcement Learning"
+            ],
             [
                 "Spring",
                 "2021",
@@ -7329,6 +7365,72 @@
                 "2022",
                 "EE111",
                 "Electric Circuits"
+            ]
+        ]
+    },
+    "wangjk": {
+        "name": "王剑坤",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS282",
+                "Machine Learning"
+            ]
+        ]
+    },
+    "liangshuang": {
+        "name": "梁爽",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS282",
+                "Machine Learning"
+            ]
+        ]
+    },
+    "lizhw": {
+        "name": "李志伟",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS282",
+                "Machine Learning"
+            ]
+        ]
+    },
+    "brian": {
+        "name": "Brian Cox",
+        "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "ARTS1303",
+                "Unity Game Development"
+            ]
+        ]
+    },
+    "liuzhch1": {
+        "name": "刘志成",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "ARTS1303",
+                "Unity Game Development"
+            ]
+        ]
+    },
+    "mingyt": {
+        "name": "明钰涛",
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "ARTS1303",
+                "Unity Game Development"
             ]
         ]
     }
