@@ -445,7 +445,23 @@ layui.define(['jquery', 'util', 'element', 'proxy', 'tagsInputAutoComplete', 'av
                         }
                     },
                     showcfg: function(){
-                        d_cfg.innerHTML = '<hr><form class="layui-form" action="" lay-filter="form-new-semester" style="padding-top: 15px;">    <div class="layui-form-item">        <div class="layui-inline">            <label class="layui-form-label">季节</label>            <div class="layui-input-inline">              <input type="text" name="season" lay-verify="required" autocomplete="off" class="layui-input">            </div>        </div>        <div class="layui-inline">          <label class="layui-form-label">学年</label>          <div class="layui-input-inline">            <input type="text" name="year" lay-verify="required" autocomplete="off" class="layui-input">          </div>        </div>        <div class="layui-inline">            <label class="layui-form-label">课程编号</label>            <div class="layui-input-inline">              <input type="text" name="course_id" lay-verify="required" autocomplete="off" class="layui-input">            </div>        </div>        <div class="layui-inline">          <label class="layui-form-label">开课单位</label>          <div class="layui-input-inline">            <input type="text" name="department" lay-verify="required" autocomplete="off" class="layui-input">          </div>        </div>        <div class="layui-inline">          <label class="layui-form-label">学分</label>          <div class="layui-input-inline">            <input type="text" name="credit" lay-verify="required" autocomplete="off" class="layui-input">          </div>        </div>        <div class="layui-inline">            <label class="layui-form-label">学时</label>            <div class="layui-input-inline">              <input type="text" name="hours" lay-verify="required" autocomplete="off" class="layui-input">            </div>        </div>    </div>    <div class="layui-form-item">        <label class="layui-form-label">先修课程</label>        <div class="layui-input-block">            <input style="width: 95%" type="text" name="prerequisite" lay-verify="required" autocomplete="off" class="layui-input">        </div>    </div>    <div class="layui-form-item">        <label class="layui-form-label">评分标准</label>        <div class="layui-input-block">            <input style="width: 95%" type="text" name="evaluation" lay-verify="required" autocomplete="off" class="layui-input">        </div>    </div>    <div class="layui-form-item">        <label class="layui-form-label">首页</label>        <div class="layui-input-block">            <input style="width: 95%" type="text" name="mainpage" placeholder="例：https://example.com。不填即无首页。" autocomplete="off" class="layui-input">        </div>    </div>    <div class="layui-form-item">        <label class="layui-form-label">教师</label>        <div id="teacher-new-semester" style="width:95%"></div>    </div>    <div class="layui-form-item">        <label class="layui-form-label">助教</label>        <div id="ta-new-semester" style="width:95%"></div>    </div>    <div class="layui-row" style="margin-left: 110px; margin-bottom: 1rem;">        <p style="font-size:12px; margin-bottom:0; text-shadow: 0 0 1rem #fefefe; color: #b4b4b4;">提示：单击人物ID以查看详情。</p>        <a href="javascript:;" style="font-size:12px; font-weight: normal;">没有找到？点这里添加人物</a>    </div>        <div class="layui-form-item">    <div class="layui-input-block">      <button type="button" class="layui-btn layui-btn-violet" lay-submit="" lay-filter="submit-new-semester">添加</button>      <button type="reset" class="layui-btn layui-btn-primary-violet layui-btn-disabled">重置</button>    </div>  </div></form>';
+
+                        layui.form.verify({
+                            courseid: function(value, item){ //value：表单的值、item：表单的DOM对象
+                                if(!new RegExp("^"+cardComponent.content.code+"\.[0-9]+$").test(value)){
+                                    return '课程编号格式错误，必须为 '+cardComponent.content.code+'.[两位数字] 的形式。';
+                                }
+                                let slist = cardComponent.content.semesters;
+                                if (slist) {
+                                    for (let i = 0; i < slist.length; i++) {
+                                        if (slist[i].course_id == value && slist[i].season == semester.season && slist[i].year == semester.year)
+                                        return '该学期课程编号已存在，请更换。';
+                                    }
+                                }
+                            }
+                        });
+
+                        d_cfg.innerHTML = '<hr><form class="layui-form" action="" lay-filter="form-new-semester" style="padding-top: 15px;">    <div class="layui-form-item">        <div class="layui-inline">            <label class="layui-form-label">季节</label>            <div class="layui-input-inline">              <input type="text" name="season" lay-verify="required" autocomplete="off" class="layui-input">            </div>        </div>        <div class="layui-inline">          <label class="layui-form-label">学年</label>          <div class="layui-input-inline">            <input type="text" name="year" lay-verify="required" autocomplete="off" class="layui-input">          </div>        </div>        <div class="layui-inline">            <label class="layui-form-label">课程编号</label>            <div class="layui-input-inline">              <input type="text" name="course_id" lay-verify="required|courseid" autocomplete="off" class="layui-input">            </div>        </div>        <div class="layui-inline">          <label class="layui-form-label">开课单位</label>          <div class="layui-input-inline">            <input type="text" name="department" lay-verify="required" autocomplete="off" class="layui-input">          </div>        </div>        <div class="layui-inline">          <label class="layui-form-label">学分</label>          <div class="layui-input-inline">            <input type="text" name="credit" lay-verify="required" autocomplete="off" class="layui-input">          </div>        </div>        <div class="layui-inline">            <label class="layui-form-label">学时</label>            <div class="layui-input-inline">              <input type="text" name="hours" lay-verify="required" autocomplete="off" class="layui-input">            </div>        </div>    </div>    <div class="layui-form-item">        <label class="layui-form-label">先修课程</label>        <div class="layui-input-block">            <input style="width: 95%" type="text" name="prerequisite" lay-verify="required" autocomplete="off" class="layui-input">        </div>    </div>    <div class="layui-form-item">        <label class="layui-form-label">评分标准</label>        <div class="layui-input-block">            <input style="width: 95%" type="text" name="evaluation" lay-verify="required" autocomplete="off" class="layui-input">        </div>    </div>    <div class="layui-form-item">        <label class="layui-form-label">首页</label>        <div class="layui-input-block">            <input style="width: 95%" type="text" name="mainpage" placeholder="例：https://example.com。不填即无首页。" autocomplete="off" class="layui-input">        </div>    </div>    <div class="layui-form-item">        <label class="layui-form-label">教师</label>        <div id="teacher-new-semester" style="width:95%"></div>    </div>    <div class="layui-form-item">        <label class="layui-form-label">助教</label>        <div id="ta-new-semester" style="width:95%"></div>    </div>    <div class="layui-row" style="margin-left: 110px; margin-bottom: 1rem;">        <p style="font-size:12px; margin-bottom:0; text-shadow: 0 0 1rem #fefefe; color: #b4b4b4;">提示：单击人物ID以查看详情。</p>        <a href="javascript:;" style="font-size:12px; font-weight: normal;">没有找到？点这里添加人物</a>    </div>        <div class="layui-form-item">    <div class="layui-input-block">      <button type="button" class="layui-btn layui-btn-violet" lay-submit="" lay-filter="submit-new-semester">添加</button>      <button type="reset" class="layui-btn layui-btn-primary-violet layui-btn-disabled">重置</button>    </div>  </div></form>';
                         d_cfg.classList.add('layui-hide');
 
                         layui.form.val('form-new-semester', {
@@ -1218,7 +1234,7 @@ layui.define(['jquery', 'util', 'element', 'proxy', 'tagsInputAutoComplete', 'av
 
             addPeople: function() {
                 var pid = "wums1";
-                var p = {"name": "无名氏"};
+                var p = {"name": "无名氏", "info": [["envelope", "&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;", "mailto:&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"]]};
 
                 function stringToEntity(str,radix){
                     let arr=str.split('')
@@ -1337,7 +1353,7 @@ layui.define(['jquery', 'util', 'element', 'proxy', 'tagsInputAutoComplete', 'av
                     var tgt = $('[name=icon-' + idx + ']')[0];
                     tgt.oninput = function(){
                         var idx = $('#table tbody tr').index($(this).closest('tr'));
-                        var tgt = $('[name=icon-' + idx + ']')[0];
+                        var tgt = this;
                         p.info[idx][0] = tgt.value;
                         d1.innerHTML = makeHTML();
                     }
@@ -1345,7 +1361,7 @@ layui.define(['jquery', 'util', 'element', 'proxy', 'tagsInputAutoComplete', 'av
                     var tgt = $('[name=text-' + idx + ']')[0];
                     tgt.oninput = function(){
                         var idx = $('#table tbody tr').index($(this).closest('tr'));
-                        var tgt = $('[name=text-' + idx + ']')[0];
+                        var tgt = this;
                         p.info[idx][1] = tgt.value;
                         if (p.info[idx][0] == 'envelope') {
                             p.info[idx][1] = stringToEntity(tgt.value);
@@ -1356,7 +1372,7 @@ layui.define(['jquery', 'util', 'element', 'proxy', 'tagsInputAutoComplete', 'av
                     var tgt = $('[name=link-' + idx + ']')[0];
                     tgt.oninput = function(){
                         var idx = $('#table tbody tr').index($(this).closest('tr'));
-                        var tgt = $('[name=link-' + idx + ']')[0];
+                        var tgt = this;
                         p.info[idx][2] = tgt.value;
                         if (p.info[idx][0] == 'envelope') {
                             p.info[idx][2] = 'mailto:'+stringToEntity(tgt.value.split('mailto:').pop());
