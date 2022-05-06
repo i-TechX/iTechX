@@ -1,0 +1,170 @@
+«««
+code: CS274A
+name: Natural Language Processing
+semester: Spring 2022
+category: Homework 作业
+title: Homework 3
+»»»
+
+# Homework 3
+
+## Page 1 (question)
+
+@ Problem - checkbox
+
+title: "Question 1 - Beyond CFG"
+content: """
+Select all correct statements
+"""
+choice: """
+There are no polynomial-time parsing algorithms for Mildly context-sensitive grammars.
+Mildly context-sensitive grammars are more expressive than PCFGs.
+In span-based parsing, we need to compute scores for every possible span, and use the CKY algorithm to find the highest-scoring tree. 
+Constituency parsing can be casted to a sequence-labeling task. The main advantage is the faster parsing speed. 
+"""
+points: "10"
+answer: "BCD"
+
+
+@ Problem - text
+
+title: "Question 2 - Constituency parsing evaluation"
+content: """
+(Note: indexes here are left inclusive and right exclusive)
+
+Gold standard brackets are:  S-(0:11), NP-(0:2), VP-(2:9), VP-(3:9), NP-(4:6), PP- (6-9), NP-(7,9), NP-(9:10). 
+
+and that of predicted parse tree are: S-(0:11), NP-(0:2), VP-(2:10), VP-(3:10), NP-(4:6), PP-(6-10), NP-(7,10). 
+
+What is the F1 score?  (Answer should be  XX.XX %, you need to enter XX.XX as your answer, excluding %)
+"""
+points: "10"
+answer: "40"
+
+
+@ Problem - checkbox
+
+title: "Question 3 - PCFG"
+content: """
+Select all correct statements.
+"""
+choice: """
+The inside algorithm is fully differentiable, thus we can use automatic differentiation to backpropagate through the inside algorithm. 
+The time complexity of the inside algorithm is $O(n^3 |G|)$, where $n$ is the sentence length and $|G|$ is the grammar size.
+Any CFGs can be rewritten into Choskey Normal form. The resulting parse tree can be non-binary. 
+The CKY algorithm can be applied to any CFGs for parsing.
+"""
+points: "10"
+answer: "AB"
+
+
+@ Problem - checkbox
+
+title: "Question 4 - PCFG"
+content: """
+Select all correct statements.
+"""
+choice: """
+Weighted context-free grammar (WCFG) has the same expressiveness as probabilistic context-free grammar (PCFG). 
+We can use the maximum likelihood estimator (MLE) to learn a PCFG on a treebank. MLE often leads to good performance because PCFGs are very expressive.
+Latent-variable PCFG split each nonterminal into a finite number of subtypes, regarding nonterminal subtypes in training parse trees as latent variables. 
+We can use the EM algorithm for unsupervised learning of PCFGs, and use the inside-outside algorithm to compute expected counts. 
+"""
+points: "10"
+answer: "ACD"
+
+
+## Page 2 (question)
+
+
+@ Problem - radio
+
+title: "Question 5 - Head or Dependent"
+content: """
+In a dependency parse tree, the nodes are the words in a sentence and each word has one and only one dependent.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 6 - Evaluation"
+content: """
+Given the following gold and predicted dependency parses:
+
+Gold:
+
+<img src="https://s1.ax1x.com/2022/05/06/OnYJsK.png" link="https://imgtu.com/i/OnYJsK" alt="gold" style="max-width:90%; max-height:2000px;"/>
+
+Predicted:
+
+<img src="https://s1.ax1x.com/2022/05/06/OnY0JA.png" link="https://imgtu.com/i/OnY0JA" alt="predicted" style="max-width:90%; max-height:2000px;"/>
+
+What is the Unlabelled Attachment Score (UAS)? What about the Labelled Attachment Score (LAS)?
+"""
+choice: """
+UAS = 80%, LAS = 40%
+UAS = 60%, LAS = 80%
+UAS = 80%, LAS = 60%
+UAS = 60%, LAS = 20%
+"""
+points: "10"
+answer: "C"
+
+
+@ Problem - radio
+
+title: "Question 7 - Graph-Based Dependency Parsing"
+content: """
+Consider the sentence: I love Natural Language Processing.
+
+| Head\Dependent | I   | love | Natural | Language | Processing |
+| -------------- | --- | ---- | ------- | -------- | ---------- |
+| ROOT           | 15  | 13   | 20      | 10       | 20         |
+| I              | -   | 10   | 12      | 1        | 25         |
+| love           | 10  | -    | 6       | 19       | 15         |
+| Natural        | 2   | 23   | -       | 7        | 1          |
+| Language       | 13  | 1    | 22      | -        | 15         |
+| Processing     | 5   | 1    | 7       | 26       | -          |
+
+Given the arc scores above, what's the dependent of ROOT if we run the Eisner Algorithm?
+"""
+choice: """
+I
+love
+Natural
+Language
+Processing
+"""
+points: "10"
+answer: "A"
+explanation: """
+This question is a little bit difficult. We know that the Eisner Algorithm returns the (projective) dependency parse tree with the highest score. Since for any dependency parse tree, each word has one and only one head, we assert that we have to pick one and only one score from each column. We try the maximum score in each column (15, 23, 22, 26, 25) and surprisingly find that it is a valid dependency parse tree. So we get the answer.
+"""
+
+
+@ Problem - radio
+
+title: "Question 8 - Transition-Based Parsing"
+content: """
+Consider the sentence: I love Natural Language Processing.
+
+We perform the following transitions: SHIFT, SHIFT, LEFT-ARC, SHIFT, SHIFT, SHIFT, LEFT-ARC, LEFT-ARC, RIGHT-ARC, RIGHT-ARC.
+
+What's the dependent of ROOT in the dependency parse tree?
+"""
+choice: """
+I
+love
+Natural
+Language
+Processing
+"""
+points: "10"
+answer: "B"
+
