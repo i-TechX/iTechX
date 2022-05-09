@@ -1,4 +1,23 @@
 {
     "code": "CS160",
-    "name": "Human Computer Interaction"
+    "name": "Human Computer Interaction",
+    "semesters": [
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "CS160.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Web programming (e.g., html, css), object-oriented programming (e.g., C++, java), python",
+            "evaluation": "Assignments (15%), Quiz (15%, only with a two-sided A4 cheat sheet), Presentation and Participation (10%), Course Project (60%)",
+            "teacher": [
+                "liquan"
+            ],
+            "ta": [
+                "xielx",
+                "ouyy"
+            ]
+        }
+    ]
 }
