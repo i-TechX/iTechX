@@ -3522,6 +3522,12 @@
         "ta-courses": [
             [
                 "Spring",
+                "2022",
+                "CS272",
+                "Computer Vision II"
+            ],
+            [
+                "Spring",
                 "2021",
                 "CS132",
                 "Software Engineering"
@@ -6177,6 +6183,12 @@
         "ta-courses": [
             [
                 "Spring",
+                "2022",
+                "CS272",
+                "Computer Vision II"
+            ],
+            [
+                "Spring",
                 "2021",
                 "CS270",
                 "Digital Image Processing"
@@ -8186,7 +8198,15 @@
                 "https://faculty.sist.shanghaitech.edu.cn/faculty/wangjingya/"
             ]
         ],
-        "image": true
+        "image": true,
+        "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS272",
+                "Computer Vision II"
+            ]
+        ]
     },
     "jiangsy2": {
         "name": "姜淞译",
@@ -8195,6 +8215,14 @@
                 "envelope",
                 "&#106;&#105;&#97;&#x6e;&#103;&#x73;&#x79;&#50;&#x40;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#x6e;",
                 "mailto:&#106;&#105;&#x61;&#110;&#x67;&#115;&#121;&#50;&#64;&#x73;&#x68;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#101;&#100;&#117;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS272",
+                "Computer Vision II"
             ]
         ]
     }
