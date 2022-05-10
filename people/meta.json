@@ -963,6 +963,12 @@
         "teach-courses": [
             [
                 "Spring",
+                "2022",
+                "CS270B",
+                "Advanced Digital Image Processing"
+            ],
+            [
+                "Spring",
                 "2021",
                 "CS270",
                 "Digital Image Processing"
@@ -4459,6 +4465,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS270B",
+                "Advanced Digital Image Processing"
+            ],
             [
                 "Fall",
                 "2021",
