@@ -3,6 +3,29 @@
     "name": "Discrete Mathematics",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "SI120.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Attendance: 10%, Homework: 30%, Midterm: 30%, Final Exam: 30%",
+            "teacher": [
+                "zhanglf",
+                "hexm"
+            ],
+            "ta": [
+                "qiaowh",
+                "limt1",
+                "zhengge",
+                "chenzl",
+                "chenyc",
+                "lizy5",
+                "chenyy6"
+            ]
+        },
+        {
             "course_id": "SI120.01",
             "season": "Spring",
             "year": "2021",
@@ -11,7 +34,13 @@
                 "jiangjh"
             ],
             "ta": [
-                "qiaowh", "xuzhl2", "wuhy1", "lizha", "youch", "zhuqy", "mayx2"
+                "qiaowh",
+                "xuzhl2",
+                "wuhy1",
+                "lizha",
+                "youch",
+                "zhuqy",
+                "mayx2"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -25,10 +54,16 @@
             "year": "2020",
             "mainpage": "https://i-techx.github.io/SI120/index.html",
             "teacher": [
-                "zhanglf", "lindsaynj"
+                "zhanglf",
+                "lindsaynj"
             ],
             "ta": [
-                "kepzh", "qiaowh", "zengli", "xiasa", "wuhy1", "youch"
+                "kepzh",
+                "qiaowh",
+                "zengli",
+                "xiasa",
+                "wuhy1",
+                "youch"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -42,7 +77,8 @@
             "year": "2019",
             "mainpage": "https://i-techx.github.io/SI120/index.html",
             "teacher": [
-                "zhanglf", "nlegout"
+                "zhanglf",
+                "nlegout"
             ],
             "ta": [
                 "unknown"
