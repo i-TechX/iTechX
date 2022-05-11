@@ -82,8 +82,8 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 '加载网页所使用的Github API，对api.github.com进行代理', 
                 "^https?://api.github.com(.*)$", 
                 {
-                    "itechx": ["https://githubapi.itechx.workers.dev$1", "iTechX 临时代理（默认）"],
-                    "none": ["$&", "无代理"],
+                    "itechx": ["https://githubapi.itechx.workers.dev$1", "iTechX 临时代理"],
+                    "none": ["$&", "无代理（默认）"],
                 }
             ],
         ];
@@ -94,7 +94,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
             'PDF': 'nbviewer-preview',
             'Images': 'ghucs',
             'Files': 'ghproxy',
-            'API': 'itechx'
+            'API': 'none'
         };
 
         /* Init */
