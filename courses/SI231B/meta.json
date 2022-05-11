@@ -1,0 +1,81 @@
+{
+    "code": "SI231B",
+    "name": "Matrix Computations",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2021",
+            "course_id": "SI231B.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Assignments: 30%, 6 times; Midterm exam: 40%; Final project: 30%, working in a group of 2 or 1",
+            "teacher": [
+                "qiuyue"
+            ],
+            "ta": [
+                "zhangxy11",
+                "lizw",
+                "zhuxy3",
+                "mengxx"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2021",
+            "course_id": "SI231B.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Compulsory: Linear Algebra, Mathematical Analysis or Advanced Calculus, Probability and Statistics. Recommended Postrequisites: Mathematical and Numerical Optimization, Machine Learning.",
+            "evaluation": "Assignments: 30%, Midterm exam: 40%, Final project: 30%",
+            "teacher": [
+                "zhaoziping"
+            ],
+            "ta": [
+                "zhangzp1"
+            ],
+            "mainpage": "https://si231.sist.shanghaitech.edu.cn/index-21spring.html"
+        },
+        {
+            "season": "Fall",
+            "year": "2020",
+            "course_id": "SI231B.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Assignments: 30%, 5 times; Midterm exam: 40%; Final project: 30%, working in a group of 2",
+            "teacher": [
+                "qiuyue"
+            ],
+            "ta": [
+                "xuzhh",
+                "unknown"
+            ]
+        },
+        {
+            "season": "Fall",
+            "year": "2020",
+            "course_id": "SI231B.02",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Compulsory: Linear Algebra, Mathematical Analysis or Advanced Calculus, Probability and Statistics, Linear Programming, SI151 Optimization and Machine Learning. Recommended/Postrequisites: Mathematical and Numerical Optimization, Machine Learning.",
+            "evaluation": "Assignments: 30%, Midterm exam: 40%, Final project: 30%",
+            "teacher": [
+                "zhaoziping"
+            ],
+            "ta": [
+                "zhulin",
+                "xuzhh",
+                "maosong",
+                "xush",
+                "zhangxy11",
+                "unknown"
+            ],
+            "mainpage": "https://si231.sist.shanghaitech.edu.cn/index-20fall.html"
+        }
+    ]
+}
