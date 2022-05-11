@@ -37,6 +37,27 @@
                 "xuzhh",
                 "unknown"
             ]
+        },
+        {
+            "season": "Fall",
+            "year": "2020",
+            "course_id": "SI231B.02",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Assignments: 30%, Midterm exam: 40%, Final project: 30%",
+            "teacher": [
+                "zhaoziping"
+            ],
+            "ta": [
+                "zhulin",
+                "xuzhh",
+                "maosong",
+                "xush",
+                "zhangxy11",
+                "unknown"
+            ]
         }
     ]
 }
