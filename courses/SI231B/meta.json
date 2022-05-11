@@ -1,4 +1,25 @@
 {
     "code": "SI231B",
-    "name": "Matrix Computations"
+    "name": "Matrix Computations",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2021",
+            "course_id": "SI231B.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Assignments: 30%, 6 times; Midterm exam: 40%; Final project: 30%, working in a group of 2 or 1",
+            "teacher": [
+                "qiuyue"
+            ],
+            "ta": [
+                "zhangxy11",
+                "lizw",
+                "zhuxy3",
+                "mengxx"
+            ]
+        }
+    ]
 }
