@@ -650,6 +650,12 @@
         "teach-courses": [
             [
                 "Fall",
+                "2022",
+                "ARTS1422",
+                "Data Visualization"
+            ],
+            [
+                "Fall",
                 "2021",
                 "CS240",
                 "Algorithm Design and Analysis"
@@ -7333,6 +7339,14 @@
         ]
     },
     "chenlongfei": {
-        "name": "陈龙飞"
+        "name": "陈龙飞",
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "ARTS1422",
+                "Data Visualization"
+            ]
+        ]
     }
 }
