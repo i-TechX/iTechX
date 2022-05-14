@@ -1,5 +1,23 @@
 {
     "status": "activate",
     "code": "ARTS1422",
-    "name": "Data Visualization"
+    "name": "Data Visualization",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "ARTS1422.00",
+            "department": "创意与艺术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "本： 信息科学技术导论(SI100B) ; 信息科学技术导论(SI100F) ",
+            "evaluation": "1.\t作业 (homework)：涉及知识、工具、编程语言的熟悉与应用以及文献的阅读:  20% 2.\t随堂测试 (quiz)：10% 3.\tTop VIS Competition (individual-based): 10% 4.\t课程项目(team-based)：60% 课程项目将于学期初宣布，学生将三人为一组完成课题。学生将在学期末完成项目，完成项目系统，录制视频，撰写学术排版样式的文章并完成项目演讲。",
+            "teacher": [
+                "liquan"
+            ],
+            "ta": [
+                "chenlongfei"
+            ]
+        }
+    ]
 }
