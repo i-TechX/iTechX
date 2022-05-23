@@ -1,0 +1,413 @@
+// ------------------------------------
+// example-1
+#include<stdio.h>
+#include<iostream>
+
+class A
+{
+public:
+	int i = 0;
+	void f();
+};
+
+void A::f() {
+	i = 20;
+	std::cout << i << std::endl;
+}
+
+typedef struct B {
+	int i;
+};
+
+void f(B *p) {
+	p->i = 20;
+	std::cout << p->i << std::endl;
+}
+
+
+
+int main(void) {
+
+	A a;
+	A b;
+	
+	std::cout << a.i << std::endl;
+	a.f();
+	a.f();
+
+	B c;
+	f(&c);
+
+}
+
+// ------------------------------------
+// example-2
+#include<stdio.h>
+#include<iostream>
+
+class A
+{
+public:
+	int i = 0;
+	void f();
+};
+
+void A::f() {
+	i = 20;
+	printf("A::f()--&i = %p...\n", &i);
+	// printf("this = %p...\n", this);
+}
+
+
+int main(void) {
+
+	A a;
+	A aa;
+	a.i = 10;
+
+	printf("&a = %p...\n", &a);
+	printf("&a.i = %p...\n", &(a.i));
+
+	a.f();
+	printf("&aa = %p...\n", &aa);
+	aa.f();
+
+	return 0;
+}
+
+
+// ------------------------------------
+// example-3
+// constructer
+#include<stdio.h>
+#include<iostream>
+
+class A
+{
+public:
+	int i = 0;
+	A();
+	void f();
+};
+
+void A::f() {
+	this->i = 20;
+	printf("A::f()--&i = %p...\n", &i);
+	printf("this = %p...\n", this);
+}
+
+A::A() {
+	i = 0;
+	printf("A::A()-- this = %p...\n", this);
+}
+
+int main(void) {
+
+	A a;
+	A aa;
+	a.i = 10;
+
+	printf("&a = %p...\n", &a);
+	printf("&a.i = %p...\n", &(a.i));
+
+	a.f();
+	printf("&aa = %p...\n", &aa);
+	aa.f();
+
+	return 0;
+}
+
+
+// ------------------------------------
+// example-4
+// constructor
+#include<stdio.h>
+#include<iostream>
+
+using namespace std;
+
+class Tree
+{
+public:
+	Tree(int _initHeight);
+	~Tree();
+	void grow(int years);
+	void printSize();
+private:
+	int height;
+};
+
+Tree::Tree(int _initHeight){
+	height = _initHeight;
+	cout << "inside Tree()" << endl;
+}
+
+Tree::~Tree()
+{
+	cout << "inside ~Tree()" << endl;
+}
+void Tree::grow(int years) {
+	height += years;
+}
+void Tree::printSize() {
+	cout << "Size  = " << height << endl;
+}
+
+
+int main(void) {
+	
+	cout << "before opening brace" << endl;
+	{
+		Tree t(12);
+		cout << "after Tree creation" << endl;
+		t.printSize();
+		t.grow(4);
+		cout << "before close brace" << endl;
+	}
+	cout << "after close brace" << endl;
+
+	return 0;
+}
+
+// ------------------------------------
+// example-5
+// constructor
+#include<stdio.h>
+#include<iostream>
+
+class X
+{
+public:
+	X();
+
+};
+X::X(){}
+
+void f(int i) {
+	if (i < 10){
+		//goto jum1;	//error
+	}
+	X x1;
+jum1:
+	switch (i) {
+	case 1:
+		X x2;
+		break;
+	//case 2:	//error
+		X x3;
+		break;
+	}
+}
+
+int main(void) {
+
+	f(2);
+
+	return 0;
+}
+
+// ------------------------------------
+// example-6
+#include<stdio.h>
+#include<iostream>
+
+class A
+{
+public:
+	int i = 0;
+	A(int a);
+	~A();
+	void f();
+};
+
+void A::f() {
+	this->i = 20;
+	printf("A::f()--&i = %p...\n", &i);
+	printf("this = %p...\n", this);
+}
+
+A::A(int a) {
+	i = a;
+	printf("A::A()-- this = %p...\n", this);
+}
+A::~A() {
+	printf("A::~A()-- this = %p...\n", this);
+}
+
+int main(void) {
+
+	A a(1);
+	A aa(2);
+	a.i = 10;
+
+	printf("&a = %p...\n", &a);
+	printf("&a.i = %p...\n", &(a.i));
+	a.f();
+	printf("&aa = %p...\n", &aa);
+	aa.f();
+
+	A y[2] = {A(1),A(2)};
+
+	return 0;
+}
+
+// ------------------------------------
+// example-7
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+	
+	A() { cout << "A:A()" << endl; }
+	~A() { cout << "A:~A()" << i << endl; }
+	void set(int _i) { i = _i; }
+private:
+	int i = 0;
+};
+
+int main(void) {
+
+	A* p = new A[10];
+	for (int i = 0; i < 10; i++){
+		p[i].set(i);
+	}
+	//delete[] p;
+	delete p;
+
+	return 0;
+}
+
+// ------------------------------------
+// example-8
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+class A
+{
+public:
+	A() { p = 0;  cout << "A:A()" << endl; }
+	~A() { if (p) delete p;	cout << "A:~A()" << i << endl; }
+	void set(int _i) { i = _i; }
+
+	void g(A* q) { cout << "A::g() q->i = " << q->i << endl; }
+private:
+	int i = 0;
+	int *p;
+};
+
+
+
+int main(void) {
+
+	A* p = new A[10];
+	for (int i = 0; i < 10; i++){
+		p[i].set(i);
+	}
+	
+	A b;
+	b.set(100);
+	p[0].g(&b);
+	
+	delete[] p;
+
+	return 0;
+}
+
+
+// ------------------------------------
+// example-9
+// friend
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+
+struct X;
+
+struct Y {
+	void f(X*);
+};
+
+struct X {
+public:
+	void init();
+	friend void g(X*, int); // global friend
+	friend void Y::f(X*);	// struct membber friend
+	friend struct Z;	//entire struct is a friend
+	friend void h();
+
+
+	void print() {
+		printf("X: m_i = %d...\n", m_i);
+	}
+
+private:
+	int m_i;
+};
+
+void X::init(){
+	m_i = 0;
+}
+
+void g(X* x, int i) {
+	x->m_i = i;
+}
+
+void Y::f(X* x) {
+	x->m_i = 100;
+}
+
+struct Z {
+private:
+	int j;
+};
+
+int main(void) {
+
+	X x_tmp;
+	x_tmp.init();
+
+	g(&x_tmp, 10);
+	x_tmp.print();
+
+	Y y_tmp;
+	y_tmp.f(&x_tmp);
+	x_tmp.print();
+
+	return 0;
+
+	return 0;
+}
+
+// ------------------------------------
+// example-10
+#include<stdio.h>
+#include<iostream>
+using namespace std;
+
+class B {
+public:
+	B(int i){}
+	// B (){}
+};
+
+class A {
+public:
+
+	A():i(0), b(0) {
+		// i = 0; 
+		// b = 0; 
+	}
+
+	int i;
+	B b;
+};
+
+int main(void) {
+
+
+}
+
+
+

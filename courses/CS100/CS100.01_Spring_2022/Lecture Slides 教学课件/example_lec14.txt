@@ -1,0 +1,357 @@
+// -------------------------------
+// example-1
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class Person {
+public:
+	// functions  
+private:
+	string m_name;
+	int m_age;
+};
+
+class Driver : public Person {
+public:
+	// functions  
+private:
+	int	m_licenseExpire;  
+	string m_licenseType;
+	// etc
+};
+
+class Chassis {
+public:
+	//functions
+private:
+	string m_material;  
+	double m_weight;  
+	double m_maxLoad;
+	// etc
+};
+
+
+class Vehicle {
+public:
+	// functions  
+private:
+	int m_numAxles; 
+	int m_numWheels; 
+	int	m_maxSpeed;
+	double m_weight;
+	// etc
+};
+
+class Car : public Vehicle {
+public:
+	// functions 
+private:
+	int	m_numSeats;
+	double m_MPG;  
+	string m_color;  
+	string m_fuelType;
+	// etc
+
+	Chassis m_chassis;
+	Driver *m_driver;
+};
+int main(void)
+{
+	return 0;
+}
+
+// -------------------------------
+// example-2
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A() :m_i(0) { cout << "A::A()" << endl; }
+	~A(){ cout << "A::~A()" << endl; }
+	void print(){ cout << "A::print() i = " << m_i << endl; }
+	void set(int i) { m_i = i; }
+private:
+	int m_i;
+};
+
+class B : public A {
+
+};
+
+
+int main(void) {
+	B b;
+	b.set(10);
+	b.print();
+
+	return 0;
+}
+
+// -------------------------------
+// example-3
+#include<stdio.h>
+#include<iostream>
+#include<string>
+using namespace std;
+class A {
+public:
+	A() :m_i(0) { cout << "A::A()" << endl; }
+	~A(){ cout << "A::~A()" << endl; }
+	void print(){ cout << "A::print() i = " << m_i << endl; }
+// protected:
+	void set(int i) { m_i = i; }
+private:
+	int m_i;
+};
+
+class B : public A {
+public:
+	void f() { 
+		set(20);
+		print();
+		// m_i = 100;
+	};
+};
+int main(void) {
+	B b;
+	b.set(10);
+	b.print();
+	b.f();
+	
+	return 0;
+}
+
+// -------------------------------
+// example-4
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A(int ii) :m_i(ii) { cout << "A::A()" << endl; }
+	~A(){ cout << "A::~A()" << endl; }
+	void print(){ cout << "A::print() i = " << m_i << endl; }
+	void set(int i) { m_i = i; }
+private:
+	int m_i;
+};
+
+class B : public A {
+public:
+	B(): A(15){ cout << "B::B()" << endl; }
+	~B() { cout << "B::~B()" << endl; }
+
+	void f() { 
+		set(20);
+		print();
+		// m_i = 100;
+	};
+};
+
+int main(void) {
+	B b;
+	b.set(10);
+	b.print();
+	b.f();
+
+	return 0;
+}
+
+// -------------------------------
+// example-5
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A() :m_i(10) { cout << "A::A()" << endl; }
+	~A(){ cout << "A::~A()" << endl; }
+
+	// virtual void print(){
+	void print() {
+		cout << "A::print() i = " << m_i << endl;
+	}
+
+	void print(int i) { cout << "A::print2()" << i << endl; print(); }
+	void set(int i) { m_i = i; }
+private:
+	int m_i;
+};
+
+class B : public A {
+public:
+	B(): A(){ cout << "B::B()" << endl; }
+	~B() { cout << "B::~B()" << endl; }
+
+	void print() { 
+		cout << "B::print()" << endl;
+	}
+
+	void f() { 
+		set(20);
+		print();
+		// m_i = 100;
+	};
+};
+
+int main(void) {
+	B b;
+	b.set(10);
+	b.print();
+	//b.print(200);	// name hiding !
+	
+	
+	A *pA = (A*)&b;
+	pA->print(200);
+	b.A::print(200);
+
+	return 0;
+}
+
+// -------------------------------
+// example-6
+// const object
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A() : m_i(0){}
+
+	void f() { cout << "f()" << endl; }		// A* this
+	void f() const { cout << "f() const" << endl; }	// const A* this
+	void set(int i) { m_i = i; }
+private:
+	int m_i;
+	const int m_i;
+};
+
+
+int main(void) {
+	const A a;
+	a.f();
+	// a.set(100);
+
+	return 0;
+}
+
+// -------------------------------
+// example-7
+// conversion
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A() : m_i(20){}
+	int m_i;
+};
+
+class B: public A {
+
+};
+
+int main(void) {
+	A a;
+	B b;
+
+	cout << "a.i = " << a.m_i << endl;
+	cout << "b.i = " << b.m_i << endl;
+
+	cout << "sizeof(a) = " << sizeof(a) << endl;
+	cout << "sizeof(b) = " << sizeof(b) << endl;
+
+	int *p = (int*)&a;
+	cout << p << " *p = " << *p << endl;
+
+	/**p = 100;
+	cout << "a.i = " << a.m_i << endl;*/
+
+	p = (int *)&b;
+	cout << p << " *p = " << *p << endl;
+
+	return 0;
+}
+
+// -------------------------------
+// example-8
+// upcasting, downcasting (向上向下造型)
+// conversion
+#include<stdio.h>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+class A {
+public:
+	A() : m_i(20) {}
+	void f() { cout << "A.i = " << m_i << endl; }
+	int m_i;
+};
+
+class B : public A {
+public:
+	B() : m_j(30) {}
+	void f() { cout << "B.j = " << m_j << endl; }
+private:
+	int m_j;
+
+};
+
+int main(void) {
+	A a;
+	B b;
+
+	cout << "a.i = " << a.m_i << endl;
+	cout << "b.i = " << b.m_i << endl;
+
+	cout << "sizeof(a) = " << sizeof(a) << endl;
+	cout << "sizeof(b) = " << sizeof(b) << endl;
+
+	int* p = (int*)&a;
+	cout << p << " *p = " << *p << endl;
+
+	*p = 100;
+	cout << "a.i = " << a.m_i << endl;
+
+	p = (int*)&b;
+	cout << p << " *p = " << *p << endl;
+	p++;
+	*p = 50;
+	b.f();
+
+
+	/*A* pA = &b;
+	pA->f();
+	(&b)->f();*/
+
+	return 0;
+}
+
+
+
+
+
+
+
+

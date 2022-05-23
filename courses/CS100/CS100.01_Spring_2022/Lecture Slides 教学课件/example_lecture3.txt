@@ -1,0 +1,150 @@
+// example-1
+int num1, num2;
+printf("enter num1 and num2:\n");
+scanf("%d %d", &num1, &num2);
+
+int sum = num1 + num2;
+printf("sum = %d....\n", sum);
+
+// example-2: flag: 
+printf("%-9d...\n", 12);
+printf("%9d...\n", 12);
+printf("%+9d...\n", 12);
+printf("%09d...\n", 12);
+
+printf("%-20f...\n", 1.2);
+printf("%20f...\n", 1.2);
+printf("%+20f...\n", 1.2);
+printf("%020f...\n", 1.2);
+
+// example-3
+printf("%10.3f ...\n", 12.34);
+
+int len = 10;
+printf("%*.3f ... \n", len, 12.34);
+
+// example-4
+// size: hh, h, l, ll, L 
+//(1, short, long, long long, long double)
+printf("%hhd ... \n", 1234);
+printf("%hhu ... \n", 1234);
+
+// example-5
+// %i,d,u,o,x,X,f,F,e,E,
+// %s,p,n
+const char *s_1 = "test test test";
+printf("%s \n", s_1);
+printf("%p", s_1);
+
+_set_printf_count_output(1);
+int num;
+printf("%d%n\n",12345, &num);
+printf("num = %d...\n", num);
+
+// example-6
+// scanf: %*
+int a, b; 
+scanf("%*d %d", &a, &b);
+printf("a = %d ...\n", a);
+printf("b = %d ...\n", b);
+
+// example-7
+// scanf: %[]
+char a[20], b[20];
+scanf("%*[^,],%[^,],%[^.]", &a, &b);
+printf("a = %s...\n", a);
+printf("b = %s...\n", b);
+
+
+// example-8
+int number;
+printf("Please enter a number: ");
+scanf("%d", &number);
+printf("The number read is %d\n", number);
+
+// int c;
+// while ((c = getchar()) != '\n' && c != EOF);
+
+// fflush(stdin); 
+
+char reply;
+
+printf("Correct(y / n)?");
+scanf("%c", &reply);
+//scanf("\n%c", &reply);
+printf("your reply: %c\n", reply);
+
+
+// example-9
+int a, b;
+
+while(1) {
+	a = 0; b = 0;
+	printf("please input 2 int:\n");
+	scanf("%d", &a); 
+	scanf("%d", &b); 
+
+	printf("a = %d, b = %d ......\n", a, b);
+}
+return 0;
+
+// example-10
+char c1, c2;
+c1 = getchar();
+c2 = getchar();
+
+//putchar(c1);
+//putchar('\n');
+//putchar(c2 ='b');
+//putchar('\n');
+
+printf("c1 = %c...\n", c1);
+printf("c2 = %c...\n", c2);
+
+
+// example-11
+	char ch;
+
+	while ( (ch = getchar()) != EOF) 
+	{
+		putchar(ch);
+	}
+
+	printf("EOF\n");
+
+// example-12
+	int i;
+	i = 3 + 4, 5 + 6;
+	//i = (3 + 4, 5 + 6);
+
+	printf("i = %d ...\n", i);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

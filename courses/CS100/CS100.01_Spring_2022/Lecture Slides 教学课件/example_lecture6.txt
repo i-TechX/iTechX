@@ -1,0 +1,301 @@
+// example-1
+// address
+	int i = 0;
+
+#if 0
+	int p;
+	p = (int)&i;
+	printf("0x%x ...\n", p);
+#endif
+
+#if 0
+	int *tmp = &(i++);
+#endif
+
+	printf("0x%x ...\n", &i);
+	printf("%p ...\n", &i);
+	
+// example-2
+
+	int i = 0; 
+	int p = 1;
+	int a[2] = { -1, 10 };
+
+	printf("%p...\n", &i);
+	printf("%p...\n", &p);
+
+	printf("%p...\n", &a);
+	printf("%p...\n", &a[0]);
+	printf("%p...\n", &a[1]);
+
+	printf("size(&p) = %d ... \n", sizeof(&p));
+	
+// example-3
+// pointer
+void f(int *p);
+void g(int i);
+
+int main(void) {
+
+	int i = 6;
+	printf("&i = %p ...\n", &i);
+	f(&i);
+
+	g(i);
+	printf("i = %d ...\n", i);
+
+	return 0;
+}
+
+void f(int *p) {
+
+	printf("f(): p = %p ...\n", p);
+
+	(*p)++;
+}
+
+void g(int i) {
+
+	printf("g(): &i = %p ...\n", &i);
+	i++;
+}
+
+// example-4
+	int i = 0;
+	//scanf("%d", i);
+	scanf("%d", &i);
+	printf(" i = %d ...\n", i);
+	
+// application
+// example-5
+void swap(int *pa, int*pb);
+
+int main(void) {
+
+	int a = 5, b = 6;
+
+	printf(" a = %d, b = %d ...\n", a, b);
+	swap(&a, &b);
+	printf(" a = %d, b = %d ...\n", a, b);
+
+	return 0;
+}
+
+void swap(int *pa, int*pb) {
+	int tmp = *pa;
+	*pa = *pb;
+	*pb = tmp;
+}
+
+// example-6
+void minmax(int a[], int len, int *min, int *max);
+
+int main(void) {
+
+	int a[] = { 1,2,3,4,5,6,7,8,-1,0,9,-3,10 };
+	int min, max;
+
+	minmax(a, sizeof(a) / sizeof(a[0]), &min, &max);
+
+	printf("min = %d, max = %d ...\n", min, max);
+
+	return 0;
+}
+
+void minmax(int a[], int len, int *min, int *max) {
+
+	*min = *max = a[0];
+
+	for (int i = 0; i < len; i++) {
+		if (a[i] < *min)
+			*min = a[i];
+
+		if (a[i] > *max)
+			*max = a[i];
+	}
+}
+	
+// example-7	
+int divide(int a, int b, int * result) {
+	int flag = 1;
+	if (b == 0)
+		flag = 0;
+	else
+		*result = a / b;
+
+	return flag;
+}
+
+int main(void) {
+
+	int a = 10, b = 3;
+	int c;
+
+	if (divide(a, b, &c))
+		printf("%d/%d = %d...\n", a, b, c);
+	else
+		printf("divide 0!!\n");
+		
+	return 0;
+}
+	
+// example-8
+int i = 6;
+// int *p = &i;
+int *p = (int*)10;
+*p = 12;
+
+// pointer operation	
+// example-9
+	char ac[] = { 0, 1, 2 ,3, 4, 5, 6, 7 , 8, 9 };
+	char *p = ac;
+
+	printf("p   = %p ...\n", p);
+	printf("p+1 = %p ...\n", p + 1);
+
+
+	int ai[] = { 0, 1, 2 ,3, 4, 5, 6, 7 , 8, 9 };
+	int *pi = ai;
+
+	printf("pi   = %p ...\n", pi);
+	printf("pi+1 = %p ...\n", pi + 1);
+#if 1
+	pi = (int*)p;
+	pi[0] = 0;
+
+	for (int i = 0; i < sizeof(ac) / sizeof(ac[0]); i++) {
+		printf("ac[%d] = %d\n",i, ac[i]);
+	}
+#endif
+
+
+// example-10
+	char ac[] = { 0, 1, 2 ,3, 4, 5, 6, 7 , 8, 9, -1 };
+	char *p = ac;
+
+	for (int i = 0; i < sizeof(ac)/sizeof(ac[0]); i++){
+		printf("loop1: %d\n", ac[i]);
+	}
+
+	while (*p != -1){
+		printf("loop2: %d\n", *p++);
+	}
+	
+	
+// function pointer
+// example-11
+
+void f(void) {
+	printf("f()...\n");
+}
+
+int main(void) {
+
+	int i = 0;
+	int* p = &i;
+	*p = 20;
+
+	int a[] = { 1,2 };
+
+#if 1
+	// p = f;
+	void (*pAAAAf)(void) = f;
+
+	f();
+	(*pf)();	// *pf()
+#endif
+	printf("%p ... \n", main);
+	printf("%p ... \n", f);
+	printf("%p ... \n", a);
+
+	return 0;
+}
+
+// example-12
+void f(int i ) {
+	printf("test in f(): %d ... \n", i);
+}
+
+void g(int i) {
+	printf("test in g(): %d ... \n", i);
+}
+
+int main(void) {
+
+	int i = 0;
+	void(*fa[2])(int) = { f,g };
+
+	fa[0](20);
+	fa[1](10);
+
+		for (int i = 0; i < sizeof(fa)/sizeof(fa[0]); i++)
+			fa[i](200);
+	
+	return 0;
+}
+
+// example-13
+int plus(int a, int b) {
+	return a + b;
+}
+
+int minus(int a, int b) {
+	return a - b;
+}
+
+void cal(int(*f)(int, int)) {
+
+	int a = (*f) (5888,1);
+	printf("%d\n", (*f)(100, 99));
+}
+
+int main(void) {
+
+	cal(plus);
+	cal(minus);
+	
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

@@ -1,0 +1,279 @@
+// example-1
+	int i, sum;
+
+	// 20-30
+	for (i = 20, sum = 0; i < 30; i++)
+		sum += i;
+	printf("sum = %d...\n", sum);
+
+	// 0-30
+	for (i = 0, sum = 0; i < 30; i++)
+		sum += i;
+	printf("sum = %d...\n", sum);
+
+	// 20-51
+	for (i = 20, sum = 0; i < 51; i++)
+		sum += i;
+	printf("sum = %d...\n", sum);
+--------------------------------------
+int sum_ab(int a, int b) {
+	int sum = 0;
+	for (int i = a; i < b; i++)
+		sum += i;
+
+	return sum;
+}
+--------------------------------------
+	int sum;
+
+	// 20-30
+	sum = sum_ab(20, 30);
+	printf("sum = %d...\n", sum);
+
+	// 0-30
+	sum = sum_ab(0, 30);
+	printf("sum = %d...\n", sum);
+
+	// 20-51
+	sum = sum_ab(20, 51);
+	printf("sum = %d...\n", sum);
+	
+	
+	
+// example-2	
+void hello() {
+	printf("hello world!\n");
+}
+
+int main(void) {
+	//hello;
+	hello();
+
+	return 0;
+}
+
+// example-3		
+// order
+
+float max2(float a, float b) {
+	return a > b ? a : b;
+}
+float max3(float a, float b, float c) {
+
+	return max2(max2(a, b), c);
+}
+
+int main(void) {
+	
+	float tmp;
+	tmp = max2(max2(1, 23), 100);
+	tmp = max3(10, 10.1, -8.1);
+
+	printf("tmp  = %.1f ...\n", tmp);
+		
+	return 0;
+}
+	
+	
+// example-4	
+// mis-match
+void print_num(int num) {
+	printf("num = %d...\n", num);
+}
+
+int main(void) {
+	
+	// double tmp = 2.4;
+	print_num(2);
+	// print_num(2.333);
+	// rint_num(tmp);
+
+
+	return 0;
+}
+
+
+
+// example-5
+// parameters
+void swap(int a, int b);
+
+int main(void) {
+	
+	int a = 10;
+	int b = 9;
+#if 0
+	{
+		int i = 10;
+		int b = 0;
+		printf("inside: a = %d, b = %d ...\n", a, b);
+	}
+#endif
+
+	printf("before swap: a = %d, b = %d ...\n", a, b);
+	swap(a, b);
+	printf("after swap: a = %d, b = %d ...\n", a, b);
+
+	return 0;
+}
+
+void swap(int a, int b) {
+	int t = a; 
+	a = b;
+	b = a;
+}
+
+// example-6
+// stdarg
+#include<stdarg.h>
+
+int sum_list(int n, ...);
+
+int main(void) {
+	int tmp;
+
+	tmp = sum_list(2, 10, 1);
+	printf("tmp = %d...\n", tmp);
+	
+	tmp = sum_list(2, 13, 10);
+	printf("tmp = %d...\n", tmp);
+
+	tmp = sum_list(2);
+	printf("tmp = %d...\n", tmp);
+
+	return 0;
+}
+
+
+int sum_list(int n, ...) {
+	int sum = 0;
+	
+	va_list vap;
+
+	va_start(vap, n);
+	for (int i = 0; i < n; i++) {
+		int tmp = va_arg(vap, int);
+		sum += tmp;
+	}
+	va_end(vap);
+
+	return sum;
+}
+
+// main return 
+echo %ERRORLEVEL%
+
+
+
+// example-7
+void swap(int a, int b);
+void swap(int *, int *);
+
+
+int main(void) {
+
+	int a = 10;
+	int b = 9;
+
+	printf("before swap: a = %d, b = %d ...\n", a, b);
+	swap(a, b);
+	swap(&a, &b);
+	printf("after swap: a = %d, b = %d ...\n", a, b);
+
+	return 0;
+}
+
+void swap(int a, int b) {
+	int t = a;
+	a = b;
+	b = a;
+}
+
+
+void swap(int *a, int *b) {
+	int tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+// example-8
+#include <stdio.h>
+
+void get_array(int a[5]) {
+	a[3] = 233;
+	
+	for (int i = 0; i < 5; i++) {
+		printf("inside, a[%d] = %d...\n", i, a[i]);
+	}
+}
+
+void get_num(int num) {
+	num = 233;
+	printf("inside, num = %d...\n", num);
+}
+
+int main(void) {
+
+	int a[5] = { 1, 2, 3, 4, 5 };
+	int num = 1;
+
+	get_array(a);
+	get_num(num);
+
+	for (int i = 0; i < 5; i++) {
+		printf("outside, a[%d] = %d...\n", i, a[i]);
+	}
+
+	printf("outside, num = %d...\n", num);
+
+	return 0;
+}
+
+// example-9
+#include <stdio.h>
+
+void get_array(int a[5]) {
+	a[3] = 233;
+	
+	for (int i = 0; i < 5; i++) {
+		printf("inside, a[%d] = %d...\n", i, a[i]);
+	}
+
+	printf("inside, sizeof a: %d...\n", sizeof(a));
+}
+
+
+int main(void) {
+
+	int a[5] = { 1, 2, 3, 4, 5 };
+
+	printf("outside, sizeof a: %d...\n", sizeof(a));
+
+	get_array(a);
+	
+
+	for (int i = 0; i < 5; i++) {
+		printf("outside, a[%d] = %d...\n", i, a[i]);
+	}
+
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
