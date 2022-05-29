@@ -24,8 +24,9 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 '加载阅读文件，如在线试题，文档，视频等，对raw.githubusercontent.com进行代理', 
                 "^https?://raw.githubusercontent.com(/([^/]*)/([^/]*)/([^/]*)(.*\\.(?:(?:mdx)|(?:md)|(?:htmlx)|(?:json))))$", 
                 {
-                    "jsdelivr": ["https://cdn.jsdelivr.net/gh/$2/$3@$4$5", "jsDelivr 代理（默认）"],
-                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理"],
+                    "jsdelivr": ["https://cdn.jsdelivr.net/gh/$2/$3@$4$5", "jsDelivr 代理"],
+                    "jsdelivr-fastly": ["https://fastly.jsdelivr.net/gh/$2/$3@$4$5", "jsDelivr 代理 (fastly)"],
+                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理（默认）"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理"],
                     "none": ["$&", "无代理"],
                 }
@@ -89,7 +90,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
         ];
 
         const DEFAULT_RULE = {
-            'Reader': 'jsdelivr',
+            'Reader': 'ghucs',
             'Microsoft': 'preview',
             'PDF': 'nbviewer-preview',
             'Images': 'ghucs',
