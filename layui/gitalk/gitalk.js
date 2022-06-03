@@ -5847,7 +5847,7 @@ exports.default = function (_ref) {
       className = _ref.className,
       alt = _ref.alt,
       _ref$defaultSrc = _ref.defaultSrc,
-      defaultSrc = _ref$defaultSrc === undefined ? '//cdn.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg' : _ref$defaultSrc;
+      defaultSrc = _ref$defaultSrc === undefined ? '//fastly.jsdelivr.net/npm/gitalk@1/src/assets/icon/github.svg' : _ref$defaultSrc;
   return _react2.default.createElement(
     'div',
     { className: 'gt-avatar ' + className },
