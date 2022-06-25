@@ -1,4 +1,4 @@
- # Ziyu Shao
+# Ziyu Shao
  
  I am a tenured associate professor in the School of Information Science and Technology@ ShanghaiTech University. I direct the Intelligence, Information and Decision Lab @ SIST!
 
