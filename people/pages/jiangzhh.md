@@ -14,3 +14,5 @@ Zhihao Jiang is currently an assistant professor in the School of Information Sc
 - MS.E in Robotics, 2010, University of Pennsylvania
 
 - BS.E in Technology and Instruments in Measurement and Control, 2008, University of Electronic Science and Technology of China
+
+Homepage: http://faculty.sist.shanghaitech.edu.cn/faculty/jiangzhh/
