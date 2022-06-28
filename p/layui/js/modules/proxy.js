@@ -28,6 +28,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                     "jsdelivr-fastly": ["https://fastly.jsdelivr.net/gh/$2/$3@$4$5", "jsDelivr 代理 (fastly)"],
                     "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理（默认）"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理"],
+                    "itechx2": ["https://itechx-portal.pages.dev/raw.githubusercontent.com$1", "iTechX 临时代理2"],
                     "none": ["$&", "无代理"],
                 }
             ],[
@@ -40,6 +41,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                     "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理-下载"],
                     "fastgit": ["https://raw.fastgit.org$1", "FastGit 代理-下载"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理-下载"],
+                    "itechx2": ["https://itechx-portal.pages.dev/raw.githubusercontent.com$1", "iTechX 临时代理2"],
                     "none": ["$&", "无代理-下载"],
                 }
             ],[
@@ -55,6 +57,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                     "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理-下载"],
                     "fastgit": ["https://raw.fastgit.org$1", "FastGit 代理-下载"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理-下载"],
+                    "itechx2": ["https://itechx-portal.pages.dev/raw.githubusercontent.com$1", "iTechX 临时代理2"],
                     "none": ["$&", "无代理-下载"],
                 }
             ],[
@@ -65,6 +68,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                     "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理"],
                     "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理（默认）"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理"],
+                    "itechx2": ["https://itechx-portal.pages.dev/raw.githubusercontent.com$1", "iTechX 临时代理2"],
                     "none": ["$&", "无代理"],
                 }
             ],[
@@ -76,6 +80,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                     "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理"],
                     "fastgit": ["https://raw.fastgit.org$1", "FastGit 代理"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理"],
+                    "itechx2": ["https://itechx-portal.pages.dev/raw.githubusercontent.com$1", "iTechX 临时代理2"],
                     "none": ["$&", "无代理"],
                 }
             ],[
@@ -84,7 +89,8 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 "^https?://api.github.com(.*)$", 
                 {
                     "itechx": ["https://githubapi.itechx.workers.dev$1", "iTechX 临时代理"],
-                    "none": ["$&", "无代理（默认）"],
+                    "itechx2": ["https://itechx-portal.pages.dev/api.github.com$1", "iTechX 临时代理2（默认）"],
+                    "none": ["$&", "无代理"],
                 }
             ],
         ];
@@ -95,7 +101,7 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
             'PDF': 'nbviewer-preview',
             'Images': 'ghucs',
             'Files': 'ghproxy',
-            'API': 'none'
+            'API': 'itechx2'
         };
 
         /* Init */
