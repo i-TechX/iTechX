@@ -1,0 +1,23 @@
+{
+    "code": "CS225",
+    "name": "Advanced Distributed System",
+    "semesters": [
+        {
+            "season": "Spring",
+            "year": "2022",
+            "mainpage": "https://jhe16.github.io/teaching/2014-spring-teaching-1",
+            "course_id": "CS225.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "CS130 and CS120 or equivalents. Programming in C++ or Java in Unix environment.",
+            "evaluation": "Quiz and class participation: 15%, paper presentation: 15%, written reviews: 20%, project 50% (proposal writeup 5%, proposal presentation 5%, project midreview presentation 10%, demo 10%, final presentation 10%, final writeup 10%)",
+            "teacher": [
+                "hejingzhu"
+            ],
+            "ta": [
+                "chendh1"
+            ]
+        }
+    ]
+}
