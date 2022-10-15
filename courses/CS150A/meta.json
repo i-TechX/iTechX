@@ -3,6 +3,25 @@
     "name": "Database",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CS150A.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "算法与数据结构, 操作系统 I",
+            "evaluation": "作业 (25%) + 小测试 (10%), 课程project (25%), 期末考试 (40%)",
+            "teacher": [
+                "sunlu1"
+            ],
+            "ta": [
+                "chenbb",
+                "xujh2020",
+                "pengxy",
+                "bianke"
+            ]
+        },
+        {
             "course_id": "CS150A.01",
             "season": "Fall",
             "year": "2021",
