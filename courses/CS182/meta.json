@@ -3,6 +3,22 @@
     "name": "Introduction to Machine Learning",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CS182.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Mathematical Analysis II, Linear Algebra,Probability and Statistics",
+            "evaluation": "作业: 30% 课程project：30% 期末考试：40%",
+            "teacher": [
+                "zhaoziping"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
             "season": "Spring",
             "year": "2022",
             "course_id": "CS182.01",
