@@ -25,8 +25,8 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 "^https?://raw.githubusercontent.com(/([^/]*)/([^/]*)/([^/]*)(.*\\.(?:(?:mdx)|(?:md)|(?:htmlx)|(?:json))))$", 
                 {
                     "jsdelivr": ["https://cdn.jsdelivr.net/gh/$2/$3@$4$5", "jsDelivr 代理"],
-                    "jsdelivr-fastly": ["https://fastly.jsdelivr.net/gh/$2/$3@$4$5", "jsDelivr 代理 (fastly)"],
-                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理（默认）"],
+                    "jsdelivr-fastly": ["https://fastly.jsdelivr.net/gh/$2/$3@$4$5", "jsDelivr 代理 (fastly)（默认）"],
+                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理"],
                     "itechx2": ["https://itechx-portal.pages.dev/raw.githubusercontent.com$1", "iTechX 临时代理2"],
                     "none": ["$&", "无代理"],
@@ -65,8 +65,8 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
                 '加载图片文件，如课程封面、人物头像等，对raw.githubusercontent.com进行代理', 
                 "^https?://raw.githubusercontent.com(/([^/]*)/([^/]*)/([^/]*)(.*\\.(?:(?:jpg))))$", 
                 {
-                    "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理"],
-                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理（默认）"],
+                    "ghproxy": ["https://ghproxy.com/$&", "ghproxy 代理（默认）"],
+                    "ghucs": ["https://raw.githubusercontents.com$1", "GHUCS 代理"],
                     "itechx": ["https://githubraw.itechx.workers.dev$1", "iTechX 临时代理"],
                     "itechx2": ["https://itechx-portal.pages.dev/raw.githubusercontent.com$1", "iTechX 临时代理2"],
                     "none": ["$&", "无代理"],
@@ -96,20 +96,21 @@ layui.define(['jquery', 'form', 'layer'], function(exports){
         ];
 
         const DEFAULT_RULE = {
-            'Reader': 'ghucs',
+            'Reader': 'jsdelivr-fastly',
             'Microsoft': 'preview',
             'PDF': 'nbviewer-preview',
-            'Images': 'ghucs',
+            'Images': 'ghproxy',
             'Files': 'ghproxy',
             'API': 'itechx2'
         };
 
         /* Init */
-        if (window.localStorage.getItem('ITECHX_PROXY_SETTING') == null) {
-            window.localStorage.setItem('ITECHX_PROXY_SETTING', JSON.stringify(DEFAULT_RULE));
+        if (!window.localStorage.getItem('ITECHX_PROXY_SETTING_RESETED')) {
+            window.localStorage.removeItem('ITECHX_PROXY_SETTING');
+            window.localStorage.setItem('ITECHX_PROXY_SETTING_RESETED', "v20221101");
         }
 
-        const rule = JSON.parse(window.localStorage.getItem('ITECHX_PROXY_SETTING'));
+        const rule = JSON.parse(window.localStorage.getItem('ITECHX_PROXY_SETTING') || JSON.stringify(DEFAULT_RULE));
 
         var proxyComponent = {
             parse: function(url){
