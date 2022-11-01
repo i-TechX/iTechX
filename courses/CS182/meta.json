@@ -3,6 +3,25 @@
     "name": "Introduction to Machine Learning",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "mainpage": "https://cs182.sist.shanghaitech.edu.cn/",
+            "course_id": "CS182.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Mathematical Analysis II, Linear Algebra,Probability and Statistics",
+            "evaluation": "5 Problem sets with programming (30%); Final exam (2 hours, 2 A4 cheatsheet) (40%); Final project (30%)",
+            "teacher": [
+                "zhaoziping"
+            ],
+            "ta": [
+                "chenmt",
+                "chengcheng2",
+                "weiquan"
+            ]
+        },
+        {
             "season": "Spring",
             "year": "2022",
             "course_id": "CS182.01",
@@ -24,7 +43,7 @@
             "course_id": "CS182.01",
             "season": "Fall",
             "year": "2021",
-            "mainpage": "https://cs182.sist.shanghaitech.edu.cn/",
+            "mainpage": "https://cs182.sist.shanghaitech.edu.cn/index-21fall.html",
             "teacher": [
                 "zhaoziping"
             ],
