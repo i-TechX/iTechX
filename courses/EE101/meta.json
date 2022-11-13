@@ -49,6 +49,22 @@
             "ta": [
                 "gesonghan"
             ]
+        },
+        {
+            "season": "Spring",
+            "year": "2020",
+            "course_id": "EE101.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "6 Homework (30%), Quiz (5%), Midterm Exam (30%), Project (35%)",
+            "teacher": [
+                "zhengrui"
+            ],
+            "ta": [
+                "zenghy"
+            ]
         }
     ]
 }
