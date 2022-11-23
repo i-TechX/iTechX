@@ -1,4 +1,23 @@
 {
     "code": "EE130",
-    "name": "Electromagnetics"
+    "name": "Electromagnetics",
+    "semesters": [
+        {
+            "season": "Spring",
+            "year": "2017",
+            "course_id": "EE130.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "roll call, homework, experiments, class projects, quiz, exams. Top two will be exempted from the final exam.",
+            "teacher": [
+                "wangxiong"
+            ],
+            "ta": [
+                "gaohx",
+                "lity2"
+            ]
+        }
+    ]
 }
