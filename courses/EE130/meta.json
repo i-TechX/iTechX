@@ -4,6 +4,28 @@
     "semesters": [
         {
             "season": "Spring",
+            "year": "2021",
+            "course_id": "EE130.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "高等数学，普通物理 I",
+            "evaluation": "Homework (20%), Quiz (20%), Midterm Exam (20%), Final Exam (20%), Lab (20%)",
+            "teacher": [
+                "wangxiong",
+                "linfh"
+            ],
+            "ta": [
+                "yilh",
+                "qijr",
+                "huwm",
+                "miaosy",
+                "changch",
+                "zhanglj"
+            ]
+        },
+        {
+            "season": "Spring",
             "year": "2020",
             "course_id": "EE130.01",
             "department": "信息科学与技术学院",
