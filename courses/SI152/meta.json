@@ -1,4 +1,23 @@
 {
     "code": "SI152",
-    "name": "Numerical Optimization"
+    "name": "Numerical Optimization",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "SI152.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework 40%, Exam 60%",
+            "teacher": [
+                "wanghao1"
+            ],
+            "ta": [
+                "shiqk",
+                "gouby"
+            ]
+        }
+    ]
 }
