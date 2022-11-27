@@ -34,6 +34,22 @@
             "ta": [
                 "sunhx"
             ]
+        },
+        {
+            "season": "Fall",
+            "year": "2021",
+            "course_id": "SI152.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework 30%, Project 30%, Exam 40%",
+            "teacher": [
+                "wanghao1"
+            ],
+            "ta": [
+                "shenjd"
+            ]
         }
     ]
 }
