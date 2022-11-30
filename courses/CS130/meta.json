@@ -3,6 +3,28 @@
     "name": "Operating Systems I",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CS130.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "C/C++, Computer Architecture I or II",
+            "evaluation": "考试：期中（10%）、期末（15%）；作业：10%；编程项目：项目1（10%），项目2（10%），项目3（20%），项目4（20%）；考勤：5%",
+            "teacher": [
+                "yinshu"
+            ],
+            "ta": [
+                "xuzj",
+                "liyh12022",
+                "ligch",
+                "jiych1",
+                "lizch",
+                "zhangyn3"
+            ],
+            "mainpage": "https://lion.sist.shanghaitech.edu.cn/Course/CS130/22f/"
+        },
+        {
             "course_id": "CS130.01",
             "season": "Fall",
             "year": "2021",
@@ -11,7 +33,12 @@
                 "yinshu"
             ],
             "ta": [
-                "limzh", "zhaochf", "ligch", "youch", "danghr", "zhangzhch2"
+                "limzh",
+                "zhaochf",
+                "ligch",
+                "youch",
+                "danghr",
+                "zhangzhch2"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -28,7 +55,14 @@
                 "yinshu"
             ],
             "ta": [
-                "songyj", "zhangqh", "linzhy", "sunshuo", "xuzj", "wuhp", "wuty", "zhangjian"
+                "songyj",
+                "zhangqh",
+                "linzhy",
+                "sunshuo",
+                "xuzj",
+                "wuhp",
+                "wuty",
+                "zhangjian"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -45,7 +79,16 @@
                 "xietao"
             ],
             "ta": [
-                "jingyzh", "songyj", "jinjch", "yechn", "wangyh1", "yangzhj", "zhangjian", "zhangqh", "dengtl", "xiezhq"
+                "jingyzh",
+                "songyj",
+                "jinjch",
+                "yechn",
+                "wangyh1",
+                "yangzhj",
+                "zhangjian",
+                "zhangqh",
+                "dengtl",
+                "xiezhq"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -62,7 +105,14 @@
                 "yinshu"
             ],
             "ta": [
-                "zouyl", "dengtl", "chenchen", "zhangqh", "luohc", "nianzhl", "songyj", "hugzh1"
+                "zouyl",
+                "dengtl",
+                "chenchen",
+                "zhangqh",
+                "luohc",
+                "nianzhl",
+                "songyj",
+                "hugzh1"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

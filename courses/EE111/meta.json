@@ -3,6 +3,23 @@
     "name": "Electric Circuits",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "EE111.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "8 Homeworks (24%), Midterm exam (30%), Final exam (40%), Quizzes and Attendance Check (6%)",
+            "teacher": [
+                "zouxb"
+            ],
+            "ta": [
+                "shity",
+                "huangzy1"
+            ]
+        },
+        {
             "season": "Spring",
             "year": "2022",
             "course_id": "EE111.01",

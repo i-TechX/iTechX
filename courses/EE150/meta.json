@@ -3,6 +3,26 @@
     "name": "Signals and Systems",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "EE150.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Complex numbers, Important geometric series, Zeros of a complex equation",
+            "evaluation": "Homework: 15%, Mid-term (close-book): 30%, Final Exam (close-book): 50%, Attendance: 5%",
+            "teacher": [
+                "xulin1",
+                "caixr"
+            ],
+            "ta": [
+                "wutong1",
+                "zhaozh1",
+                "lintw",
+                "fanyj"
+            ]
+        },
+        {
             "season": "Spring",
             "year": "2022",
             "course_id": "EE150.01",
