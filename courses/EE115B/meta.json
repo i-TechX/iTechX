@@ -27,10 +27,11 @@
             "hours": "64",
             "prerequisite": "未知",
             "evaluation": "未知",
-            "teacher": [],
-            "ta": [
-                "unknown"
-            ]
+            "teacher": [
+                "zhuzhf",
+                "lijuan1"
+            ],
+            "ta": []
         },
         {
             "season": "Fall",
