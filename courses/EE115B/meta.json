@@ -19,6 +19,20 @@
             "ta": []
         },
         {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "EE115B.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
             "season": "Fall",
             "year": "2021",
             "course_id": "EE115B.01",
