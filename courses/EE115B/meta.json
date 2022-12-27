@@ -1,0 +1,52 @@
+{
+    "status": "activate",
+    "code": "EE115B",
+    "name": "Digital Circuits",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "EE115B.01",
+            "department": "信息科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "未知",
+            "teacher": [
+                "hzyang",
+                "lijuan1"
+            ],
+            "ta": []
+        },
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "EE115B.01",
+            "department": "信息科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "未知",
+            "teacher": [
+                "zhuzhf",
+                "lijuan1"
+            ],
+            "ta": []
+        },
+        {
+            "season": "Fall",
+            "year": "2021",
+            "course_id": "EE115B.01",
+            "department": "信息科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "未知",
+            "teacher": [
+                "hzyang",
+                "lijuan1"
+            ],
+            "ta": []
+        }
+    ]
+}
