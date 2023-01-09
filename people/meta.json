@@ -643,6 +643,12 @@
         ],
         "teach-courses": [
             [
+                "Fall",
+                "2022",
+                "CS121",
+                "Parallel Computing"
+            ],
+            [
                 "Spring",
                 "2022",
                 "CS240",
