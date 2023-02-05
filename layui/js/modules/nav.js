@@ -38,7 +38,7 @@ layui.define(['jquery', 'element', 'layer', 'proxy'], function(exports){
           }
 
         options = assign({
-            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            proxy: 'https://cors-anywhere-36o.pages.dev?https://github.com/login/oauth/access_token',
             baseURL: 'https://api.github.com',
             page: 'none',
         }, options);
