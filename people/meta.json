@@ -19,6 +19,12 @@
         ],
         "teach-courses": [
             [
+                "Fall",
+                "2021",
+                "SI211",
+                "Numerical Analysis"
+            ],
+            [
                 "Spring",
                 "2021",
                 "SI120",
@@ -42,6 +48,18 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS152",
+                "Applied Cryptography"
+            ],
+            [
+                "Spring",
+                "2022",
+                "SI120",
+                "Discrete Mathematics"
+            ],
             [
                 "Fall",
                 "2021",
@@ -167,6 +185,12 @@
         ],
         "teach-courses": [
             [
+                "Fall",
+                "2022",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
+            [
                 "Spring",
                 "2022",
                 "CS274A",
@@ -227,6 +251,18 @@
         ],
         "teach-courses": [
             [
+                "Spring",
+                "2022",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
+            [
+                "Spring",
+                "2022",
+                "SI120",
+                "Discrete Mathematics"
+            ],
+            [
                 "Fall",
                 "2020",
                 "CS181",
@@ -269,6 +305,12 @@
         "teach-courses": [
             [
                 "Fall",
+                "2022",
+                "EE160",
+                "Introduction to Control"
+            ],
+            [
+                "Fall",
                 "2021",
                 "EE160",
                 "Introduction to Control"
@@ -297,6 +339,18 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE160",
+                "Introduction to Control"
+            ],
+            [
+                "Spring",
+                "2022",
+                "SI211",
+                "Numerical Analysis"
+            ],
             [
                 "Fall",
                 "2020",
@@ -350,6 +404,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS130",
+                "Operating Systems I"
+            ],
             [
                 "Fall",
                 "2021",
@@ -584,6 +644,18 @@
         "teach-courses": [
             [
                 "Fall",
+                "2022",
+                "CS121",
+                "Parallel Computing"
+            ],
+            [
+                "Spring",
+                "2022",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ],
+            [
+                "Fall",
                 "2021",
                 "CS121",
                 "Parallel Computing"
@@ -650,6 +722,24 @@
         "teach-courses": [
             [
                 "Fall",
+                "2022",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ],
+            [
+                "Spring",
+                "2022",
+                "CS160",
+                "Human Computer Interaction"
+            ],
+            [
+                "Fall",
+                "2022",
+                "ARTS1422",
+                "Data Visualization"
+            ],
+            [
+                "Fall",
                 "2021",
                 "CS240",
                 "Algorithm Design and Analysis"
@@ -697,16 +787,34 @@
         ],
         "teach-courses": [
             [
+                "Fall",
+                "2022",
+                "SI152",
+                "Numerical Optimization"
+            ],
+            [
                 "Spring",
                 "2022",
                 "CS282",
                 "Machine Learning"
             ],
             [
+                "Fall",
+                "2021",
+                "SI152",
+                "Numerical Optimization"
+            ],
+            [
                 "Spring",
                 "2021",
                 "CS282",
                 "Machine Learning"
+            ],
+            [
+                "Fall",
+                "2020",
+                "SI152",
+                "Numerical Optimization"
             ]
         ]
     },
@@ -726,6 +834,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
             [
                 "Fall",
                 "2021",
@@ -750,6 +864,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ],
             [
                 "Fall",
                 "2021",
@@ -786,6 +906,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS150A",
+                "Database"
+            ],
             [
                 "Spring",
                 "2022",
@@ -836,9 +962,27 @@
         "teach-courses": [
             [
                 "Fall",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ],
+            [
+                "Fall",
                 "2021",
                 "CS182",
                 "Introduction to Machine Learning"
+            ],
+            [
+                "Spring",
+                "2021",
+                "SI231B",
+                "Matrix Computations"
+            ],
+            [
+                "Fall",
+                "2020",
+                "SI231B",
+                "Matrix Computations"
             ],
             [
                 "Spring",
@@ -908,6 +1052,18 @@
         "teach-courses": [
             [
                 "Fall",
+                "2022",
+                "SI251",
+                "Convex Optimization"
+            ],
+            [
+                "Spring",
+                "2022",
+                "SI152",
+                "Numerical Optimization"
+            ],
+            [
+                "Fall",
                 "2021",
                 "CS251",
                 "Convex Optimization"
@@ -931,6 +1087,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS270B",
+                "Advanced Digital Image Processing"
+            ],
             [
                 "Spring",
                 "2021",
@@ -1003,6 +1165,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS120",
+                "Computer Networks"
+            ],
             [
                 "Fall",
                 "2021",
@@ -1162,6 +1330,30 @@
         "teach-courses": [
             [
                 "Fall",
+                "2022",
+                "EE101",
+                "Medical Imaging"
+            ],
+            [
+                "Fall",
+                "2021",
+                "EE101",
+                "Medical Imaging"
+            ],
+            [
+                "Fall",
+                "2020",
+                "EE101",
+                "Medical Imaging"
+            ],
+            [
+                "Spring",
+                "2020",
+                "EE101",
+                "Medical Imaging"
+            ],
+            [
+                "Fall",
                 "2019",
                 "CS270",
                 "Digital Image Processing"
@@ -1185,6 +1377,18 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ],
+            [
+                "Spring",
+                "2022",
+                "CS270",
+                "Digital Image Processing"
+            ],
             [
                 "Spring",
                 "2021",
@@ -1257,6 +1461,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ],
             [
                 "Spring",
                 "2021",
@@ -1392,7 +1602,7 @@
                 "Fall",
                 "2022",
                 "SI140A",
-                "Probability and Statistics for Information Scienc"
+                "Probability and Statistics for Information Science"
             ],
             [
                 "Spring",
@@ -1495,6 +1705,12 @@
         "teach-courses": [
             [
                 "Fall",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ],
+            [
+                "Fall",
                 "2021",
                 "EE150",
                 "Signals and Systems"
@@ -1529,6 +1745,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ],
             [
                 "Spring",
                 "2021",
@@ -1626,6 +1848,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE111",
+                "Electric Circuits"
+            ],
             [
                 "Fall",
                 "2021",
@@ -1766,6 +1994,12 @@
         "ta-courses": [
             [
                 "Spring",
+                "2022",
+                "SI120",
+                "Discrete Mathematics"
+            ],
+            [
+                "Spring",
                 "2021",
                 "SI120",
                 "Discrete Mathematics"
@@ -1819,6 +2053,12 @@
         ],
         "ta-courses": [
             [
+                "Fall",
+                "2022",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
+            [
                 "Spring",
                 "2022",
                 "CS274A",
@@ -1866,6 +2106,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS270",
+                "Digital Image Processing"
+            ],
             [
                 "Spring",
                 "2021",
@@ -1975,6 +2221,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS152",
+                "Applied Cryptography"
+            ],
             [
                 "Fall",
                 "2020",
@@ -2115,6 +2367,12 @@
         ],
         "ta-courses": [
             [
+                "Fall",
+                "2022",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
+            [
                 "Spring",
                 "2022",
                 "CS274A",
@@ -2174,6 +2432,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS225",
+                "Advanced Distributed System"
+            ],
             [
                 "Fall",
                 "2020",
@@ -2289,6 +2553,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ],
+            [
                 "Fall",
                 "2021",
                 "EE160",
@@ -2306,6 +2576,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE160",
+                "Introduction to Control"
+            ],
             [
                 "Fall",
                 "2021",
@@ -2379,6 +2655,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2022",
+                "EE160",
+                "Introduction to Control"
+            ],
+            [
                 "Fall",
                 "2020",
                 "EE160",
@@ -2428,6 +2710,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ],
+            [
                 "Fall",
                 "2021",
                 "CS130",
@@ -2446,6 +2734,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS130",
+                "Operating Systems I"
+            ],
             [
                 "Fall",
                 "2021",
@@ -2617,6 +2911,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS130",
+                "Operating Systems I"
+            ],
             [
                 "Spring",
                 "2021",
@@ -3111,6 +3411,12 @@
         "ta-courses": [
             [
                 "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ],
+            [
+                "Spring",
                 "2021",
                 "CS110",
                 "Computer Architecture I"
@@ -3317,6 +3623,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ],
+            [
                 "Fall",
                 "2021",
                 "CS282",
@@ -3424,6 +3736,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS272",
+                "Computer Vision II"
+            ],
             [
                 "Spring",
                 "2021",
@@ -3878,6 +4196,12 @@
         "ta-courses": [
             [
                 "Fall",
+                "2022",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ],
+            [
+                "Fall",
                 "2021",
                 "CS240",
                 "Algorithm Design and Analysis"
@@ -3966,6 +4290,12 @@
         ],
         "ta-courses": [
             [
+                "Fall",
+                "2020",
+                "SI231B",
+                "Matrix Computations"
+            ],
+            [
                 "Spring",
                 "2020",
                 "CS240",
@@ -4037,6 +4367,12 @@
         ],
         "ta-courses": [
             [
+                "Fall",
+                "2022",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ],
+            [
                 "Spring",
                 "2022",
                 "CS282",
@@ -4066,6 +4402,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS271",
+                "Computer Graphics II"
+            ],
             [
                 "Fall",
                 "2021",
@@ -4147,6 +4489,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "SI251",
+                "Convex Optimization"
+            ],
             [
                 "Spring",
                 "2022",
@@ -4424,6 +4772,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2022",
+                "CS270B",
+                "Advanced Digital Image Processing"
+            ],
+            [
                 "Fall",
                 "2021",
                 "CS280",
@@ -4603,6 +4957,12 @@
                 "2021",
                 "CS182",
                 "Introduction to Machine Learning"
+            ],
+            [
+                "Spring",
+                "2021",
+                "SI231B",
+                "Matrix Computations"
             ]
         ]
     },
@@ -4639,6 +4999,12 @@
                 "2021",
                 "SI251",
                 "Convex Optimization"
+            ],
+            [
+                "Spring",
+                "2019",
+                "EE130",
+                "Electromagnetics"
             ]
         ]
     },
@@ -4893,6 +5259,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ],
+            [
                 "Fall",
                 "2021",
                 "CS101",
@@ -5012,6 +5384,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ],
             [
                 "Fall",
                 "2021",
@@ -5985,6 +6363,12 @@
         "ta-courses": [
             [
                 "Fall",
+                "2022",
+                "CS120",
+                "Computer Networks"
+            ],
+            [
+                "Fall",
                 "2021",
                 "CS120",
                 "Computer Networks"
@@ -6055,6 +6439,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS272",
+                "Computer Vision II"
+            ],
             [
                 "Spring",
                 "2021",
@@ -6297,6 +6687,12 @@
         "ta-courses": [
             [
                 "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ],
+            [
+                "Spring",
                 "2021",
                 "CS100",
                 "Introduction to Programming"
@@ -6355,6 +6751,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI152",
+                "Numerical Optimization"
+            ],
             [
                 "Spring",
                 "2021",
@@ -6505,6 +6907,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ],
             [
                 "Spring",
                 "2021",
@@ -6706,7 +7114,7 @@
                 "Fall",
                 "2022",
                 "SI140A",
-                "Probability and Statistics for Information Scienc"
+                "Probability and Statistics for Information Science"
             ],
             [
                 "Spring",
@@ -6896,6 +7304,12 @@
         "ta-courses": [
             [
                 "Spring",
+                "2021",
+                "EE130",
+                "Electromagnetics"
+            ],
+            [
+                "Spring",
                 "2020",
                 "EE111",
                 "Electric Circuits"
@@ -7022,6 +7436,12 @@
         "ta-courses": [
             [
                 "Fall",
+                "2022",
+                "EE111",
+                "Electric Circuits"
+            ],
+            [
+                "Fall",
                 "2021",
                 "EE111",
                 "Electric Circuits"
@@ -7038,6 +7458,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE111",
+                "Electric Circuits"
+            ],
             [
                 "Fall",
                 "2021",
@@ -7086,6 +7512,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "SI152",
+                "Numerical Optimization"
+            ],
             [
                 "Spring",
                 "2022",
@@ -7446,21 +7878,2072 @@
             ]
         ]
     },
-    "tangyx": {
-        "name": "唐吟煦",
+    "xielx": {
+        "name": "谢莱鑫",
         "info": [
             [
-                "",
-                "",
-                ""
+                "envelope",
+                "&#120;&#105;&#101;&#108;&#120;&#64;&#x73;&#104;&#x61;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#x65;&#99;&#x68;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;",
+                "mailto:&#120;&#105;&#x65;&#108;&#x78;&#64;&#115;&#104;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS160",
+                "Human Computer Interaction"
+            ]
+        ]
+    },
+    "ouyy": {
+        "name": "欧阳阳",
+        "info": [
+            [
+                "envelope",
+                "&#x6f;&#117;&#121;&#121;&#64;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#x65;&#100;&#x75;&#46;&#99;&#x6e;",
+                "mailto:&#111;&#117;&#x79;&#121;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#x69;&#x74;&#x65;&#99;&#x68;&#46;&#x65;&#100;&#117;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS160",
+                "Human Computer Interaction"
+            ]
+        ]
+    },
+    "lijy6": {
+        "name": "李金原",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#x69;&#106;&#x79;&#54;&#64;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;",
+                "mailto:&#x6c;&#105;&#x6a;&#121;&#x36;&#x40;&#x73;&#104;&#x61;&#x6e;&#x67;&#104;&#97;&#x69;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS152",
+                "Applied Cryptography"
+            ]
+        ]
+    },
+    "zhangchy2": {
+        "name": "张楚瑜",
+        "info": [
+            [
+                "envelope",
+                "&#x7a;&#104;&#x61;&#110;&#103;&#x63;&#104;&#x79;&#x32;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#104;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#x6e;",
+                "mailto:&#x7a;&#104;&#x61;&#x6e;&#103;&#99;&#x68;&#x79;&#x32;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#x65;&#x64;&#x75;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS181",
+                "Artificial Intelligence I"
+            ]
+        ]
+    },
+    "wuyu1": {
+        "name": "吴隅",
+        "info": [
+            [
+                "envelope",
+                "&#119;&#117;&#x79;&#117;&#49;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#116;&#101;&#99;&#x68;&#46;&#101;&#x64;&#x75;&#x2e;&#x63;&#110;",
+                "mailto:&#119;&#x75;&#121;&#117;&#49;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#x68;&#x61;&#105;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS181",
+                "Artificial Intelligence I"
+            ]
+        ]
+    },
+    "dingzhl": {
+        "name": "丁兆龙",
+        "info": [
+            [
+                "envelope",
+                "&#x64;&#105;&#x6e;&#x67;&#x7a;&#x68;&#108;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#101;&#100;&#117;&#46;&#99;&#110;",
+                "mailto:&#x64;&#105;&#x6e;&#103;&#122;&#104;&#x6c;&#64;&#x73;&#x68;&#x61;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ]
+        ]
+    },
+    "tanhy": {
+        "name": "谭惠予",
+        "info": [
+            [
+                "envelope",
+                "&#116;&#x61;&#x6e;&#x68;&#x79;&#64;&#115;&#104;&#x61;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#x2e;&#x63;&#x6e;",
+                "mailto:&#116;&#x61;&#110;&#104;&#x79;&#64;&#115;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ]
+        ]
+    },
+    "wukf": {
+        "name": "吴可斐",
+        "info": [
+            [
+                "envelope",
+                "&#119;&#117;&#x6b;&#102;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#100;&#117;&#46;&#x63;&#110;",
+                "mailto:&#x77;&#x75;&#107;&#102;&#64;&#x73;&#104;&#97;&#110;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ]
+        ]
+    },
+    "liuxin7": {
+        "name": "刘鑫",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#x69;&#x75;&#120;&#105;&#110;&#x37;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#110;",
+                "mailto:&#x6c;&#105;&#117;&#120;&#105;&#110;&#x37;&#x40;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#116;&#x65;&#x63;&#x68;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS245",
+                "Online Optimization and Learning"
+            ]
+        ]
+    },
+    "guohq": {
+        "name": "郭亨铨",
+        "info": [
+            [
+                "envelope",
+                "&#x67;&#x75;&#x6f;&#104;&#x71;&#x40;&#115;&#104;&#97;&#110;&#103;&#x68;&#97;&#105;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;",
+                "mailto:&#x67;&#117;&#x6f;&#x68;&#x71;&#x40;&#x73;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS245",
+                "Online Optimization and Learning"
+            ]
+        ]
+    },
+    "mayuexin": {
+        "name": "马月昕",
+        "info": [
+            [
+                "envelope",
+                "&#x6d;&#97;&#121;&#117;&#x65;&#120;&#x69;&#110;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#104;&#x2e;&#101;&#100;&#x75;&#46;&#x63;&#110;",
+                "mailto:&#x6d;&#x61;&#x79;&#x75;&#101;&#x78;&#105;&#110;&#64;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#x64;&#x75;&#46;&#99;&#110;"
+            ],
+            [
+                "home",
+                "Home Page",
+                "http://yuexinma.me/aboutme.html"
+            ]
+        ],
+        "image": true,
+        "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS271",
+                "Computer Graphics II"
+            ]
+        ]
+    },
+    "qiuzs": {
+        "name": "仇泽淞",
+        "info": [
+            [
+                "envelope",
+                "&#x71;&#x69;&#117;&#x7a;&#115;&#64;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#x68;&#46;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;",
+                "mailto:&#x71;&#105;&#117;&#122;&#115;&#x40;&#x73;&#x68;&#97;&#x6e;&#103;&#104;&#x61;&#105;&#x74;&#101;&#x63;&#x68;&#x2e;&#x65;&#100;&#x75;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS271",
+                "Computer Graphics II"
+            ]
+        ]
+    },
+    "chehj": {
+        "name": "车浩杰",
+        "info": [
+            [
+                "envelope",
+                "&#x63;&#104;&#101;&#104;&#x6a;&#64;&#x73;&#104;&#x61;&#x6e;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#99;&#104;&#x2e;&#101;&#100;&#117;&#x2e;&#x63;&#x6e;",
+                "mailto:&#99;&#x68;&#101;&#x68;&#106;&#x40;&#115;&#104;&#97;&#110;&#x67;&#104;&#x61;&#105;&#x74;&#101;&#99;&#104;&#x2e;&#101;&#100;&#x75;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS271",
+                "Computer Graphics II"
+            ]
+        ]
+    },
+    "zengzy1": {
+        "name": "曾梓耘",
+        "info": [
+            [
+                "envelope",
+                "&#x7a;&#101;&#x6e;&#x67;&#122;&#121;&#49;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#x68;&#97;&#x69;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#100;&#117;&#x2e;&#x63;&#110;",
+                "mailto:&#122;&#101;&#x6e;&#103;&#122;&#121;&#49;&#64;&#115;&#104;&#97;&#110;&#103;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ]
+        ]
+    },
+    "zhourui": {
+        "name": "周锐",
+        "info": [
+            [
+                "envelope",
+                "&#122;&#104;&#x6f;&#117;&#x72;&#117;&#x69;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#104;&#x61;&#x69;&#x74;&#101;&#x63;&#x68;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;",
+                "mailto:&#x7a;&#x68;&#111;&#117;&#x72;&#117;&#x69;&#64;&#x73;&#104;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#99;&#x68;&#46;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ]
+        ]
+    },
+    "maqx": {
+        "name": "马钦潇",
+        "info": [
+            [
+                "envelope",
+                "&#109;&#x61;&#113;&#x78;&#x40;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#101;&#100;&#117;&#46;&#99;&#x6e;",
+                "mailto:&#109;&#x61;&#113;&#120;&#x40;&#115;&#104;&#97;&#110;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#104;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#110;"
             ]
         ],
         "ta-courses": [
             [
                 "Fall",
                 "2022",
+                "EE160",
+                "Introduction to Control"
+            ],
+            [
+                "Spring",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ]
+        ]
+    },
+    "limt1": {
+        "name": "李慕天",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#105;&#x6d;&#x74;&#49;&#64;&#x73;&#x68;&#x61;&#110;&#103;&#x68;&#97;&#105;&#x74;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#x2e;&#x63;&#110;",
+                "mailto:&#x6c;&#x69;&#x6d;&#116;&#x31;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#x61;&#105;&#116;&#101;&#x63;&#x68;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "SI120",
+                "Discrete Mathematics"
+            ]
+        ]
+    },
+    "zhengge": {
+        "name": "郑舸",
+        "info": [
+            [
+                "envelope",
+                "&#122;&#x68;&#101;&#110;&#103;&#x67;&#x65;&#x40;&#115;&#x68;&#97;&#110;&#103;&#x68;&#97;&#x69;&#116;&#x65;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#x2e;&#99;&#x6e;",
+                "mailto:&#122;&#x68;&#101;&#x6e;&#103;&#103;&#101;&#64;&#x73;&#104;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#x65;&#100;&#117;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "SI120",
+                "Discrete Mathematics"
+            ]
+        ]
+    },
+    "chenzl": {
+        "name": "陈子苓",
+        "info": [
+            [
+                "envelope",
+                "&#x63;&#x68;&#101;&#x6e;&#x7a;&#108;&#x40;&#115;&#104;&#97;&#110;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#x68;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;",
+                "mailto:&#x63;&#x68;&#101;&#110;&#x7a;&#x6c;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#97;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "SI120",
+                "Discrete Mathematics"
+            ]
+        ]
+    },
+    "chenyc": {
+        "name": "陈昱聪",
+        "info": [
+            [
+                "envelope",
+                "&#x63;&#x68;&#x65;&#110;&#121;&#x63;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#x68;&#97;&#105;&#116;&#101;&#99;&#x68;&#46;&#101;&#x64;&#117;&#46;&#99;&#x6e;",
+                "mailto:&#99;&#104;&#101;&#110;&#121;&#99;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#97;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "SI120",
+                "Discrete Mathematics"
+            ]
+        ]
+    },
+    "lizy5": {
+        "name": "李子阳",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#105;&#x7a;&#x79;&#53;&#64;&#x73;&#104;&#97;&#110;&#x67;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;",
+                "mailto:&#108;&#105;&#x7a;&#121;&#53;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#104;&#97;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#101;&#100;&#117;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "SI120",
+                "Discrete Mathematics"
+            ]
+        ]
+    },
+    "chenyy6": {
+        "name": "陈雨瑶",
+        "info": [
+            [
+                "envelope",
+                "&#x63;&#x68;&#101;&#x6e;&#121;&#121;&#54;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#110;",
+                "mailto:&#x63;&#104;&#x65;&#x6e;&#x79;&#x79;&#x36;&#x40;&#x73;&#x68;&#97;&#110;&#103;&#104;&#x61;&#x69;&#x74;&#x65;&#99;&#x68;&#x2e;&#101;&#x64;&#x75;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "SI120",
+                "Discrete Mathematics"
+            ]
+        ]
+    },
+    "jinxch": {
+        "name": "金鑫辰",
+        "info": [
+            [
+                "envelope",
+                "&#106;&#105;&#x6e;&#120;&#99;&#104;&#x40;&#x73;&#104;&#x61;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#99;&#110;",
+                "mailto:&#106;&#105;&#110;&#120;&#x63;&#104;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#97;&#x69;&#116;&#x65;&#x63;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "gongke": {
+        "name": "龚可",
+        "info": [
+            [
+                "envelope",
+                "&#103;&#111;&#110;&#103;&#107;&#101;&#64;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#x65;&#x63;&#104;&#x2e;&#101;&#100;&#x75;&#x2e;&#x63;&#x6e;",
+                "mailto:&#x67;&#x6f;&#x6e;&#x67;&#x6b;&#101;&#x40;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#x61;&#x69;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "yanjz": {
+        "name": "颜家子",
+        "info": [
+            [
+                "envelope",
+                "&#x79;&#x61;&#x6e;&#x6a;&#122;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#x75;&#x2e;&#x63;&#110;",
+                "mailto:&#x79;&#x61;&#x6e;&#x6a;&#x7a;&#x40;&#115;&#104;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#x74;&#x65;&#99;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "hujt": {
+        "name": "胡锦添",
+        "info": [
+            [
+                "envelope",
+                "&#104;&#x75;&#x6a;&#x74;&#x40;&#115;&#104;&#x61;&#110;&#x67;&#104;&#x61;&#105;&#x74;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#x2e;&#99;&#110;",
+                "mailto:&#104;&#x75;&#106;&#x74;&#64;&#115;&#x68;&#x61;&#x6e;&#x67;&#104;&#x61;&#x69;&#x74;&#x65;&#99;&#x68;&#x2e;&#101;&#100;&#x75;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "jianghr1": {
+        "name": "蒋浩然",
+        "info": [
+            [
+                "envelope",
+                "&#106;&#105;&#x61;&#110;&#103;&#x68;&#114;&#49;&#x40;&#x73;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#105;&#116;&#x65;&#99;&#x68;&#46;&#101;&#100;&#117;&#46;&#x63;&#x6e;",
+                "mailto:&#x6a;&#105;&#97;&#110;&#103;&#x68;&#x72;&#49;&#x40;&#115;&#x68;&#97;&#110;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#104;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "chengdh": {
+        "name": "成鼎浩",
+        "info": [
+            [
+                "envelope",
+                "&#x63;&#104;&#x65;&#110;&#103;&#100;&#104;&#64;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;",
+                "mailto:&#99;&#104;&#x65;&#110;&#x67;&#x64;&#104;&#64;&#115;&#104;&#97;&#x6e;&#103;&#104;&#x61;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "linhy": {
+        "name": "林弘扬",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#x69;&#x6e;&#x68;&#121;&#64;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#x68;&#x2e;&#101;&#x64;&#x75;&#x2e;&#99;&#x6e;",
+                "mailto:&#108;&#x69;&#x6e;&#x68;&#x79;&#x40;&#115;&#104;&#x61;&#110;&#x67;&#104;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "wangwq1": {
+        "name": "王炜清",
+        "info": [
+            [
+                "envelope",
+                "&#x77;&#97;&#x6e;&#x67;&#x77;&#x71;&#49;&#x40;&#x73;&#x68;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#x2e;&#101;&#100;&#117;&#x2e;&#99;&#110;",
+                "mailto:&#x77;&#97;&#x6e;&#x67;&#x77;&#x71;&#x31;&#64;&#x73;&#x68;&#97;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#x2e;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "daihzh": {
+        "name": "戴海钊",
+        "info": [
+            [
+                "envelope",
+                "&#x64;&#x61;&#105;&#104;&#122;&#104;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#x68;&#x2e;&#101;&#100;&#117;&#46;&#99;&#x6e;",
+                "mailto:&#100;&#97;&#x69;&#x68;&#x7a;&#x68;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "suhzh": {
+        "name": "苏慧哲",
+        "info": [
+            [
+                "envelope",
+                "&#x73;&#117;&#x68;&#122;&#x68;&#x40;&#x73;&#x68;&#97;&#110;&#x67;&#104;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#101;&#100;&#x75;&#46;&#x63;&#110;",
+                "mailto:&#x73;&#x75;&#x68;&#122;&#x68;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#101;&#100;&#x75;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "caoyh1": {
+        "name": "曹宇涵",
+        "info": [
+            [
+                "envelope",
+                "&#99;&#97;&#111;&#121;&#104;&#x31;&#64;&#x73;&#x68;&#97;&#110;&#103;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#x68;&#46;&#x65;&#x64;&#117;&#46;&#99;&#110;",
+                "mailto:&#99;&#97;&#x6f;&#x79;&#x68;&#x31;&#64;&#x73;&#104;&#97;&#110;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS100",
+                "Introduction to Programming"
+            ]
+        ]
+    },
+    "wangjingya": {
+        "name": "汪婧雅",
+        "info": [
+            [
+                "envelope",
+                "&#119;&#x61;&#110;&#x67;&#x6a;&#105;&#110;&#x67;&#121;&#x61;&#64;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#x69;&#x74;&#x65;&#x63;&#x68;&#46;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;",
+                "mailto:&#x77;&#x61;&#110;&#x67;&#106;&#105;&#110;&#x67;&#121;&#x61;&#64;&#115;&#104;&#x61;&#110;&#x67;&#104;&#97;&#x69;&#116;&#101;&#99;&#x68;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#110;"
+            ],
+            [
+                "home",
+                "Home Page",
+                "https://faculty.sist.shanghaitech.edu.cn/faculty/wangjingya/"
+            ]
+        ],
+        "image": true,
+        "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS272",
+                "Computer Vision II"
+            ]
+        ]
+    },
+    "jiangsy2": {
+        "name": "姜淞译",
+        "info": [
+            [
+                "envelope",
+                "&#106;&#105;&#97;&#x6e;&#103;&#x73;&#x79;&#50;&#x40;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#x6e;",
+                "mailto:&#106;&#105;&#x61;&#110;&#x67;&#115;&#121;&#50;&#64;&#x73;&#x68;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#101;&#100;&#117;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS272",
+                "Computer Vision II"
+            ]
+        ]
+    },
+    "qiuyue": {
+        "name": "邱越",
+        "info": [
+            [
+                "envelope",
+                "&#113;&#x69;&#117;&#x79;&#x75;&#101;&#64;&#x73;&#x68;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;",
+                "mailto:&#x71;&#x69;&#x75;&#x79;&#x75;&#101;&#x40;&#115;&#104;&#97;&#110;&#x67;&#104;&#x61;&#x69;&#x74;&#x65;&#99;&#x68;&#46;&#101;&#x64;&#117;&#46;&#x63;&#110;"
+            ],
+            [
+                "home",
+                "Home Page",
+                "https://faculty.sist.shanghaitech.edu.cn/faculty/qiu/"
+            ]
+        ],
+        "image": true,
+        "teach-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI231B",
+                "Matrix Computations"
+            ],
+            [
+                "Fall",
+                "2020",
+                "SI231B",
+                "Matrix Computations"
+            ]
+        ]
+    },
+    "zhangxy11": {
+        "name": "张馨悦",
+        "info": [
+            [
+                "envelope",
+                "&#122;&#104;&#97;&#x6e;&#x67;&#x78;&#x79;&#x31;&#49;&#64;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#x68;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;",
+                "mailto:&#122;&#104;&#x61;&#x6e;&#103;&#x78;&#121;&#49;&#x31;&#x40;&#115;&#x68;&#97;&#x6e;&#x67;&#x68;&#x61;&#x69;&#x74;&#x65;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI231B",
+                "Matrix Computations"
+            ],
+            [
+                "Fall",
+                "2020",
+                "SI231B",
+                "Matrix Computations"
+            ]
+        ]
+    },
+    "lizw": {
+        "name": " 李子文",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#105;&#122;&#119;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#101;&#99;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#110;",
+                "mailto:&#108;&#x69;&#122;&#119;&#x40;&#115;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#116;&#101;&#x63;&#x68;&#46;&#101;&#100;&#x75;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI231B",
+                "Matrix Computations"
+            ]
+        ]
+    },
+    "zhuxy3": {
+        "name": "朱小宇",
+        "info": [
+            [
+                "envelope",
+                "&#122;&#x68;&#x75;&#120;&#121;&#x33;&#64;&#x73;&#104;&#x61;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#101;&#99;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#x6e;",
+                "mailto:&#122;&#104;&#117;&#120;&#121;&#x33;&#64;&#x73;&#x68;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#x64;&#x75;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI231B",
+                "Matrix Computations"
+            ]
+        ]
+    },
+    "mengxx": {
+        "name": "孟祥熙",
+        "info": [
+            [
+                "envelope",
+                "&#x6d;&#101;&#x6e;&#x67;&#x78;&#x78;&#64;&#x73;&#x68;&#x61;&#110;&#x67;&#x68;&#x61;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#46;&#x63;&#x6e;",
+                "mailto:&#x6d;&#x65;&#x6e;&#x67;&#120;&#x78;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#101;&#100;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI231B",
+                "Matrix Computations"
+            ]
+        ]
+    },
+    "xuzhh": {
+        "name": "徐之航",
+        "info": [
+            [
+                "envelope",
+                "&#x78;&#x75;&#122;&#104;&#x68;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#116;&#101;&#99;&#x68;&#46;&#101;&#100;&#x75;&#46;&#x63;&#x6e;",
+                "mailto:&#120;&#117;&#x7a;&#104;&#x68;&#64;&#115;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#x69;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2020",
+                "SI231B",
+                "Matrix Computations"
+            ]
+        ]
+    },
+    "zhulin": {
+        "name": "朱琳",
+        "info": [
+            [
+                "envelope",
+                "&#122;&#104;&#117;&#108;&#105;&#x6e;&#64;&#x73;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#x74;&#x65;&#99;&#104;&#46;&#101;&#x64;&#x75;&#x2e;&#x63;&#x6e;",
+                "mailto:&#122;&#x68;&#117;&#x6c;&#x69;&#110;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#104;&#46;&#101;&#100;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2020",
+                "SI231B",
+                "Matrix Computations"
+            ]
+        ]
+    },
+    "maosong": {
+        "name": "毛松",
+        "info": [
+            [
+                "envelope",
+                "&#x6d;&#x61;&#x6f;&#x73;&#111;&#x6e;&#103;&#64;&#115;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#104;&#46;&#x65;&#100;&#117;&#46;&#99;&#110;",
+                "mailto:&#x6d;&#x61;&#111;&#115;&#111;&#110;&#x67;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2020",
+                "SI231B",
+                "Matrix Computations"
+            ]
+        ]
+    },
+    "shijh": {
+        "name": "石嘉禾",
+        "info": [
+            [
+                "envelope",
+                "&#x73;&#x68;&#105;&#106;&#x68;&#64;&#x73;&#104;&#x61;&#110;&#103;&#x68;&#x61;&#x69;&#x74;&#x65;&#99;&#104;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;",
+                "mailto:&#115;&#104;&#105;&#x6a;&#104;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#x68;&#x61;&#x69;&#116;&#101;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "SI211",
+                "Numerical Analysis"
+            ]
+        ]
+    },
+    "chenlf": {
+        "name": "陈龙飞",
+        "info": [
+            [
+                "envelope",
+                "&#99;&#104;&#101;&#x6e;&#108;&#102;&#64;&#x73;&#x68;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#110;",
+                "mailto:&#99;&#104;&#101;&#x6e;&#108;&#102;&#64;&#x73;&#x68;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "ARTS1422",
+                "Data Visualization"
+            ]
+        ]
+    },
+    "chenlt": {
+        "name": "陈亮涛",
+        "info": [
+            [
+                "envelope",
+                "&#99;&#104;&#101;&#x6e;&#108;&#x74;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#101;&#100;&#x75;&#46;&#x63;&#x6e;",
+                "mailto:&#99;&#104;&#101;&#x6e;&#108;&#x74;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#101;&#100;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS270",
+                "Digital Image Processing"
+            ]
+        ]
+    },
+    "hejzh1": {
+        "name": "何静竹",
+        "image": true,
+        "info": [
+            [
+                "envelope",
+                "&#104;&#101;&#x6a;&#x7a;&#104;&#49;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#46;&#101;&#x64;&#117;&#46;&#99;&#110;",
+                "mailto:&#x68;&#x65;&#x6a;&#x7a;&#x68;&#x31;&#x40;&#115;&#x68;&#x61;&#110;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#110;"
+            ],
+            [
+                "home",
+                "Home Page",
+                "https://jhe16.github.io/"
+            ]
+        ],
+        "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS225",
+                "Advanced Distributed System"
+            ]
+        ]
+    },
+    "chenbb": {
+        "name": "陈彬彬",
+        "info": [
+            [
+                "envelope",
+                "&#99;&#x68;&#101;&#x6e;&#98;&#98;&#x40;&#x73;&#x68;&#x61;&#x6e;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#x68;&#46;&#x65;&#100;&#117;&#x2e;&#x63;&#x6e;",
+                "mailto:&#x63;&#x68;&#101;&#x6e;&#98;&#98;&#64;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#x65;&#100;&#117;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS150A",
+                "Database"
+            ]
+        ]
+    },
+    "xujh2020": {
+        "name": "徐嘉慧",
+        "info": [
+            [
+                "envelope",
+                "&#x78;&#x75;&#106;&#x68;&#x32;&#48;&#50;&#x32;&#64;&#x73;&#104;&#97;&#110;&#103;&#104;&#97;&#x69;&#116;&#101;&#x63;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;",
+                "mailto:&#120;&#117;&#106;&#104;&#x32;&#x30;&#x32;&#50;&#64;&#x73;&#104;&#97;&#x6e;&#x67;&#104;&#97;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#101;&#100;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS150A",
+                "Database"
+            ]
+        ]
+    },
+    "pengxy": {
+        "name": "彭星月",
+        "info": [
+            [
+                "envelope",
+                "&#x70;&#x65;&#x6e;&#x67;&#120;&#121;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#x64;&#x75;&#x2e;&#99;&#110;",
+                "mailto:&#112;&#101;&#x6e;&#x67;&#120;&#x79;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS150A",
+                "Database"
+            ]
+        ]
+    },
+    "bianke": {
+        "name": "卞珂",
+        "info": [
+            [
+                "envelope",
+                "&#98;&#105;&#x61;&#x6e;&#107;&#x65;&#50;&#x30;&#x32;&#50;&#64;&#x73;&#104;&#x61;&#110;&#103;&#x68;&#x61;&#x69;&#x74;&#x65;&#x63;&#x68;&#x2e;&#101;&#100;&#x75;&#46;&#99;&#x6e;",
+                "mailto:&#x62;&#105;&#97;&#x6e;&#107;&#101;&#50;&#x30;&#x32;&#x32;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS150A",
+                "Database"
+            ]
+        ]
+    },
+    "chenmt": {
+        "name": "陈梦婷",
+        "info": [
+            [
+                "envelope",
+                "&#99;&#x68;&#101;&#x6e;&#x6d;&#x74;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#x61;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x63;&#110;",
+                "mailto:&#99;&#x68;&#101;&#x6e;&#x6d;&#x74;&#64;&#115;&#104;&#97;&#110;&#103;&#104;&#x61;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "chengcheng2": {
+        "name": "成城",
+        "info": [
+            [
+                "envelope",
+                "&#99;&#x68;&#x65;&#110;&#x67;&#99;&#104;&#101;&#x6e;&#103;&#50;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#104;&#97;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;",
+                "mailto:&#99;&#x68;&#x65;&#110;&#x67;&#99;&#104;&#101;&#x6e;&#103;&#50;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#104;&#97;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "weiquan": {
+        "name": "魏权",
+        "info": [
+            [
+                "envelope",
+                "&#x77;&#x65;&#105;&#x71;&#x75;&#x61;&#110;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#46;&#99;&#110;",
+                "mailto:&#x77;&#x65;&#105;&#x71;&#x75;&#x61;&#110;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#x63;&#104;&#46;&#x65;&#100;&#x75;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "lijx2": {
+        "name": "李嘉轩",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#105;&#x6a;&#x78;&#x32;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#x6e;",
+                "mailto:&#108;&#105;&#x6a;&#x78;&#x32;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS181",
+                "Artificial Intelligence I"
+            ]
+        ]
+    },
+    "zhengshh": {
+        "name": "郑圣瀚",
+        "info": [
+            [
+                "envelope",
+                "&#x7a;&#x68;&#x65;&#110;&#103;&#115;&#x68;&#104;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#x69;&#x74;&#101;&#99;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#99;&#x6e;",
+                "mailto:&#x7a;&#x68;&#x65;&#110;&#103;&#115;&#x68;&#104;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#x69;&#x74;&#101;&#99;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS181",
+                "Artificial Intelligence I"
+            ]
+        ]
+    },
+    "chenbl1": {
+        "name": "陈宝岚",
+        "info": [
+            [
+                "envelope",
+                "&#x63;&#104;&#101;&#x6e;&#x62;&#108;&#x31;&#x40;&#x73;&#104;&#97;&#110;&#103;&#x68;&#97;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#x2e;&#x63;&#110;",
+                "mailto:&#99;&#x68;&#101;&#x6e;&#x62;&#108;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ]
+        ]
+    },
+    "liushy": {
+        "name": "刘诗逸",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#x69;&#x75;&#115;&#x68;&#121;&#x40;&#x73;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#x65;&#100;&#117;&#x2e;&#99;&#110;",
+                "mailto:&#x6c;&#x69;&#117;&#x73;&#x68;&#121;&#64;&#115;&#x68;&#x61;&#110;&#103;&#x68;&#x61;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ]
+        ]
+    },
+    "liujia2": {
+        "name": "刘嘉",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#105;&#117;&#x6a;&#x69;&#x61;&#50;&#x40;&#x73;&#104;&#x61;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#x75;&#x2e;&#x63;&#110;",
+                "mailto:&#x6c;&#x69;&#117;&#x6a;&#105;&#x61;&#50;&#x40;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#x63;&#x68;&#46;&#101;&#100;&#x75;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ]
+        ]
+    },
+    "jinzhy": {
+        "name": "金哲宇",
+        "info": [
+            [
+                "envelope",
+                "&#106;&#105;&#x6e;&#122;&#x68;&#x79;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#101;&#100;&#x75;&#46;&#99;&#x6e;",
+                "mailto:&#x6a;&#105;&#x6e;&#x7a;&#x68;&#121;&#64;&#115;&#x68;&#97;&#110;&#103;&#x68;&#x61;&#x69;&#116;&#x65;&#x63;&#x68;&#46;&#101;&#x64;&#x75;&#x2e;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE101",
+                "Medical Imaging"
+            ]
+        ]
+    },
+    "liuaj": {
+        "name": "刘安吉",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#x69;&#117;&#97;&#106;&#64;&#115;&#104;&#x61;&#110;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#110;",
+                "mailto:&#108;&#x69;&#x75;&#97;&#106;&#64;&#115;&#104;&#97;&#110;&#x67;&#104;&#x61;&#x69;&#116;&#101;&#x63;&#x68;&#x2e;&#101;&#x64;&#117;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "EE101",
+                "Medical Imaging"
+            ]
+        ]
+    },
+    "gesonghan": {
+        "name": "葛嵩瀚",
+        "info": [
+            [
+                "envelope",
+                "&#x67;&#101;&#x73;&#x6f;&#x6e;&#103;&#104;&#97;&#110;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#46;&#x63;&#110;",
+                "mailto:&#x67;&#x65;&#x73;&#111;&#x6e;&#x67;&#104;&#97;&#x6e;&#64;&#115;&#x68;&#97;&#110;&#x67;&#104;&#x61;&#105;&#116;&#101;&#99;&#104;&#x2e;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2020",
+                "EE101",
+                "Medical Imaging"
+            ]
+        ]
+    },
+    "zenghy": {
+        "name": "曾宏业",
+        "info": [
+            [
+                "envelope",
+                "&#x7a;&#x65;&#110;&#103;&#x68;&#121;&#64;&#x73;&#104;&#x61;&#x6e;&#x67;&#104;&#97;&#105;&#x74;&#x65;&#99;&#x68;&#x2e;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;",
+                "mailto:&#122;&#101;&#x6e;&#103;&#x68;&#x79;&#64;&#115;&#104;&#97;&#110;&#x67;&#104;&#x61;&#x69;&#x74;&#101;&#x63;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2020",
+                "EE101",
+                "Medical Imaging"
+            ]
+        ]
+    },
+    "sunhx": {
+        "name": "孙海翔",
+        "info": [
+            [
+                "envelope",
+                "&#x73;&#117;&#110;&#104;&#x78;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#x63;&#110;",
+                "mailto:&#115;&#x75;&#x6e;&#104;&#120;&#64;&#x73;&#104;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "SI251",
+                "Convex Optimization"
+            ],
+            [
+                "Spring",
+                "2022",
+                "SI152",
+                "Numerical Optimization"
+            ]
+        ]
+    },
+    "lihx2": {
+        "name": "李红霞",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#105;&#104;&#x78;&#x32;&#64;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#x65;&#100;&#117;&#x2e;&#99;&#x6e;",
+                "mailto:&#108;&#x69;&#104;&#x78;&#50;&#64;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "SI251",
+                "Convex Optimization"
+            ]
+        ]
+    },
+    "dingsht": {
+        "name": "丁枢桐",
+        "info": [
+            [
+                "envelope",
+                "&#x64;&#105;&#110;&#103;&#115;&#x68;&#x74;&#x40;&#x73;&#104;&#x61;&#x6e;&#x67;&#x68;&#97;&#105;&#116;&#101;&#x63;&#x68;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#110;",
+                "mailto:&#x64;&#x69;&#110;&#103;&#x73;&#x68;&#116;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#97;&#x69;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#100;&#117;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "SI251",
+                "Convex Optimization"
+            ]
+        ]
+    },
+    "wangxiong": {
+        "name": "王雄",
+        "info": [
+            [
+                "envelope",
+                "&#119;&#97;&#x6e;&#x67;&#120;&#x69;&#111;&#110;&#103;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;",
+                "mailto:&#119;&#97;&#x6e;&#x67;&#120;&#105;&#x6f;&#110;&#103;&#x40;&#x73;&#x68;&#x61;&#110;&#103;&#104;&#x61;&#x69;&#x74;&#101;&#99;&#104;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#110;"
+            ]
+        ],
+        "image": true,
+        "teach-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE130",
+                "Electromagnetics"
+            ],
+            [
+                "Spring",
+                "2022",
+                "EE130",
+                "Electromagnetics"
+            ],
+            [
+                "Spring",
+                "2021",
+                "EE130",
+                "Electromagnetics"
+            ],
+            [
+                "Spring",
+                "2020",
+                "EE130",
+                "Electromagnetics"
+            ],
+            [
+                "Spring",
+                "2019",
+                "EE130",
+                "Electromagnetics"
+            ],
+            [
+                "Spring",
+                "2018",
+                "EE130",
+                "Electromagnetics"
+            ],
+            [
+                "Spring",
+                "2017",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "gaohx": {
+        "name": "高鸿翔",
+        "info": [
+            [
+                "envelope",
+                "&#103;&#97;&#x6f;&#x68;&#x78;&#64;&#115;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#x6e;",
+                "mailto:&#x67;&#97;&#x6f;&#104;&#120;&#64;&#x73;&#x68;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#99;&#104;&#x2e;&#101;&#100;&#x75;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2017",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "lity2": {
+        "name": "李芸婷",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#105;&#116;&#121;&#x32;&#x40;&#x73;&#104;&#x61;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#46;&#99;&#110;",
+                "mailto:&#108;&#x69;&#116;&#x79;&#50;&#x40;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#101;&#99;&#x68;&#46;&#101;&#100;&#x75;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2017",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "linzhs": {
+        "name": "林湛松",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#x69;&#110;&#122;&#104;&#x73;&#x40;&#x73;&#x68;&#97;&#x6e;&#103;&#104;&#97;&#105;&#116;&#x65;&#99;&#x68;&#x2e;&#x65;&#100;&#x75;&#x2e;&#99;&#110;",
+                "mailto:&#x6c;&#105;&#110;&#x7a;&#104;&#x73;&#64;&#x73;&#104;&#x61;&#x6e;&#x67;&#104;&#97;&#x69;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2018",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "nishuo": {
+        "name": "倪硕",
+        "info": [
+            [
+                "envelope",
+                "&#110;&#x69;&#x73;&#x68;&#117;&#x6f;&#x40;&#115;&#104;&#x61;&#x6e;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#99;&#104;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#110;",
+                "mailto:&#x6e;&#105;&#x73;&#x68;&#x75;&#x6f;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#x74;&#101;&#x63;&#x68;&#46;&#101;&#100;&#x75;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2018",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "lumsh": {
+        "name": "鲁珉杉",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#117;&#x6d;&#115;&#x68;&#64;&#115;&#104;&#x61;&#110;&#x67;&#104;&#97;&#x69;&#116;&#101;&#99;&#x68;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#110;",
+                "mailto:&#x6c;&#117;&#x6d;&#x73;&#104;&#x40;&#x73;&#104;&#x61;&#x6e;&#x67;&#104;&#97;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2018",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "tianfg": {
+        "name": "田付谷",
+        "info": [
+            [
+                "envelope",
+                "&#116;&#x69;&#97;&#x6e;&#102;&#103;&#64;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#99;&#104;&#x2e;&#101;&#x64;&#x75;&#46;&#99;&#110;",
+                "mailto:&#116;&#105;&#x61;&#x6e;&#x66;&#x67;&#64;&#115;&#104;&#x61;&#110;&#x67;&#104;&#97;&#105;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2018",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "bazhl": {
+        "name": "巴钟灵",
+        "info": [
+            [
+                "envelope",
+                "&#x62;&#x61;&#x7a;&#x68;&#x6c;&#x40;&#115;&#104;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;",
+                "mailto:&#x62;&#97;&#122;&#x68;&#x6c;&#x40;&#x73;&#104;&#x61;&#110;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2019",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "zhangxh": {
+        "name": "张修豪",
+        "info": [
+            [
+                "envelope",
+                "&#122;&#104;&#97;&#x6e;&#x67;&#120;&#x68;&#x40;&#115;&#104;&#x61;&#110;&#103;&#x68;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x63;&#110;",
+                "mailto:&#122;&#x68;&#x61;&#x6e;&#x67;&#120;&#104;&#x40;&#115;&#x68;&#x61;&#110;&#103;&#104;&#97;&#x69;&#116;&#101;&#x63;&#x68;&#46;&#101;&#x64;&#x75;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2019",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "qizhk": {
+        "name": "齐正坤",
+        "info": [
+            [
+                "envelope",
+                "&#113;&#105;&#x7a;&#x68;&#x6b;&#64;&#115;&#x68;&#x61;&#x6e;&#x67;&#104;&#97;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;",
+                "mailto:&#113;&#105;&#122;&#x68;&#x6b;&#64;&#x73;&#104;&#97;&#110;&#x67;&#104;&#x61;&#x69;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#100;&#x75;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2019",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "wangsf": {
+        "name": "王思凡",
+        "info": [
+            [
+                "envelope",
+                "&#x77;&#x61;&#110;&#103;&#115;&#102;&#64;&#x73;&#104;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#46;&#x63;&#110;",
+                "mailto:&#x77;&#97;&#110;&#x67;&#115;&#102;&#64;&#115;&#104;&#x61;&#110;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#x63;&#104;&#46;&#x65;&#x64;&#x75;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2019",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "wangcheng1": {
+        "name": "王成",
+        "info": [
+            [
+                "envelope",
+                "&#119;&#97;&#110;&#x67;&#99;&#104;&#x65;&#x6e;&#103;&#49;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#46;&#x63;&#110;",
+                "mailto:&#119;&#x61;&#110;&#x67;&#99;&#x68;&#101;&#110;&#x67;&#49;&#64;&#115;&#x68;&#x61;&#x6e;&#x67;&#104;&#97;&#105;&#x74;&#x65;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#110;"
+            ],
+            [
+                "home",
+                "Home Page",
+                "http://shanghaitech-sist-chengwang.myfreesites.net/"
+            ]
+        ],
+        "image": true,
+        "teach-courses": [
+            [
+                "Spring",
+                "2020",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "zhanglj": {
+        "name": "张乐嘉",
+        "info": [
+            [
+                "envelope",
+                "&#122;&#104;&#97;&#110;&#x67;&#x6c;&#106;&#64;&#115;&#x68;&#x61;&#x6e;&#103;&#104;&#97;&#105;&#x74;&#101;&#x63;&#104;&#46;&#101;&#100;&#x75;&#x2e;&#99;&#110;",
+                "mailto:&#122;&#104;&#x61;&#x6e;&#103;&#x6c;&#106;&#64;&#115;&#x68;&#x61;&#110;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#99;&#104;&#46;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE130",
+                "Electromagnetics"
+            ],
+            [
+                "Spring",
+                "2021",
+                "EE130",
+                "Electromagnetics"
+            ],
+            [
+                "Spring",
+                "2020",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "zhangzhp1": {
+        "name": "张正枰",
+        "info": [
+            [
+                "envelope",
+                "&#x7a;&#x68;&#x61;&#110;&#103;&#122;&#x68;&#x70;&#x31;&#x40;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#101;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;",
+                "mailto:&#122;&#x68;&#97;&#110;&#x67;&#122;&#104;&#x70;&#49;&#64;&#115;&#104;&#97;&#110;&#x67;&#104;&#97;&#105;&#116;&#101;&#99;&#x68;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2020",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "caoshj": {
+        "name": "曹淑婕",
+        "info": [
+            [
+                "envelope",
+                "&#x63;&#97;&#x6f;&#115;&#104;&#x6a;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#101;&#x63;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;",
+                "mailto:&#99;&#x61;&#111;&#x73;&#x68;&#x6a;&#x40;&#x73;&#x68;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2020",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "linfh": {
+        "name": "林丰涵",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#x69;&#110;&#x66;&#104;&#64;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#x68;&#x2e;&#101;&#100;&#x75;&#46;&#99;&#110;",
+                "mailto:&#108;&#x69;&#x6e;&#x66;&#x68;&#x40;&#x73;&#104;&#x61;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#x63;&#x68;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "image": true,
+        "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE130",
+                "Electromagnetics"
+            ],
+            [
+                "Spring",
+                "2021",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "qijr": {
+        "name": "戚倨瑞",
+        "info": [
+            [
+                "envelope",
+                "&#x71;&#105;&#106;&#x72;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#104;&#x61;&#105;&#x74;&#x65;&#99;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#99;&#x6e;",
+                "mailto:&#x71;&#105;&#x6a;&#x72;&#64;&#x73;&#x68;&#97;&#x6e;&#103;&#104;&#97;&#105;&#x74;&#x65;&#99;&#x68;&#x2e;&#101;&#100;&#117;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2021",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "huwm": {
+        "name": "胡雯漫",
+        "info": [
+            [
+                "envelope",
+                "&#104;&#117;&#x77;&#109;&#x40;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#116;&#x65;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#110;",
+                "mailto:&#104;&#x75;&#119;&#x6d;&#64;&#115;&#104;&#97;&#x6e;&#x67;&#104;&#97;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2021",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "miaosy": {
+        "name": "缪思羽",
+        "info": [
+            [
+                "envelope",
+                "&#109;&#x69;&#x61;&#111;&#115;&#121;&#x40;&#115;&#x68;&#97;&#110;&#103;&#104;&#x61;&#105;&#x74;&#101;&#99;&#x68;&#46;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;",
+                "mailto:&#109;&#x69;&#97;&#x6f;&#x73;&#x79;&#x40;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#x69;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2021",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "changch": {
+        "name": "昌昶",
+        "info": [
+            [
+                "envelope",
+                "&#x63;&#x68;&#x61;&#x6e;&#103;&#x63;&#x68;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#101;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;",
+                "mailto:&#99;&#x68;&#x61;&#110;&#x67;&#x63;&#x68;&#64;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#105;&#116;&#101;&#99;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2021",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "wangyw2": {
+        "name": "王艺雯",
+        "info": [
+            [
+                "envelope",
+                "&#119;&#x61;&#x6e;&#x67;&#121;&#119;&#x32;&#x40;&#115;&#x68;&#97;&#110;&#103;&#104;&#97;&#x69;&#x74;&#101;&#x63;&#x68;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#110;",
+                "mailto:&#119;&#97;&#x6e;&#103;&#x79;&#119;&#50;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#97;&#105;&#x74;&#101;&#99;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "luochx": {
+        "name": "罗朝煦",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#x75;&#x6f;&#99;&#x68;&#x78;&#64;&#x73;&#104;&#x61;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;",
+                "mailto:&#108;&#x75;&#111;&#99;&#x68;&#x78;&#x40;&#x73;&#104;&#x61;&#x6e;&#103;&#x68;&#x61;&#105;&#116;&#101;&#x63;&#104;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "yuguo": {
+        "name": "于果",
+        "info": [
+            [
+                "envelope",
+                "&#x79;&#117;&#x67;&#117;&#111;&#x40;&#115;&#104;&#97;&#110;&#103;&#104;&#x61;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#x75;&#46;&#99;&#110;",
+                "mailto:&#x79;&#x75;&#103;&#117;&#x6f;&#x40;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#x69;&#116;&#x65;&#x63;&#x68;&#x2e;&#x65;&#x64;&#x75;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "liuyk": {
+        "name": "刘奕凯",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#105;&#117;&#121;&#107;&#x40;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#x68;&#x2e;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;",
+                "mailto:&#108;&#x69;&#x75;&#x79;&#107;&#64;&#115;&#104;&#97;&#x6e;&#103;&#104;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#46;&#x65;&#x64;&#117;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "yaoshzh": {
+        "name": "姚屾喆",
+        "info": [
+            [
+                "envelope",
+                "&#x79;&#x61;&#x6f;&#115;&#104;&#122;&#x68;&#x40;&#x73;&#104;&#x61;&#110;&#103;&#104;&#97;&#105;&#116;&#x65;&#99;&#x68;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#x6e;",
+                "mailto:&#121;&#x61;&#111;&#115;&#x68;&#x7a;&#x68;&#x40;&#115;&#104;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#101;&#99;&#104;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE130",
+                "Electromagnetics"
+            ]
+        ]
+    },
+    "wutong1": {
+        "name": "吴桐",
+        "info": [
+            [
+                "envelope",
+                "&#x77;&#117;&#116;&#111;&#x6e;&#x67;&#49;&#x40;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#97;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#110;",
+                "mailto:&#119;&#117;&#x74;&#x6f;&#110;&#x67;&#x31;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#x65;&#99;&#104;&#46;&#x65;&#100;&#117;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ]
+        ]
+    },
+    "zhaozh1": {
+        "name": "赵子豪",
+        "info": [
+            [
+                "envelope",
+                "&#x7a;&#104;&#97;&#111;&#x7a;&#x68;&#49;&#64;&#115;&#104;&#x61;&#x6e;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#x63;&#x68;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#110;",
+                "mailto:&#x7a;&#104;&#97;&#111;&#x7a;&#104;&#x31;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#104;&#97;&#105;&#116;&#x65;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ]
+        ]
+    },
+    "lintw": {
+        "name": "林天卫",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#x69;&#x6e;&#116;&#119;&#64;&#115;&#x68;&#97;&#110;&#x67;&#104;&#97;&#x69;&#x74;&#x65;&#x63;&#104;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#x6e;",
+                "mailto:&#108;&#x69;&#x6e;&#x74;&#x77;&#64;&#x73;&#104;&#97;&#110;&#103;&#104;&#97;&#x69;&#x74;&#x65;&#99;&#104;&#46;&#x65;&#x64;&#117;&#x2e;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ]
+        ]
+    },
+    "fanyj": {
+        "name": "范益杰",
+        "info": [
+            [
+                "envelope",
+                "&#x66;&#97;&#x6e;&#121;&#x6a;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#104;&#x61;&#105;&#x74;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#x6e;",
+                "mailto:&#x66;&#97;&#x6e;&#121;&#x6a;&#64;&#115;&#104;&#x61;&#x6e;&#x67;&#104;&#x61;&#105;&#x74;&#101;&#x63;&#x68;&#46;&#x65;&#x64;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE150",
+                "Signals and Systems"
+            ]
+        ]
+    },
+    "liyh12022": {
+        "name": "李元皓",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#105;&#121;&#104;&#x31;&#50;&#x30;&#50;&#x32;&#x40;&#115;&#x68;&#97;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#101;&#99;&#104;&#x2e;&#101;&#100;&#117;&#46;&#99;&#110;",
+                "mailto:&#x6c;&#105;&#x79;&#x68;&#49;&#x32;&#x30;&#50;&#x32;&#64;&#115;&#104;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#116;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#117;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "image": true,
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS130",
+                "Operating Systems I"
+            ]
+        ]
+    },
+    "jiych1": {
+        "name": "季宇辰",
+        "info": [
+            [
+                "envelope",
+                "&#106;&#x69;&#x79;&#99;&#104;&#x31;&#64;&#x73;&#104;&#x61;&#110;&#x67;&#104;&#x61;&#x69;&#x74;&#101;&#x63;&#104;&#x2e;&#101;&#100;&#117;&#46;&#x63;&#x6e;",
+                "mailto:&#106;&#x69;&#x79;&#x63;&#x68;&#49;&#x40;&#115;&#104;&#x61;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#101;&#x63;&#104;&#46;&#101;&#100;&#x75;&#46;&#x63;&#110;"
+            ]
+        ],
+        "image": true,
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS130",
+                "Operating Systems I"
+            ]
+        ]
+    },
+    "lizch": {
+        "name": "李泽城",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#105;&#122;&#x63;&#x68;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#x61;&#x69;&#x74;&#101;&#99;&#x68;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#110;",
+                "mailto:&#108;&#x69;&#x7a;&#x63;&#x68;&#x40;&#115;&#x68;&#x61;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#x65;&#99;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "image": true,
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS130",
+                "Operating Systems I"
+            ]
+        ]
+    },
+    "zhangyn3": {
+        "name": "张亦宁",
+        "info": [
+            [
+                "envelope",
+                "&#122;&#104;&#x61;&#x6e;&#103;&#121;&#110;&#51;&#64;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#97;&#x69;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#100;&#x75;&#x2e;&#x63;&#110;",
+                "mailto:&#122;&#104;&#97;&#110;&#x67;&#x79;&#x6e;&#51;&#64;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#x75;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "image": true,
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS130",
+                "Operating Systems I"
+            ]
+        ]
+    },
+    "zhangql1": {
+        "name": "张起龙",
+        "info": [
+            [
+                "envelope",
+                "&#x7a;&#104;&#x61;&#110;&#x67;&#113;&#x6c;&#49;&#x40;&#x73;&#104;&#x61;&#x6e;&#103;&#x68;&#97;&#x69;&#116;&#101;&#99;&#104;&#x2e;&#x65;&#x64;&#117;&#46;&#99;&#110;",
+                "mailto:&#x7a;&#104;&#97;&#110;&#103;&#113;&#x6c;&#49;&#x40;&#x73;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE160",
+                "Introduction to Control"
+            ]
+        ]
+    },
+    "xujk": {
+        "name": "徐江坤",
+        "info": [
+            [
+                "envelope",
+                "&#120;&#x75;&#106;&#x6b;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#x6e;",
+                "mailto:&#120;&#117;&#x6a;&#x6b;&#64;&#x73;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#x69;&#x74;&#101;&#99;&#104;&#46;&#x65;&#x64;&#x75;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE160",
+                "Introduction to Control"
+            ]
+        ]
+    },
+    "shiqk": {
+        "name": "石乾坤",
+        "info": [
+            [
+                "envelope",
+                "&#115;&#x68;&#105;&#x71;&#107;&#64;&#115;&#104;&#x61;&#110;&#x67;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#x64;&#117;&#x2e;&#x63;&#x6e;",
+                "mailto:&#x73;&#x68;&#x69;&#113;&#x6b;&#64;&#115;&#104;&#x61;&#110;&#103;&#x68;&#x61;&#x69;&#116;&#x65;&#99;&#104;&#46;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "SI152",
+                "Numerical Optimization"
+            ]
+        ]
+    },
+    "yangfx": {
+        "name": "杨丰旭",
+        "info": [
+            [
+                "envelope",
+                "&#121;&#97;&#x6e;&#x67;&#102;&#x78;&#64;&#115;&#x68;&#x61;&#110;&#103;&#x68;&#x61;&#x69;&#116;&#101;&#x63;&#104;&#46;&#x65;&#100;&#117;&#46;&#99;&#110;",
+                "mailto:&#121;&#97;&#x6e;&#103;&#102;&#120;&#64;&#x73;&#x68;&#97;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#x65;&#99;&#104;&#46;&#101;&#x64;&#117;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS120",
+                "Computer Networks"
+            ]
+        ]
+    },
+    "liuyl5": {
+        "name": "刘越麟",
+        "info": [
+            [
+                "envelope",
+                "&#x6c;&#x69;&#117;&#121;&#x6c;&#53;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#100;&#x75;&#46;&#99;&#110;",
+                "mailto:&#x6c;&#105;&#117;&#x79;&#108;&#x35;&#x40;&#x73;&#104;&#x61;&#110;&#x67;&#104;&#97;&#105;&#x74;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS120",
+                "Computer Networks"
+            ]
+        ]
+    },
+    "hzyang": {
+        "name": "杨恒昭",
+        "info": [
+            [
+                "envelope",
+                "&#104;&#122;&#121;&#97;&#x6e;&#x67;&#x40;&#115;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#105;&#x74;&#101;&#x63;&#x68;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#x6e;",
+                "mailto:&#104;&#x7a;&#x79;&#97;&#110;&#103;&#x40;&#x73;&#104;&#x61;&#x6e;&#x67;&#x68;&#x61;&#105;&#x74;&#101;&#x63;&#x68;&#46;&#101;&#100;&#x75;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "teach-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE115B",
+                "Digital Circuits"
+            ],
+            [
+                "Fall",
+                "2021",
+                "EE115B",
+                "Digital Circuits"
+            ]
+        ]
+    },
+    "lijuan1": {
+        "name": "李娟",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#x69;&#106;&#117;&#97;&#x6e;&#49;&#x40;&#x73;&#104;&#x61;&#x6e;&#x67;&#104;&#97;&#x69;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#100;&#x75;&#46;&#x63;&#110;",
+                "mailto:&#108;&#105;&#x6a;&#x75;&#97;&#x6e;&#49;&#64;&#x73;&#104;&#97;&#110;&#103;&#x68;&#x61;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#101;&#100;&#x75;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "teach-courses": [
+            [
+                "Fall",
+                "2022",
+                "EE115B",
+                "Digital Circuits"
+            ],
+            [
+                "Spring",
+                "2022",
+                "EE115B",
+                "Digital Circuits"
+            ],
+            [
+                "Fall",
+                "2021",
+                "EE115B",
+                "Digital Circuits"
+            ]
+        ]
+    },
+    "zhuzhf": {
+        "name": "祝智峰",
+        "info": [
+            [
+                "envelope",
+                "&#x7a;&#x68;&#117;&#x7a;&#104;&#x66;&#64;&#x73;&#104;&#x61;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#101;&#x63;&#x68;&#46;&#x65;&#x64;&#x75;&#46;&#99;&#110;",
+                "mailto:&#x7a;&#x68;&#117;&#122;&#x68;&#x66;&#64;&#115;&#104;&#97;&#110;&#x67;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#100;&#117;&#46;&#99;&#110;"
+            ]
+        ],
+        "teach-courses": [
+            [
+                "Spring",
+                "2022",
+                "EE115B",
+                "Digital Circuits"
+            ]
+        ]
+    },
+    "tangyx": {
+        "name": "唐吟煦",
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
                 "SI140A",
-                "Probability and Statistics for Information Scienc"
+                "Probability and Statistics for Information Science"
             ]
         ]
     },
@@ -7478,7 +9961,7 @@
                 "Fall",
                 "2022",
                 "SI140A",
-                "Probability and Statistics for Information Scienc"
+                "Probability and Statistics for Information Science"
             ]
         ]
     },
@@ -7496,7 +9979,7 @@
                 "Fall",
                 "2022",
                 "SI140A",
-                "Probability and Statistics for Information Scienc"
+                "Probability and Statistics for Information Science"
             ]
         ]
     },
@@ -7514,7 +9997,7 @@
                 "Fall",
                 "2022",
                 "SI140A",
-                "Probability and Statistics for Information Scienc"
+                "Probability and Statistics for Information Science"
             ]
         ]
     },
@@ -7532,7 +10015,7 @@
                 "Fall",
                 "2022",
                 "SI140A",
-                "Probability and Statistics for Information Scienc"
+                "Probability and Statistics for Information Science"
             ]
         ]
     }
