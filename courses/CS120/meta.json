@@ -3,6 +3,24 @@
     "name": "Computer Networks",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CS120.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "4 Homework (5% * 4 = 20%), Final Exam (35%), Course Project (45%, 4 subprojects * 10% + finish all the four projects 5%), Bonus Score (up to 25%, optional parts of Course Project), Attendence 5%",
+            "teacher": [
+                "yangzhc"
+            ],
+            "ta": [
+                "yangfx",
+                "liaosi",
+                "liuyl5"
+            ]
+        },
+        {
             "course_id": "CS120.01",
             "season": "Fall",
             "year": "2021",
@@ -10,7 +28,10 @@
                 "yangzhc"
             ],
             "ta": [
-                "yanyh", "yanyl", "zhaogh", "liaosi"
+                "yanyh",
+                "yanyl",
+                "zhaogh",
+                "liaosi"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -27,7 +48,9 @@
                 "yangzhc"
             ],
             "ta": [
-                "wangzhw", "yanyh", "wumy1"
+                "wangzhw",
+                "yanyh",
+                "wumy1"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -44,7 +67,8 @@
                 "yangzhc"
             ],
             "ta": [
-                "chenpzh", "lilei1"
+                "chenpzh",
+                "lilei1"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -60,7 +84,8 @@
                 "yangzhc"
             ],
             "ta": [
-                "zhunzh", "lixin1"
+                "zhunzh",
+                "lixin1"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

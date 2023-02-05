@@ -3,6 +3,22 @@
     "name": "Parallel Computing",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CS121.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "fanrui"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
             "course_id": "CS121.01",
             "season": "Fall",
             "year": "2021",

@@ -1,0 +1,361 @@
+«««
+code: CS274A
+name: Natural Language Processing
+semester: Spring 2022
+category: Homework 作业
+title: Homework 4
+»»»
+
+# Homework 4
+
+## Page 1 (question)
+
+@ Problem - custom
+
+title: "Question 1 - Lexical semantic relations"
+content: """
+Choose lexical semantic relation types for word pairs.
+"""
+choice: """
+<div class="question q1 q-radio" answer="{'A': 5}">
+    <p>small - large</p>
+    <input type="radio" name="q1" value="A" title="hyponymy">
+    <input type="radio" name="q1" value="B" title="meronymy">
+    <input type="radio" name="q1" value="C" title="antonymy">
+    <p class="tick-label"></p>
+</div>
+<div class="question q2 q-radio" answer="{'B': 5}">
+    <p>lung - body</p>
+    <input type="radio" name="q2" value="A" title="hyponymy">
+    <input type="radio" name="q2" value="B" title="meronymy">
+    <input type="radio" name="q2" value="C" title="antonymy">
+    <p class="tick-label"></p>
+</div>
+"""
+
+
+@ Problem - text
+
+title: "Question 2 - Word sense Word sense disambiguation"
+content: """
+Using WordNet(http://wordnetweb.princeton.edu/perl/webwn), tag the underlined word in the following sentence.
+
+*Time flies like an arrow.*
+
+Please enter the gloss of the word sense you chosen.
+
+Glosses can be found between parentheses on the webpage or the lecture slides. E.g., "a yound dog" for the first word sense on page 13 of the slides.
+"""
+points: "10"
+answer: "pass away rapidly"
+
+## Page 2 (question)
+
+
+@ Problem - checkbox
+
+title: "Question 3 - First-order logic"
+content: """
+Choose all pairs in which natural language sentences(NL) have consistent semantics with first-order logic formula(FOL).
+"""
+choice: """
+NL: If Abigail makes noise, no one can sleep. <br> FOL: $MAKE-NOISE(Abigail) \Rightarrow (\forall x \neg CAN-SLEEP(x))$
+NL: If Abigail makes noise, someone cannot sleep. <br> FOL: $MAKE-NOISE(Abigail) \Rightarrow (\exists x \neg CAN-SLEEP(x))$
+NL: None of Abigail's brothers can sleep. <br> FOL: $\forall x BROTHER(x, Abigail) \land \neg CAN-SLEEP(x)$
+NL: If one of Abigail's brothers makes noise, Abigail cannot sleep. <br> FOL: $\forall x (BROTHER(x, Abigail) \land MAKE-NOISE(x) \Rightarrow \neg CAN-SLEEP(Abigail))$
+"""
+points: "10"
+answer: "ABD"
+
+
+@ Problem - custom
+
+title: "Question 4 - Propbank"
+content: """
+Find the predicate and roles for the following sentences. You can find the PropBank framesets at here.
+
+*Abigail reluctantly shares a toy with Max.*
+
+Predicate: [A]   Arg0: [B]    Arg1: [C]     Arg2: [D]
+
+Fill in the blanks choosing words from the sentence.
+"""
+choice: """
+<div class="question q1 q-radio" answer="{'C': 2.5}" style="float: left; margin-right: 1em;">
+    <p align="center">Predicate</p>
+    <input type="radio" name="q1" value="A" title="Abigail">
+    <input type="radio" name="q1" value="B" title="reluctantly">
+    <input type="radio" name="q1" value="C" title="shares">
+    <input type="radio" name="q1" value="D" title="a">
+    <input type="radio" name="q1" value="E" title="toy">
+    <input type="radio" name="q1" value="F" title="with">
+    <input type="radio" name="q1" value="F" title="Max">
+    <p class="tick-label"></p>
+</div>
+<div class="question q2 q-radio" answer="{'A': 2.5}" style="float: left; margin-right: 1em;">
+    <p align="center">Arg0</p>
+    <input type="radio" name="q2" value="A" title="Abigail">
+    <input type="radio" name="q2" value="B" title="reluctantly">
+    <input type="radio" name="q2" value="C" title="shares">
+    <input type="radio" name="q2" value="D" title="a">
+    <input type="radio" name="q2" value="E" title="toy">
+    <input type="radio" name="q2" value="F" title="with">
+    <input type="radio" name="q2" value="F" title="Max">
+    <p class="tick-label"></p>
+</div>
+<div class="question q3 q-radio" answer="{'E': 2.5}" style="float: left; margin-right: 1em;">
+    <p align="center">Arg1</p>
+    <input type="radio" name="q3" value="A" title="Abigail">
+    <input type="radio" name="q3" value="B" title="reluctantly">
+    <input type="radio" name="q3" value="C" title="shares">
+    <input type="radio" name="q3" value="D" title="a">
+    <input type="radio" name="q3" value="E" title="toy">
+    <input type="radio" name="q3" value="F" title="with">
+    <input type="radio" name="q3" value="F" title="Max">
+    <p class="tick-label"></p>
+</div>
+<div class="question q4 q-radio" answer="{'F': 2.5}" style="float: left; margin-right: 1em;">
+    <p align="center">Arg2</p>
+    <input type="radio" name="q4" value="A" title="Abigail">
+    <input type="radio" name="q4" value="B" title="reluctantly">
+    <input type="radio" name="q4" value="C" title="shares">
+    <input type="radio" name="q4" value="D" title="a">
+    <input type="radio" name="q4" value="E" title="toy">
+    <input type="radio" name="q4" value="F" title="with">
+    <input type="radio" name="q4" value="F" title="Max">
+    <p class="tick-label"></p>
+</div>
+<div style="clear: left;"></div>
+"""
+
+
+@ Problem - custom
+
+title: "Question 5 - Properties of formal meaning representation"
+content: """
+Please pair the five properties of formal meaning representations with their description. 
+"""
+choice: """
+<div class="question q1 q-radio" answer="{'A': 2}">
+    <p>Unambiguity</p>
+    <input type="radio" name="q1" value="A" title="one representation should have exactly one meaning">
+    <input type="radio" name="q1" value="B" title="one meaning should have exactly one representation">
+    <input type="radio" name="q1" value="C" title="ability to ground with knowledge bases">
+    <input type="radio" name="q1" value="D" title="should be able to draw conclusions">
+    <input type="radio" name="q1" value="E" title="should be able to handle a wide variety of subject matter">
+    <p class="tick-label"></p>
+</div>
+<div class="question q2 q-radio" answer="{'B': 2}">
+    <p>Canonical form</p>
+    <input type="radio" name="q2" value="A" title="one representation should have exactly one meaning">
+    <input type="radio" name="q2" value="B" title="one meaning should have exactly one representation">
+    <input type="radio" name="q2" value="C" title="ability to ground with knowledge bases">
+    <input type="radio" name="q2" value="D" title="should be able to draw conclusions">
+    <input type="radio" name="q2" value="E" title="should be able to handle a wide variety of subject matter">
+    <p class="tick-label"></p>
+</div>
+<div class="question q3 q-radio" answer="{'C': 2}">
+    <p>Verifiability</p>
+    <input type="radio" name="q3" value="A" title="one representation should have exactly one meaning">
+    <input type="radio" name="q3" value="B" title="one meaning should have exactly one representation">
+    <input type="radio" name="q3" value="C" title="ability to ground with knowledge bases">
+    <input type="radio" name="q3" value="D" title="should be able to draw conclusions">
+    <input type="radio" name="q3" value="E" title="should be able to handle a wide variety of subject matter">
+    <p class="tick-label"></p>
+</div>
+<div class="question q4 q-radio" answer="{'D': 2}">
+    <p>Inference ability</p>
+    <input type="radio" name="q4" value="A" title="one representation should have exactly one meaning">
+    <input type="radio" name="q4" value="B" title="one meaning should have exactly one representation">
+    <input type="radio" name="q4" value="C" title="ability to ground with knowledge bases">
+    <input type="radio" name="q4" value="D" title="should be able to draw conclusions">
+    <input type="radio" name="q4" value="E" title="should be able to handle a wide variety of subject matter">
+    <p class="tick-label"></p>
+</div>
+<div class="question q5 q-radio" answer="{'E': 2}">
+    <p>Expressiveness</p>
+    <input type="radio" name="q5" value="A" title="one representation should have exactly one meaning">
+    <input type="radio" name="q5" value="B" title="one meaning should have exactly one representation">
+    <input type="radio" name="q5" value="C" title="ability to ground with knowledge bases">
+    <input type="radio" name="q5" value="D" title="should be able to draw conclusions">
+    <input type="radio" name="q5" value="E" title="should be able to handle a wide variety of subject matter">
+    <p class="tick-label"></p>
+</div>
+"""
+
+
+@ Problem - custom
+
+title: "Question 6 - Syntax-driven semantic parsing"
+content: """
+Given the syntactic tree, please write down the first-order logic formula of S and VP. 
+
+<img src="https://s1.ax1x.com/2022/05/23/Xp8u8S.png" alt="sstree.png" border="0" width="50%" />
+
+No whitespace allowed in your answer
+
+Denote lambda as L (e.g., lambda x. x=Lx.x)
+"""
+choice: """
+<div class="question q1 q-text" answer="{'LIKES(ALEX,BRIT)': 5}">
+    <p style="display: inline;">S: </p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'Lx.LIKES(x,BRIT)': 5}">
+    <p style="display: inline;">VP: </p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+## Page 3 (question)
+
+
+@ Problem - custom
+
+title: "Question 7 - Information extraction tasks"
+content: """
+Please match task names and definitions.
+"""
+choice: """
+<div class="question q1 q-radio" answer="{'A': 2}">
+    <p>Named entity recognition</p>
+    <input type="radio" name="q1" value="A" title="Tag entities in text with their corresponding type">
+    <input type="radio" name="q1" value="B" title="Cluster mentions in text that refer to the same underlying real world entities">
+    <input type="radio" name="q1" value="C" title="Assign a unique indentity to entities mentioned in text">
+    <input type="radio" name="q1" value="D" title="Predict attributes and relations for entities in a sentence.">
+    <p class="tick-label"></p>
+</div>
+<div class="question q2 q-radio" answer="{'B': 2}">
+    <p>Coreference resolution</p>
+    <input type="radio" name="q2" value="A" title="Tag entities in text with their corresponding type">
+    <input type="radio" name="q2" value="B" title="Cluster mentions in text that refer to the same underlying real world entities">
+    <input type="radio" name="q2" value="C" title="Assign a unique indentity to entities mentioned in text">
+    <input type="radio" name="q2" value="D" title="Predict attributes and relations for entities in a sentence.">
+    <p class="tick-label"></p>
+</div>
+<div class="question q3 q-radio" answer="{'C': 2}">
+    <p>Entity linking</p>
+    <input type="radio" name="q3" value="A" title="Tag entities in text with their corresponding type">
+    <input type="radio" name="q3" value="B" title="Cluster mentions in text that refer to the same underlying real world entities">
+    <input type="radio" name="q3" value="C" title="Assign a unique indentity to entities mentioned in text">
+    <input type="radio" name="q3" value="D" title="Predict attributes and relations for entities in a sentence.">
+    <p class="tick-label"></p>
+</div>
+<div class="question q4 q-radio" answer="{'D': 2}">
+    <p>Relation extraction</p>
+    <input type="radio" name="q4" value="A" title="Tag entities in text with their corresponding type">
+    <input type="radio" name="q4" value="B" title="Cluster mentions in text that refer to the same underlying real world entities">
+    <input type="radio" name="q4" value="C" title="Assign a unique indentity to entities mentioned in text">
+    <input type="radio" name="q4" value="D" title="Predict attributes and relations for entities in a sentence.">
+    <p class="tick-label"></p>
+</div>
+"""
+
+
+@ Problem - radio
+
+title: "Question 8 - B-cubed"
+content: """
+Consider the sentence:
+
+*"**I** voted for **Nader** because **he** was most aligned with **my** values," **she** said.*
+
+There are 5 mentions in this sentence: I, Nader, he, my, she.
+
+The gold clustering is:
+
+1 - Nader, he
+
+2 - I, my, she
+
+The predicted clustering is:
+
+1 - Nader, he
+
+2 - I, my
+
+3 - she
+
+Under the B-cubed metric, what is the precision? What about the recall?
+"""
+choice: """
+Precision = 1; Recall = 11/15
+Precision = 1; Recall = 2/5
+Precision = 11/15; Recall = 1
+Precision = 2/5; Recall = 1
+None of the above
+"""
+points: "10"
+answer: "A"
+
+
+
+@ Problem - radio
+
+title: "Question 9 - Mention Ranking"
+content: """
+In mention ranking, we predict an antecedent for each mention in the text. Below is a prediction from Jim, but he corrupts it with some ink by accident. Can you read how many clusters of mentions are there in this prediction? (Assume Jim has the gold mention detection)
+
+<img src="https://s1.ax1x.com/2022/05/23/XpwoZD.png" alt="discourse.png" border="0" width="50%" />
+"""
+choice: """
+1
+2
+3
+4
+Cannot be determined
+"""
+points: "10"
+answer: "C"
+
+## Page 4 (question)
+
+
+@ Problem - checkbox
+
+title: "Question 10 - Attention in RNN based seq2seq model"
+content: """
+Select all correct statements. You can take the RNN seq2seq attention model in the lecture slides as an example.
+"""
+choice: """
+Encoder hidden states are attention "queries".
+Decoder hidden states are attention "queries".
+Encoder hidden states are attention "keys".
+Encoder hidden states are attention "values".
+Decoder hidden states are attention "keys".
+"""
+points: "10"
+answer: "BCD"
+
+
+@ Problem - checkbox
+
+title: "Question 11 - Seq2seq models"
+content: """
+Select all correct statements.
+"""
+choice: """
+Learning a seq2seq model needs to have a parallel corpus (paired source-target / input-output sequences).
+Learning a seq2seq model is maximizing the conditional likelihood of target sentences given source senteces.
+Attention allows the decoder to look directly at the source when decoding.
+"""
+points: "10"
+answer: "ABC"
+
+
+@ Problem - checkbox
+
+title: "Question 12 - Transformer based seq2seq model"
+content: """
+Select all correct statements.
+"""
+choice: """
+The cross attention layer in the transformer decoder needs to be masked to prevent seeing future words when training.
+In the self-attention layer of the encoder transformer, the encoder transformer's hidden states are queries and keys, and the decoder transformer's hidden states are values.
+There is no need to have position embeddings in the transformer decoder because position information is encoded in the transformer encoder.
+The self-attention layers in the transformer encoder needn't be masked because we know and are allowed to know the whole source sentence.
+"""
+points: "10"
+answer: "D"

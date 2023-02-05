@@ -3,6 +3,45 @@
     "name": "Algorithm Design and Analysis",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CS240.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithm and Data Structure (Undergraduate course), Basic discrete mathematics, Basic probability theory, Computer programming",
+            "evaluation": "Assignments (20%), Midterm (35%), Final (35%), Course Project (10%)",
+            "teacher": [
+                "liquan"
+            ],
+            "ta": [
+                "lichq",
+                "geyx",
+                "chenbl1",
+                "liushy",
+                "liujia2"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "CS240.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Problem sets 35%, Project 25%, Final exam 40%",
+            "teacher": [
+                "fanrui"
+            ],
+            "ta": [
+                "dingzhl",
+                "tanhy",
+                "wukf",
+                "unknown"
+            ]
+        },
+        {
             "course_id": "CS240.01",
             "season": "Fall",
             "year": "2021",
@@ -10,7 +49,12 @@
                 "liquan"
             ],
             "ta": [
-                "dongjx", "geyx", "congpsh", "wangmy1", "panzh", "lichq"
+                "dongjx",
+                "geyx",
+                "congpsh",
+                "wangmy1",
+                "panzh",
+                "lichq"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -23,10 +67,19 @@
             "season": "Spring",
             "year": "2021",
             "teacher": [
-                "tukw", "fanrui"
+                "tukw",
+                "fanrui"
             ],
             "ta": [
-                "zuwq", "yangfm", "chengk", "wumy1", "liuhl2", "hejj1", "gaozq", "panzh", "wangchy8"
+                "zuwq",
+                "yangfm",
+                "chengk",
+                "wumy1",
+                "liuhl2",
+                "hejj1",
+                "gaozq",
+                "panzh",
+                "wangchy8"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -39,10 +92,17 @@
             "season": "Spring",
             "year": "2020",
             "teacher": [
-                "tukw", "fanrui"
+                "tukw",
+                "fanrui"
             ],
             "ta": [
-                "lichq", "jiazx", "xuwk", "chenjy1", "xush", "lizy", "wanglt"
+                "lichq",
+                "jiazx",
+                "xuwk",
+                "chenjy1",
+                "xush",
+                "lizy",
+                "wanglt"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

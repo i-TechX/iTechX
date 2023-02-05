@@ -1,0 +1,105 @@
+// basic data types
+int a = 6; 
+int b;
+b = 3;
+printf("a - b = %d...\n", a - b);
+
+// various types
+int a = 6;
+float b;
+double c;
+char t;
+
+printf("size of a = %d...\n", sizeof(a));
+printf("size of b = %d...\n", sizeof(b));
+printf("size of c = %d...\n", sizeof(c));
+printf("size of t = %d...\n", sizeof(t));
+printf("size of int = %d...\n", sizeof(int));
+
+// sizeof
+int a = 6;
+printf("a1 = %d.\n", a);
+a++;
+printf("a2 = %d.\n", a);
+
+printf("size of a = %d...\n", sizeof(a++));
+printf("a3 = %d.\n", a);
+
+// integer type: int char unsigned
+// 2's completion
+int a = 255;
+char c = 255;
+unsigned char c2 = 255;
+
+printf("a = %d.\n", a);
+printf("c = %d.\n", c);
+printf("c2 = %d.\n", c2);
+
+// example-2: out of range
+unsigned char c2 = -1;
+printf("c2 = %d.\n", c2);
+
+// example-3: out of range
+char c = -1;
+int c2 = -1;
+
+printf("c = %u...\n", c);
+printf("c2 = %u...\n", c2);
+
+// example-4: 8, 16, no binary?
+char c = 012;
+int c2 = 0x1a;
+printf("c = %d, c2 = %d...\n", c, c2);
+printf("c = 0%o, c2 = 0x%x...\n", c, c2);
+
+// example-5:
+extra: 0, INF, NAN
+float:  32, valid number: 7, +-(1.2^-38 ~3.4^38 )
+double: 64, valid number: 15, +-(2.2^-308 ~1.79^308)
+
+// example-6:
+double ff = 1234.56789;
+printf("%E, %f \n", ff, ff);
+
+// example-7:
+double ff = 1E-10;
+printf("%E, %f \n", ff, ff);
+printf("%E, %.16f \n", ff, ff);
+
+// example-7:
+float a = 1.111;
+float b = 1.222;
+float c = a + b;
+
+if (c == 2.333)
+	printf("same, haha...\n");
+else
+	printf("not same...\n");
+
+// example-8:
+	char c, d;
+	c = 1;
+	d = '1';
+
+
+	printf("c = %d ...\n", c);
+	printf("d = %d ...\n", d);
+	printf("d = %c ...\n", d);
+
+// example-9:
+	double a = 1;
+	double b = 2;
+	int t = a / b;
+
+	printf(" t = %d...\n", t);
+	
+	
+// example-10
+	int a = -1;
+	if (a>0 && a++ >1){
+	}
+	printf("%d\n", a);
+	
+
+
+

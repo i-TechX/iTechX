@@ -1,0 +1,159 @@
+// example-1
+	int i = 0;
+	const char *s1 = "hello world!";
+	const char *s2 = "hello world!";
+
+	char s3[] = "hello world!";
+
+	// s1 = s3;
+	// s1[0] = 't';
+	printf("s[0] = %c ...\n", s1[0]);
+	printf("s1 = %s ...\n", s1);
+	printf("s2 = %s ...\n", s2);
+	printf("s3 = %s ...\n", s3);
+
+	printf("s1 = %p ...\n", s2);
+	printf("s2 = %p ...\n", s2);
+	printf("s3 = %p ...\n", s3);
+	printf("&i = %p ...\n", &i);
+	printf("&s1 = %p ...\n", &s1);
+	
+// example-2
+	int i = 0;
+	char str1[] = "\n how are you test test test? ";
+	const char *  str2 = "\n how are you ? ";
+
+	str2 = str1;
+	str1 = str2;
+	str2++;
+	str1++;
+
+	printf("str1 = %s...\n", str1);
+	printf("str2 = %s...\n", str2);
+
+	printf("str1 = %p...\n", str1);
+	printf("str2 = %p...\n", str2);
+	printf("&i = %p...\n", &i);
+	
+//	example-3
+char word[8];
+	char word2[8];
+	//char * word;
+
+	scanf("%7s", word);
+	scanf("%7s", word2);
+
+	printf("test: %s###%s###...\n", word, word2);
+	
+// example-4
+	int ch;
+	while ((ch = getchar()) != EOF) {
+		putchar(ch);
+	}
+
+	printf("EOF\n");
+
+// example-4.5
+	printf("argc = %d ...\n", argc);
+
+	for (int i = 0; i < argc; i++){
+		printf("%d: %s ...\n", i, argv[i]);
+	}
+
+
+// example-5
+	char line[] = "hello";
+	printf("strlen = %lu\n", strlen(line));
+	printf("strlen = %lu\n", sizeof(line));
+
+
+// example-6
+int mycmp(const char *s1, const char*s2) {
+	while (*s1 == *s2 && *s1 != '\0' && *s2 != '\0')
+	{
+		s1++;
+		s2++;
+	}
+
+	return *s1 - *s2;
+
+}
+
+int main(int argc, char const *argv[])
+{
+	char s1[] = "abc";
+	char s2[] = "abc ";
+
+	printf("%d...\n", strcmp(s1, s2));
+	printf("%d...\n", mycmp(s1, s2));
+	printf("%d...\n", 'a' - 'A');
+
+	return 0;
+}
+
+// example-7
+
+void reverse(char*);
+int main(void)
+{
+	char line[132];
+	gets_s(line);
+	while (strcmp(line, "ZZZ") != 0) {
+		reverse(line);
+		printf("%s\n", line);
+		gets_s(line);
+	}
+	return 0;
+}
+
+void reverse(char* s)
+{
+	char c, * end;
+	end = s + strlen(s) - 1;
+	while (s < end) {
+		// 2 ends approach center
+		c = *s;
+
+		*s++ = *end;
+		// or *s = *end; s++;
+
+		*end-- = c;
+		// or *end = c; end--;
+	}
+}
+
+// example-8
+char s[] = "hello";
+	char *p = strchr(s, 'l');
+	printf("p: %s...\n", p);
+	p = strchr(p + 1, 'l');
+	printf("p: %s...\n", p);
+
+	/*char *t = (char*)malloc(strlen(p) + 1);
+	strcpy(t, p);
+	printf("t: %s...\n", t);
+	free(t);*/
+
+// example-9
+	char s[] = "hello";
+	char *p = strchr(s, 'l');
+	printf("p: %s...\n", p);
+
+	char c = *p;
+	*p = '\0';
+	char *t = (char*)malloc(strlen(s) + 1);
+	strcpy(t, s);
+	printf("t: %s...\n", t);
+
+
+	
+	
+	
+	
+	
+	
+
+
+
+
+

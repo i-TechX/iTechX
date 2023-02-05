@@ -3,6 +3,41 @@
     "name": "Introduction to Control",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "EE160.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "建议先修：线性代数，⾼等数学，信号与系统",
+            "evaluation": "40% Homework & Experiments Report + 10% Project Report + 50% Final Exam",
+            "teacher": [
+                "wangyang4"
+            ],
+            "ta": [
+                "zhangql1",
+                "xujk",
+                "maqx",
+                "hegq"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "EE160.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Homework: 20%, Mid-Term Exam: 40%, Final Exam: 40%",
+            "teacher": [
+                "borish"
+            ],
+            "ta": [
+                "guoyx1"
+            ]
+        },
+        {
             "course_id": "EE160.01",
             "season": "Fall",
             "year": "2021",
@@ -10,7 +45,10 @@
                 "wangyang4"
             ],
             "ta": [
-                "yuxp", "hegq", "panyq", "zhangheng1"
+                "yuxp",
+                "hegq",
+                "panyq",
+                "zhangheng1"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -22,12 +60,14 @@
             "course_id": "EE160.01",
             "season": "Fall",
             "year": "2020",
-            "mainpage": "https://faculty.sist.shanghaitech.edu.cn/faculty/boris/EE160.html",
             "teacher": [
-                "borish", "wangyang4"
+                "borish",
+                "wangyang4"
             ],
             "ta": [
-                "duxu", "guoyx1", "lijl"
+                "duxu",
+                "guoyx1",
+                "lijl"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

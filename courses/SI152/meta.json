@@ -1,0 +1,71 @@
+{
+    "code": "SI152",
+    "name": "Numerical Optimization",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "SI152.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework 40%, Exam 60%",
+            "teacher": [
+                "wanghao1"
+            ],
+            "ta": [
+                "shiqk",
+                "gouby"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "SI152.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework (20%), Quiz (10%), Course project (20%), Mid-term Exam (20%), Final Exam (30%)",
+            "teacher": [
+                "shiye"
+            ],
+            "ta": [
+                "sunhx"
+            ]
+        },
+        {
+            "season": "Fall",
+            "year": "2021",
+            "course_id": "SI152.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework 30%, Project 30%, Exam 40%",
+            "teacher": [
+                "wanghao1"
+            ],
+            "ta": [
+                "shenjd"
+            ]
+        },
+        {
+            "season": "Fall",
+            "year": "2020",
+            "course_id": "SI152.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework 40%, Project 20%, Exam 40%",
+            "teacher": [
+                "wanghao1"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        }
+    ]
+}

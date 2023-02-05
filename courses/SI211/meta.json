@@ -1,0 +1,40 @@
+{
+    "code": "SI211",
+    "name": "Numerical Analysis",
+    "semesters": [
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "SI211.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework: 30%, Mid-Term Exam: 30%, Final Exam: 40%",
+            "teacher": [
+                "borish"
+            ],
+            "ta": [
+                "shijh",
+                "unknown"
+            ],
+            "mainpage": "https://faculty.sist.shanghaitech.edu.cn/faculty/boris/SI211.html"
+        },
+        {
+            "season": "Fall",
+            "year": "2021",
+            "course_id": "SI211.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "jiangjh"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,174 @@
+// example-1
+void cheers(int n)
+{
+	int i = 1;
+	if (n <= 1)
+		printf("Hurrah: ...%d... \n", n);
+	else {
+		printf("Hip ...%d... \n", n);
+		cheers(n - 1);
+	}
+}
+
+int main(void) {
+
+	cheers(100);
+
+	return 0;
+}
+
+// example-2
+void printSomething(int n)
+{
+	if (n > 0) {
+		printf("*");
+		printSomething(n - 1);
+		printf("!");
+	}
+}
+
+// example-3
+int factorial(int n) {
+	if (n == 0)
+		return 1;
+	else
+		return n * factorial(n - 1);
+}
+
+int main(void) {
+
+	int i = 0;
+	printf("%d! = %d", i, factorial(i));
+
+	return 0;
+}
+
+// example-4
+int multi1(int m, int n)
+{
+	if (n == 1)  				
+		return m;
+	else						
+		return m + multi1(m, n - 1);
+}
+
+void multi2(int m, int n, int *product)
+{
+	if (n == 1)     
+		*product = m;
+	else {      
+		multi2(m, n - 1, product);
+		*product = *product + m;
+	}
+}
+
+int main(void) {
+
+	int i = 10, j = 5;
+	printf("%d * %d = %d...\n", i, j, multi1(i, j));
+
+	int product;
+	multi2(i, j, &product);
+	printf("%d * %d = %d... \n", i, j, product);
+
+	return 0;
+}
+
+// example-5
+void fn(int x, int y, int *z)
+{
+	if (x > y) {
+		x = x - 2;
+		y = y - 1;
+		*z = x * y;
+		fn(x, y, z);
+	}
+	printf("x = %d, y = %d, *z = %d\n", x, y, *z);
+}
+
+int main(void)
+{
+	int n1 = 20, n2 = 15, n3 = 0;
+	fn(n1, n2, &n3);
+
+	printf("n1 = %d, n2 = %d, n3 = %d\n", n1, n2, n3);
+
+	return 0;
+}
+
+// example-6
+void printDigit(int num) 
+{
+	if (num < 10)
+		printf("%d\n", num);
+	else {
+		printDigit(num / 10);
+		printf("%d\n", num % 10);
+	}
+}
+
+int main(void) {
+	int num;
+	printf("Enter a number: ");
+	scanf("%d", &num);
+	printDigit(num);
+	return 0;
+}
+
+// example-7
+#include <stdio.h>
+
+int move(int count, int start, int finish, int temp) {
+	if (count ==1)
+	{
+		printf("move disk %d from tower %d to tower %d\n", count, start, finish);
+		return 1;
+	}
+	int a = move(count - 1, start, temp, finish);
+	printf("move disk %d from tower %d to tower %d\n", count, start, finish);
+	int b = move(count - 1, temp, finish, start);
+
+	return a + b + 1;
+}
+
+int main(void) 
+{	
+	int disks = 16;
+	printf("Disks: %d\n", disks);
+
+	int sum = move(disks, 1, 3, 2);
+
+	printf("sum = %d\n", sum);
+	return 0;
+}
+
+// example-8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,6 +3,23 @@
     "name": "Applied Cryptography",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "CS152.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Attendance: 10%, Homework: 60%, Final Exam: 30%",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "kepzh",
+                "lijy6"
+            ]
+        },
+        {
             "course_id": "CS152.01",
             "season": "Fall",
             "year": "2020",
@@ -11,7 +28,11 @@
                 "zhanglf"
             ],
             "ta": [
-                "liujing1", "chenxin3", "fengshuai", "kepzh", "qinqi"
+                "liujing1",
+                "chenxin3",
+                "fengshuai",
+                "kepzh",
+                "qinqi"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

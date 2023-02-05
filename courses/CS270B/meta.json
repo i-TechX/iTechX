@@ -1,0 +1,22 @@
+{
+    "code": "CS270B",
+    "name": "Advanced Digital Image Processing",
+    "semesters": [
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "CS270B.01",
+            "department": "信息科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "未知",
+            "evaluation": "Homework assignment (20%*2=40%), Project (60%), Possible bonus (10%)",
+            "teacher": [
+                "zhangyy8"
+            ],
+            "ta": [
+                "wangyj2"
+            ]
+        }
+    ]
+}

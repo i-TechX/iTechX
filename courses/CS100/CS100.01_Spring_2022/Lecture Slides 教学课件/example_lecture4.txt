@@ -1,0 +1,223 @@
+// example-1
+// if-elseif-else: sum(a,b,c);
+	double score;
+	char level;
+
+	printf("enter your score:");
+	scanf("%lf", &score);
+
+	if (score >= 90)
+		level = 'A';
+	else if (score >= 80)
+		level = 'B';
+	else
+		level = 'C';
+
+	printf("your level is %c...\n", level);
+	
+	
+// example-2
+// if-else: max(a,b,c)
+// #define max_3(a,b,c) (a>b?(a>c?a:c):(b>c?b:c))
+	int a, b, c;
+	int max;
+	printf("input 3 intergers: ");
+	scanf("%d %d %d", &a, &b, &c);
+
+	if (a > b)
+		if (c > a)
+			max = c;
+		else
+			max = a;
+	else 
+		if (c > b)
+			max = c;
+		else 
+			max = b;
+
+	printf("output max = %d...\n", max);
+
+// example-3
+// switch: break
+	double score;
+	char grade;
+
+	const int EIGHT = 8;
+	int eight = 8;
+
+	printf("enter score: ");
+	scanf("%lf", &score);
+	switch ((int)score / 10) {
+	case 10: case 9:
+		grade = 'A';	
+		break;
+	//case 8:
+	case EIGHT:
+		grade = 'B';	
+		break;
+	case 7:
+		grade = 'C';	
+		break;
+	case 6:
+		grade = 'D';	
+		break;
+	case 5:
+		grade = 'E';	
+		break;
+	default: 
+		grade = 'F';
+	}
+
+	printf("grade = %c...\n", grade);
+	
+// example-4
+// while-loop
+// n's num
+	int x;
+	int n = 0;
+	scanf("%d", &x);
+
+	printf("x input = %d...\n", x);
+#if 0
+	n++;
+	x /= 10;
+
+	while (x > 0) {
+		n++;
+		x /= 10;
+	}
+#else
+	do {
+		n++;
+		x /= 10;
+	} while (x > 0);
+#endif
+
+	printf("n = %d...\n", n);
+	
+	
+// example-5
+// while-loop
+// sum of all number
+	int number, sum(0), count(0);
+
+#if 1
+	do{
+		scanf("%d", &number);
+
+		if (number != -1) {
+			sum += number;
+			count++;
+		}
+	} while (number != -1);
+#else
+	scanf("%d", &number);
+	while (number != -1){
+		sum += number;
+		count++;
+		scanf("%d", &number);
+	}
+#endif
+
+	printf("sum = %d...\n", sum);
+	printf("count = %d...\n", count);
+
+	
+// example-6
+// while-loop: invert a interger
+	int x;
+	scanf("%d", &x);
+
+	int d;
+	int ret = 0;
+	while (x > 0){
+		d = x % 10;
+		% printf("%d",d);
+		ret = 10 * ret + d;
+		printf("x = %d, d = %d, ret = %d...\n", x, d, ret);
+		x /= 10;
+	}
+
+	printf("inverse x = %d", ret);
+	
+
+// example-7
+// for-loop
+	int i = 10;
+	for (int i = 0; i < 5; i++) {
+		printf("i = %d\n", i);
+	}
+
+	printf("i = %d\n",i);
+
+
+// example-8
+// Nested for-loop
+	for (int x = 1; x < 100; x++) {
+
+		int isPrime = 1;
+		for (int i = 2; i < x; i++) {
+			if (x%i == 0) {
+				isPrime = 0;
+				break;
+			}
+		} // loop-i
+
+		if (isPrime == 1)
+		{
+			printf("%d ", x);
+		}
+
+	} // loop-x
+	printf("\n");
+	
+// example-9
+// Nested for-loop
+	int n;
+	scanf("%d", &n);
+	n = 9;
+
+	int i, j;
+	i = 1;
+	while (i <= n) {
+		j = 1;
+		while (j <= i) {
+			printf("%d*%d=%d", i, j, i*j);
+
+			/*if (i*j < 10)
+				printf("     ");
+			else
+				printf("    ");*/
+			j++;
+		} // j-loop
+		// printf("\n");
+		i++;
+	} // i-loop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

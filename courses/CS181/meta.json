@@ -3,6 +3,43 @@
     "name": "Artificial Intelligence I",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CS181.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Programming Languages, Data Structures, Algorithms, Discrete Mathematics, Probability and Statistics, Linear Algebra, Calculus",
+            "evaluation": "6 homework assignments (10%), 5 programming assignments (25%), Project (15%), Midterm exam (25%), Final exam (25%)",
+            "teacher": [
+                "tukw"
+            ],
+            "ta": [
+                "wuhy1",
+                "jiangchy",
+                "lijx2",
+                "zhengshh"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "CS181.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Programming Languages, Data Structures, Algorithms, Discrete Mathematics, Probability and Statistics, Linear Algebra, Calculus",
+            "evaluation": "6 homework assignments (10%), 5 programming assignments (25%), Project (15%), Midterm exam (25%), Final exam (25%)",
+            "teacher": [
+                "hexm",
+                "yangsb"
+            ],
+            "ta": [
+                "zhangchy2",
+                "wuyu1"
+            ]
+        },
+        {
             "course_id": "CS181.01",
             "season": "Fall",
             "year": "2021",
@@ -10,7 +47,10 @@
                 "tukw"
             ],
             "ta": [
-                "wuhy1", "chenzhuo", "chents", "yangsl"
+                "wuhy1",
+                "chenzhuo",
+                "chents",
+                "yangsl"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -24,10 +64,16 @@
             "year": "2020",
             "mainpage": "https://i-techx.github.io/CS181/index.html",
             "teacher": [
-                "tukw", "hexm"
+                "tukw",
+                "hexm"
             ],
             "ta": [
-                "jiangchy", "wuhy1", "jiazx", "qiaowh", "chendh1", "zhanggl1"
+                "jiangchy",
+                "wuhy1",
+                "jiazx",
+                "qiaowh",
+                "chendh1",
+                "zhanggl1"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -44,7 +90,11 @@
                 "tukw"
             ],
             "ta": [
-                "jiangchy", "huzch", "shenyao", "caoyf", "dengbw"
+                "jiangchy",
+                "huzch",
+                "shenyao",
+                "caoyf",
+                "dengbw"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

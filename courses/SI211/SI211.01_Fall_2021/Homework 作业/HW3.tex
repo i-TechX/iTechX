@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{luainputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose}
+\usepackage{amsfonts}
+\usepackage{babel}
+\usepackage{ulem}
+
+\usepackage{extarrows}
+\usepackage[colorlinks]{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{float}
+\usepackage{amsmath,graphicx}
+\usepackage{subfigure} 
+\usepackage{cite}
+\usepackage{amsthm,amssymb,amsfonts}
+\usepackage{textcomp}
+\usepackage{bm,pifont}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{xparse}
+\usepackage{cleveref}
+\usepackage{xcolor}
+\usepackage[center]{caption}
+
+
+\begin{document}
+
+\begin{center}
+	\textbf{\LARGE{Numerical analysis(SI211)$_\text{Fall 2021-22}\,$ Homework 3 } } \\
+	\texttt{Prof. Jiahua Jiang }\\
+	\texttt{\textbf{Name:} xxx }  \quad 
+	\texttt{\textbf{Student No.:} xxx }  \quad 
+	\texttt{\textbf{E-mail:}} \texttt{ xxx@shanghaitech.edu.cn}
+\par\end{center}
+
+\noindent
+\rule{\linewidth}{0.4pt}
+{\bf {\large Acknowledgements:}}
+\begin{enumerate} 
+    \item Deadline: \textcolor{red}{\textbf{2021-12-24 11:59:00}}, no late submission is allowed.
+    \item No handwritten homework is accepted. You should submit your homework in \textcolor{blue}{Blackboard} with \textcolor{blue}{PDF} format, we recommend you use \LaTeX. 
+    \item Giving your solution in English, solution in Chinese is not allowed.
+    \item Make sure that your codes can run and are consistent with your solutions, you can use any  programming language. 
+    \item Your PDF should be named as "{\sf your\_student\_id+HW3.pdf}", package all your codes into "{\sf your\_student\_id+Code3.zip}" and upload. \textcolor{blue}{ Don't put your PDF in your code file} 
+    \item \color{blue}{All the results from your code should be shown in pdf but please do not inset your code into \LaTeX }.
+    \item Plagiarism is not allowed. Those plagiarized solutions and codes will get 0 point. \textcolor{red}{
+    If the results on the pdf are inconsistent with the results of code, your coding problem will get 0 point.}
+    \end{enumerate}
+\rule{\linewidth}{0.4pt}
+
+\newpage
+\begin{enumerate}
+% % ____________________________________ pro_1 ____________________________________
+  \item \textbf{Euler's Method}(\textcolor{blue}{20 points.})\\ 
+  For initial-value problem:
+  \begin{equation}
+  \begin{aligned}
+      &y'(x)=ax+b\\
+      &y(0) = 0,
+  \end{aligned}
+ \end{equation}
+ use Euler's method and Taylor's method of order $2$ to derive the approximation of $y_{i+1}$ with step size $h$ respectively. Besides, compare your results with the exact solution $y=\frac{1}{2}ax^2+bx$ (i.e. compare $y_{i+1}$ and $y(x_{i+1})$). \\
+\textbf{Solution:}\\
+
+    
+% % ____________________________________ pro_2 ____________________________________
+\newpage
+\item \textbf{Runge-Kutta Methods}(\textcolor{blue}{20 points.})\\
+Prove the following Runge-kutta method is of order 3(i.e. has truncation error $\mathcal{O}(h^4)$)
+\begin{equation}
+    \begin{aligned}
+        y_{i+1} &= y_i+\frac{h}{4}(K_1+3K_3)\\
+        K_1 &= f(x_i,y_i)\\
+        K_2 &= f(x_i+\frac{h}{3},y_i+\frac{h}{3}K_1)\\
+        K_3 &= f(x_i+\frac{2}{3}h,y_i+\frac{2}{3}hK_2)
+    \end{aligned}
+\end{equation}
+\newline \textbf{Solution:}\\
+
+% % ____________________________________ pro_3 ____________________________________
+\newpage
+
+
+\item \textbf{\textcolor{red}{Coding}Runge-Kutta Order Four}(\textcolor{blue}{20 points.}) 
+Use Runge-Kutta Fourth-Order method to solve the following initial-value problem:
+\begin{equation}
+\begin{aligned}
+    y'(x)&=x+y(0\leq x\leq1)\\
+    y(0)&=1.
+\end{aligned}
+\end{equation}
+The exact solution of the problem is $y(x) = -x-1+2e^x$.
+With step size $h=0.1$, give your predictions within the interval $x\in [0,1]$. List the Runge-Kutta 4 method results and their errors in the following table. 
+\begin{center}
+\begin{tabular}{||c c c c||} 
+ \hline
+ $x_i$ & Exact($y_i = y(x_i)$) & Runge-Kutta Order 4 ($w_i$) & Error($|y_i-w_i|$) \\ [0.5ex] 
+ \hline\hline
+ 0.0 & 1.0 & 1.0 & 0 \\
+ \hline
+ ... & ... & ... & ... \\
+ \hline
+  1.0 & ... & ... & ... \\[1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+
+
+\end{enumerate}
+\end{document}

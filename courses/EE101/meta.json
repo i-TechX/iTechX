@@ -1,0 +1,70 @@
+{
+    "code": "EE101",
+    "name": "Medical Imaging",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "EE101.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "数学分析，概率论，普通物理",
+            "evaluation": "5 Homework (30%), Quiz (5%), Test (30%), Project (35%)",
+            "teacher": [
+                "zhengrui"
+            ],
+            "ta": [
+                "jinzhy"
+            ]
+        },
+        {
+            "season": "Fall",
+            "year": "2021",
+            "course_id": "EE101.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Calculus, Probability theory, General Physics",
+            "evaluation": "5 Homework (30%), Quiz (5%), 3 Tests (30%), Project (35%)",
+            "teacher": [
+                "zhengrui"
+            ],
+            "ta": [
+                "liuaj"
+            ]
+        },
+        {
+            "season": "Fall",
+            "year": "2020",
+            "course_id": "EE101.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "5 Homework (30%), Quiz (5%), Midterm Exam (30%), Project (35%)",
+            "teacher": [
+                "zhengrui"
+            ],
+            "ta": [
+                "gesonghan"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2020",
+            "course_id": "EE101.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "6 Homework (30%), Quiz (5%), Midterm Exam (30%), Project (35%)",
+            "teacher": [
+                "zhengrui"
+            ],
+            "ta": [
+                "zenghy"
+            ]
+        }
+    ]
+}
