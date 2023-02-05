@@ -140,7 +140,7 @@ layui.define(['jquery', 'util', 'element', 'proxy', 'tagsInputAutoComplete', 'av
                     </div>\
                     <div class="layui-footer" style="margin:2em;">                                                                                              \
                         <!-- 底部固定区域 -->                                                                                                \
-                        <p style="display:flex; justify-content: center;">© 2020-2022 iTechX - MIT license.</p>                             \
+                        <p style="display:flex; justify-content: center;">© 2020-2023 iTechX - MIT license.</p>                             \
                     </div>';
                     return;
                 }
@@ -316,7 +316,7 @@ layui.define(['jquery', 'util', 'element', 'proxy', 'tagsInputAutoComplete', 'av
                     <div id="gitalk-container"></div>\
                     <div class="layui-footer" style="margin:2em;">                                                                          \
                         <!-- 底部固定区域 -->                                                                                                \
-                        <p style="display:flex; justify-content: center;">© 2020-2022 iTechX - MIT license.</p>                             \
+                        <p style="display:flex; justify-content: center;">© 2020-2023 iTechX - MIT license.</p>                             \
                     </div>                                                                                                                  \
                 ';
 
