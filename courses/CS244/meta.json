@@ -1,5 +1,24 @@
 {
     "status": "activate",
     "code": "CS244",
-    "name": "Theory of Computation"
+    "name": "Theory of Computation",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CS244.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "计算机编程(CS100),离散数学(SI120),算法与数据结构(CS101), Graph theory(optional)",
+            "evaluation": "理论作业：20%  期中30%  期末50%",
+            "teacher": [
+                "songfu"
+            ],
+            "ta": [
+                "youch"
+            ],
+            "mainpage": "https://piazza.com/shanghaitech.edu.cn/fall2022/cs244/info"
+        }
+    ]
 }
