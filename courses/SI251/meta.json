@@ -10,7 +10,7 @@
             "credit": "4",
             "hours": "64",
             "prerequisite": "Basic linear algebra, Basic probability, A programming language (Matlab or Python)",
-            "evaluation": "3 Homework (20%), Random Quiz (10%), Final Exam, 1 A4 cheatsheet (40%), Course project (30%)",
+            "evaluation": "3 Homework (20%), Random Quiz (10%), open-book Final Exam (40%), Course project (30%)",
             "teacher": [
                 "shiye"
             ],
