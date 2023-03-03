@@ -70,9 +70,9 @@ We have two steps in the policy iteration algorithm: policy evaluation and polic
 
 (ii) Solve linear system: $V^{\pi}(s)=\sum_{s^{\prime}} T\left(s, \pi(s), s^{\prime}\right)\left[R\left(s, \pi(s), s^{\prime}\right)+\gamma V^{\pi}\left(s^{\prime}\right)\right]$
 
-(iii) One step look ahead: $\pi_{i+1}(s)=\arg \max _{a} \sum_{s^{\prime}} T\left(s, a, s^{\prime}\right)\left[R\left(s, a, s^{\prime}\right)+\gamma V^{\pi_{i}}\left(s^{\prime}\right)\right]$
+(iii) One step look ahead: $\pi_{i+1}(s)=\arg \max_{a} \sum_{s^{\prime}} T\left(s, a, s^{\prime}\right)\left[R\left(s, a, s^{\prime}\right)+\gamma V^{\pi_{i}}\left(s^{\prime}\right)\right]$
 
-(iv) Q-value iteration: $Q_{k+1}(s, a) \leftarrow \sum_{s^{\prime}} T\left(s, a, s^{\prime}\right)\left[R\left(s, a, s^{\prime}\right)+\gamma \max _{a^{\prime}} Q_{k}\left(s^{\prime}, a^{\prime}\right)\right]$
+(iv) Q-value iteration: $Q_{k+1}(s, a) \leftarrow \sum_{s^{\prime}} T\left(s, a, s^{\prime}\right)\left[R\left(s, a, s^{\prime}\right)+\gamma \max_{a^{\prime}} Q_{k}\left(s^{\prime}, a^{\prime}\right)\right]$
 
 """
 choice: """
@@ -427,7 +427,7 @@ This simple example actually reflects many real-world situations in which one mu
 
 Assume $\gamma = 1$. We perform value iteration and initialize the value of each state to zero. That is, $\forall s, V_{0}(s) = 0$. Recall the update function in value iteration:
 
-$V_{k+1}(s) \leftarrow \max _{a} \sum_{s^{\prime}} T\left(s, a, s^{\prime}\right)\left[R\left(s, a, s^{\prime}\right)+\gamma V_{k}\left(s^{\prime}\right)\right]$
+$V_{k+1}(s) \leftarrow \max_{a} \sum_{s^{\prime}} T\left(s, a, s^{\prime}\right)\left[R\left(s, a, s^{\prime}\right)+\gamma V_{k}\left(s^{\prime}\right)\right]$
 
 Calculate the following:
 """

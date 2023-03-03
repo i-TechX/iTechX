@@ -49,7 +49,7 @@ Which of the following expressions about the forward algorithm and Viterbi algor
 choice: """
 $P\left(x_{t+1} \mid e_{1: t+1}\right)=\sum_{x_{1: t}} P\left(x_{1: t+1} \mid e_{1: t+1}\right)$
 In the forward algorithm,  $f_{1: t+1}\left(X_{t+1}\right)=\alpha P\left(e_{t+1} \mid X_{t+1}\right) \sum_{x_{t}} P\left(X_{t+1} \mid x_{t}\right) f_{1: t}\left(x_{t}\right)$ , where  $f_{1: t}\left(X_{t}\right)=P\left(X_{t} \mid e_{1: t}\right)$  and  $\alpha$  is the normalization factor.
-In the Viterbi algorithm,  $m_{1: t+1}\left(X_{t+1}\right)=P\left(X_{t+1} \mid e_{t+1}\right) \max _{x_{t}} P\left(X_{t+1} \mid x_{t}\right) m_{1: t}\left(x_{t}\right)$ , where  $m_{1: t}\left(X_{t}\right)=\max _{x_{1: t-1}} P\left(X_{1: t} \mid e_{1: t}\right) $
+In the Viterbi algorithm,  $m_{1: t+1}\left(X_{t+1}\right)=P\left(X_{t+1} \mid e_{t+1}\right) \max_{x_{t}} P\left(X_{t+1} \mid x_{t}\right) m_{1: t}\left(x_{t}\right)$ , where  $m_{1: t}\left(X_{t}\right)=\max_{x_{1: t-1}} P\left(X_{1: t} \mid e_{1: t}\right) $
 In the Viterbi algorithm, for each state at time t we keep track of the unnormalized maximum probability of any path to it.
 None of the choices is correct.
 """
@@ -353,7 +353,7 @@ In this section, assume the discount factor $\gamma = 1$.
 We perform value iteration and initialize the value of each state as zero. That is, $\forall s, V_{0}(s) = 0$. Recall the update function in value iteration:
 
 $$
-V_{k+1}(s) \leftarrow \max _{a} \sum_{s^{\prime}} T\left(s, a, s^{\prime}\right)\left[R\left(s, a, s^{\prime}\right)+\gamma V_{k}\left(s^{\prime}\right)\right]
+V_{k+1}(s) \leftarrow \max_{a} \sum_{s^{\prime}} T\left(s, a, s^{\prime}\right)\left[R\left(s, a, s^{\prime}\right)+\gamma V_{k}\left(s^{\prime}\right)\right]
 $$
 
 Calculate the following.
@@ -467,7 +467,7 @@ Assume, the discount factor $\gamma = 0.6$ and the step size for $\alpha = 0.5$.
 
 Recall in Q-learning,
 
-$$ Q(s, a) \leftarrow(1-\alpha) Q(s, a)+\alpha[R\left(s, a, s^{\prime}\right)+\gamma \max _{a^{\prime}} Q\left(s^{\prime}, a^{\prime}\right)] $$
+$$ Q(s, a) \leftarrow(1-\alpha) Q(s, a)+\alpha[R\left(s, a, s^{\prime}\right)+\gamma \max_{a^{\prime}} Q\left(s^{\prime}, a^{\prime}\right)] $$
 
 We update the Q function table every time a sample is learnt. Fill in the Q values below after all samples are processed.
 
