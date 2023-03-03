@@ -1,0 +1,335 @@
+«««
+code: CS181
+name: Artificial Intelligence I
+semester: Fall 2022
+category: Homework 作业
+title: Homework 6
+»»»
+
+# Homework 6
+
+## Page 1 (question)
+
+@ Problem - custom
+
+title: "Question 1 - Naïve Bayes"
+content: """
+<p>In this question, we will train a Naive Bayes classifier to predict class labels Y as a function of input features $F_i$ .</p>
+<p><img height="200" src="./image/hw6/hw9_nb.png"></p>
+<p>We are given the following 15 training points:</p>
+<p><img width="392" height="148" src="./image/hw6/xid-1240162_1"></p>
+<p>What is the maximum likelihood estimate of the prior P(Y)?</p>
+<table class="layui-table" style="width: fit-content;" border="1"> <thead><tr>      <td>Y</td>      <td>P(Y)</td>     </tr>  </thead>   <tbody>        <tr>      <td>A</td>      <td><strong>[q1.1]</strong></td>     </tr>     <tr>      <td>B</td>      <td><span ><strong>[q1.2]</strong></span></td>     </tr>     <tr>      <td>C</td>      <td><span ><strong>[q1.3]</strong></span>&nbsp;</td>     </tr>    </tbody>   </table>
+<p>What are the maximum likelihood estimates of the conditional probability distributions? Fill in the tables below (the second and third are done for you).</p>
+<table class="layui-table" style="width: fit-content; float: left; margin-right: 1em;" border="1"> <thead>  <tr>     <td>$F_1$</td>     <td>Y</td>     <td>$P(F_1|Y)$</td>    </tr>  </thead>  <tbody>    <tr>     <td>0</td>     <td>A</td>     <td><strong>[q1.4]</strong></td>    </tr>    <tr>     <td>1</td>     <td>A</td>     <td><strong>[q1.5]</strong></td>    </tr>    <tr>     <td>0</td>     <td>B</td>     <td><strong>[q1.6]</strong></td>    </tr>    <tr>     <td>1</td>     <td>B</td>     <td><strong>[q1.7]</strong></td>    </tr>    <tr>     <td>0</td>     <td>C</td>     <td><strong>[q1.8]</strong></td>    </tr>    <tr>     <td>1</td>     <td>C</td>     <td><strong>[q1.9]</strong></td>    </tr>   </tbody>  </table>
+<table class="layui-table" style="width: fit-content; float: left; margin-right: 1em;" border="1"> <thead>  <tr >     <td >$F_2$</td>     <td >Y</td>     <td >$P(F_2|Y)$</td>    </tr>  </thead>  <tbody >    <tr >     <td >0</td>     <td >A</td>     <td >1.000</td>    </tr>    <tr >     <td >1</td>     <td >A</td>     <td >0.000</td>    </tr>    <tr >     <td >0</td>     <td >B</td>     <td >0.222</td>    </tr>    <tr >     <td >1</td>     <td >B</td>     <td >0.778</td>    </tr>    <tr >     <td >0</td>     <td >C</td>     <td >0.250</td>    </tr>    <tr >     <td >1</td>     <td >C</td>     <td >0.750</td>    </tr>   </tbody>  </table>
+<table class="layui-table" style="width: fit-content; float: left; margin-right: 1em;" border="1"> <thead> <tr >     <td >$F_3$</td>     <td >Y</td>     <td >$P(F_3|Y)$</td>    </tr> </thead>  <tbody >      <tr >     <td >0</td>     <td >A</td>     <td >0.500</td>    </tr>    <tr >     <td >1</td>     <td >A</td>     <td >0.500</td>    </tr>    <tr >     <td >0</td>     <td >B</td>     <td >0.000</td>    </tr>    <tr >     <td >1</td>     <td >B</td>     <td >1.000</td>    </tr>    <tr >     <td >0</td>     <td >C</td>     <td >0.500</td>    </tr>    <tr >     <td >1</td>     <td >C</td>     <td >0.500</td>    </tr>   </tbody>  </table>
+"""
+choice: """
+<div class="question q1 q-text" answer="{'0.133':2}">
+    <p style="display: inline;">q1.1 = </p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'0.6':2}">
+    <p style="display: inline;">q1.2 = </p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q3 q-text" answer="{'0.267':2}">
+    <p style="display: inline;">q1.3 = </p>
+    <input type="text" name="q3" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q4 q-text" answer="{'0.5':2}">
+    <p style="display: inline;">q1.4 = </p>
+    <input type="text" name="q4" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q5 q-text" answer="{'0.5':2}">
+    <p style="display: inline;">q1.5 = </p>
+    <input type="text" name="q5" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q6 q-text" answer="{'0.111':2}">
+    <p style="display: inline;">q1.6 = </p>
+    <input type="text" name="q6" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q7 q-text" answer="{'0.889':2}">
+    <p style="display: inline;">q1.7 = </p>
+    <input type="text" name="q7" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q8 q-text" answer="{'0.25':2}">
+    <p style="display: inline;">q1.8 = </p>
+    <input type="text" name="q8" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q9 q-text" answer="{'0.75':2}">
+    <p style="display: inline;">q1.9 = </p>
+    <input type="text" name="q9" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+
+
+@ Problem - custom
+
+title: "Question 2 - Naïve Bayes"
+content: """
+<p>Following question 1,  Now consider a new data point $(F_1=0,F_2=0,F_3=1)$. Use your classifier to determine the joint probability of causes Y and this new data point, along with the posterior probability of Y given the new data: </p>
+<table class="layui-table" style="width: fit-content; float: left; margin-right: 1em;" border="1"> <thead> <tr>     <td>Y</td>     <td>$P(Y,F_1=0,F_2=0,F_3=1)$</td>    </tr> </thead>  <tbody>      <tr>     <td>A</td>     <td><strong>[q2.1]</strong></td>    </tr>    <tr>     <td>B</td>     <td><strong>[q2.2]</strong></td>    </tr>    <tr>     <td>C</td>     <td><strong>[q2.3]</strong></td>    </tr>   </tbody>  </table>
+<table class="layui-table" style="width: fit-content; float: left; margin-right: 1em;" border="1"> <thead> <tr>     <td>Y</td>     <td>$P(Y|F_1=0,F_2=0,F_3=1)$</td>    </tr> </thead>  <tbody>      <tr>     <td>A</td>     <td><strong>[q2.4]</strong></td>    </tr>    <tr>     <td>B</td>     <td><strong>[q2.5]</strong></td>    </tr>    <tr>     <td>C</td>     <td><strong>[q2.6]</strong></td>    </tr>   </tbody>  </table>
+<p style="clear: both;"></p>
+<p>What label does your classifier give to the new data point? (Break ties alphabetically). Enter capital letters only</p>
+<p><strong>[q2.7]</strong></p>
+<p>The training data is repeated here for your convenience:</p>
+<p><img width="392" height="148" src="./image/hw6/xid-1240162_1"></p>
+"""
+choice: """
+<div class="question q1 q-text" answer="{'0.033':2}">
+    <p style="display: inline;">q2.1 = </p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'0.015':2}">
+    <p style="display: inline;">q2.2 = </p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q3 q-text" answer="{'0.008':2}">
+    <p style="display: inline;">q2.3 = </p>
+    <input type="text" name="q3" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q4 q-text" answer="{'0.589':2,'0.59':2}">
+    <p style="display: inline;">q2.4 = </p>
+    <input type="text" name="q4" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q5 q-text" answer="{'0.268':2,'0.262':2}">
+    <p style="display: inline;">q2.5 = </p>
+    <input type="text" name="q5" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q6 q-text" answer="{'0.143':2,'0.148':2}">
+    <p style="display: inline;">q2.6 = </p>
+    <input type="text" name="q6" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q7 q-text" answer="{'A':2}">
+    <p style="display: inline;">q2.7 = </p>
+    <input type="text" name="q7" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+
+
+@ Problem - custom
+
+title: "Question 3 - Naïve Bayes"
+content: """
+<p>Following the previous questions, now use Laplace Smoothing with strength k = 3 to estimate the prior P(Y) for the same data.  </p>
+<table class="layui-table" style="width: fit-content;" border="1"> <thead>  <tr>     <td>Y</td>     <td>P(Y)</td>    </tr> </thead>  <tbody>     <tr>     <td>A</td>     <td><strong>[q3.1]</strong></td>    </tr>    <tr>     <td>B</td>     <td><strong>[q3.2]</strong></td>    </tr>    <tr>     <td>C</td>     <td><strong>[q3.3]</strong></td>    </tr>   </tbody>  </table>
+<p>Use Laplace Smoothing with strength k = 3 to estimate the conditional probability distributions below (again, the second two are done for you).</p>
+<table class="layui-table" style="width: fit-content; float: left; margin-right: 1em;" border="1"> <thead> <tr>     <td>$F_1$</td>     <td>Y</td>     <td>$P(F_1|Y)$</td>    </tr> </thead>  <tbody>      <tr>     <td>0</td>     <td>A</td>     <td><span ><strong>[q3.4]</strong></span></td>    </tr>    <tr>     <td>1</td>     <td>A</td>     <td><span ><strong>[q3.5]</strong></span></td>    </tr>    <tr>     <td>0</td>     <td>B</td>     <td><span ><strong>[q3.6]</strong></span></td>    </tr>    <tr>     <td>1</td>     <td>B</td>     <td><span ><strong>[q3.7]</strong></span></td>    </tr>    <tr>     <td>0</td>     <td>C</td>     <td><span ><strong>[q3.8]</strong></span></td>    </tr>    <tr>     <td>1</td>     <td>C</td>     <td><span ><strong>[q3.9]</strong></span></td>    </tr>   </tbody>  </table>
+<table class="layui-table" style="width: fit-content; float: left; margin-right: 1em;" border="1"> <thead> <tr >     <td >$F_2$</td>     <td >Y</td>     <td >$P(F_2|Y)$</td>    </tr>  </thead>  <tbody >     <tr >     <td >0</td>     <td >A</td>     <td >0.625</td>    </tr>    <tr >     <td >1</td>     <td >A</td>     <td >0.375</td>    </tr>    <tr >     <td >0</td>     <td >B</td>     <td >0.333<span ></span></td>    </tr>    <tr >     <td >1</td>     <td >B</td>     <td ><span ></span>0.667</td>    </tr>    <tr >     <td >0</td>     <td >C</td>     <td >0.400<span ></span></td>    </tr>    <tr >     <td >1</td>     <td >C</td>     <td >0.600</td>    </tr>   </tbody>  </table>
+<table class="layui-table" style="width: fit-content; float: left; margin-right: 1em;" border="1"> <thead> <tr >     <td >$F_3$</td>     <td >Y</td>     <td >$P(F_3|Y)$</td>    </tr>  </thead>  <tbody >    <tr >     <td >0</td>     <td >A</td>     <td >0.500</td>    </tr>    <tr >     <td >1</td>     <td >A</td>     <td ><span ></span>0.500</td>    </tr>    <tr >     <td >0</td>     <td >B</td>     <td ><span ></span>0.200</td>    </tr>    <tr >     <td >1</td>     <td >B</td>     <td ><span ></span>0.800</td>    </tr>    <tr >     <td >0</td>     <td >C</td>     <td ><span ></span>0.500</td>    </tr>    <tr >     <td >1</td>     <td >C</td>     <td ><span ></span>0.500</td>    </tr>   </tbody>  </table>
+"""
+choice: """
+<div class="question q1 q-text" answer="{'0.208':2}">
+    <p style="display: inline;">q3.1 = </p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'0.5':2}">
+    <p style="display: inline;">q3.2 = </p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q3 q-text" answer="{'0.292':2}">
+    <p style="display: inline;">q3.3 = </p>
+    <input type="text" name="q3" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q4 q-text" answer="{'0.5':2}">
+    <p style="display: inline;">q3.4 = </p>
+    <input type="text" name="q4" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q5 q-text" answer="{'0.5':2}">
+    <p style="display: inline;">q3.5 = </p>
+    <input type="text" name="q5" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q6 q-text" answer="{'0.267':2}">
+    <p style="display: inline;">q3.6 = </p>
+    <input type="text" name="q6" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q7 q-text" answer="{'0.733':2}">
+    <p style="display: inline;">q3.7 = </p>
+    <input type="text" name="q7" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q8 q-text" answer="{'0.4':2}">
+    <p style="display: inline;">q3.8 = </p>
+    <input type="text" name="q8" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q9 q-text" answer="{'0.6':2}">
+    <p style="display: inline;">q3.9 = </p>
+    <input type="text" name="q9" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+
+
+@ Problem - custom
+
+title: "Question 4 - Naïve Bayes"
+content: """
+<p>Now consider again the new data point $(F_1=0,F_2=0,F_3=1)$ .   Use the Laplace-Smoothed version of your classifier to determine the joint probability of causes Y  and this new data point, along with the posterior probability of Y given the new data:</p>
+<table class="layui-table" style="width: fit-content; float: left; margin-right: 1em;" border="1"> <thead>  <tr>     <td>Y</td>     <td>$P(Y,F_1=0,F_2=0,F_3=1)$</td>    </tr>  </thead>  <tbody>    <tr>     <td>A</td>     <td><strong>[q4.1]</strong></td>    </tr>    <tr>     <td>B</td>     <td><strong>[q4.2]</strong></td>    </tr>    <tr>     <td>C</td>     <td><strong>[q4.3]</strong></td>    </tr>   </tbody>  </table>
+<table class="layui-table" style="width: fit-content; float: left; margin-right: 1em;" border="1"> <thead>  <tr>     <td>Y</td>     <td>$P(Y|F_1=0,F_2=0,F_3=1)$</td>    </tr>  </thead>  <tbody>    <tr>     <td>A</td>     <td><strong>[q4.4]</strong></td>    </tr>    <tr>     <td>B</td>     <td><strong>[q4.5]</strong></td>    </tr>    <tr>     <td>C</td>     <td><strong>[q4.6]</strong></td>    </tr>   </tbody>  </table>
+<p style="clear: both;"></p>
+<p>What label does your (Laplace-Smoothed) classifier give to the new data point? (Break ties alphabetically). Enter a single capital letter.</p>
+<p><strong>[q4.7]</strong></p>
+"""
+choice: """
+<div class="question q1 q-text" answer="{'0.033':2}">
+    <p style="display: inline;">q4.1 = </p>
+    <input type="text" name="q1" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q2 q-text" answer="{'0.036':2}">
+    <p style="display: inline;">q4.2 = </p>
+    <input type="text" name="q2" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q3 q-text" answer="{'0.023':2}">
+    <p style="display: inline;">q4.3 = </p>
+    <input type="text" name="q3" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q4 q-text" answer="{'0.359':2,'0.356':2}">
+    <p style="display: inline;">q4.4 = </p>
+    <input type="text" name="q4" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q5 q-text" answer="{'0.391':2,'0.389':2}">
+    <p style="display: inline;">q4.5 = </p>
+    <input type="text" name="q5" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q6 q-text" answer="{'0.25':2,'0.255':2}">
+    <p style="display: inline;">q4.6 = </p>
+    <input type="text" name="q6" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+<div class="question q7 q-text" answer="{'B':2}">
+    <p style="display: inline;">q4.7 = </p>
+    <input type="text" name="q7" placeholder="" class="layui-input" style="display: inline;">
+    <p class="tick-label" style="display: inline;"></p>
+</div>
+"""
+
+## Page 2 (question)
+
+@ Problem - checkbox
+
+title: "Question 5 - Overfitting"
+content: """
+Select all correct statements.
+"""
+choice: """
+You have a lot of training data, but it is very noisy and far from the true data distribution (test data distribution), it is very likely to overfit the training data if you train a model to fit it.
+You have too few training samples (but close to the true data distribution), and you train a very expressive model to fit it, it is very likely to overfit.
+You have inadequate training data  (and close to the true data distribution) , and you train an expressive model to fit it. Applying regularization techniques will make the model less likely to overfit the training data.
+"""
+points: "5"
+answer: "ABC"
+
+
+@ Problem - radio
+
+title: "Question 6 - Natural Language Processing"
+content: """
+<p>Consider a context-free grammar with the following rules (assume that S is the start symbol):</p>  <p>S → NP VP</p>  <p>NP → DT NN</p>  <p>NP → NP PP</p>  <p>PP → IN NP</p>  <p>VP → VB NP</p>  <p>DT → the</p>  <p>NN → man</p>  <p>NN → dog</p>  <p>NN → cat</p>  <p>NN → park</p>  <p>VB → saw</p>  <p>IN → in</p>  <p>IN → with</p>  <p>IN → under&nbsp;</p>  <br>  <p>How many parse trees are there under this grammar for the sentence: <strong>the man saw the dog in the park?&nbsp;</strong></p>
+"""
+choice: """
+4
+3
+2
+1
+"""
+points: "10"
+answer: "D"
+
+
+@ Problem - radio
+
+title: "Question 7 - Natural Language Processing"
+content: """
+Following the previous question,  How many parse trees for the sentence:   <strong>the man saw the dog in the park with the cat?</strong>
+"""
+choice: """
+4
+3
+2
+1
+"""
+points: "10"
+answer: "C"
+
+
+@ Problem - checkbox
+
+title: "Question 8"
+content: """
+Lasso can be interpreted as least-squares linear regression where
+"""
+choice: """
+weights are regularized with the L1 norm
+weights are regularized with the L2 norm
+complex models are encourged
+the solution algorithm is simpler
+"""
+points: "10"
+answer: "A"
+
+
+@ Problem - checkbox
+
+title: "Question 9 - K-means"
+content: """
+Suppose we are given data comprising points of several different classes. Each class has a different probability distribution from which the sample points are drawn. We do not have the class labels. We use k-means clustering to try to guess the classes. Which of the following circumstances would undermine its effectiveness?
+"""
+choice: """
+Some of the classes are not normally distributed
+The variance of each distribution is small in all directions
+Each class has the same mean
+You choose k = n, the number of sample points
+"""
+points: "10"
+answer: "CD"
+
+
+@ Problem - checkbox
+
+title: "Question 10 - EM"
+content: """
+Select all correct statements about EM.
+"""
+choice: """
+K-means algorithm can be treated as a special case of EM.
+M-step calculates the label distribution of each data point based on current parameters.
+E-step computes weighted MLE of parameters given label distributions.
+The estimated parameters after each E-M iteration are always better parameters that increase the marginal likelihood (we marginalize the hidden variables).
+"""
+points: "10"
+answer: "AD"
