@@ -3,6 +3,25 @@
     "name": "Signals and Systems",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2023",
+            "course_id": "EE150.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework: 15%, Mid-term: 30%, Final Exam: 50%, Participation: 5%",
+            "teacher": [
+                "zhouyong",
+                "maoyj"
+            ],
+            "ta": [
+                "zhuyx",
+                "zhengtk",
+                "zhangyl4"
+            ]
+        },
+        {
             "season": "Fall",
             "year": "2022",
             "course_id": "EE150.01",
