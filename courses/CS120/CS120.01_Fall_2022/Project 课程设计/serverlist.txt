@@ -1,0 +1,3 @@
+ftp.ncnu.edu.tw
+ftp.sjtu.edu.cn
+mirrors.ustc.edu.cn
