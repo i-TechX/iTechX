@@ -4,6 +4,47 @@
     "semesters": [
         {
             "course_id": "EE150L.01",
+            "season": "Spring",
+            "year": "2023",
+            "teacher": [
+                "luly"
+            ],
+            "ta": [
+                "wanglh",
+                "xuky1",
+                "huxy2022",
+                "tianxu2022",
+                "hanjl2022"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "1",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "Lab 1: 10%, Lab 2-6: 4% pre-lab + 14% lab each"
+        },
+        {
+            "course_id": "EE150L.01",
+            "season": "Fall",
+            "year": "2022",
+            "teacher": [
+                "luly"
+            ],
+            "ta": [
+                "wanglh",
+                "xuky1",
+                "luojw",
+                "fangty",
+                "gaoyy",
+                "wuych4"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "1",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "Lab 1: 10%, Lab 2-6: 4% pre-lab + 14% lab each"
+        },
+        {
+            "course_id": "EE150L.01",
             "season": "Fall",
             "year": "2021",
             "teacher": [

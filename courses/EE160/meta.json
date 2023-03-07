@@ -3,6 +3,22 @@
     "name": "Introduction to Control",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2023",
+            "course_id": "EE160.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "建议先修：线性代数，⾼等数学，信号与系统",
+            "evaluation": "40% Quiz & Homework + 20% Experiments Report + 40% Final Exam",
+            "teacher": [
+                "wangyang4"
+            ],
+            "ta": [
+                "nijie"
+            ]
+        },
+        {
             "season": "Fall",
             "year": "2022",
             "course_id": "EE160.01",

@@ -3,6 +3,26 @@
     "name": "Electromagnetics",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2023",
+            "course_id": "EE130.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "高等数学，普通物理 I",
+            "evaluation": "Homework (30%), Quiz (20%), Midterm Exam (25%), Final Exam (25%)",
+            "teacher": [
+                "linfh"
+            ],
+            "ta": [
+                "gudr",
+                "yaozhm",
+                "maoya",
+                "wutong1",
+                "youxch2022"
+            ]
+        },
+        {
             "season": "Fall",
             "year": "2022",
             "course_id": "EE130.01",
