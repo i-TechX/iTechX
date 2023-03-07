@@ -1,0 +1,152 @@
+\documentclass[10pt]{article}
+% \usepackage[UTF8]{ctex}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage{amsthm}
+\usepackage{amsmath,amscd}
+\usepackage{amssymb,array}
+\usepackage{amsfonts,latexsym}
+\usepackage{graphicx,subfig,wrapfig}
+\usepackage{times}
+\usepackage{psfrag,epsfig}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+\usepackage{cite}
+\usepackage{algorithm}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{algorithmic}
+%\usepackage[amsmath,thmmarks]{ntheorem}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\allowdisplaybreaks[4]
+\linespread{1.25}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{mydef}{Definition}
+
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\trace}{trace}
+\DeclareMathOperator*{\acos}{acos}
+\DeclareMathOperator*{\argmax}{argmax}
+
+
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}
+\renewcommand{\algorithmicensure}{ \textbf{Output:}}
+\renewcommand{\mathbf}{\boldsymbol}
+\newcommand{\mb}{\mathbf}
+\newcommand{\matlab}[1]{\texttt{#1}}
+\newcommand{\setname}[1]{\textsl{#1}}
+\newcommand{\Ce}{\mathbb{C}}
+\newcommand{\Ee}{\mathbb{E}}
+\newcommand{\Ne}{\mathbb{N}}
+\newcommand{\Se}{\mathbb{S}}
+\newcommand{\norm}[2]{\left\| #1 \right\|_{#2}}
+
+\newenvironment{mfunction}[1]{
+	\noindent
+	\tabularx{\linewidth}{>{\ttfamily}rX}
+	\hline
+	\multicolumn{2}{l}{\textbf{Function \matlab{#1}}}\\
+	\hline
+}{\\\endtabularx}
+
+\newcommand{\parameters}{\multicolumn{2}{l}{\textbf{Parameters}}\\}
+
+\newcommand{\fdescription}[1]{\multicolumn{2}{p{0.96\linewidth}}{
+
+		\textbf{Description}
+
+		#1}\\\hline}
+
+\newcommand{\retvalues}{\multicolumn{2}{l}{\textbf{Returned values}}\\}
+\def\0{\boldsymbol{0}}
+\def\b{\boldsymbol{b}}
+\def\bmu{\boldsymbol{\mu}}
+\def\e{\boldsymbol{e}}
+\def\u{\boldsymbol{u}}
+\def\x{\boldsymbol{x}}
+\def\v{\boldsymbol{v}}
+\def\w{\boldsymbol{w}}
+\def\N{\boldsymbol{N}}
+\def\X{\boldsymbol{X}}
+\def\Y{\boldsymbol{Y}}
+\def\A{\boldsymbol{A}}
+\def\B{\boldsymbol{B}}
+\def\y{\boldsymbol{y}}
+\def\cX{\mathcal{X}}
+\def\transpose{\top} % Vector and Matrix Transpose
+
+%\long\def\answer#1{{\bf ANSWER:} #1}
+\long\def\answer#1{}
+\newcommand{\myhat}{\widehat}
+\long\def\comment#1{}
+\newcommand{\eg}{{e.g.,~}}
+\newcommand{\ea}{{et al.~}}
+\newcommand{\ie}{{i.e.,~}}
+
+\newcommand{\db}{{\boldsymbol{d}}}
+\renewcommand{\Re}{{\mathbb{R}}}
+\newcommand{\Pe}{{\mathbb{P}}}
+
+\hyphenation{MATLAB}
+
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\title{Numerical Optimization, 2022 Fall\\Homework 3}
+\author{Your Name\\Your ID}
+\date{Due 14:59 (CST), Sep. 29, 2022 \\(NOTE: Only latex version is accepted)\\}
+\maketitle
+
+
+%===============================
+
+\section{Pivot}
+Show that if the vectors $\bm{a}_1, \bm{a}_2, \dots, \bm{a}_m$ are a basis in $E^m$, the vectors $\bm{a}_1, \bm{a}_2, \dots, \bm{a}_{p-1}, \bm{a}_q, \bm{a}_{p+1}, \dots, \bm{a}_m$ also are a basis if and only if $\bar{a}_{pq} \neq 0$, where $\bar{a}_{pq}$ is defined by the tableau shown in Table \ref{tab: tableau}.
+\begin{longtable}[c]{cccccccccc}
+	$x_1$   & $x_2$   & $x_3$   & $\cdots$ & $x_m$   & $x_{m+1}$          & $x_{m+2}$          & $\cdots$ & $x_n$          &                \\
+	\endfirsthead
+	%
+	\endhead
+	%
+	1       & 0       & 0       & $\cdots$ & 0       & $\bar{a}_{1(m+1)}$ & $\bar{a}_{1(m+2)}$ & $\cdots$ & $\bar{a}_{1n}$ & $\bar{a}_{10}$ \\
+	0       & 1       & 0       & $\cdots$ & 0       & $\bar{a}_{2(m+1)}$ & $\bar{a}_{2(m+2)}$ & $\cdots$ & $\bar{a}_{2n}$ & $\bar{a}_{20}$ \\
+	0       & 0       & 1       & $\cdots$ & 0       & $\bar{a}_{3(m+1)}$ & $\bar{a}_{3(m+2)}$ & $\cdots$ & $\bar{a}_{3n}$ & $\bar{a}_{30}$ \\
+	$\cdot$ & $\cdot$ & $\cdot$ &          & $\cdot$ & $\cdot$            & $\cdot$            &          & $\cdot$        & $\cdot$        \\
+	$\cdot$ & $\cdot$ & $\cdot$ &          & $\cdot$ & $\cdot$            & $\cdot$            &          & $\cdot$        & $\cdot$        \\
+	$\cdot$ & $\cdot$ & $\cdot$ &          & $\cdot$ & $\cdot$            & $\cdot$            &          & $\cdot$        & $\cdot$        \\
+	0       & 0       & 0       & $\cdots$ & 1       & $\bar{a}_{m(m+1)}$ & $\bar{a}_{m(m+2)}$ & $\cdots$ & $\bar{a}_{mn}$ & $\bar{a}_{m0}$ \\
+	\caption{Tableau}
+	\label{tab: tableau}\\
+\end{longtable}
+
+%===============================
+
+\section{Reduced Cost}
+If $r_j > 0$ for every $j$ corresponding to a variable $x_j$ that is not basic, show that
+the corresponding basic feasible solution is the unique optimal solution.
+
+%===============================
+
+\section{Two-Phase Simplex}
+Use the two-phase simplex procedure to solve the following problem
+\begin{equation}
+	\begin{aligned}
+		\min\qquad & -3x_1 + x_2 + 3x_3 - x_4 \\
+		\mathrm{s.t.}\qquad & x_1 + 2x_2 -x_3 + x_4 = 0 \\
+							& 2x_1 - 2x_2 + 3x_3 + 3x_4 = 9 \\
+							& x_1 - x_2 + 2x_3 - x_4 = 6 \\
+							& x_i \geq 0,\quad i = 1,2,3,4.
+ 	\end{aligned}
+\end{equation}
+
+
+
+\end{document}

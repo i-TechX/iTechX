@@ -1,0 +1,108 @@
+%!TEX program = xelatex
+\documentclass[8pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{titlesec}
+\usepackage{xcolor}
+%\usepackage[shortlabels]{enumitem}
+\usepackage{enumerate}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{listings}
+\usetikzlibrary{arrows}
+\usepackage{subfigure}
+\usepackage{graphicx,booktabs,multirow}
+\usepackage[a4paper]{geometry}
+\usepackage{upquote}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{geometry}
+\geometry{a4paper,left=4cm,right=4cm,top=2cm,bottom=2cm}
+
+\title{SI152 - Numerical Optimization homework 4}
+
+\begin{document}
+\date{}
+\maketitle
+\centerline{\Large \textbf{Deadline: 2022-06-04 23:59:00}}\\
+\vspace*{30pt}
+\begin{enumerate}
+    \item You can use Word, Latex or handwriting to complete this assignment. If you want to submit a handwritten version, scan it clearly.
+    \item The \textbf{report} has to be submitted as a PDF file to Blackboard, other formats are not accepted.
+    \item The submitted file name is \textbf{student\_id+your\_student\_name.pdf}.
+    \item Late policy: You have 4 free late days for the quarter and may use up to 2 late days per assignment with no penalty. Once you have exhausted your free late days, we will deduct a late penalty of $25\%$ per additional late day. Note: The timeout period is recorded in days, even if you delay for $1$ minute, it will still be counted as a $1$ late day.
+    \item You are required to follow ShanghaiTech’s academic honesty policies. You are not allowed to copy materials from other students or from online or published resources. Violating academic honesty can result in serious sanctions.
+\end{enumerate}
+
+\textbf{Any plagiarism will get Zero point.}
+
+\newpage
+\section{Integer Programming}
+Solve the following IP by branch and bound method: \textcolor{red}{(30 pt)}
+
+\begin{equation}
+    \label{general}
+        \begin{array}{ll}
+            \min & 2x_1+x_2-3x_3\\
+            \text {s.t.} & x_1+x_2+2x_3\leq5\\&2x_1+2x_2-x_3\leq1\\&\forall x_i\geq0, x_i\in \mathbb{Z}, i=\{1,2,3\}
+        \end{array}
+\end{equation} 
+
+\section{Newton's method}
+Consider an unconstrained nonlinear optimization problem
+\begin{equation*}
+    \min\limits_x~~f(x)=3x_1^2+3x_2^2-x_1^2x_2
+\end{equation*}
+Use Newton's method to solve the problem from different initial points.\\
+(1) Write down the first-order derivative, Hessian matrix and find the stable points (including minimal point and saddle points).  \textcolor{red}{(10 pt)}\\
+(2) \textbf{Coding:}
+You should finish coding using matlab or python, please attach all your code screenshots in your homework document.\\
+Starting from different initial points, the iteration of the Newton method is investigated. The termination criterion of the iterations is $\|g_k\|_{\infty}<10^{-6}$. Set step size $\alpha=1$, the initial starting point is $(1.5,1.5)$, $(-2,4)$, Complete the following table and correct to $4$ decimal places. \textcolor{red}{(20 pt)}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|c|c|c}
+\hline
+$k$ &     $x_{k}$       & $f(x_k)$  & $\|\nabla f(x_k)\|_2$ \\ \hline
+0 & (1,5000,1.5000)  &        &             \\
+1 &                   &        &             \\
+2 &                   &        &             \\
+3 &                   &        &              \\
+4 &                   &        &             \\
+5 &                   &        &             \\
+6 &                   &        &    0.0000    \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+    \centering  
+\begin{tabular}{l|c|c|c}
+\hline
+$k$ & $x_{k}$           & $f(x_k)$  & $\|\nabla f(x_k)\|_2$ \\ \hline
+0 & (-2.0000,4.0000)  &        &             \\
+1 &                   &        &             \\
+2 &                   &        &             \\
+3 &                   &        &              \\
+4 &                   &        &             \\
+5 &                   &        &             \\
+6 &                   &        &    0.0000    \\ \hline
+\end{tabular}
+\end{table}
+(3) If you change the initial point to $(0,3)$, can you still use Newton's method to get the result? Then compare the results of the three iterations by different initial points and explain why. (You should illustrate the general case rather than limited to this case) \textcolor{red}{(20 pt)}
+
+\section{Gradient Descent}
+In order to minimize 
+$f(\boldsymbol{x})$ 
+where $x \in R^n$, 
+we takes iteration:
+$$\boldsymbol{x}^{k+1}=\boldsymbol{x}^{k}+\alpha_{k} \boldsymbol{p}^{k}$$
+where $\boldsymbol{p}^{k}=\boldsymbol{H}^{k} \nabla f\left(\boldsymbol{x}^{k}\right)$ and $\alpha^k \to 0^+$. What kind of $\boldsymbol{H}^{k}$ can guarantee that $\boldsymbol{p}^{k}$ is a descent direction? Give a detailed proof. \textcolor{red}{(20 pt)}\\
+
+
+
+
+\end{document}
+

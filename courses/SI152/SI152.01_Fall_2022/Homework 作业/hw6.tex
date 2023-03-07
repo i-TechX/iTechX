@@ -1,0 +1,136 @@
+\documentclass[10pt]{article}
+% \usepackage[UTF8]{ctex}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage{amsthm}
+\usepackage{amsmath,amscd}
+\usepackage{amssymb,array}
+\usepackage{amsfonts,latexsym}
+\usepackage{graphicx,subfig,wrapfig}
+\usepackage{times}
+\usepackage{psfrag,epsfig}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+\usepackage{cite}
+\usepackage{algorithm}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{algorithmic}
+%\usepackage[amsmath,thmmarks]{ntheorem}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{longtable}
+
+\allowdisplaybreaks[4]
+\linespread{1.25}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{mydef}{Definition}
+
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\trace}{trace}
+\DeclareMathOperator*{\acos}{acos}
+\DeclareMathOperator*{\argmax}{argmax}
+
+
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}
+\renewcommand{\algorithmicensure}{ \textbf{Output:}}
+\renewcommand{\mathbf}{\boldsymbol}
+\newcommand{\mb}{\mathbf}
+\newcommand{\matlab}[1]{\texttt{#1}}
+\newcommand{\setname}[1]{\textsl{#1}}
+\newcommand{\Ce}{\mathbb{C}}
+\newcommand{\Ee}{\mathbb{E}}
+\newcommand{\Ne}{\mathbb{N}}
+\newcommand{\Se}{\mathbb{S}}
+\newcommand{\norm}[2]{\left\| #1 \right\|_{#2}}
+
+\newenvironment{mfunction}[1]{
+	\noindent
+	\tabularx{\linewidth}{>{\ttfamily}rX}
+	\hline
+	\multicolumn{2}{l}{\textbf{Function \matlab{#1}}}\\
+	\hline
+}{\\\endtabularx}
+
+\newcommand{\parameters}{\multicolumn{2}{l}{\textbf{Parameters}}\\}
+
+\newcommand{\fdescription}[1]{\multicolumn{2}{p{0.96\linewidth}}{
+
+		\textbf{Description}
+
+		#1}\\\hline}
+
+\newcommand{\retvalues}{\multicolumn{2}{l}{\textbf{Returned values}}\\}
+\def\0{\boldsymbol{0}}
+\def\b{\boldsymbol{b}}
+\def\bmu{\boldsymbol{\mu}}
+\def\e{\boldsymbol{e}}
+\def\u{\boldsymbol{u}}
+\def\x{\boldsymbol{x}}
+\def\v{\boldsymbol{v}}
+\def\w{\boldsymbol{w}}
+\def\N{\boldsymbol{N}}
+\def\X{\boldsymbol{X}}
+\def\Y{\boldsymbol{Y}}
+\def\A{\boldsymbol{A}}
+\def\B{\boldsymbol{B}}
+\def\y{\boldsymbol{y}}
+\def\cX{\mathcal{X}}
+\def\transpose{\top} % Vector and Matrix Transpose
+
+%\long\def\answer#1{{\bf ANSWER:} #1}
+\long\def\answer#1{}
+\newcommand{\myhat}{\widehat}
+\long\def\comment#1{}
+\newcommand{\eg}{{e.g.,~}}
+\newcommand{\ea}{{et al.~}}
+\newcommand{\ie}{{i.e.,~}}
+
+\newcommand{\db}{{\boldsymbol{d}}}
+\renewcommand{\Re}{{\mathbb{R}}}
+\newcommand{\Pe}{{\mathbb{P}}}
+
+\hyphenation{MATLAB}
+
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\title{Numerical Optimization, 2021 Fall\\Homework 6}
+\author{Your Name\\Your ID}
+\date{Due 23:59 (CST), Nov. 27, 2021 \\(NOTE: Homework will not be accepted after this due for any reason.)\\}
+\maketitle
+
+%===============================
+
+\section{Convex Basics}
+Prove that $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is affine if and only if $f$ is both convex and concave.
+
+%===============================
+
+\section{Newton's Method}
+Consider minimizing $\frac{1}{2} x^T Ax+b^Tx+c$, $A$ positive definite.  Prove that Newton's method will converge to the optimal in one step starting at an arbitrary initial point $x_0$.
+
+\section{Coding}
+In this example we want to compute the minimum of the non-convex bivariate Rosenbrock function "banana function"
+$$
+f(x,y)=(1-x)^2+100(y-x^2)^2.
+$$
+It is notorious in optimization examples because of the slow convergence most methods exhibit when trying to solve this problem. And the domain of the above Rosenbrock function is $x \in [-2,2]$, $y \in [-2,2]$.
+\begin{enumerate}
+    \item Show the gradient of $f(x,y)$.
+    \item Plot the 3D-surface of $f(x,y)$ on its domain.
+    \item Use Gradient Descent method with \textit{Armijo Backtracking Line Search} to minimize $f(x,y)$.
+    \item Use Newton's method with \textit{Armijo Backtracking Line Search} to minimize $f(x,y)$.
+\end{enumerate}
+
+Please start at the point $(x,y) = ( -1.2, 1 )$ to initiate your algorithms. For each case, draw the curves of the step size $\alpha^k$ and $\| \nabla f(x^k,y^k) \|_{\infty}$ of the two algorithms, with respect to the iteration number $k$. 
+
+Your program may be implemented with Python or MATLAB. Please paste your curves down below, then put your code in an independent file (We encourage you to submit a *.mlx (by MATLAB Live Editor) or *.ipynb (by Jupyter) file to answer the question. Others are fine, of course) and submit it to Blackboard alongside the PDF. 
+
+\textbf{Hint:} You may set initial step size $\alpha_0 = 1$, constant $c_1 = 10^{-4}$, and termination condition as $\| \nabla f(x^k,y^k) \|_{\infty} \leq 10^{-4}$.
+\end{document}
