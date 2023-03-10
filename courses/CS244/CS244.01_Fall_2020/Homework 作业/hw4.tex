@@ -1,0 +1,136 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning}
+\usepackage{mdwtab}
+\usepackage{syntax}
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\setlength{\grammarparsep}{0.05cm}   % vertical distance between production rules
+\setlength{\grammarindent}{0.01cm}      % horizontal indent distance
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName\ -\ \hmwkAuthorID}
+\chead{\hmwkClass: Homework \hmwkNo}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+\newenvironment{homeworkProblem}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkProblemCounter}{#1}
+    \fi
+    \section{Problem \arabic{homeworkProblemCounter}}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+\newenvironment{solution}{
+    \subsection{Solution}
+}
+
+\newcommand{\hmwkNo}{4}
+\newcommand{\hmwkDueDate}{November 12, 2020 at 11:59 p.m.}
+\newcommand{\hmwkClass}{CS244 Theory of Computation}
+\newcommand{\hmwkClassInstructor}{Fu Song}
+\newcommand{\hmwkAuthorName}{Name}
+\newcommand{\hmwkAuthorID}{ID}
+\newcommand{\inter}{\mathord{} \cap \mathord{}}
+\newcommand{\union}{\mathord{} \cup \mathord{}}
+\renewcommand{\SS}{\ensuremath{\Sigma}}
+\newcommand{\SSS}{\ensuremath{\Sigma\kstar}}
+\newcommand{\SSE}{\ensuremath{\Sigma_{\varepsilon}}}
+\newcommand{\st}[1]{\mbox{\texttt{#1}}}
+\newcommand{\GG}{\ensuremath{\Gamma}}
+\newcommand{\GGE}{\ensuremath{\Gamma_{\hspace{-.15em}\varepsilon}}}
+\newcommand{\tTk}[1]{\langle \mbox{\textsc{#1}} \rangle}
+\newcommand{\cfgor}{\ | \ }
+\newcommand{\cfgarrow}{\rightarrow}
+\newcommand{\lcfgarrow}{\rightarrow}
+\newcommand{\set}[1]{\{#1|\ }  %}
+\newcommand{\setb}[1]{\{\brk{#1}| \ }
+\newcommand{\setend}{\ensuremath{\}}}
+\newcommand{\brk}[1]{\langle #1 \rangle}
+\newcommand{\lang}[1]{\ensuremath{\text{\textit{#1}}}}
+\newcommand{\defin}[1]{\textit{\textbf{{\boldmath #1}}}}
+\newcommand{\NP}{\mathrm{NP}}
+\renewcommand{\P}{\mathrm{P}}
+\title{
+    \vspace{-0.4in}
+    \textmd{\textbf{\hmwkClass \\ Homework \hmwkNo}}\\
+    \normalsize\vspace{0.1in}\small{Due: \hmwkDueDate}\\
+}
+
+\author{\hmwkAuthorName\ -\ \hmwkAuthorID}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+You may discuss this assignment with other students and work
+on the problems together. However, your write-up should be your own individual work and you should indicate in your submission who you worked with, if applicable. You should use the {\LaTeX} template provided by us to write your solution and submit the generated PDF file into Gradescope. \\
+
+I worked with: (Name, ID), (Name, ID), \ldots \\
+
+Let $\Sigma = \{\mathsf{0}, \mathsf{1}\}$ if not otherwise specified.
+
+\begin{homeworkProblem}
+	Say that a variable $A$ in $\mathsf{CFG}$ $G$ is \defin{redundant}
+	if removing it and its associated rules leaves $L(G)$ unchanged.
+	Let $\lang{REDUNDANT}_{\mathsf{CFG}}=\setb{G,A}A$ is a redundant variable
+	in $G$\setend.  
+	Show that $\lang{REDUNDANT}_{\mathsf{CFG}}$ is \textbf{undecidable}.
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+	Consider the problem of testing whether a $\mathsf{TM}$ accepts the empty string $\epsilon$. Formally, let $\lang{EPSILON}_{\mathsf{TM}}=\{\langle T \rangle \mid T \text{ is a }\mathsf{TM} \text{ that accept } \epsilon\}$.
+	\begin{enumerate}[(a)]
+		\item Use a \textbf{reduction} or the \textbf{recursion theorem} to prove that $\lang{EPSILON}_\mathsf{TM}$ is \textbf{undecidable}.
+		\item Answer YES or NO and give a brief reason for your answer. \\
+				 Is $A_\mathsf{TM}$ \textbf{mapping reducible} to $\overline{\lang{EPSILON}_\mathsf{TM}}$?
+	\end{enumerate}
+\end{homeworkProblem}
+
+
+\begin{homeworkProblem}
+	Show that $\lang{EQ}_{\mathsf{TM}}\nleq_m\overline{\lang{EQ}_{\mathsf{TM}}}$.
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+	Let $\textit{SET-SPLITTING} = \{ \langle S, C \rangle \mid S$ is a finite set and $C = \{ C_1, \dotsc, C_k \}$ is a collection of subsets of $S$, where the elements of $S$ can be colored red or blue so every $C_i$ has at least one red element and at least one blue element $\}$. Show that $\textit{SET-SPLITTING}$ is \textbf{NP-complete}.
+\end{homeworkProblem}
+
+\end{document}

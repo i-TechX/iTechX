@@ -1,0 +1,152 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning}
+\usepackage{mdwtab}
+\usepackage{syntax}
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\setlength{\grammarparsep}{0.05cm}   % vertical distance between production rules
+\setlength{\grammarindent}{0.01cm}      % horizontal indent distance
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName\ -\ \hmwkAuthorID}
+\chead{\hmwkClass: Homework \hmwkNo}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+\newenvironment{homeworkProblem}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkProblemCounter}{#1}
+    \fi
+    \section{Problem \arabic{homeworkProblemCounter}}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+\newenvironment{solution}{
+    \subsection{Solution}
+}
+
+\newcommand{\hmwkNo}{3}
+\newcommand{\hmwkDueDate}{October 28, 2020 at 11:59pm}
+\newcommand{\hmwkClass}{CS244 Theory of Computation}
+\newcommand{\hmwkClassInstructor}{Fu Song}
+\newcommand{\hmwkAuthorName}{Name}
+\newcommand{\hmwkAuthorID}{ID}
+\newcommand{\inter}{\mathord{} \cap \mathord{}}
+\newcommand{\union}{\mathord{} \cup \mathord{}}
+\renewcommand{\SS}{\ensuremath{\Sigma}}
+\newcommand{\SSS}{\ensuremath{\Sigma\kstar}}
+\newcommand{\SSE}{\ensuremath{\Sigma_{\varepsilon}}}
+\newcommand{\st}[1]{\mbox{\texttt{#1}}}
+\newcommand{\GG}{\ensuremath{\Gamma}}
+\newcommand{\GGE}{\ensuremath{\Gamma_{\hspace{-.15em}\varepsilon}}}
+\newcommand{\tTk}[1]{\langle \mbox{\textsc{#1}} \rangle}
+\newcommand{\cfgor}{\ | \ }
+\newcommand{\cfgarrow}{\rightarrow}
+\newcommand{\lcfgarrow}{\rightarrow}
+\newcommand{\set}[1]{\{#1|\ }  %}
+\newcommand{\setb}[1]{\{\brk{#1}| \ }
+\newcommand{\setend}{\ensuremath{\}}}
+\newcommand{\brk}[1]{\langle #1 \rangle}
+\newcommand{\lang}[1]{\ensuremath{\text{\textit{#1}}}}
+\newcommand{\defin}[1]{\textit{\textbf{{\boldmath #1}}}}
+\title{
+    \vspace{-0.4in}
+    \textmd{\textbf{\hmwkClass \\ Homework \hmwkNo}}\\
+    \normalsize\vspace{0.1in}\small{Due: \hmwkDueDate}\\
+}
+
+\author{\hmwkAuthorName\ -\ \hmwkAuthorID}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+You may discuss this assignment with other students and work
+on the problems together. However, your write-up should be your own individual work and you should indicate in your submission who you worked with, if applicable. You should use the {\LaTeX} template provided by us to write your solution and submit the generated PDF file into Gradescope. \\
+
+I worked with: (Name, ID), (Name, ID), \ldots \\
+
+Let $\Sigma = \{\mathsf{0}, \mathsf{1}\}$ if not otherwise specified.
+
+\begin{homeworkProblem}
+	Consider the problem of testing whether a pushdown automaton ever uses
+	its stack. Formally, let $\lang{PUSHER}=\setb{P}{P}$ is a PDA that
+	pushes a symbol on its stack on some (possibly non-accepting) branch
+	of its computation at some point on some input $w\in\Sigma^\ast\setend$. 
+	Show that $\lang{PUSHER}$ is decidable. 
+\end{homeworkProblem}
+
+
+\begin{homeworkProblem}
+Let $C$ be a language.  Prove that $C$ is Turing-recognizable
+iff a decidable language $D$ exists such that $C=\{x\mid \exists y\in\{0,1\}^\ast \ (\langle x,y\rangle\in D)\}$.\\
+(Hint: You must prove both directions of the ``iff''. 
+The ($\longleftarrow$) direction is easier.
+For the ($\longrightarrow$) direction, think of $y$ as providing
+additional information that allows you to confirm when $x\in C$,
+but without the possibility of looping.) 
+\end{homeworkProblem}
+
+
+\begin{homeworkProblem}
+	Consider the problem of determining whether a single-tape Turing machine ever writes a blank symbol over a nonblank symbol during the course of its computation on any input string. Formulate this problem as a language and show that it is undecidable.
+\end{homeworkProblem}
+
+
+\begin{homeworkProblem}
+	A $\mathit{2}$-$\mathit{way \ pushdown \ automaton}$ (2WAY-PDA) is a nondeterministic pushdown automaton that has a single stack and that can move its input head in both directions on the input tape. In addition we assume that a 2WAY-PDA is capable of detecting when its input head is at either end of its input tape. A 2WAY-PDA accepts its input by entering an accept state.
+	\begin{enumerate}[(a)]
+		\item Give a 2WAY-PDA that recognizes the language $\{a^m b^m c^m \mid m\ge 0\}$.
+		\item Let $E_{\text{2WAY-PDA}}=\{ \langle P \rangle \mid P \text{ is a 2WAY-PDA which recognizes the empty language} \}$.\\
+		Show that $E_{\text{2WAY-PDA}}$ is not decidable.
+	\end{enumerate}
+\end{homeworkProblem}
+
+
+\begin{homeworkProblem}
+	Let $A$ be a language.
+	\begin{enumerate}[(a)]
+		\item Show that $A$ is Turing-recognizable iff $A \leq_\mathsf{m} A_\mathsf{TM}$.
+		\item Show that $A$ is decidable iff $A\leq_\mathsf{m}0^\ast1^\ast$.
+	\end{enumerate}
+\end{homeworkProblem}
+
+
+\end{document}

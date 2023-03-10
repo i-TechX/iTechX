@@ -1547,6 +1547,12 @@
             ],
             [
                 "Fall",
+                "2020",
+                "CS244",
+                "Theory of Computation"
+            ],
+            [
+                "Fall",
                 "2019",
                 "CS131",
                 "Programming Languages and Compilers"
@@ -3871,6 +3877,12 @@
     "liujzh": {
         "name": "刘健中",
         "ta-courses": [
+            [
+                "Fall",
+                "2020",
+                "CS244",
+                "Theory of Computation"
+            ],
             [
                 "Spring",
                 "2017",
@@ -6279,6 +6291,12 @@
             ],
             [
                 "Fall",
+                "2020",
+                "CS244",
+                "Theory of Computation"
+            ],
+            [
+                "Fall",
                 "2019",
                 "CS131",
                 "Programming Languages and Compilers"
@@ -6625,6 +6643,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2020",
+                "CS244",
+                "Theory of Computation"
+            ],
             [
                 "Fall",
                 "2018",
@@ -10597,6 +10621,17 @@
                 "2022",
                 "CS121",
                 "Parallel Computing"
+            ]
+        ]
+    },
+    "yesq": {
+        "name": "叶崧卿",
+        "ta-courses": [
+            [
+                "Fall",
+                "2020",
+                "CS244",
+                "Theory of Computation"
             ]
         ]
     }

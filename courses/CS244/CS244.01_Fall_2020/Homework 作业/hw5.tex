@@ -1,0 +1,136 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{comment}
+
+\usetikzlibrary{automata, positioning}
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName\ -\ \hmwkAuthorID}
+\chead{\hmwkClass: Homework \hmwkNo}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+\newenvironment{homeworkProblem}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkProblemCounter}{#1}
+    \fi
+    \section{Problem \arabic{homeworkProblemCounter}}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+\newenvironment{solution}{
+    \subsection{Solution}
+}
+
+\newcommand{\hmwkNo}{5}
+\newcommand{\hmwkDueDate}{Sunday, Dec 20, 2020 at 11:59pm}
+\newcommand{\hmwkClass}{CS244 Theory of Computation}
+\newcommand{\hmwkClassInstructor}{Fu Song}
+\newcommand{\hmwkAuthorName}{Name}
+\newcommand{\hmwkAuthorID}{ID}
+
+\title{
+    \vspace{-0.4in}
+    \textmd{\textbf{\hmwkClass \\ Homework \hmwkNo}}\\
+    \normalsize\vspace{0.1in}\small{Due: \hmwkDueDate}\\
+}
+
+\author{\hmwkAuthorName\ -\ \hmwkAuthorID}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+You may discuss this assignment with other students and work
+on the problems together. However, your write-up should be your own individual work and you should indicate in your submission who you worked with, if applicable. You should use the {\LaTeX} template provided by us to write your solution and submit the generated PDF file into Gradescope.
+
+% Note: You only need to submit your solutions to the \textbf{\emph{first three}} problems. The other problems are optional. \\
+
+I worked with: (Name, ID), (Name, ID), \ldots
+
+\begin{homeworkProblem}
+Let $EQ_{\textsf{BP}}=\{\langle B_1, B_2\rangle \mid B_1$ and $B_2$ are equivalent branching programs$\}$. Show that $EQ_{\textsf{BP}}$ is coNP-complete.
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+\begin{enumerate}[label=(\alph*)]
+    \item Show that $A_\textsf{LBA} = \{ \langle B, w \rangle \mid B$ is an \textsf{LBA} that accepts input $w \}$ is PSPACE-complete.
+    \item Show that $E_\textsf{DFA} = \{ \langle A \rangle \mid A$ is a \textsf{DFA} and $L(A) = \emptyset \}$ is NL-complete.
+\end{enumerate}
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+Say that two Boolean formulas are \textbf{\emph{equivalent}} if they have the same set of variables and are true on the same set of assignments to those variables (i.e., they describe the same Boolean function). A Boolean formula is \textbf{\emph{minimal}} if no shorter Boolean formula is equivalent to it. (For definiteness, say that the length of a Boolean formula is the number of symbols it has.) Let $MIN\_FORMULA$ be the collection of minimal Boolean formulas.\\
+Show that $MIN\_FORMULA\in$ PSPACE.  
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+Let $B$ be the language of properly nested parentheses and brackets. For example, \texttt{([()()]()[])} is in $B$ but \texttt{([)]} is not.Show that $B$ is in $L$.	
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+Describe a deterministic, polynomial-time \textit{SAT}-oracle Turing machine $M^\textit{SAT}$ that takes as input a directed graph $G$ and nodes $s$ and $t$, and outputs a Hamiltonian path from $s$ to $t$ if one exists. If none exist, then $M^\textit{SAT}$ outputs \textbf{No Hamiltonian path}.
+\end{homeworkProblem}
+
+
+
+% \begin{homeworkProblem}
+% For any positive integer $x$, let $x^\mathcal{R}$ be the integer whose binary representation is the reverse of the binary representation of $x$. (Assume no leading $\mathsf{0}$s in the binary representation of $x$.) Define the function $\mathcal{R}^+ : \mathcal{N} \rightarrow \mathcal{N}$ where $\mathcal{R}^+(x) = x + x^\mathcal{R}$.
+% \begin{enumerate}[label=(\alph*)]
+%     \item Let $A_2 = \{ \langle x, y \rangle \mid \mathcal{R}^+(x) = y \}$. Show $A_2 \in \mathrm{L}$.
+%     \item Let $A_3 = \{ \langle x, y \rangle \mid \mathcal{R}^+(\mathcal{R}^+(x)) = y \}$. Show $A_3 \in \mathrm{L}$.
+% \end{enumerate}
+% \end{homeworkProblem}
+
+% \begin{homeworkProblem}
+% For branching program $B$ and $w = w_1 \dotso w_m$, where each $w_i \in \{\mathsf{0}, \mathsf{1}\}$, let $B(w)$ be the output of $B$ when its input variables $x_1, \dotsc, x_m$ are set $x_i = w_i$ for each $i$.
+% \begin{enumerate}[label=(\alph*)]
+%     \item Let $\mathit{ALL}_\mathsf{ROBP} = \{ \langle B \rangle \mid B$ is a read-once branching program and $B(w) = 1$ on all $w\}$. Show that $\mathit{ALL}_\mathsf{ROBP} \in \mathrm{P}$.
+%     \item Let $\mathit{ALL}_\mathsf{BP} = \{ \langle B \rangle \mid B$ is a branching program and $B(w) = 1$ on all $w\}$. Show that $\mathit{ALL}_\mathsf{BP}$ is coNP-complete.
+% \end{enumerate}
+% \end{homeworkProblem}
+
+% \begin{homeworkProblem}
+% Prove that if $A \subseteq \{\mathsf{0}, \mathsf{1}\}^*$ is a regular language, a family of branching programs $(B_1, B_2, \dotsc)$ exists where each $B_n$ accepts exactly the strings in $A$ of length $n$ and is bounded in size by a constant times $n$.
+% \end{homeworkProblem}
+
+\end{document}
