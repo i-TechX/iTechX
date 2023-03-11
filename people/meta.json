@@ -1298,6 +1298,18 @@
         ],
         "teach-courses": [
             [
+                "Spring",
+                "2023",
+                "CS272",
+                "Computer Vision II"
+            ],
+            [
+                "Spring",
+                "2021",
+                "CS272",
+                "Computer Vision II"
+            ],
+            [
                 "Fall",
                 "2021",
                 "CS172",
@@ -1308,6 +1320,12 @@
                 "2020",
                 "CS172",
                 "Computer Vision I"
+            ],
+            [
+                "Spring",
+                "2020",
+                "CS272",
+                "Computer Vision II"
             ],
             [
                 "Fall",
@@ -5652,6 +5670,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2022",
+                "CS272",
+                "Computer Vision II"
+            ],
+            [
                 "Fall",
                 "2019",
                 "CS172",
@@ -5880,6 +5904,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2022",
+                "CS272",
+                "Computer Vision II"
+            ],
             [
                 "Fall",
                 "2020",
@@ -8668,8 +8698,20 @@
         "image": true,
         "teach-courses": [
             [
+                "Fall",
+                "2022",
+                "CS272",
+                "Computer Vision II"
+            ],
+            [
                 "Spring",
                 "2022",
+                "CS272",
+                "Computer Vision II"
+            ],
+            [
+                "Spring",
+                "2021",
                 "CS272",
                 "Computer Vision II"
             ]
