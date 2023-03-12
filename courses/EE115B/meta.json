@@ -3,6 +3,26 @@
     "name": "Digital Circuits",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2023",
+            "course_id": "EE115B.01",
+            "department": "信息科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "Homework and Attendance: 25%, Lab: 25%, Midterm Exams: 25%, Final Exam: 25%",
+            "teacher": [
+                "zhuzhf",
+                "lijuan1"
+            ],
+            "ta": [
+                "songjb2022",
+                "huyh",
+                "guochx2022",
+                "renchy2022"
+            ]
+        },
+        {
             "season": "Fall",
             "year": "2022",
             "course_id": "EE115B.01",
@@ -10,12 +30,17 @@
             "credit": "3",
             "hours": "48",
             "prerequisite": "无",
-            "evaluation": "未知",
+            "evaluation": "Attendance: 5%, Homework: 15%, Lab: 15%, 2 Midterm Exams: 40%, Final Exam: 25%",
             "teacher": [
                 "hzyang",
                 "lijuan1"
             ],
-            "ta": []
+            "ta": [
+                "yanhan",
+                "huyh",
+                "shuyw",
+                "tangec"
+            ]
         },
         {
             "season": "Spring",
@@ -25,12 +50,15 @@
             "credit": "3",
             "hours": "48",
             "prerequisite": "无",
-            "evaluation": "未知",
+            "evaluation": "Homework and Attendance: 25%, Lab: 25%, Midterm Exams: 25%, Final Exam: 25%",
             "teacher": [
                 "zhuzhf",
                 "lijuan1"
             ],
-            "ta": []
+            "ta": [
+                "xinyue",
+                "xuzhd"
+            ]
         },
         {
             "season": "Fall",
@@ -40,12 +68,16 @@
             "credit": "3",
             "hours": "48",
             "prerequisite": "无",
-            "evaluation": "未知",
+            "evaluation": "Homework and Attendance: 25%, Lab: 25%, 2 Midterm Exams: 25%, Final Exam: 25%",
             "teacher": [
                 "hzyang",
                 "lijuan1"
             ],
-            "ta": []
+            "ta": [
+                "xushj",
+                "gaoshy1",
+                "luochx"
+            ]
         }
     ]
 }
