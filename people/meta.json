@@ -1624,6 +1624,12 @@
         "teach-courses": [
             [
                 "Fall",
+                "2022",
+                "CS171",
+                "Computer Graphics I"
+            ],
+            [
+                "Fall",
                 "2021",
                 "CS171",
                 "Computer Graphics I"
@@ -7719,6 +7725,12 @@
         ],
         "ta-courses": [
             [
+                "Fall",
+                "2022",
+                "CS171",
+                "Computer Graphics I"
+            ],
+            [
                 "Spring",
                 "2022",
                 "CS110",
@@ -7775,6 +7787,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS171",
+                "Computer Graphics I"
+            ],
             [
                 "Spring",
                 "2022",
@@ -10782,6 +10800,24 @@
                 "2023",
                 "CS274A",
                 "Natural Language Processing"
+            ]
+        ]
+    },
+    "zhangsy3": {
+        "name": "张厶元",
+        "info": [
+            [
+                "envelope", 
+                "&#x7a;&#104;&#97;&#x6e;&#x67;&#x73;&#121;&#x33;&#x40;&#x73;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#x63;&#104;&#x2e;&#101;&#100;&#x75;&#46;&#x63;&#x6e;", 
+                "mailto:&#x7a;&#104;&#97;&#x6e;&#x67;&#x73;&#121;&#x33;&#x40;&#x73;&#104;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#x63;&#104;&#x2e;&#101;&#100;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2022",
+                "CS171",
+                "Computer Graphics I"
             ]
         ]
     }
