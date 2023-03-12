@@ -22,6 +22,25 @@
                 "wangyh5",
                 "aichy"
             ]
+        },
+        {
+            "season": "Fall",
+            "year": "2021",
+            "course_id": "MATH1212.01",
+            "department": "数学科学研究所",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Mathematical Analysis and Linear Algebra",
+            "evaluation": "Homework 25%, Behavior 5%, Final Project 10%, Midterm Exam 30%, Final Exam 30%, Bonus 5%",
+            "teacher": [
+                "shaozy"
+            ],
+            "ta": [
+                "wangshsh2",
+                "tangyx",
+                "gaoxin",
+                "biansm"
+            ]
         }
     ]
 }
