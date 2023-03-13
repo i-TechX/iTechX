@@ -5,8 +5,23 @@
         {
             "course_id": "CS171.01",
             "season": "Fall",
+            "year": "2022",
+            "teacher": [
+                "liuxp"
+            ],
+            "ta": [
+                "wuyh3", "zhangsy3", "zhangzhr2"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "未知"
+        },
+        {
+            "course_id": "CS171.01",
+            "season": "Fall",
             "year": "2021",
-            "mainpage": "https://faculty.sist.shanghaitech.edu.cn/faculty/liuxp/course/cs171.01/index.html",
             "teacher": [
                 "liuxp"
             ],

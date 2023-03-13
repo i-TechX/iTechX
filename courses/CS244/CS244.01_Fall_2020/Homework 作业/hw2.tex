@@ -1,0 +1,151 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning}
+\usepackage{mdwtab}
+\usepackage{syntax}
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\setlength{\grammarparsep}{0.05cm}   % vertical distance between production rules
+\setlength{\grammarindent}{0.01cm}      % horizontal indent distance
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName\ -\ \hmwkAuthorID}
+\chead{\hmwkClass: Homework \hmwkNo}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+\newenvironment{homeworkProblem}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkProblemCounter}{#1}
+    \fi
+    \section{Problem \arabic{homeworkProblemCounter}}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+\newenvironment{solution}{
+    \subsection{Solution}
+}
+
+\newcommand{\hmwkNo}{2}
+\newcommand{\hmwkDueDate}{October 19, 2020 at 11:59pm}
+\newcommand{\hmwkClass}{CS244 Theory of Computation}
+\newcommand{\hmwkClassInstructor}{Fu Song}
+\newcommand{\hmwkAuthorName}{Name}
+\newcommand{\hmwkAuthorID}{ID}
+\newcommand{\inter}{\mathord{} \cap \mathord{}}
+\newcommand{\union}{\mathord{} \cup \mathord{}}
+\renewcommand{\SS}{\ensuremath{\Sigma}}
+\newcommand{\SSS}{\ensuremath{\Sigma\kstar}}
+\newcommand{\SSE}{\ensuremath{\Sigma_{\varepsilon}}}
+\newcommand{\GG}{\ensuremath{\Gamma}}
+\newcommand{\GGE}{\ensuremath{\Gamma_{\hspace{-.15em}\varepsilon}}}
+\newcommand{\tTk}[1]{\langle \mbox{\textsc{#1}} \rangle}
+\newcommand{\st}[1]{\mbox{\texttt{#1}}}
+\newcommand{\cfgor}{\ | \ }
+\newcommand{\cfgarrow}{\rightarrow}
+\newcommand{\lcfgarrow}{\rightarrow}
+\newcommand{\set}[1]{\{#1|\ }  %}
+\newcommand{\setb}[1]{\{\brk{#1}| \ }
+\newcommand{\setend}{\ensuremath{\}}}
+\newcommand{\brk}[1]{\langle #1 \rangle}
+\newcommand{\lang}[1]{\ensuremath{\text{\textit{#1}}}}
+
+\title{
+    \vspace{-0.4in}
+    \textmd{\textbf{\hmwkClass \\ Homework \hmwkNo}}\\
+    \normalsize\vspace{0.1in}\small{Due: \hmwkDueDate}\\
+}
+
+\author{\hmwkAuthorName\ -\ \hmwkAuthorID}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+You may discuss this assignment with other students and work
+on the problems together. However, your write-up should be your own individual work and you should indicate in your submission who you worked with, if applicable. You should use the {\LaTeX} template provided by us to write your solution and submit the generated PDF file into Gradescope. \\
+
+I worked with: (Name, ID), (Name, ID), \ldots \\
+
+Let $\Sigma = \{\mathsf{0}, \mathsf{1}\}$ if not otherwise specified.
+
+\begin{homeworkProblem}
+Let $\SS=\{\st0,\st1\}$ and let $C_2 = \set{ztz}z\in\st0^*$
+and $t\in\st0^*\st1\st0^*\st1\st0^*$, where $|t|=|z|\setend$.
+\begin{enumerate}[(a)]
+	\item Show that $C_2$ is not a CFL.
+	\item Is $C_2 \union (\SS\SS\SS)^*$ a CFL?  Why or why not?
+	\item Is $C_2 \union \SS(\SS\SS\SS)^*$ a CFL?  Why or why not?
+\end{enumerate}
+\end{homeworkProblem}
+
+
+\begin{homeworkProblem}
+Let $G = (V, \Sigma, R, \tTk{stmt})$ be the following grammar.
+$ \Sigma = \{\st{if}, \st{condition}, \st{then}, \st{else},
+\st{a:=1}\},\\
+V = \{\tTk{stmt}, \tTk{if-then}, \tTk{if-then-else}, \tTk{assign}\} $ 
+and the rules are:
+\begin{grammar}
+	<\textsc{stmt}> $\cfgarrow$ $\tTk{assign} \cfgor \tTk{if-then} \cfgor \tTk{if-then-else}$ 
+	
+	<\textsc{if-then}> $\cfgarrow$ $\st{if condition then}\; \tTk{stmt} $ 
+	
+	<\textsc{if-then-else}> $\cfgarrow$ $\st{if condition then}\; \tTk{stmt} \; \st{else}\; \tTk{stmt} $ 
+	
+	<\textsc{assign}> $\cfgarrow$ $\st{a:=1}$ 
+
+\end{grammar}
+\begin{enumerate}[(a)]
+	\item Show that $G$ is ambiguous.
+	\item Give a new unambiguous grammar that generates $L(G)$. \\
+	(You do not need to prove that your grammar works or that it is
+	unambiguous, but please add a few comments about why it does work
+	to help the grader.)
+\end{enumerate} 
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+Let the \textbf{\emph{rotational closure}} of language $A$
+be $\text{RC}(A)=\{ yx\mid xy\in A$ where $x,y\in\Sigma^\ast\}$.
+Show that the class of \textsf{CFL}s is closed under rotational closure.
+\end{homeworkProblem}
+
+
+\end{document}

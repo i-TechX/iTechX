@@ -17,6 +17,25 @@
             "ta": [
                 "youch"
             ]
+        },
+        {
+            "season": "Fall",
+            "year": "2020",
+            "course_id": "CS244.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": " algorithms and discrete mathematics(optional)",
+            "evaluation": " Quiz 5%, HW 20%, Midterm 25%, Final exam 50%",
+            "teacher": [
+                "songfu"
+            ],
+            "ta": [
+                "zhangyd1",
+                "qinqi",
+                "liujzh",
+                "yesq"
+            ]
         }
     ]
 }

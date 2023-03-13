@@ -4,6 +4,38 @@
     "semesters": [
         {
             "season": "Spring",
+            "year": "2023",
+            "course_id": "CS272.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Digital Image Processing / Computer Vision I,  Programing skills (Python)",
+            "evaluation": "Assignment (30%), Small quiz + Course attendance (30%), Course project (40%)",
+            "teacher": [
+                "gaoshh"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CS272.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Digital Image Processing / Computer Vision I,  Programing skills (OpenCV, Matlab, Python)",
+            "evaluation": "Assignment (30%), Small quiz + course attendance (20%), Course project (50%)",
+            "teacher": [
+                "wangjingya"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Spring",
             "year": "2022",
             "course_id": "CS272.01",
             "department": "信息科学与技术学院",
@@ -18,6 +50,40 @@
                 "caizhy",
                 "zhangjz",
                 "jiangsy2"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2021",
+            "course_id": "CS272.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Digital Image Processing / Computer Vision I,  Programing skills (OpenCV, Matlab, Python)",
+            "evaluation": "Homework (20%, implement 2 papers), Small quiz (course attendance, 10%), Course project (70%)",
+            "teacher": [
+                "gaoshh",
+                "wangjingya"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2020",
+            "course_id": "CS272.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Digital Image Processing / Computer Vision I,  Programing skills (OpenCV, Matlab, Python)",
+            "evaluation": "Homework (20%, implement 5 papers), Course attendance (10%), Course project (70%)",
+            "teacher": [
+                "gaoshh"
+            ],
+            "ta": [
+                "zhoukang",
+                "liandz"
             ]
         }
     ]

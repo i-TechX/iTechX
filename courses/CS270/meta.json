@@ -4,6 +4,22 @@
     "semesters": [
         {
             "course_id": "CS270.01",
+            "season": "Fall",
+            "year": "2022",
+            "teacher": [
+                "renww"
+            ],
+            "ta": [
+                "zhuxy4", "duanchen", "wuyn1"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework assignment (15%*3=45%), Quiz (5%*3=15%), Final Project (40%)"
+        },
+        {
+            "course_id": "CS270.01",
             "season": "Spring",
             "year": "2022",
             "teacher": [

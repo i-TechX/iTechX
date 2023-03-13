@@ -1,0 +1,126 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usetikzlibrary{automata, positioning}
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName\ -\ \hmwkAuthorID}
+\chead{\hmwkClass: Homework \hmwkNo}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+\newenvironment{homeworkProblem}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkProblemCounter}{#1}
+    \fi
+    \section{Problem \arabic{homeworkProblemCounter}}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+\newenvironment{solution}{
+    \subsection{Solution}
+}
+
+\newcommand{\hmwkNo}{1}
+\newcommand{\hmwkDueDate}{September 28, 2020 at 11:59pm}
+\newcommand{\hmwkClass}{CS244 Theory of Computation}
+\newcommand{\hmwkClassInstructor}{Fu Song}
+\newcommand{\hmwkAuthorName}{Name}
+\newcommand{\hmwkAuthorID}{ID}
+
+\title{
+    \vspace{-0.4in}
+    \textmd{\textbf{\hmwkClass \\ Homework \hmwkNo}}\\
+    \normalsize\vspace{0.1in}\small{Due: \hmwkDueDate}\\
+}
+
+\author{\hmwkAuthorName\ -\ \hmwkAuthorID}
+\date{}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+You may discuss this assignment with other students and work
+on the problems together. However, your write-up should be your own individual work and you should indicate in your submission who you worked with, if applicable. You should use the {\LaTeX} template provided by us to write your solution and submit the generated PDF file into Gradescope. \\
+
+I worked with: (Name, ID), (Name, ID), \ldots \\
+
+Let $\Sigma = \{\mathsf{0}, \mathsf{1}\}$ if not otherwise specified.
+
+\begin{homeworkProblem}
+Let $A$ be the languages that every 1 has at least 2 zeros following immediately after. Show that $A$ is regular in the following ways:
+\begin{enumerate}[(a)]
+    \item by giving an $\mathsf{NFA}$ that recognizes $A$,
+    \item by giving a $\mathsf{DFA}$ that recognizes $A$,
+    \item by giving a regular expression that describes $A$, and
+    \item by giving a right linear grammar that describes $A$.
+\end{enumerate}
+\end{homeworkProblem}
+
+
+\begin{homeworkProblem}
+	\begin{enumerate}[(a)]
+		\item Let $A=\{0^k u 0^k \mid k\geq 1\text{ and } u\in\Sigma^\ast\}.$ Show that $A$ is regular.
+		\item Let $B=\{0^k 1u 0^k \mid k\geq 1\text{ and } u\in\Sigma^\ast\}.$ Show that $B$ is not regular.
+	\end{enumerate}
+\end{homeworkProblem}
+
+
+\begin{homeworkProblem}
+	Let $B$ be the set of all strings with even length that contain at least one $\mathsf{1}$ in their first half.
+	\begin{enumerate}[(a)]
+		\item Is B regular? Please show your proof.
+		\item Let $C = \{w \mid w \in B \text{ or } w \text{ has odd length}\}$. Is C regular? Please show your proof.
+		\item Let $D = \{w \mid w \text{ has even length but } w \notin B\}$.  Is D regular? Please show your proof.
+	\end{enumerate}
+\end{homeworkProblem}
+
+
+\begin{homeworkProblem}
+	\begin{enumerate}[(a)]
+		\item Let $A$ be an infinite regular language. Prove that $A$ can be split into two infinite disjoint regular subsets.
+		\item Let $B$ and $D$ be two languages. Write 
+		$B\subsetneq D$ if $B \subseteq D$ and $D$ contains infinitely many strings that are not in $B$. Show that if $B$ and $D$ are two regular languages where $B\subsetneq D$, then we can find a regular language  $C$ where $B\subsetneq C\subsetneq D$.
+	\end{enumerate}
+\end{homeworkProblem}
+
+\end{document}

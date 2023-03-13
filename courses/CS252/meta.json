@@ -5,6 +5,23 @@
         {
             "course_id": "CS252.01",
             "season": "Fall",
+            "year": "2022",
+            "teacher": [
+                "zhanglf"
+            ],
+            "ta": [
+                "lijy6",
+                "chenxin3"
+            ],
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Attendance: 10%, Homework and Project: 60%, Exam: 30%"
+        },
+        {
+            "course_id": "CS252.01",
+            "season": "Fall",
             "year": "2021",
             "teacher": [
                 "zhanglf"
