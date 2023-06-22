@@ -3,14 +3,58 @@
     "name": "Algorithms and Data Structures",
     "semesters": [
         {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CS101.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming",
+            "evaluation": "Exams (45%, mid-term 20%, final 25%), Weekly Homework (20%), 4 Programming Tasks (20%), In-class Quizzes (15%)",
+            "teacher": [
+                "zhaodj",
+                "liuxin7",
+                "zhangyy8",
+                "genghao"
+            ],
+            "ta": [
+                "lianyh",
+                "gongke",
+                "caoyh1",
+                "hujt",
+                "tianye",
+                "pengcheng2",
+                "suhzh",
+                "liuhx",
+                "limiao",
+                "congzhx",
+                "pengyc",
+                "liwch1",
+                "hekai"
+            ],
+            "mainpage": "https://smart.sist.shanghaitech.edu.cn/cs101/"
+        },
+        {
             "course_id": "CS101.01",
             "season": "Fall",
             "year": "2021",
             "teacher": [
-                "zhaodj", "zhangyy8"
+                "zhaodj",
+                "zhangyy8"
             ],
             "ta": [
-                "xuteng", "zhanglw2", "sheyn", "liuhx", "tujd", "lianyh", "wangshy3", "limiao", "litsh", "zhuqy", "zhengyt1", "unknown"
+                "xuteng",
+                "zhanglw2",
+                "sheyn",
+                "liuhx",
+                "tujd",
+                "lianyh",
+                "wangshy3",
+                "limiao",
+                "litsh",
+                "zhuqy",
+                "zhengyt1",
+                "unknown"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -23,10 +67,22 @@
             "season": "Fall",
             "year": "2021",
             "teacher": [
-                "zhaodj", "jiangzhh"
+                "zhaodj",
+                "jiangzhh"
             ],
             "ta": [
-                "xuteng", "zhanglw2", "sheyn", "liuhx", "tujd", "lianyh", "wangshy3", "limiao", "litsh", "zhuqy", "zhengyt1", "unknown"
+                "xuteng",
+                "zhanglw2",
+                "sheyn",
+                "liuhx",
+                "tujd",
+                "lianyh",
+                "wangshy3",
+                "limiao",
+                "litsh",
+                "zhuqy",
+                "zhengyt1",
+                "unknown"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -39,10 +95,21 @@
             "season": "Fall",
             "year": "2020",
             "teacher": [
-                "zhaodj", "zhangyy8"
+                "zhaodj",
+                "zhangyy8"
             ],
             "ta": [
-                "zhangyao1", "guanyh", "xuwk", "wangyj2", "xuteng", "geyx", "liuhx", "songze", "chenzhuo", "sheyn", "zhanglw2"
+                "zhangyao1",
+                "guanyh",
+                "xuwk",
+                "wangyj2",
+                "xuteng",
+                "geyx",
+                "liuhx",
+                "songze",
+                "chenzhuo",
+                "sheyn",
+                "zhanglw2"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -55,10 +122,21 @@
             "season": "Fall",
             "year": "2020",
             "teacher": [
-                "zhaodj", "yangzhc"
+                "zhaodj",
+                "yangzhc"
             ],
             "ta": [
-                "zhangyao1", "guanyh", "xuwk", "wangyj2", "xuteng", "geyx", "liuhx", "songze", "chenzhuo", "sheyn", "zhanglw2"
+                "zhangyao1",
+                "guanyh",
+                "xuwk",
+                "wangyj2",
+                "xuteng",
+                "geyx",
+                "liuhx",
+                "songze",
+                "chenzhuo",
+                "sheyn",
+                "zhanglw2"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -72,10 +150,18 @@
             "year": "2019",
             "mainpage": "https://i-techx.github.io/CS101/",
             "teacher": [
-                "zhaodj", "zhangyy8"
+                "zhaodj",
+                "zhangyy8"
             ],
             "ta": [
-                "zhangwen1", "zhangyao1", "wanglt", "shenyao", "xuwk", "yuanky", "wangyj2", "unknown"
+                "zhangwen1",
+                "zhangyao1",
+                "wanglt",
+                "shenyao",
+                "xuwk",
+                "yuanky",
+                "wangyj2",
+                "unknown"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -89,10 +175,16 @@
             "year": "2018",
             "mainpage": "https://i-techx.github.io/CS101/",
             "teacher": [
-                "zhaodj", "yujingyi"
+                "zhaodj",
+                "yujingyi"
             ],
             "ta": [
-                "jingyzh", "shenyao", "zhangyao1", "zhangwen1", "yuanky", "unknown"
+                "jingyzh",
+                "shenyao",
+                "zhangyao1",
+                "zhangwen1",
+                "yuanky",
+                "unknown"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

@@ -3,15 +3,63 @@
     "name": "Computer Architecture I",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2023",
+            "course_id": "CS110.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Introduction to Programming, Algorithms and Data Structures",
+            "evaluation": "Homework: 40% (4 programming HW * 6% + 3 paper HW * 5% + HW1 1%), Lab: 5%, Exams: 53% (Midterm 1: 14%, Midterm 2: 14%, Final: 25%), Participation: 2% CS110P for projects: P1.1 17%, P1.2 17%, P2.1 16%, P2.2 16%, P3 17%, P4 17%",
+            "teacher": [
+                "wangchd",
+                "liust"
+            ],
+            "ta": [
+                "huyp",
+                "jialei2022",
+                "chenmeng",
+                "chenhy5",
+                "songyl1",
+                "malj",
+                "suhzh",
+                "lihan",
+                "lizz",
+                "jianghr1",
+                "huwm1",
+                "pengcheng2",
+                "hujt",
+                "chenst",
+                "xuqing2",
+                "jiangqsh"
+            ],
+            "mainpage": "https://toast-lab.sist.shanghaitech.edu.cn/courses/CS110@ShanghaiTech/Spring-2023/index.html"
+        },
+        {
             "course_id": "CS110.01",
             "season": "Spring",
             "year": "2022",
             "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/22s/",
             "teacher": [
-                "soerensch", "wangchd"
+                "soerensch",
+                "wangchd"
             ],
             "ta": [
-                "xuky", "gouby", "tujd", "wangjr", "wuty", "wuwq", "wuyh3", "xubw", "yanghd", "youch", "zhangzhr2", "zhaoyb1", "zhaoyd1", "ningshanl", "chenmeng"
+                "xuky",
+                "gouby",
+                "tujd",
+                "wangjr",
+                "wuty",
+                "wuwq",
+                "wuyh3",
+                "xubw",
+                "yanghd",
+                "youch",
+                "zhangzhr2",
+                "zhaoyb1",
+                "zhaoyd1",
+                "ningshanl",
+                "chenmeng"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -25,10 +73,23 @@
             "year": "2021",
             "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/21s/",
             "teacher": [
-                "soerensch", "wangchd"
+                "soerensch",
+                "wangchd"
             ],
             "ta": [
-                "xuky", "chents", "daiqy", "diaozh", "lipf", "pengsht", "wangchy4", "wangjr", "xuteng", "yezhe", "yuzy", "zhangchb1", "zhengyt1"
+                "xuky",
+                "chents",
+                "daiqy",
+                "diaozh",
+                "lipf",
+                "pengsht",
+                "wangchy4",
+                "wangjr",
+                "xuteng",
+                "yezhe",
+                "yuzy",
+                "zhangchb1",
+                "zhengyt1"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -42,10 +103,23 @@
             "year": "2020",
             "mainpage": "https://robotics.shanghaitech.edu.cn/courses/ca/20s/",
             "teacher": [
-                "soerensch", "wangchd"
+                "soerensch",
+                "wangchd"
             ],
             "ta": [
-                "songyj", "pangaq", "yucheng", "suhang", "wangjr", "xuky", "wumy1", "lipf", "wangph", "wuty", "songze", "caizhy", "linzhy"
+                "songyj",
+                "pangaq",
+                "yucheng",
+                "suhang",
+                "wangjr",
+                "xuky",
+                "wumy1",
+                "lipf",
+                "wangph",
+                "wuty",
+                "songze",
+                "caizhy",
+                "linzhy"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -79,7 +153,9 @@
                 "soerensch"
             ],
             "ta": [
-                "nianzhl", "jiangchy", "unknown"
+                "nianzhl",
+                "jiangchy",
+                "unknown"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -96,7 +172,13 @@
                 "soerensch"
             ],
             "ta": [
-                "xuqw", "chenbin", "liuyh1", "qinxin", "jiafr", "liujzh", "yangych"
+                "xuqw",
+                "chenbin",
+                "liuyh1",
+                "qinxin",
+                "jiafr",
+                "liujzh",
+                "yangych"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -113,7 +195,12 @@
                 "soerensch"
             ],
             "ta": [
-                "zhaoyp1", "dongyb", "wumy", "jinshi", "xuqw", "zhuchen"
+                "zhaoyp1",
+                "dongyb",
+                "wumy",
+                "jinshi",
+                "xuqw",
+                "zhuchen"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
