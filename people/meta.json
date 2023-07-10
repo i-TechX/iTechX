@@ -5457,6 +5457,12 @@
                 "Algorithms and Data Structures"
             ],
             [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ],
+            [
                 "Spring",
                 "2021",
                 "CS100",
@@ -7129,6 +7135,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ],
             [
                 "Spring",
                 "2021",
@@ -11712,6 +11724,14 @@
                 "&#122;&#x68;&#x61;&#x6e;&#x67;&#x63;&#104;&#121;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;",
                 "mailto:&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"
             ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ]
         ]
     },
     "liuxh2": {
@@ -11721,6 +11741,14 @@
                 "envelope",
                 "&#108;&#x69;&#117;&#x78;&#x68;&#50;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#x68;&#x61;&#x69;&#x74;&#x65;&#x63;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;",
                 "mailto:&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
             ]
         ]
     }
