@@ -1340,6 +1340,12 @@
                 "Computer Vision II"
             ],
             [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ],
+            [
                 "Spring",
                 "2021",
                 "CS272",
@@ -1798,6 +1804,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ],
             [
                 "Spring",
                 "2020",
@@ -4284,6 +4296,12 @@
         ],
         "ta-courses": [
             [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ],
+            [
                 "Spring",
                 "2021",
                 "CS240",
@@ -5439,6 +5457,12 @@
                 "Algorithms and Data Structures"
             ],
             [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ],
+            [
                 "Spring",
                 "2021",
                 "CS100",
@@ -6393,6 +6417,12 @@
         "ta-courses": [
             [
                 "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ],
+            [
+                "Fall",
                 "2020",
                 "CS152",
                 "Applied Cryptography"
@@ -7105,6 +7135,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ],
             [
                 "Spring",
                 "2021",
@@ -8553,6 +8589,12 @@
                 "2022",
                 "SI120",
                 "Discrete Mathematics"
+            ],
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
             ]
         ]
     },
@@ -8829,6 +8871,12 @@
                 "2022",
                 "CS100",
                 "Introduction to Programming"
+            ],
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
             ]
         ]
     },
@@ -11629,6 +11677,78 @@
                 "2023",
                 "CS110",
                 "Computer Architecture I"
+            ]
+        ]
+    },
+    "liangjr": {
+        "name": "梁俊睿",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#x69;&#x61;&#x6e;&#103;&#x6a;&#x72;&#64;&#x73;&#104;&#x61;&#x6e;&#x67;&#x68;&#97;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#100;&#x75;&#x2e;&#99;&#110;",
+                "mailto:&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "teach-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ]
+        ]
+    },
+    "wuyw1": {
+        "name": "邬一闻",
+        "info": [
+            [
+                "envelope",
+                "&#119;&#x75;&#121;&#119;&#49;&#64;&#115;&#104;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#116;&#101;&#x63;&#x68;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#110;",
+                "mailto:&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ]
+        ]
+    },
+    "zhangchy1": {
+        "name": "张晨杨",
+        "info": [
+            [
+                "envelope",
+                "&#122;&#x68;&#x61;&#x6e;&#x67;&#x63;&#104;&#121;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#x74;&#x65;&#99;&#x68;&#46;&#101;&#100;&#x75;&#46;&#99;&#x6e;",
+                "mailto:&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
+            ]
+        ]
+    },
+    "liuxh2": {
+        "name": "刘新航",
+        "info": [
+            [
+                "envelope",
+                "&#108;&#x69;&#117;&#x78;&#x68;&#50;&#64;&#x73;&#x68;&#x61;&#x6e;&#x67;&#x68;&#x61;&#x69;&#x74;&#x65;&#x63;&#x68;&#x2e;&#101;&#x64;&#x75;&#46;&#x63;&#x6e;",
+                "mailto:&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2021",
+                "SI100B",
+                "Introduction to Information Science and Technology"
             ]
         ]
     }
