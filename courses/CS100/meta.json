@@ -4,6 +4,42 @@
     "semesters": [
         {
             "season": "Spring",
+            "year": "2023",
+            "course_id": "CS100.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Regular Homework (72% = 4*7%+4*11%), Midterm Exam (22%), Quizzes (4%), Recitation Attendance (2%)",
+            "teacher": [
+                "xulan1",
+                "mayuexin"
+            ],
+            "ta": [
+                "zhangych6",
+                "zhaoqch1",
+                "liuyq2",
+                "gongke",
+                "zhoushch",
+                "zhouha",
+                "zhangcheng2",
+                "jiky",
+                "zhangxx5",
+                "xuyf3",
+                "daihzh",
+                "caoyh3",
+                "yanglsh",
+                "zengyan",
+                "wangpch",
+                "heyx1",
+                "huangchn",
+                "geshy",
+                "zhouyx2",
+                "zhangyu9"
+            ]
+        },
+        {
+            "season": "Spring",
             "year": "2022",
             "course_id": "CS100.01",
             "department": "信息科学与技术学院",
