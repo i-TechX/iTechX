@@ -1504,6 +1504,12 @@
         ],
         "teach-courses": [
             [
+                "Spring",
+                "2023",
+                "CS131",
+                "Programming Languages and Compilers"
+            ],
+            [
                 "Fall",
                 "2022",
                 "CS244",
@@ -10040,7 +10046,15 @@
                 "mailto:&#x68;&#x75;&#97;&#x6e;&#x67;&#x6c;&#101;&#x69;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#104;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#x63;&#x6e;"
             ]
         ],
-        "image": true
+        "image": true,
+        "ta-courses": [
+            [
+                "Spring",
+                "2023",
+                "CS131",
+                "Programming Languages and Compilers"
+            ]
+        ]
     },
     "huab": {
         "name": "胡艾博",
