@@ -3,6 +3,23 @@
     "name": "Programming Languages and Compilers",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2023",
+            "course_id": "CS131.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Algorithms and Data Structures",
+            "evaluation": "Homework 20% Projects 25% Quiz 10% Midterm 20% Final 25%",
+            "teacher": [
+                "songfu"
+            ],
+            "ta": [
+                "huanglei",
+                "huab"
+            ]
+        },
+        {
             "course_id": "CS131.01",
             "season": "Spring",
             "year": "2021",
@@ -10,7 +27,9 @@
                 "songfu"
             ],
             "ta": [
-                "yangyw", "jiyb", "youch"
+                "yangyw",
+                "jiyb",
+                "youch"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -26,7 +45,8 @@
                 "songfu"
             ],
             "ta": [
-                "qinqi", "cailw"
+                "qinqi",
+                "cailw"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",
@@ -42,7 +62,8 @@
                 "songfu"
             ],
             "ta": [
-                "cailw", "unknown"
+                "cailw",
+                "unknown"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

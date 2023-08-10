@@ -1,0 +1,120 @@
+\documentclass[10pt]{article}
+\usepackage[pdftex]{graphicx, color}
+\usepackage{listings,proof}
+\usepackage{verbatim}
+
+\newcommand {\response}{{\color{blue}\textbf{RESPONSE:}\\}}
+\headheight 8pt \headsep 20pt \footskip 30pt
+\textheight 9in \textwidth 6.5in
+\oddsidemargin 0in \evensidemargin 0in
+\topmargin -.35in
+
+\newcommand {\pts}[1]{({\bf #1 pts})}
+\newcommand{\ttmath}[1]{$\mathtt{#1}$}
+\newcommand{\ossimple}[6]{#1,#2,#3\vdash #4 : #5,#6}
+\newcommand{\osrule}[8]{\frac{#7}{\ossimple{#1}{#2}{#3}{#4}{#5}{#6}}\eqno
+  \mbox{#8}}
+\newcommand{\infertext}[2]{\infer{{\textrm{#1}}}{#2}}
+
+\begin{document}
+\begin{center}
+	\Large CS131 Compilers: Writing Assignment 4\\Due 11:59pm June 7, 2023\\(Late submission could be accepted.)
+\end{center}
+
+\begin{center}
+	%% Change this:
+	\LARGE Name - ID
+\end{center}
+
+\begin{center}
+	%% Change this:
+	I worked with Name1 Name2 ...
+	\small \\Complteted on \today
+\end{center}
+
+\begin{center}
+	\large \textbf{Code of Conduct}    \\
+\end{center}
+
+\small \textbf{This writing assignments should be your own individual work. Discussion on concept, methodology, and class materials are welcomed, but you should list all the people you have discussed with. Copying is strictly prohibited. Plagiarism, once confirmed, may result in assignment grades reduced to zero for all involved people. And this event will be reported. Also you should use \LaTeX\ or Typst to produce your response based on this template. Submission in other forms won't be graded.}\\
+
+
+\begin{enumerate}
+
+    \item \pts{15} In the C code to compute Fibonacci numbers recursively. Suppose that the 
+activation record for f includes the following elements
+in order: (return value, argument $n$, local $s$, local $t$); there will normally be
+other elements in the activation record as well. The questions below assume
+that the initial call is f (5).
+    \begin{verbatim}
+    int f(int n) {
+        int t, s;
+        if (n < 2) return 1;
+        s = f(n-1);
+        t = f(n-2);
+        return s+t;
+    }
+    \end{verbatim}
+\begin{enumerate}
+    \item Show the complete activation tree.
+    \item What does the stack and its activation records look like the first time f(1) is about to return?
+    \item What does the stack and its activation records look like the fifth time f(1) is about to return?
+
+
+\end{enumerate} 
+\response
+
+    \item \pts{15} \textbf{Garbage Collection} Answer the following question
+    \begin{enumerate}
+        \item what kind of GC strategy is used in JVM(Java Run Time Environment).
+        \item what kind of GC strategy is used in the Smart Pointer of modern C++.
+        \item Name one advantage that Stop-and-Copy has over Mark-and-Sweep.
+    \end{enumerate}
+    \response
+    
+    \item \pts{20} \textbf{Code Optimization} Consider the following basic block, in which all variables are integers, and 
+** denotes exponentiation.
+    \begin{verbatim}
+        a := b + c
+        z := a ** 2
+        x := 0 * b
+        y := b + c
+        w := y * y
+        u := x + 3
+        v := u + w
+    \end{verbatim}
+    Assume that the only variables that are live at the exit of this block are v and z. In order, apply the
+following optimizations to this basic block. Show the result of each transformation.
+    \begin{enumerate}
+        \item algebraic simplification
+        \item common sub-expression elimination
+        \item copy propagation
+        \item constant folding
+        \item dead code elimination
+    \end{enumerate}
+\response
+
+    \item \pts{20} \textbf{Register Allocation. } Consider the following program, annotated with live variable information:
+    \begin{verbatim}
+        // live: {v, x}
+        u = v + 1
+        // live: {u, v, x}
+        w = u - v
+        // live: {u, w, x}
+        x = x + w
+        // live: {u, w, x}
+        y = u - w
+        // live: {x, y}
+        z = x + y
+        // live {z}
+    \end{verbatim}
+    \begin{enumerate}
+        \item Draw the interference graph for the program.
+        \item What is the smallest number of colors that can be used to color the graph without spilling?
+Explain why no smaller number of colors will be enough.
+    \end{enumerate} 
+    \response
+
+\end{enumerate}
+\end{document}
+
