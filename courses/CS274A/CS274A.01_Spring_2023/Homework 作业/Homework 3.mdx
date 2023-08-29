@@ -1,0 +1,196 @@
+«««
+code: CS274A
+name: Natural Language Processing
+semester: Spring 2023
+category: Homework 作业
+title: Homework 3
+»»»
+
+# Homework 3
+
+## Page 1 (question)
+
+@ Problem - radio
+
+title: "Question 1 - BERT"
+content: """
+BERT is finetuned using MLM (masked language modeling) and NSP (next sentence prediction ) and then pretrained on downstream tasks such as text classification.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 2 - ELMO"
+content: """
+Unlike BERT, ELMO is NOT a kind of contextualized word embedding.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 3 - ELMO"
+content: """
+ELMO is based on Bidirectional LSTM. Therefore, we cannot use ELMO to finish language modeling tasks.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 4 - BERT"
+content: """
+BERT is a kind of non-autoregressive model.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "A"
+
+
+@ Problem - radio
+
+title: "Question 5 - GPT"
+content: """
+Masked language modeling task is one of the tasks used to pre-train GPT
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 6 - Prompt"
+content: """
+Select the correct state for Prompt
+"""
+choice: """
+Prompt Tuning can help us utilize a pre-trained language model in downstream tasks more efficiently than fine-tuning.
+Prompt is a kind of tunable parameter.
+Prompt Tuning is a task used in the pre-training procedure of GPT models.
+We need to update the parameters of the whole model to finish prompt tuning.
+"""
+points: "10"
+answer: "A"
+
+
+@ Problem - checkbox
+
+title: "Question 7 - Pre-trained Language Models"
+content: """
+Select all the correct statement(s)
+"""
+choice: """
+GPT is a kind of bidirectional language model.
+There is a cross-attention module in encoder-decoder language models.
+T5 is a classical decoder-only pre-trained language model like GPT.
+About 1.5% of input words are left unchanged in BERT's pre-training procedure.
+"""
+points: "10"
+answer: "BD"
+
+
+@ Problem - checkbox
+
+title: "Question 8 - Pre-trained Language Models"
+content: """
+Please select all correct statement(s)
+"""
+choice: """
+Reinforcement Learning can be used to pre-trained language models.
+In-context learning is one of the pre-training tasks for pre-trained language models.
+GPT models can handle input sentences of any length, unlike BERT. This is because they are generative language models.
+In most situations, we use the [CLS] token's representation to encode spans in a sentence.
+"""
+points: "10"
+answer: "A"
+
+
+@ Problem - checkbox
+
+title: "Question 9 - From HMM to CRF/Neural sequence labeling models"
+content: """
+Select all correct statements
+"""
+choice: """
+The difference between MEMM and CRF is that the former is locally normalized and suffers from the label bias issue, while the latter is globally normalized. 
+MEMMs prefer states with higher number of transitions, thus suffer from the label bias issue.
+In CRF training, both max-margin loss and negative log-likelihood loss involve the use of the forward algorithm to compute the partition function.
+Neural CRFs use neural networks (e.g., BiLSTMs, Transformers) to compute CRF potential scores. 
+"""
+points: "10"
+answer: "AD"
+
+
+@ Problem - checkbox
+
+title: "Question 10 - HMM"
+content: """
+Select all correct statements
+"""
+choice: """
+The Baum-Welch algorithm is a special case of the EM algorithm, and can be used for unsupervised learning of HMM parameters.
+If we use the Baum-Welch algorithm to train an HMM, it will finally converge to a global optimum after running a  sufficient number of iterations.
+The forward-backward algorithm has the same time and space complexity as the Viterbi algorithm. 
+We can use the "count and normalize" strategy to train an HMM in both supervised and unsupervised manners. The difference is that, in supervised learning, "count" is the actual counts, whereas in unsupervised learning, "count" is the expected counts.
+"""
+points: "10"
+answer: "ACD"
+
+
+@ Problem - radio
+
+title: "Question 11 - Viterbi Algorithm"
+content: """
+Given a HMM with transition (Table 1), emission (Table 2) below. And we assume all hidden states transition to the "STOP" with equal probability. Please select the correct optimal sequence of hidden states for the word sequence "I Love ShanghaiTech":
+
+<table border="0" align="center" style="cursor: default; margin: 0px auto; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px; border-collapse: separate; border: 1px dashed #bbbbbb; width: 239px; height: 150px;">  <caption style="margin: 0px; padding: 0px; border: 1px dashed #bbbbbb; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px; text-align: center;">   Table&nbsp;1:&nbsp;Transition  </caption>   <tbody style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">    <tr style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">     <td style="margin-left: 60px;">Y<sub style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">t-1</sub></td>     <td colspan="2" style="margin-left: 60px;">P(Y<sub style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">t</sub>|Y<sub style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">t-1</sub>)</td>    </tr>    <tr style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">&nbsp;</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">H<sub style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">0</sub></td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">H<sub style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">1</sub></td>    </tr>    <tr style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">START</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.6</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.4</td>    </tr>    <tr style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">H<sub style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">0</sub></td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.2</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.8</td>    </tr>    <tr style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">H<sub style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">1</sub></td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.8</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.2</td>    </tr>   </tbody>  </table>
+
+<table border="0" align="center" style="cursor: default; margin: 0px auto; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px; border-collapse: separate; border: 1px dashed #bbbbbb; width: 244px; height: 240px;">  <caption style="margin: 0px; padding: 0px; border: 1px dashed #bbbbbb; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px; text-align: center;">   Table&nbsp;2:&nbsp;Emission  </caption>   <tbody style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">    <tr style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;"><sub style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">W</sub></td>     <td colspan="2" style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">P(Wj|Hi)</td>    </tr>    <tr style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">&nbsp;</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">H0</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">H1</td>    </tr>    <tr style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">I</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.4</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.3</td>    </tr>    <tr style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">Love</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.3</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.2</td>    </tr>    <tr style="margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; font-size: 13px;">     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;"><span style="margin: 0px; padding: 0px; border: 0px; outline: 0px; font-weight: 400; font-style: normal; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;">ShanghaiTech</span></td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.3</td>     <td style="font-family: inherit; font-size: 13px; margin: 0px; outline: 0px; font-weight: inherit; font-style: inherit; text-align: left; cursor: text; border: 1px dashed #bbbbbb;">0.5</td>    </tr>   </tbody>  </table>
+"""
+choice: """
+(H1, H0, H1)
+(H1, H1, H1)
+(H1, H0, H0)
+(H0, H0, H1)
+"""
+points: "10"
+answer: "A"
+
+
+@ Problem - radio
+
+title: "Question 12 - Time complexity of forward-backward algorithm"
+content: """
+Suppose the hidden number in an HMM model is N and the sentence length is L. Give the time complexity of the forward-backward algorithm in this model.
+"""
+choice: """
+$O(N^2L)$
+$O(NL^2)$
+$O(N^2L^2)$
+$O(NL)$
+"""
+points: "10"
+answer: "A"
