@@ -1,0 +1,280 @@
+«««
+code: CS274A
+name: Natural Language Processing
+semester: Spring 2023
+category: Homework 作业
+title: Homework 6
+»»»
+
+# Homework 6
+
+## Page 1 (question)
+
+@ Problem - custom
+
+title: "Question 1 - Semantic Relations"
+content: """
+Below is a network representation of three semantic relations. What are the three semantic relations?
+
+<center><img src="https://s1.ax1x.com/2023/08/28/pPaGqC6.png" width="680px"/></center>
+"""
+choice: """
+<div class="question q1 q-radio" answer="{'B': 3.33}">
+    <p>Relation 1: </p>
+    <input type="radio" name="q1" value="A" title="Antonymy - opposition">
+    <input type="radio" name="q1" value="B" title="Hyponymy - subset; is-a relation">
+    <input type="radio" name="q1" value="C" title="Meronymy - part-of relation">
+    <p class="tick-label"></p>
+</div>
+<div class="question q2 q-radio" answer="{'A': 3.33}">
+    <p>Relation 2: </p>
+    <input type="radio" name="q2" value="A" title="Antonymy - opposition">
+    <input type="radio" name="q2" value="B" title="Hyponymy - subset; is-a relation">
+    <input type="radio" name="q2" value="C" title="Meronymy - part-of relation">
+    <p class="tick-label"></p>
+</div>
+<div class="question q3 q-radio" answer="{'C': 3.34}">
+    <p>Relation 3: </p>
+    <input type="radio" name="q3" value="A" title="Antonymy - opposition">
+    <input type="radio" name="q3" value="B" title="Hyponymy - subset; is-a relation">
+    <input type="radio" name="q3" value="C" title="Meronymy - part-of relation">
+    <p class="tick-label"></p>
+</div>
+"""
+
+
+@ Problem - radio
+
+title: "Question 2 - Word Sense Disambiguation (WSD)"
+content: """
+Word Sense Disambiguation (WSD) aims at selecting the correct sense for a word in context, where the set of senses of each word is given. It could be formulated as
+"""
+choice: """
+a sequence labeling task
+a sentence classification task
+a relation extraction task
+a named entity recognition task
+"""
+points: "10"
+answer: "A"
+
+
+@ Problem - radio
+
+title: "Question 3 - Meaning Representations"
+content: """
+In the paper [Scaling Semantic Parsers with On-the-fly Ontology Matching](https://aclanthology.org/D13-1161.pdf), the authors point out a significant problem in meaning representation (MR). Let’s take a look at an example with lambda-calculus:
+
+<center><img src="https://s1.ax1x.com/2023/08/29/pPdM7FK.png" width="680px"/></center>
+
+A semantic parser might aim to construct MR1 for Q1 and MR2 for Q2. But in fact, these two questions have the same meaning, and many QA databases simply aim to produce MR1 for Q2, thereby introducing significant lexical ambiguity that complicates learning. This problem addresses which property of meaning representation?
+"""
+choice: """
+Unambiguity
+Canonical Form
+Verifiability
+Inference Ability
+Expressiveness
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - checkbox
+
+title: "Question 4 - Lambda calculus"
+content: """
+Choose all correct reductions.
+"""
+choice: """
+$[\lambda x. \alpha x x \alpha](y) = \alpha y x z$
+$[[\lambda x. \lambda z. zx](q)](y) = qy$
+$[\lambda x. [\lambda z. zx](q)](y) = qy$
+$[\lambda x. \alpha x x \alpha](y) = \alpha y y \alpha$
+"""
+points: "10"
+answer: "CD"
+
+
+@ Problem - radio
+
+title: "Question 5 - Semantic Attachments to CFG"
+content: """
+In the given CFG, each rule has a semantic attachment. 
+
+<center><img src="https://s1.ax1x.com/2023/08/29/pPdQ1l4.png" width="680px"/></center>
+
+Notice that the subscript indices are only used to distinguish VPs. They are not part of the syntactic category.
+
+We know that the sentence `Whiskers smiles and purrs` has a representation of $\exists e_{1} . {Smiles}\left(e_{1}\right) \wedge {Smiler}(e_{1} , \mathtt{WHISKERS}  ) \wedge   \exists e_{2} . {Purrs}  \left(e_{2}\right) \wedge {Purrer}(e_{2} , \mathtt{WHISKERS})$. Which of the following semantic attachment should be placed at the question mark?
+"""
+choice: """
+$\{\lambda x. {And}(x)\}$
+$\{\lambda x. x(And)\}$
+$\{\lambda p. \lambda q. p \land q\}$
+$\{\lambda P. \lambda Q. \lambda x. P(x) \land Q(x)\}$
+$\{\lambda P. \lambda Q. \lambda x. \lambda y. P(x) \land Q(y)\}$
+"""
+points: "10"
+answer: "D"
+
+
+@ Problem - custom
+
+title: "Question 6 - Propbank"
+content: """
+Find the predicate and roles for the following sentences based on [the PropBank framesets](https://verbs.colorado.edu/propbank/framesets-english-aliases/).
+
+*Abigail reluctantly shares a toy with Max.*
+
+Predicate: [A]   Arg0: [B]    Arg1: [C]     Arg2: [D]
+
+Fill in the blanks choosing words from the sentence.
+"""
+choice: """
+<div class="question q1 q-radio" answer="{'C': 2.5}" style="float: left; margin-right: 1em;">
+    <p align="center">Predicate</p>
+    <input type="radio" name="q1" value="A" title="Abigail">
+    <input type="radio" name="q1" value="B" title="reluctantly">
+    <input type="radio" name="q1" value="C" title="shares">
+    <input type="radio" name="q1" value="D" title="a">
+    <input type="radio" name="q1" value="E" title="toy">
+    <input type="radio" name="q1" value="F" title="with">
+    <input type="radio" name="q1" value="F" title="Max">
+    <p class="tick-label"></p>
+</div>
+<div class="question q2 q-radio" answer="{'A': 2.5}" style="float: left; margin-right: 1em;">
+    <p align="center">Arg0</p>
+    <input type="radio" name="q2" value="A" title="Abigail">
+    <input type="radio" name="q2" value="B" title="reluctantly">
+    <input type="radio" name="q2" value="C" title="shares">
+    <input type="radio" name="q2" value="D" title="a">
+    <input type="radio" name="q2" value="E" title="toy">
+    <input type="radio" name="q2" value="F" title="with">
+    <input type="radio" name="q2" value="F" title="Max">
+    <p class="tick-label"></p>
+</div>
+<div class="question q3 q-radio" answer="{'E': 2.5}" style="float: left; margin-right: 1em;">
+    <p align="center">Arg1</p>
+    <input type="radio" name="q3" value="A" title="Abigail">
+    <input type="radio" name="q3" value="B" title="reluctantly">
+    <input type="radio" name="q3" value="C" title="shares">
+    <input type="radio" name="q3" value="D" title="a">
+    <input type="radio" name="q3" value="E" title="toy">
+    <input type="radio" name="q3" value="F" title="with">
+    <input type="radio" name="q3" value="F" title="Max">
+    <p class="tick-label"></p>
+</div>
+<div class="question q4 q-radio" answer="{'F': 2.5}" style="float: left; margin-right: 1em;">
+    <p align="center">Arg2</p>
+    <input type="radio" name="q4" value="A" title="Abigail">
+    <input type="radio" name="q4" value="B" title="reluctantly">
+    <input type="radio" name="q4" value="C" title="shares">
+    <input type="radio" name="q4" value="D" title="a">
+    <input type="radio" name="q4" value="E" title="toy">
+    <input type="radio" name="q4" value="F" title="with">
+    <input type="radio" name="q4" value="F" title="Max">
+    <p class="tick-label"></p>
+</div>
+<div style="clear: left;"></div>
+"""
+
+
+@ Problem - radio
+
+title: "Question 7 - Discourse Analysis 1"
+content: """
+In mention ranking, we predict an antecedent for each mention in the text (represented by solid lines). Which of the following coreference links represented by the dashed lines can be inferred according to the transitive closure?
+
+<center><img src="https://s1.ax1x.com/2022/06/13/XRX4un.png" width="40%"/></center>
+"""
+choice: """
+A
+B
+Both of them
+Neither of them
+"""
+points: "10"
+answer: "C"
+
+
+@ Problem - radio
+
+title: "Question 8 - Mention Ranking"
+content: """
+In mention ranking, we predict an antecedent for each mention in the text. Below is a prediction from Jim, but he corrupts it with some ink by accident. Can you read how many clusters of mentions are there in this prediction? (Assume Jim has the gold mention detection)
+
+<img src="https://s1.ax1x.com/2022/05/23/XpwoZD.png" alt="discourse.png" border="0" width="50%" />
+"""
+choice: """
+1
+2
+3
+4
+Cannot be determined
+"""
+points: "10"
+answer: "C"
+
+
+@ Problem - custom
+
+title: "Question 9 - Information extraction tasks"
+content: """
+Please match task names and definitions.
+"""
+choice: """
+<div class="question q1 q-radio" answer="{'A': 2.5}">
+    <p>Named entity recognition</p>
+    <input type="radio" name="q1" value="A" title="Tag entities in text with their corresponding type">
+    <input type="radio" name="q1" value="B" title="Cluster mentions in text that refer to the same underlying real world entities">
+    <input type="radio" name="q1" value="C" title="Assign a unique indentity to entities mentioned in text">
+    <input type="radio" name="q1" value="D" title="Predict attributes and relations for entities in a sentence.">
+    <p class="tick-label"></p>
+</div>
+<div class="question q2 q-radio" answer="{'B': 2.5}">
+    <p>Coreference resolution</p>
+    <input type="radio" name="q2" value="A" title="Tag entities in text with their corresponding type">
+    <input type="radio" name="q2" value="B" title="Cluster mentions in text that refer to the same underlying real world entities">
+    <input type="radio" name="q2" value="C" title="Assign a unique indentity to entities mentioned in text">
+    <input type="radio" name="q2" value="D" title="Predict attributes and relations for entities in a sentence.">
+    <p class="tick-label"></p>
+</div>
+<div class="question q3 q-radio" answer="{'C': 2.5}">
+    <p>Entity linking</p>
+    <input type="radio" name="q3" value="A" title="Tag entities in text with their corresponding type">
+    <input type="radio" name="q3" value="B" title="Cluster mentions in text that refer to the same underlying real world entities">
+    <input type="radio" name="q3" value="C" title="Assign a unique indentity to entities mentioned in text">
+    <input type="radio" name="q3" value="D" title="Predict attributes and relations for entities in a sentence.">
+    <p class="tick-label"></p>
+</div>
+<div class="question q4 q-radio" answer="{'D': 2.5}">
+    <p>Relation extraction</p>
+    <input type="radio" name="q4" value="A" title="Tag entities in text with their corresponding type">
+    <input type="radio" name="q4" value="B" title="Cluster mentions in text that refer to the same underlying real world entities">
+    <input type="radio" name="q4" value="C" title="Assign a unique indentity to entities mentioned in text">
+    <input type="radio" name="q4" value="D" title="Predict attributes and relations for entities in a sentence.">
+    <p class="tick-label"></p>
+</div>
+"""
+
+
+@ Problem - checkbox
+
+title: "Question 10 - NER as Constituency Parsing"
+content: """
+Given the following partially-observed constituency parse tree, what are the observed entity spans?
+
+<center><img src="https://s1.ax1x.com/2023/08/29/pPdQRtf.png" width="40%"/></center>
+"""
+choice: """
+AB
+EF
+FG
+EFG
+BCDE
+BCDEF
+BCDEFG
+"""
+points: "10"
+answer: "ABD"

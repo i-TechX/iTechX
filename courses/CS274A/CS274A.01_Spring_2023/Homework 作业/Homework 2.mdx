@@ -1,0 +1,231 @@
+«««
+code: CS274A
+name: Natural Language Processing
+semester: Spring 2023
+category: Homework 作业
+title: Homework 2
+»»»
+
+# Homework 2
+
+## Page 1 (question)
+
+@ Problem - radio
+
+title: "Question 1 - Bidirectional LSTM"
+content: """
+Bidirectional LSTM provide an easier way to learn long distance dependencies, so it usually perform better than vanilla RNNs in language modeling tasks.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 2 - Perplexity"
+content: """
+It is safe to compare the perplexities of language models with different vocabularies.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 3 - Perplexity"
+content: """
+Four students are training a simple language model. The vocabulary size is 33279. Below are the perplexities of language models reported by these students. Who is absolutely lying?
+"""
+choice: """
+Ben: 124853942.3429384
+Saoirse: 965.0860734119312
+Tomm: 1.0
+Macha: 0.198248938724835
+"""
+points: "10"
+answer: "D"
+
+
+@ Problem - radio
+
+title: "Question 4 - RNN Vanishing Gradient"
+content: """
+We can solve the vanishing gradient problem in vanilla RNN by multiply the gradient with a constant scalar in when the gradient is small.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 5 - The sparsity problem"
+content: """
+Compared to n-gram language models, fixed window neural language models won't suffer from the data sparsity problem, because:
+"""
+choice: """
+Neural language models always have enough data do train.
+Fixed window neural language models use embeddings to represent words instead of the words themselves.
+Fixed window neural language models do not care about the word order while n-gram language models do consider the word order.
+Fixed window neural language models have less parameters than n-gram language models.
+"""
+points: "10"
+answer: "B"
+
+
+## Page 2 (question)
+
+
+@ Problem - checkbox
+
+title: "Question 6 - Attention"
+content: """
+Select all correct statements.
+"""
+choice: """
+The attention module is fast to compute because it can be easily vectorized and is parallelizable.
+Self-attention means the "queries", "keys" and "values" are all from the same sequence of vectors.
+Multi-head self-attention takes self-attention over the original input vectors multiple times and concatenate the attention output together.
+[a, b, c, d], [d, b, a, c] are two sequences of input vectors, after feeding them into a multi-head self-attention layer without a positional encoding, the attention output for the input vector b are the same.
+"""
+points: "10"
+answer: "ABD"
+
+
+@ Problem - checkbox
+
+title: "Question 7 - Attention 2"
+content: """
+Select all correct statements about the **RNN language model with attention** covered in the lecture. Suppose we are training the language model on a sentence of length L, and we are at time step t and predicting the (t+1)-th token.
+"""
+choice: """
+Query vector is the hidden state of the (t+1)-th token
+Query vector is the hidden state of the t-th token
+Keys and values are hidden states from time step 1 to t-1.
+Keys and values are hidden states from time step 1 to t.
+Keys and values are hidden states from time step 1 to L.
+"""
+points: "10"
+answer: "BD"
+
+
+@ Problem - checkbox
+
+title: "Question 8 - RNN and Attention"
+content: """
+Select all correct statements.
+"""
+choice: """
+RNNs take O(sequence length) steps for distant word pairs to interact.
+The attention scores are calculated by the "keys" and "values".
+The attention scores are calculated by the "queries" and "keys".
+The final attention output  is a weighted sum of "values".
+Attention takes Θ(log2(sequence length)) steps for distant word pairs to interact.
+"""
+points: "10"
+answer: "ACD"
+
+
+@ Problem - radio
+
+title: "Question 9 - Attention"
+content: """
+Select all correct statements.
+"""
+choice: """
+A dot product attention has complexity that scales linearly with the length of input.
+In dot product attention, we compute a distribution of **query** vectors that a **key** vector focuses on.
+Not all linear attention mechanisms guarantee their attention to be a valid distribution.
+In linear attention, by limiting the attention matrix according to some pre-defined patterns, the complexity of attention is reduced.
+"""
+points: "10"
+answer: "C"
+
+
+@ Problem - checkbox
+
+title: "Question 10 - Transformer"
+content: """
+Select all correct statements.
+"""
+choice: """
+Position embedding is used to encode the word-order and word-position information. A randomly initialized position embedding is invalid because it cannot encode the word-order information.
+Adding a feed-forward layer with nonlinearities improves the model's ability and allows the neural network model more complex functions
+The residual connection smoothes the loss landscape and makes training easier, it also introduces more model parameters to improve the model's expressive power.
+Layer normalization shifts the "mean" and "standard deviation" of the previous layer output to zero.
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 11 - BERT"
+content: """
+BERT is finetuned using MLM (masked language modeling) and NSP (next sentence prediction ) and then pretrained on downstream tasks such as text classification.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"
+
+
+## Page 3 (question)
+
+@ Problem - checkbox
+
+title: "Question 12 - From HMM to CRF"
+content: """
+Select all correct statements.
+"""
+choice: """
+The difference between MEMM and CRF is that the former is locally normalized and suffers from the label bias issue, while the latter is globally normalized. 
+MEMMs prefer states with higher number of transitions, thus suffer from the label bias issue.
+In CRF training, both max-margin loss and negative log-likelihood loss involve the use of the forward algorithm to compute the partition function.
+Neural CRFs use neural networks (e.g., BiLSTMs, Transformers) to compute CRF potential scores.
+"""
+points: "10"
+answer: "AD"
+
+
+@ Problem - checkbox
+
+title: "Question 13 - HMM"
+content: """
+Select all correct statements.
+"""
+choice: """
+The Baum-Welch algorithm is a special case of the EM algorithm, and can be used for unsupervised learning of HMM parameters.
+If we use the Baum-Welch algorithm to train an HMM, it will finally converge to a global optimum after running a  sufficient number of iterations.
+The forward-backward algorithm has the same time and space complexity as the Viterbi algorithm. 
+We can use the 'count and normalize' strategy to train an HMM in both supervised and unsupervised manners.  The difference is that, in supervised learning, 'count' is the actual counts, whereas in unsupervised learning, 'count' is the expected counts.
+"""
+points: "10"
+answer: "ACD"
+
+
+@ Problem - radio
+
+title: "Question 14 - 	Decode"
+content: """
+Beam search can always find the optimal translation in the decoding process of neural machine translation.
+"""
+choice: """
+Correct
+Incorrect
+"""
+points: "10"
+answer: "B"

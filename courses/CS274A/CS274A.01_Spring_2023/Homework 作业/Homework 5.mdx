@@ -1,0 +1,236 @@
+«««
+code: CS274A
+name: Natural Language Processing
+semester: Spring 2023
+category: Homework 作业
+title: Homework 5
+»»»
+
+# Homework 5
+
+## Page 1 (question)
+
+@ Problem - radio
+
+title: "Question 1 - Evaluation"
+content: """
+Given the following gold and predicted dependency parses:
+
+Gold:
+
+<img src="https://s1.ax1x.com/2022/05/06/OnYJsK.png" link="https://imgtu.com/i/OnYJsK" alt="gold" style="max-width:90%; max-height:2000px;"/>
+
+Predicted:
+
+<img src="https://s1.ax1x.com/2022/05/06/OnY0JA.png" link="https://imgtu.com/i/OnY0JA" alt="predicted" style="max-width:90%; max-height:2000px;"/>
+
+What is the Unlabelled Attachment Score (UAS)? What about the Labelled Attachment Score (LAS)?
+"""
+choice: """
+UAS = 80%, LAS = 40%
+UAS = 60%, LAS = 80%
+UAS = 80%, LAS = 60%
+UAS = 60%, LAS = 20%
+"""
+points: "10"
+answer: "C"
+
+
+@ Problem - radio
+
+title: "Question 2 - Graph-Based Dependency Parsing"
+content: """
+Consider the sentence: I love Natural Language Processing.
+
+| Head\Dependent | I   | love | Natural | Language | Processing |
+| -------------- | --- | ---- | ------- | -------- | ---------- |
+| ROOT           | 15  | 13   | 20      | 10       | 20         |
+| I              | -   | 10   | 12      | 1        | 25         |
+| love           | 10  | -    | 6       | 19       | 15         |
+| Natural        | 2   | 23   | -       | 7        | 1          |
+| Language       | 13  | 1    | 22      | -        | 15         |
+| Processing     | 5   | 1    | 7       | 26       | -          |
+
+Given the arc scores above, what's the dependent of ROOT if we run the Chu-Liu-Edmonds Algorithm?
+"""
+choice: """
+I
+love
+Natural
+Language
+Processing
+"""
+points: "10"
+answer: "A"
+
+
+@ Problem - radio
+
+title: "Question 3 - Graph-Based Dependency Parsing"
+content: """
+Consider the sentence: I love Natural Language Processing.
+
+| Head\Dependent | I   | love | Natural | Language | Processing |
+| -------------- | --- | ---- | ------- | -------- | ---------- |
+| ROOT           | 15  | 13   | 20      | 10       | 20         |
+| I              | -   | 10   | 12      | 1        | 25         |
+| love           | 10  | -    | 6       | 19       | 15         |
+| Natural        | 2   | 23   | -       | 7        | 1          |
+| Language       | 13  | 1    | 22      | -        | 15         |
+| Processing     | 5   | 1    | 7       | 26       | -          |
+
+Given the arc scores above, what's the dependent of ROOT if we run the Eisner Algorithm?
+"""
+choice: """
+I
+love
+Natural
+Language
+Processing
+"""
+points: "10"
+answer: "A"
+explanation: """
+This question is a little bit difficult. We know that the Eisner Algorithm returns the (projective) dependency parse tree with the highest score. Since for any dependency parse tree, each word has one and only one head, we assert that we have to pick one and only one score from each column. We try the maximum score in each column (15, 23, 22, 26, 25) and surprisingly find that it is a valid dependency parse tree. So we get the answer.
+"""
+
+
+@ Problem - radio
+
+title: "Question 4 - Head or Dependent"
+content: """
+In a dependency parse tree, the nodes are the words in a sentence and each word has one and only one dependent.
+"""
+choice: """
+Yes
+No
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 5 - Projective parsing"
+content: """
+Choose the correct statements
+"""
+choice: """
+Since projective dependency parse trees can be transformed into consituence parse trees, CYK can be used in projective depency parsing.
+Chu-Liu-Edmonds algorithm can be applied to non-projective dependency parsing.
+Eisner algorithm can be applied to non-projective dependency parsing.
+Since non-projective dependency parse trees can be transformed into consituence parse trees, CYK can be used in non-projective depency parsing.
+"""
+points: "10"
+answer: "AB"
+
+
+@ Problem - radio
+
+title: "Question 6 - Transition-Based Parsing"
+content: """
+Consider the sentence: I love Natural Language Processing.
+
+We perform the following transitions: SHIFT, SHIFT, LEFT-ARC, SHIFT, SHIFT, SHIFT, LEFT-ARC, LEFT-ARC, RIGHT-ARC, RIGHT-ARC.
+
+What's the dependent of ROOT in the dependency parse tree?
+"""
+choice: """
+I
+love
+Natural
+Language
+Processing
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 7 - Dependency Parsing 2"
+content: """
+What can we get if we substitute `sum` for `max` (将`max`替换为`sum`) in the Eisner Algorithm?
+"""
+choice: """
+The score of the projective dependency parse tree with the highest score.
+The sum of the scores of all the projective dependency parse trees.
+The product of the scores of all the projective dependency parse trees.
+The result has no meaning in practice.
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 8 - Dependency Parsing 3"
+content: """
+Recap the example for Chu-Liu-Edmonds Algorithm in class:
+
+<img src="https://s1.ax1x.com/2022/06/13/XRLUUO.png" width="680px"/>
+
+We first contract `V1` and `V2` into `V4`:
+
+<img src="https://s1.ax1x.com/2022/06/13/XRLoMn.png" width="680px"/>
+
+Then we contract `V4` and `V3` into `V5`:
+
+<img src="https://s1.ax1x.com/2022/06/13/XRLXiF.png" width="680px"/>
+
+After contraction, we have:
+
+<img src="https://s1.ax1x.com/2022/06/13/XRLjG4.png" width="680px"/>
+
+In class, we select edge `a` as the `bestInEdge` of `V5`.
+
+<img src="https://s1.ax1x.com/2022/06/13/XRLxz9.png" width="680px"/>
+
+We finally get
+
+<img src="https://s1.ax1x.com/2022/06/13/XROZzd.png" width="680px"/>
+
+What if we select edge `c` as the `bestInEdge` of `V5` instead? Please choose the expanded dependency parse tree.
+"""
+choice: """
+<img src='https://s1.ax1x.com/2022/06/03/XNgYHx.png' width='150px'/>
+<img src='https://s1.ax1x.com/2022/06/03/XNgUUK.png' width='150px'/>
+<img src='https://s1.ax1x.com/2022/06/03/XNgBgH.png' width='150px'/>
+<img src='https://s1.ax1x.com/2022/06/03/XNg7bq.png' width='150px'/>
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 9 - Dependency Parsing 4"
+content: """
+Consider the following dependency parse tree. How many possible action sequences in arc-standard parsing can it be obtained from? For example, `SHIFT SHIFT SHIFT RIGHT-ARC RIGHT-ARC RIGHT-ARC` is a possible action sequence to obtain `I -> love -> NLP` and `ROOT -> I`. Assume we only have actions `SHIFT`, `LEFT-ARC`, `RIGHT-ARC`.
+
+<center><img src="https://s1.ax1x.com/2022/06/13/XRXthD.png" width="200px"/></center>
+"""
+choice: """
+1
+2
+3
+4
+"""
+points: "10"
+answer: "B"
+
+
+@ Problem - radio
+
+title: "Question 10 - Dependency Parsing 5"
+content: """
+In the Chu-Liu-Edmonds algorithm, sometimes we would subtract a constant value `c` from the weights of all edges coming out of ROOT. Why do we do this?
+"""
+choice: """
+We want to constrain that the ROOT has only one dependent. 
+We want to constrain that each word (except ROOT) has only one head. 
+We want to make the dependency tree look prettier in the paper. 
+We do not have a clear purpose, just do it for fun.
+"""
+points: "10"
+answer: "A"
