@@ -4,6 +4,22 @@
     "semesters": [
         {
             "season": "Spring",
+            "year": "2023",
+            "course_id": "CS245.01",
+            "department": "信息科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "Algorithms and data structures, Probability and statistics, and Convex optimization",
+            "evaluation": "Three problem sets (30%), Final project (60%): report (45%) and presentation (15%), Participation and quiz: 10%.",
+            "teacher": [
+                "liuxin7"
+            ],
+            "ta": [
+                "guohq"
+            ]
+        },
+        {
+            "season": "Spring",
             "year": "2022",
             "course_id": "CS245.01",
             "department": "信息科学与技术学院",
