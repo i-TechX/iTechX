@@ -191,6 +191,12 @@
         ],
         "teach-courses": [
             [
+                "Fall",
+                "2023",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
+            [
                 "Spring",
                 "2023",
                 "CS274A",
@@ -870,6 +876,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2023",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
             [
                 "Spring",
                 "2022",
@@ -2149,6 +2161,12 @@
         ],
         "ta-courses": [
             [
+                "Fall",
+                "2023",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
+            [
                 "Spring",
                 "2022",
                 "SI120",
@@ -2208,6 +2226,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Fall",
+                "2023",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
             [
                 "Spring",
                 "2023",
@@ -3504,6 +3528,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2023",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
             [
                 "Spring",
                 "2021",
@@ -7952,6 +7982,12 @@
         ],
         "ta-courses": [
             [
+                "Fall",
+                "2023",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
+            [
                 "Spring",
                 "2022",
                 "CS110",
@@ -8584,6 +8620,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2023",
+                "CS181",
+                "Artificial Intelligence I"
+            ],
             [
                 "Spring",
                 "2022",
@@ -12201,6 +12243,42 @@
                 "2022",
                 "SI231B",
                 "Matrix Computations"
+            ]
+        ]
+    },
+    "tangjj": {
+        "name": "唐嘉晋",
+        "info": [
+            [
+                "envelope", 
+                "&#x74;&#x61;&#x6e;&#103;&#106;&#106;&#x40;&#115;&#x68;&#97;&#110;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#99;&#x68;&#46;&#101;&#100;&#117;&#46;&#99;&#x6e;", 
+                "mailto:&#x74;&#x61;&#x6e;&#103;&#106;&#106;&#x40;&#115;&#x68;&#97;&#110;&#x67;&#104;&#x61;&#x69;&#116;&#x65;&#99;&#x68;&#46;&#101;&#100;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2023",
+                "CS181",
+                "Artificial Intelligence I"
+            ]
+        ]
+    },
+    "jipy": {
+        "name": "吉鹏宇",
+        "info": [
+            [
+                "envelope", 
+                "&#106;&#x69;&#112;&#121;&#x40;&#115;&#104;&#97;&#110;&#103;&#x68;&#x61;&#x69;&#116;&#101;&#x63;&#x68;&#x2e;&#101;&#100;&#x75;&#46;&#99;&#110;", 
+                "mailto:&#106;&#x69;&#112;&#121;&#x40;&#115;&#104;&#97;&#110;&#103;&#x68;&#x61;&#x69;&#116;&#101;&#x63;&#x68;&#x2e;&#101;&#100;&#x75;&#46;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2023",
+                "CS181",
+                "Artificial Intelligence I"
             ]
         ]
     }
