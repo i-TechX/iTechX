@@ -4,6 +4,39 @@
     "semesters": [
         {
             "season": "Fall",
+            "year": "2022",
+            "course_id": "SI100B.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "未知",
+            "teacher": [
+                "gaoshh",
+                "liangjr",
+                "louxin"
+            ],
+            "ta": [
+                "caoyh1",
+                "wuxh",
+                "zhouha",
+                "luao",
+                "zhangbm",
+                "fangnr",
+                "qiujc",
+                "wanggw",
+                "tiancheng",
+                "liusy",
+                "xiezhw",
+                "licf",
+                "wuchy",
+                "qiujh",
+                "cuiza",
+                "hehy"
+            ]
+        },
+        {
+            "season": "Fall",
             "year": "2021",
             "course_id": "SI100B.01",
             "department": "信息科学与技术学院",
