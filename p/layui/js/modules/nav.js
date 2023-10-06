@@ -198,24 +198,26 @@ layui.define(['jquery', 'element', 'layer', 'proxy'], function(exports){
                 }
 
                 if (page == "dashboard") {
-                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 30em;"><a href="dashboard">课程面板</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 36em;"><a href="dashboard">课程面板</a></li>';
                 } else {
-                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 30em;"><a href="dashboard">课程面板</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 36em;"><a href="dashboard">课程面板</a></li>';
                 }
 
                 if (page == "help") {
-                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 24em;"><a href="help">帮助</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 30em;"><a href="help">帮助</a></li>';
                 } else {
-                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 24em;"><a href="help">帮助</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 30em;"><a href="help">帮助</a></li>';
                 }
 
                 if (page == "settings") {
-                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 18em;"><a href="settings">设置</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right layui-this" style="position: relative; margin-right: 24em;"><a href="settings">设置</a></li>';
                 } else {
-                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 18em;"><a href="settings">设置</a></li>';
+                    tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 24em;"><a href="settings">设置</a></li>';
                 }
 
-                tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 10em;"><a href="https://i-techx.github.io/dashboard">返回旧版</a></li>';
+                tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 16em;"><a href="https://i-techx.github.io/dashboard">返回旧版</a></li>';
+
+                tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 10em;"><a href="https://github.com/i-TechX/iTechX">Github</a></li>';
 
                 if (this.userInfo) {
                     tabs += '<li class="layui-nav-item layui-layout-right" style="position: relative; margin-right: 2em;">                \

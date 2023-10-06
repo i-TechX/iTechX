@@ -112,6 +112,18 @@ layui.define(['jquery', 'util', 'layer', 'proxy', 'form'], function(exports){
                                 d2.appendChild(d);
                             }
 
+                            {
+                                var d = document.createElement('div');
+                                cardComponent.getStatus(d);
+                                d2.appendChild(d);
+                            }
+
+                            if (options.hasOwnProperty('contriID')) {
+                                var d = document.createElement('div');
+                                cardComponent.getContributors(options['contriID'], d);
+                                d2.appendChild(d);
+                            }
+
                             if (options.hasOwnProperty('boardLabel')) {
                                 var d = document.createElement('div');
                                 cardComponent.getAnnouncements(options['boardLabel'], d);
@@ -235,17 +247,87 @@ layui.define(['jquery', 'util', 'layer', 'proxy', 'form'], function(exports){
                 element.appendChild(d);
             },
 
-            getAnnouncements: function(label, element) {
+            getStatus: function(element) {
                 var d = document.createElement('div');
                 d.style.margin = "2em";
                 d.innerHTML = '\
                     <p><b>Status 网站状态</b></p>\
+                    <div style="margin:0.5rem;"><a href="https://github.com/i-TechX/iTechX"><img src="https://img.shields.io/github/stars/' + options.owner + '/' + options.repo + '?style=flat-square&logo=github&color=ff9700"></img></a></div>\
                     <div style="margin:0.5rem;"><img src="https://img.shields.io/github/issues-raw/' + options.owner + '/' + options.repo + '/Gitalk?color=green&label=courses%20online&style=flat-square"></img></div>\
                     <div style="margin:0.5rem;"><img src="https://img.shields.io/github/repo-size/' + options.owner + '/' + options.repo + '?style=flat-square&label=database%20size"></img></div>\
                     <div style="margin:0.5rem;"><img src="https://img.shields.io/github/last-commit/' + options.owner + '/' + options.repo + '/file-base?color=8f63e9&style=flat-square&label=last%20update"></img></div>\
                 ';
                 element.appendChild(d);
+            },
 
+            getContributors: function(contriID, element) {
+                var d = document.createElement('div');
+                d.style.margin = "2em";
+                d.innerHTML = '\
+                    <p style="margin-bottom: 3px;"><b>Contributors 贡献者</b></p>\
+                    <p style="font-size: 4pt; margin-bottom: 16px;"><a href="https://github.com/i-TechX/iTechX/discussions/63" style="font-weight: 400;"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;如何成为贡献者</a></p>\
+                    <div style="text-align: center;"><i class="layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop" style="font-size: 2em; color: #b4b4b4;"></i></div>\
+                ';
+                element.appendChild(d);
+
+                $.ajax({
+                    url: proxy.parse(options.baseURL + '/repos/' + options.owner + '/' + options.repo + '/issues/comments/' + contriID),
+                    type: "GET",
+                    data: {
+                        t: Date.now()
+                    },
+                    headers: headers,
+                    success: function (data) {
+                        if (data) {
+                            d.innerHTML = '<p style="margin-bottom: 3px;"><b>Contributors 贡献者</b></p>\
+                            <p style="font-size: 4pt; margin-bottom: 16px;"><a href="https://github.com/i-TechX/iTechX/discussions/63" style="font-weight: 400;"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;如何成为贡献者</a></p>';
+                            var contributors = data['body'].split('\n');
+                            for (var i = 0; i < contributors.length; i++) {
+                                var pid = contributors[i];
+                                var da = document.createElement('a');
+                                da.href = "https://github.com/" + pid;
+                                var dd = document.createElement('img');
+                                dd.classList.add("layui-circle");
+                                da.appendChild(dd);
+                                d.appendChild(da);
+                                dd.style.width = "3em";
+                                dd.style.height = "3em";
+                                dd.style.margin = "0.1em";
+                                dd.style.border = "1px solid #b4b4b4";
+                                dd.style.borderRadius = "50%";
+                                dd.style.objectFit = "cover";
+                                dd.style.objectPosition = "center";
+                                cardComponent.loadImage(pid, dd);
+                            }
+                        } else {
+                            console.log('data error:', data);
+                        }
+                    },
+                    error: function(err) {
+                        console.log(err);
+                        d.innerHTML = '<p style="margin-bottom: 3px;"><b>Contributors 贡献者</b></p>\
+                        <p style="font-size: 4pt; margin-bottom: 16px;"><a href="https://github.com/i-TechX/iTechX/discussions/63" style="font-weight: 400;"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;如何成为贡献者</a></p>\
+                        <div style="text-align: center;">Unexpected error occurs.</div>\
+                        ';
+                    }
+                })
+            },
+
+            loadImage: function(pid, element) {
+                $.ajax({
+                    url: proxy.parse(options.baseURL + "/users/" + pid),
+                    type: "GET",
+                    headers: headers,
+                    success: function (data) {
+                        element.src = data['avatar_url'];
+                    },
+                    error: function(err) {
+                        console.log(err);
+                    }
+                })
+            },
+
+            getAnnouncements: function(label, element) {
                 var d = document.createElement('div');
                 d.style.margin = "2em";
                 d.innerHTML = '\
