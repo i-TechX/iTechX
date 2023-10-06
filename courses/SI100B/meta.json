@@ -10,7 +10,7 @@
             "credit": "4",
             "hours": "64",
             "prerequisite": "无",
-            "evaluation": "未知",
+            "evaluation": "24 lectures on Wed&Fri, for the first 12 weeks 1. Python programming (PP), 8 lectures, 20% of the total score 2. Signal processing (SP), 8 lectures, 20%, 3. Electrical and electronic technologies (EE), 8 lectures, 20% Project (PJ) during the last 4 weeks  Choose 1 from 5 projects, each one with a different focus: programming, signal processing, electronics 40%, details to be announced later in the semester",
             "teacher": [
                 "gaoshh",
                 "liangjr",
