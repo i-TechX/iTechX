@@ -823,6 +823,12 @@
         ],
         "teach-courses": [
             [
+                "Fall",
+                "2023",
+                "SI152",
+                "Numerical Optimization"
+            ],
+            [
                 "Spring",
                 "2023",
                 "CS282",
