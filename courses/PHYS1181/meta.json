@@ -10,12 +10,14 @@
             "credit": "3",
             "hours": "48",
             "prerequisite": "最好有微积分基础。",
-            "evaluation": "未知",
+            "evaluation": "平时作业(30%)，两次期中(各20%)及期末考试(30%)",
             "teacher": [
                 "zhaoad"
             ],
             "ta": [
-                "unknown"
+                "songxm1",
+                "yefei",
+                "songqch"
             ]
         }
     ]
