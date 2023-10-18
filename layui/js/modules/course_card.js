@@ -265,7 +265,7 @@ layui.define(['jquery', 'util', 'layer', 'proxy', 'form'], function(exports){
                 d.style.margin = "2em";
                 d.innerHTML = '\
                     <p style="margin-bottom: 3px;"><b>Contributors 贡献者</b></p>\
-                    <p style="font-size: 4pt; margin-bottom: 16px;"><a href="https://github.com/i-TechX/iTechX/discussions/63" style="font-weight: 400;"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;如何成为贡献者</a></p>\
+                    <p style="font-size: x-small; margin-bottom: 16px;"><a href="https://github.com/i-TechX/iTechX/discussions/63" style="font-weight: 400;"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;如何成为贡献者</a></p>\
                     <div style="text-align: center;"><i class="layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop" style="font-size: 2em; color: #b4b4b4;"></i></div>\
                 ';
                 element.appendChild(d);
@@ -280,7 +280,7 @@ layui.define(['jquery', 'util', 'layer', 'proxy', 'form'], function(exports){
                     success: function (data) {
                         if (data) {
                             d.innerHTML = '<p style="margin-bottom: 3px;"><b>Contributors 贡献者</b></p>\
-                            <p style="font-size: 4pt; margin-bottom: 16px;"><a href="https://github.com/i-TechX/iTechX/discussions/63" style="font-weight: 400;"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;如何成为贡献者</a></p>';
+                            <p style="font-size: x-small; margin-bottom: 16px;"><a href="https://github.com/i-TechX/iTechX/discussions/63" style="font-weight: 400;"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;如何成为贡献者</a></p>';
                             var contributors = data['body'].split('\n');
                             for (var i = 0; i < contributors.length; i++) {
                                 var pid = contributors[i];
@@ -306,7 +306,7 @@ layui.define(['jquery', 'util', 'layer', 'proxy', 'form'], function(exports){
                     error: function(err) {
                         console.log(err);
                         d.innerHTML = '<p style="margin-bottom: 3px;"><b>Contributors 贡献者</b></p>\
-                        <p style="font-size: 4pt; margin-bottom: 16px;"><a href="https://github.com/i-TechX/iTechX/discussions/63" style="font-weight: 400;"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;如何成为贡献者</a></p>\
+                        <p style="font-size: x-small; margin-bottom: 16px;"><a href="https://github.com/i-TechX/iTechX/discussions/63" style="font-weight: 400;"><i class="fa fa-question-circle-o" aria-hidden="true"></i>&nbsp;&nbsp;如何成为贡献者</a></p>\
                         <div style="text-align: center;">Unexpected error occurs.</div>\
                         ';
                     }
@@ -385,7 +385,7 @@ layui.define(['jquery', 'util', 'layer', 'proxy', 'form'], function(exports){
                                 var d = document.createElement('div');
                                 d.innerHTML = '<blockquote class="layui-elem-quote">' + 
                                 '<p style="font-weight: bold; margin-bottom: 0;">' + title + '&nbsp;&nbsp;' + link + '</p>' +
-                                '<p style="font-size: 4pt; margin-bottom: 10px;">' + time + '</p>' +
+                                '<p style="font-size: x-small; margin-bottom: 10px;">' + time + '</p>' +
                                 '<p>' + text + '</p>' + '</blockquote>';
                                 element.appendChild(d);
                             }
