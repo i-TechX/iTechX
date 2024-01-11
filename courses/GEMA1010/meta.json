@@ -19,6 +19,22 @@
                 "刘燕冬",
                 "李奇"
             ]
+        },
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "GEMA1010.01",
+            "department": "数学科学研究所",
+            "credit": "5",
+            "hours": "80",
+            "prerequisite": "无",
+            "evaluation": "平时成绩 30%, Midterm 30%, Final 40%",
+            "teacher": [
+                "陈克应"
+            ],
+            "ta": [
+                "unknown"
+            ]
         }
     ]
 }
