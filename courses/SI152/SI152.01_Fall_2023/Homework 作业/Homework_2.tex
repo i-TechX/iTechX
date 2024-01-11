@@ -1,0 +1,157 @@
+\documentclass[10pt]{article}
+\usepackage[UTF8]{ctex}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage{amsthm}
+\usepackage{amsmath,amscd}
+\usepackage{amssymb,array}
+\usepackage{amsfonts,latexsym}
+\usepackage{graphicx,subfig,wrapfig}
+\usepackage{times}
+\usepackage{psfrag,epsfig}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+\usepackage{cite}
+\usepackage{algorithm}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{algorithmic}
+%\usepackage[amsmath,thmmarks]{ntheorem}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{bm}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{mydef}{Definition}
+
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\trace}{trace}
+\DeclareMathOperator*{\acos}{acos}
+\DeclareMathOperator*{\argmax}{argmax}
+
+
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}
+\renewcommand{\algorithmicensure}{ \textbf{Output:}}
+\renewcommand{\mathbf}{\boldsymbol}
+\newcommand{\mb}{\mathbf}
+\newcommand{\matlab}[1]{\texttt{#1}}
+\newcommand{\setname}[1]{\textsl{#1}}  
+\newcommand{\Ce}{\mathbb{C}}
+\newcommand{\Ee}{\mathbb{E}}
+\newcommand{\Ne}{\mathbb{N}}
+\newcommand{\Se}{\mathbb{S}}
+\newcommand{\norm}[2]{\left\| #1 \right\|_{#2}}
+
+\newenvironment{mfunction}[1]{
+	\noindent
+	\tabularx{\linewidth}{>{\ttfamily}rX}
+	\hline
+	\multicolumn{2}{l}{\textbf{Function \matlab{#1}}}\\
+	\hline
+}{\\\endtabularx}
+
+\newcommand{\parameters}{\multicolumn{2}{l}{\textbf{Parameters}}\\}
+
+\newcommand{\fdescription}[1]{\multicolumn{2}{p{0.96\linewidth}}{
+
+		\textbf{Description}
+
+		#1}\\\hline}
+
+\newcommand{\retvalues}{\multicolumn{2}{l}{\textbf{Returned values}}\\}
+\def\0{\boldsymbol{0}}
+\def\b{\boldsymbol{b}}
+\def\bmu{\boldsymbol{\mu}}
+\def\e{\boldsymbol{e}}
+\def\u{\boldsymbol{u}}
+\def\x{\boldsymbol{x}}
+\def\v{\boldsymbol{v}}
+\def\w{\boldsymbol{w}}
+\def\N{\boldsymbol{N}}
+\def\X{\boldsymbol{X}}
+\def\Y{\boldsymbol{Y}}
+\def\A{\boldsymbol{A}}
+\def\B{\boldsymbol{B}}
+\def\y{\boldsymbol{y}}
+\def\cX{\mathcal{X}}
+\def\transpose{\top} % Vector and Matrix Transpose
+
+%\long\def\answer#1{{\bf ANSWER:} #1}
+\long\def\answer#1{}
+\newcommand{\myhat}{\widehat}
+\long\def\comment#1{}
+\newcommand{\eg}{{e.g.,~}}
+\newcommand{\ea}{{et al.~}}
+\newcommand{\ie}{{i.e.,~}}
+
+\newcommand{\db}{{\boldsymbol{d}}}
+\renewcommand{\Re}{{\mathbb{R}}}
+\newcommand{\Pe}{{\mathbb{P}}}
+
+\hyphenation{MATLAB}
+
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\title{	Numerical Optimization, 2023 Fall\\Homework 2}
+\date{Due 23:59 (CST), Nov. 2, 2023 }
+\maketitle
+
+%===============================
+
+\section{Standard Form}
+Convert the following problem to a linear program in standard form. \textcolor{red}{[20pts]}~
+\begin{equation}
+	\begin{aligned}
+		\max_{\bm{x} \in \mathbb{R}^{4}}\qquad & 2x_{1} - x_{3} + x_{4} \\
+		\mathrm{s.t.}\qquad & x_{1} + x_{2} \geq 5 \\
+							& x_{1} - x_{3} \leq 2 \\
+                                & 4x_{2} + 3x_{3} - x_{4} \leq 10 \\
+                                & x_{1} \geq 0 \\
+	\end{aligned}
+\end{equation}
+
+
+% %===============================
+
+
+\section{Two-Phase Simplex}
+Use the two-phase simplex procedure to solve the following problem. \textcolor{red}{[40pts]}
+\begin{equation}
+	\begin{aligned}
+		\min_{\bm{x} \in \mathbb{R}^{4}}\qquad & -3x_{1} + x_{2} + 3x_{3} - x_{4} \\
+		\mathrm{s.t.}\qquad & x_{1} + 2x_{2} - x_{3} + x_{4} = 0 \\
+							  & 2x_{1} - 2x_{2} + 3x_{3} + 3x_{4} = 9 \\
+							  & x_{1} - x_{2} + 2x_{3} - x_{4} = 6 \\
+							  & x_{1}, x_{2}, x_{3}, x_{4} \geq 0 \\
+	\end{aligned}
+\end{equation}
+
+
+% %===============================
+
+\section{Extreme Point}
+\subsection{Q1}
+Prove that the extreme points of the following two sets are in one-to-one correspondence.
+\textcolor{red}{[20pts]}
+\begin{equation}
+	\begin{aligned}
+		& S_{1} = \{ \bm{x} \in \mathbb{R}^{n} : \bm{Ax} \leq \bm{b}, \bm{x} \geq 0 \} \\
+		& S_{2} = \{ \bm{(x, y)} \in \mathbb{R}^{n} \times \mathbb{R}^{m} : \bm{Ax} + \bm{y} = \bm{b}, \bm{x} \geq 0, \bm{y} \geq 0 \}, \\
+	\end{aligned}
+\end{equation}
+
+where $\bm{A} \in \mathbb{R}^{m \times n}$, $\bm{b} \in \mathbb{R}^{m}$.
+
+
+\subsection{Q2}
+Does the set $P = \{ \bm{x} \in \mathbb{R}^{2} : 0 \leq x_{1} \leq 1 \}$ have extreme points? What is its standard form? Does it have extreme points in its standard form? If so, give a extreme point and explain why it is a extreme point.
+\textcolor{red}{[20pts]}
+
+\end{document}
+
+
