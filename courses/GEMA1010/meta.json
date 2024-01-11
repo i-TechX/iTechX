@@ -1,4 +1,24 @@
 {
     "code": "GEMA1010",
-    "name": "Mathematical Analysis II"
+    "name": "Mathematical Analysis II",
+    "semesters": [
+        {
+            "season": "Spring",
+            "year": "2023",
+            "course_id": "GEMA1010.01",
+            "department": "数学科学研究所",
+            "credit": "5",
+            "hours": "80",
+            "prerequisite": "无",
+            "evaluation": "平时成绩 30%, Midterm 30%, Final 40%, 平时成绩包括作业",
+            "teacher": [
+                "陈克应"
+            ],
+            "ta": [
+                "朱家成",
+                "刘燕冬",
+                "李奇"
+            ]
+        }
+    ]
 }
