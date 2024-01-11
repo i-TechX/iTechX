@@ -1,0 +1,135 @@
+\documentclass[10pt]{article}
+\usepackage[UTF8]{ctex}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage{amsthm}
+\usepackage{amsmath,amscd}
+\usepackage{amssymb,array}
+\usepackage{amsfonts,latexsym}
+\usepackage{graphicx,subfig,wrapfig}
+\usepackage{times}
+\usepackage{psfrag,epsfig}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+\usepackage{cite}
+\usepackage{algorithm}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{algorithmic}
+%\usepackage[amsmath,thmmarks]{ntheorem}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{xcolor} % 添加颜色包
+\newfontfamily{\ttconsolas}{Consolas}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{mydef}{Definition}
+
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\trace}{trace}
+\DeclareMathOperator*{\acos}{acos}
+\DeclareMathOperator*{\argmax}{argmax}
+
+
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}
+\renewcommand{\algorithmicensure}{ \textbf{Output:}}
+\renewcommand{\mathbf}{\boldsymbol}
+\newcommand{\mb}{\mathbf}
+\newcommand{\matlab}[1]{\texttt{#1}}
+\newcommand{\setname}[1]{\textsl{#1}}  
+\newcommand{\Ce}{\mathbb{C}}
+\newcommand{\Ee}{\mathbb{E}}
+\newcommand{\Ne}{\mathbb{N}}
+\newcommand{\Se}{\mathbb{S}}
+\newcommand{\norm}[2]{\left\| #1 \right\|_{#2}}
+
+\newenvironment{mfunction}[1]{
+	\noindent
+	\tabularx{\linewidth}{>{\ttfamily}rX}
+	\hline
+	\multicolumn{2}{l}{\textbf{Function \matlab{#1}}}\\
+	\hline
+}{\\\endtabularx}
+
+\newcommand{\parameters}{\multicolumn{2}{l}{\textbf{Parameters}}\\}
+
+\newcommand{\fdescription}[1]{\multicolumn{2}{p{0.96\linewidth}}{
+
+		\textbf{Description}
+
+		#1}\\\hline}
+
+\newcommand{\retvalues}{\multicolumn{2}{l}{\textbf{Returned values}}\\}
+\def\0{\boldsymbol{0}}
+\def\b{\boldsymbol{b}}
+\def\bmu{\boldsymbol{\mu}}
+\def\e{\boldsymbol{e}}
+\def\u{\boldsymbol{u}}
+\def\x{\boldsymbol{x}}
+\def\v{\boldsymbol{v}}
+\def\w{\boldsymbol{w}}
+\def\N{\boldsymbol{N}}
+\def\X{\boldsymbol{X}}
+\def\Y{\boldsymbol{Y}}
+\def\A{\boldsymbol{A}}
+\def\B{\boldsymbol{B}}
+\def\y{\boldsymbol{y}}
+\def\cX{\mathcal{X}}
+\def\transpose{\top} % Vector and Matrix Transpose
+
+%\long\def\answer#1{{\bf ANSWER:} #1}
+\long\def\answer#1{}
+\newcommand{\myhat}{\widehat}
+\long\def\comment#1{}
+\newcommand{\eg}{{e.g.,~}}
+\newcommand{\ea}{{et al.~}}
+\newcommand{\ie}{{i.e.,~}}
+
+\newcommand{\db}{{\boldsymbol{d}}}
+\newcommand{\dd}{{\mathrm{d}}}
+\renewcommand{\Re}{{\mathbb{R}}}
+\newcommand{\Pe}{{\mathbb{P}}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\hyphenation{MATLAB}
+
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\title{	Numerical Optimization, 2023 Fall\\Homework 4}
+\date{Due 23:59 (CST), Jan. 4, 2024 }
+\maketitle
+
+% %===============================
+
+\begin{problem}{1}
+    $f$ is a positive definite quadratic function $$f(\pmb x) = \frac{1}{2}\pmb x^T\pmb A\pmb x + \pmb b^T\pmb x,  \quad \pmb A \in \mathbb{S}_{++}^n, \pmb b \in \mathbb{R}^n,$$ $\pmb x^k$ is the current iteration point, $\pmb d^k$ is the descent direction. Derive the step size of exact linear search \textcolor{red}{[20pts]} $$\alpha^k = \arg\min_{\alpha > 0}f(\pmb x^k + \alpha \pmb d^k).$$
+\end{problem}
+~\\
+~\\
+
+% %===============================
+
+
+\pagebreak\begin{problem}{2}
+    Prove that $f: \mathbb{R}^n \rightarrow \mathbb{R}$ is affine if and only if $f$ is both convex and concave. \textcolor{red}{[20pts]} 
+\end{problem}
+~\\
+~\\
+
+%===============================
+
+\pagebreak\begin{problem}{3}
+    Solve the optimal solution of the Rosenbrock function $$f(x, y) = (1 - x)^2 + 100(y - x^2)^2, $$ using MATLAB programming to implement three algorithms (each 20pts): gradient descent (GD) method, Newton's method, and Quasi-Newton methods (either rank-1, DFP or BFGS). You are required to print iteration information of last 10 steps: including objective, step size, residual of gradient. Technical implementation: explain how to choose the step size, how to set the termination criteria, how to choose the initial point, the value of the required parameters, converge or not and convergence rate. (paste the code in the pdf to submit it, no need to submit the source code) \textcolor{red}{[60pts]}
+\end{problem}
+~\\
+~\\
+
+	
+\end{document}
+
+
