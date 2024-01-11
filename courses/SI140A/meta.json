@@ -20,6 +20,22 @@
             ]
         },
         {
+            "season": "Spring",
+            "year": "2023",
+            "course_id": "SI140A.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Mathematical Analysis and Linear Algebra",
+            "evaluation": "Homework 20%, Behavior 5%, Final Project 15%, Midterm Exam 30%, Final Exam 30%",
+            "teacher": [
+                "shaozy"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
             "season": "Fall",
             "year": "2022",
             "course_id": "SI140A.01",
