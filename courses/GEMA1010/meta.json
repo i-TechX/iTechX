@@ -1,0 +1,40 @@
+{
+    "code": "GEMA1010",
+    "name": "Mathematical Analysis II",
+    "semesters": [
+        {
+            "season": "Spring",
+            "year": "2023",
+            "course_id": "GEMA1010.01",
+            "department": "数学科学研究所",
+            "credit": "5",
+            "hours": "80",
+            "prerequisite": "无",
+            "evaluation": "平时成绩 30%, Midterm 30%, Final 40%, 平时成绩包括作业",
+            "teacher": [
+                "kychen"
+            ],
+            "ta": [
+                "zhujch",
+                "liuyd2022",
+                "liqi2"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "GEMA1010.01",
+            "department": "数学科学研究所",
+            "credit": "5",
+            "hours": "80",
+            "prerequisite": "无",
+            "evaluation": "平时成绩 30%, Midterm 30%, Final 40%",
+            "teacher": [
+                "kychen"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        }
+    ]
+}
