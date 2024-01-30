@@ -1,0 +1,22 @@
+{
+    "code": "ECON1101",
+    "name": "Introduction to Economics: Energy and Environmental Economics",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2023",
+            "course_id": "ECON1101.01",
+            "department": "信息科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "20% homework + 15% quiz + 15% midterm + 50% final",
+            "teacher": [
+                "yangxy"
+            ],
+            "ta": [
+                "zhangdong"
+            ]
+        }
+    ]
+}
