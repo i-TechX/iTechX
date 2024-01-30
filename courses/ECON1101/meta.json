@@ -1,6 +1,6 @@
 {
     "code": "ECON1101",
-    "name": "Introduction to Economics: Energy and Environmental Economics\t",
+    "name": "Introduction to Economics: Energy and Environmental Economics",
     "semesters": [
         {
             "season": "Fall",
@@ -11,8 +11,12 @@
             "hours": "48",
             "prerequisite": "无",
             "evaluation": "20% homework + 15% quiz + 15% midterm + 50% final",
-            "teacher": [],
-            "ta": []
+            "teacher": [
+                "yangxy"
+            ],
+            "ta": [
+                "zhangdong"
+            ]
         }
     ]
 }
