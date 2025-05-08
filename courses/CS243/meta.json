@@ -3,6 +3,22 @@
     "name": "Introduction to Algorithmic Game Theory",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2025",
+            "course_id": "CS243.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "无",
+            "evaluation": "Classroom Quizzes (10%); Homework (25%); Project (25%); Exam (40%)",
+            "teacher": [
+                "zhaodj"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
             "course_id": "CS243.01",
             "season": "Spring",
             "year": "2023",
@@ -27,7 +43,11 @@
                 "zhaodj"
             ],
             "ta": [
-                "zhangty", "yangty2", "zhangyao1", "lianxy", "gexu"
+                "zhangty",
+                "yangty2",
+                "zhangyao1",
+                "lianxy",
+                "gexu"
             ],
             "department": "信息科学与技术学院",
             "credit": "4",

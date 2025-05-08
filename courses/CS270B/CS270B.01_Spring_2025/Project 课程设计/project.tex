@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}   % For figures
+\usepackage{amsmath}    % For math
+\usepackage{booktabs}   % For professional tables
+\usepackage{hyperref}   % For hyperlinks
+\usepackage[labelfont=bf]{caption} % Bold figure captions
+
+\title{Project Title}
+\author{Author Name \\ \texttt{email@example.com}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Briefly summarize the problem, methodology, key results, and implications (4-5 sentences). 
+\end{abstract}
+
+\section{Problem Description \& Objectives}
+\label{sec:problem}
+State the problem clearly, its significance, and objectives. Example:
+\begin{itemize}
+    \item \textbf{Problem}: Existing methods for [task] suffer from [limitation]. 
+    \item \textbf{Motivation}: Addressing this improves [application domain]. 
+    \item \textbf{Objectives}: (1) Improve [metric], (2) Reduce [cost], (3) Extend to [scenario].
+\end{itemize}
+
+\section{Methodology}
+\label{sec:method}
+\subsection{Approach Overview}
+Describe the high-level solution (1 paragraph). 
+
+\subsection{Technical Details}
+Detail the algorithms/methods. For example:
+\begin{equation}
+    L = \sum_{i=1}^N (y_i - f(x_i))^2 + \lambda \|\mathbf{w}\|^2 \quad \text{(Regularized Loss)}
+\end{equation}
+
+\subsection{Implementation}
+\begin{itemize}
+    \item \textbf{Dataset}: [Name], size, preprocessing steps.
+    \item \textbf{Baselines}: Compared with [Method A, B].
+    \item \textbf{Setup}: Framework (PyTorch/TensorFlow), hardware (GPU/TPU).
+\end{itemize}
+
+\section{Experimental Results}
+\label{sec:results}
+\subsection{Quantitative Analysis}
+Present results in tables (see Table~\ref{tab:results}).
+
+\begin{table}[h]
+    \centering
+    \caption{Performance comparison (higher is better).}
+    \label{tab:results}
+    \begin{tabular}{lcc}
+        \toprule
+        Method & Accuracy & F1-Score \\
+        \midrule
+        Baseline & 0.85 & 0.82 \\
+        Ours & \textbf{0.91} & \textbf{0.89} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Qualitative Analysis}
+Include visual results (see Figure~\ref{fig:comparison}).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{example-image} % Replace with actual image
+    \caption{Qualitative comparison between input (left) and output (right).}
+    \label{fig:comparison}
+\end{figure}
+
+\section{Conclusions \& Future Work}
+\label{sec:conclusion}
+Summarize key contributions and limitations. Example:
+\begin{itemize}
+    \item \textbf{Conclusions}: Our method improves [metric] by [X\%] over baselines.
+    \item \textbf{Limitations}: Requires [resource/computation].
+    \item \textbf{Future Work}: Extend to [other domains], optimize [component].
+\end{itemize}
+
+\bibliographystyle{plain} % Choose style (e.g., IEEEtran)
+\bibliography{references} % Replace with your .bib file
+
+\end{document}

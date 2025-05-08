@@ -1,0 +1,162 @@
+\documentclass[11pt,oneside,a4paper]{article}
+\usepackage[top=1 in, bottom=1 in, left=0.85 in, right=0.85 in]{geometry}
+\usepackage{hyperref}
+ \usepackage{float}
+\usepackage{subcaption}
+
+\usepackage{amsmath,amssymb,graphicx,url, algorithm2e}
+\usepackage{thmtools,thm-restate,wrapfig,enumitem,mathabx}
+\newtheorem{assumption}{Assumption}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proof}{Proof}
+\usepackage{color}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+\title{Online Optimization and Learning (CS245)}
+\author{Name: ~~~~~~~~~~~~ID: ~~~~~~~~~~~~Email: ~~~~~~~~~~~~}
+\date{}
+
+\begin{document}
+
+\maketitle
+\noindent
+\rule{\linewidth}{0.4pt}
+{\bf {\large Rules:}}
+\begin{enumerate} 
+    \item Deadline: \textcolor{red}{\textbf{2025/4/14/23:59:59}}.\\ The grade of the late submission subjects to the decaying policy $(75\%, 50\%, 25\%)$.
+    \item Please do latex your homework and no handwriting is accepted.
+    \item Submit your homework to TA(guohq@shanghaitech.edu.cn), including your PDF and Code, with filename ``{\sf name+id+CS245HW2.zip}''.
+    \item \textcolor{red}{Plagiarism is not allowed.} You will fail this homework if any plagiarism is detected.
+    \end{enumerate}
+    \vspace{-0.3cm}
+\rule{\linewidth}{0.4pt}
+
+\newpage
+\noindent  {\bf Problem 1: Explore-then-Exploit in Bandits}
+
+\vspace{0.5cm}
+\noindent 
+Explore-then-Exploit is a simple and efficient algorithm for K-armed bandit problems.
+\vspace{0.1in}
+\hrule
+\vspace{0.05in}
+\noindent{\bf Explore-then-Exploit}
+\vspace{0.05in}
+\hrule
+\vspace{0.05in}
+
+\noindent {\bf Initialization:} Time horizon $T$, exploration times $N$.
+
+\noindent {\bf Exploration:} \noindent In the first phase, the choice of arms does not depend on the observed rewards, and each arm is played for $N$ times.
+
+\noindent {\bf 
+Exploitation:} In all remaining rounds, the algorithm selects the arm with the highest empirical mean reward based on the exploration phase.
+
+\vspace{0.02in}
+\hrule
+\vspace{0.5cm}
+\noindent Consider the stochastic multi-armed bandit setting:
+\begin{itemize}
+    \item After $N$ times explorations, for any arm $a$,derive an upper bound on the expected estimation error $|\mu_a - \bar \mu_a|$, where $\mu_a$ is the true mean reward and $\bar \mu_a$ is its empirical mean estimate.
+    \item Choose proper $N$, and prove an \textbf{upper bound} on the regret for the above algorithm.
+    \item Specialize the analysis to the two-armed case and establish a \textbf{lower bound} on the regret of the algorithm.
+\end{itemize}
+
+\vspace{0.5cm}
+{\noindent \bf Solution:}
+
+
+\newpage
+\noindent  {\bf Problem 2: Online Mirror Descent for Adversarial/Stochastic Bandits}
+\vspace{0.5cm}
+
+\noindent We have discussed Online Mirror Descent is possible to achieve good performance for Adversarial/Stochastic Bandits. 
+\vspace{0.05in}
+\hrule
+\vspace{0.05in}
+\noindent{\bf Online Mirror Descent for Adversarial/Stochastic Bandits}
+\vspace{0.05in}
+\hrule
+\vspace{0.05in}
+
+\noindent {\bf Initialization:} $x_1 = [1/K,...,1/K]$ and learning rate $\eta_t$. \\
+\noindent For each round $t=1,\cdots, T:$ 
+\begin{itemize}
+\item {\bf Learner:}  Sample an arm $i$ from $x_t$.
+\item {\bf Environment:} Observe the reward of arm $i$ : $r_t(i)$.
+\item {\bf Estimator:} $\hat{r}_t(i) = r_t(i)/x_t(i)$ and 0 otherwise.
+\item {\bf Update:} $x_{t+1} = \argmin_{x \in \mathcal K} \langle x, -\hat{r}_t \rangle + \frac{1}{\eta_t} B_{\Psi}(x;x_t).$
+\end{itemize}
+\vspace{0.02in}
+\hrule
+\vspace{0.1in}
+
+\noindent If the regularizer $\Psi(x)$ is the negative entropy function, $B_{\psi}$ is the KL divergence and the algorithm is the classical EXP3 algorithm. 
+\vspace{0.1cm}
+
+\noindent Now we consider a different regularizer $\psi(x) = -\sum_{i=1}^K \sqrt{x_i}.$
+\begin{itemize}
+    \item For adversarial bandits, please provide the regret analysis of the algorithm with a proper adaptive learning rate $\eta_t$ and compare it with the regret of EXP3.
+    \item For stochastic bandits, please try to provide a possible problem dependent regret analysis of the algorithm with a proper adaptive learning rate $\eta_t$.
+\end{itemize}
+\vspace{0.5cm}
+{\noindent \bf Solution:}
+
+
+\newpage
+\noindent  {\bf Problem 3: Bandit Algorithms}
+\vspace{0.5cm}
+
+\noindent Consider the following protocol of Bandits problem.
+\vspace{0.05in}
+\hrule
+\vspace{0.05in}
+\noindent{\bf Learning in Bandits}
+\vspace{0.05in}
+\hrule
+\vspace{0.05in}
+
+\noindent {\bf Initialization:} $K$ arms. \\
+\noindent For each round $t=1,\cdots, T:$ 
+\begin{itemize}
+\item \noindent {\bf Learner:}  Choose an arm $i \in [K].$
+\item {\bf Environment:} Observe the loss of picked arm $\ell_{t,i}.$
+\end{itemize}
+\vspace{0.02in}
+\hrule
+\vspace{0.1in}
+
+\noindent In this problem, we provide an environment with $K=32$ arms and $T=5000$ rounds, where each round you will receive a \textbf{loss} of your picked arm (note to be consistent with Homework $1,$ the environment returns the loss instead of reward). 
+\vspace{0.2cm}
+
+\noindent Let's apply the following  algorithms: 
+\begin{itemize}
+    \item Explore-then-exploit Algorithm in Problem $1$.
+    \item UCB Algorithm: A classical algorithm for stochastic bandits. 
+    \item Thompson Sampling Algorithm: A classical algorithm for stochastic bandits. 
+    \item EXP3 Algorithm: A classical algorithm for adversarial bandits.
+    \item Online Mirror Descent with a log-barrier regularizer.
+    \item Online Mirror Descent with $\Psi(x) = -\sum_i \sqrt{x_i}$ in Problem $2$.
+\end{itemize}
+
+\noindent Like in Homework $1,$ you are supposed to choose the proper learning rates and plot the trajectories of algorithms. 
+\vspace{0.2cm}
+
+\noindent  
+Please read the code sample and implement the algorithms with Python $3$. 
+
+\vspace{0.2cm}
+\noindent Note after you submit the code, we will also test your algorithm in other environments. 
+
+\vspace{0.5cm}
+
+\end{document}

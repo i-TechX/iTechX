@@ -1,0 +1,154 @@
+\documentclass[11pt,oneside,a4paper]{article}
+\usepackage[top=1 in, bottom=1 in, left=0.85 in, right=0.85 in]{geometry}
+\usepackage{hyperref}
+ \usepackage{float}
+\usepackage{subcaption}
+
+\usepackage{amsmath,amssymb,graphicx,url, algorithm2e}
+\usepackage{thmtools,thm-restate,wrapfig,enumitem,mathabx}
+\newtheorem{assumption}{Assumption}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proof}{Proof}
+\usepackage{color}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+\title{Online Optimization and Learning (CS245)}
+\author{Name: ~~~~~~~~~~~~ID: ~~~~~~~~~~~~Email: ~~~~~~~~~~~~}
+\date{}
+
+\begin{document}
+
+\maketitle
+\noindent
+\rule{\linewidth}{0.4pt}
+{\bf {\large Rules:}}
+\begin{enumerate} 
+    \item Deadline: \textcolor{red}{\textbf{2025-03-29/23:59:59}}.\\ The grade of the late submission subjects to the decaying policy $(75\%, 50\%, 25\%)$.
+    \item Please do latex your homework and no handwriting is accepted.
+    \item Submit your homework to TA(guohq@shanghaitech.edu.cn), including your PDF and Code, with filename ``{\sf name+id+CS245HW1.zip}''.
+    \item \textcolor{red}{Plagiarism is not allowed.} You will fail this homework if any plagiarism is detected.
+    \end{enumerate}
+    \vspace{-0.3cm}
+\rule{\linewidth}{0.4pt}
+
+\newpage
+
+\noindent  {\bf Problem 1: Adaptive Online Learning.}
+\vspace{0.5cm}
+
+\vspace{0.1in}
+\hrule
+\vspace{0.05in}
+\noindent{\bf Online Mirror Desecent}
+\vspace{0.05in}
+\hrule
+\vspace{0.05in}
+
+\noindent {\bf Initialization:} $x_1\in \mathcal K,$ learning rate $\eta_t$ and regularizer $\psi(\cdot).$  
+
+\noindent For $t=1,\cdots, T:$ 
+\begin{itemize}
+\item \noindent {\bf Learner:}  Submit $x_t.$
+\item {\bf Environment:} Observe the loss gradient $l_t$.
+\item {\bf Update:} $x_{t+1} = \argmin_{x\in \mathcal K} ~\langle l_t,x \rangle + \frac{1}{\eta_t} B_\psi(x;x_{t}).$
+
+\end{itemize}
+\vspace{0.02in}
+\hrule
+\vspace{0.1in}
+
+\vspace{0.1in}
+\hrule
+\vspace{0.05in}
+\noindent{\bf Follow-The-Regularized-Leader}
+\vspace{0.05in}
+\hrule
+\vspace{0.05in}
+
+\noindent {\bf Initialization:} $x_1\in \mathcal K,$ learning rate $\eta_t$ and regularizer $R(\cdot).$
+
+\noindent For $t=1,\cdots, T:$ 
+\begin{itemize}
+\item \noindent {\bf Learner:}  Submit $x_t.$
+\item {\bf Environment:} Observe the loss function $f_t(x) = \langle l_t,x \rangle$
+\item {\bf Update:} $x_{t+1} = \argmin_{x\in \mathcal K} ~ \sum_{s=1}^t f_s(x) + \frac{1}{\eta_t} R(x).$
+
+\end{itemize}
+\vspace{0.02in}
+\hrule
+\vspace{0.1in}
+Here we introduce the Online Mirror Descent (OMD) and Follow-The-Regularized-Leader (FTRL) algorithms for linear loss function $f_t(x) = \langle l_t, x\rangle \geq 0$. Let's consider the following problem (please provide the detailed steps to justify your answers):
+\begin{itemize}
+    \item Let regularizer $\psi(x) = R(x) = \frac{1}{2} \|x\|^2$, please design adaptive learning rate for $\eta_t$ to prove that OMD and FTRL achieves sub-linear regret, where the regret is defined as usually $$\mathcal R(T)=\sum_{t=1}^T f_t(x_t) - \min_{x\in \mathcal K} \sum_{t=1}^T f_t(x).$$
+    \item FTRL and OMD both have regularization terms, can you explain the connections between these two algorithms?
+\end{itemize}
+
+
+
+\newpage
+
+\noindent  {\bf Problem 2: Online Mirror Descent for LLM Preference Alignment.}
+\vspace{0.5cm}
+
+\noindent 
+Reinforcement learning from human feedback (RLHF) has effectively aligned large language models (LLMs) with human preferences. Given a prompt $x_t$ sampled from the dataset according to a specific distribution, the LLM model samples a pair of responses $(y^1_t,y^2_t)$ from the policy distribution $\pi_t \in \Pi$ (where $\Pi$ represents the set of all possible response distributions). A human evaluator then selects the preferred response, and the LLM is fine-tuned based on this preference feedback.
+
+Here, we consider a simplified formulation of the problem. After choosing the policy $\pi_t$, the LLM model has access to the reward function $r_t(y) = \mathbb{E}_{x_t}[ \mathbb{P}(y \succ \pi_t)|x_t] = \mathbb{E}_{y'\sim\pi_t}[\mathbb{P}(y \succ y') ]$ (which denotes the expected win rate of response $y$ against the current policy $\pi_t$). Below, we present a Mirror Descent Algorithm designed to address this problem.
+\vspace{0.1in}
+\hrule
+\vspace{0.05in}
+\noindent{\bf Online Mirror Descent}
+\vspace{0.05in}
+\hrule
+\vspace{0.05in}
+
+\noindent {\bf Initialization:} $\pi_1 \in \Pi$, Number of iterations $T$, learning rate $\eta$, preference oracle $\mathbb{P}$.
+
+\noindent For $t=1,\cdots, T:$ 
+\begin{itemize}
+\item \noindent {\bf Learner:}  Submit $\pi_t$ and construct response pairs.
+\item {\bf Environment:} The preference oracle $\mathbb{P}$ outputs the reward function $r_t$.
+\item {\bf Algorithm:} (Given the prediction $M_{t+1}$,) Conduct the following (Optimistic) Online Mirror Descent to output the next-step policy $\pi_{t+1}$:
+\begin{align*}
+    \pi_{t+1} = \argmax_{\pi \in \Pi} \langle \pi, r_t \rangle - \frac{1}{\eta} \text{KL}(\pi\|\pi_t). 
+\end{align*}
+\end{itemize}
+\vspace{0.02in}
+\hrule
+\vspace{0.1in}
+
+\noindent Let's consider the following problem (please provide the detailed steps to justify your answers):
+\begin{itemize}
+    \item Can you provide the closed-form updates for the above Online Mirror Descent algorithm?
+    \item To judge the performance of the algorithm, let $\bar \pi := \frac{1}{T}\sum_{t=1}^T \pi_t$, $J(\pi_1,\pi_2):= \mathbb{E}_{x,y^1\sim \pi_1,~y^2\sim \pi_2}[\mathbb{P}(y^1\succ y^2) |x] =\mathbb{E}_{y^1\sim \pi_1,~y^2\sim \pi_2}[\mathbb{P}(y^1\succ y^2)] $, the corresponding DualGap is defined as
+    \begin{align*}
+        \text{DualGap}(\bar \pi):= \max_{\pi_1} J(\pi_1, \pi) - \min_{\pi_2}J(\pi,\pi_2).
+    \end{align*}
+    When $\text{DualGap}(\bar \pi)=0$, it indicates that the Nash equilibrium has been reached. Consequently, the objective is to minimize the DualGap, as it serves as a measure of how closely a policy approximates the Nash equilibrium. Please choose proper $\eta$ and prove the DualGap of \textbf{Online Mirror Descent}.
+    \item For this problem, please write up the  \textbf{Optimistic Online Mirror Descent} algorithm, set proper learning rates, and prove the DualGap.
+\end{itemize}
+(Hint: Find the relationship between \textit{Regret} and \textit{Dual Gap}, and recall the symmetric nature of the game.)
+\newpage
+\noindent  {\bf Problem 3: (Adaptive) Gradient Descent Algorithms for Linear Regression.}
+\vspace{0.5cm}
+
+\noindent In this problem, you will train a linear regression model to predict estate prices.
+\vspace{0.1cm}
+
+\noindent The dataset is available at: \url{https://archive.ics.uci.edu/dataset/477/real+estate+valuation+data+set}, where the first six fields are the features of the estate and the last field is the price. For this dataset, you need to:
+\begin{itemize}
+    \item Split the data into train and test sets in a proper way and utilize a linear regression model to predict the evaluation level. You are asked to implement \red{Gradient Descent Algorithm}, \red{Adaptive Gradient Descent Algorithm}, \red{Root Mean Square Propagation Algorithm}, and \red{Adam Algorithm} in training your model. (You may need to preprocess the data before training to ensure convergence.)
+    \item Please plot your training losses, test your models on your test dataset, and compare their performance.
+\end{itemize}
+\noindent Please implement algorithm code with Python $3$, and make sure your code works.
+
+\end{document}

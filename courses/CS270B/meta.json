@@ -4,6 +4,23 @@
     "semesters": [
         {
             "season": "Spring",
+            "year": "2025",
+            "course_id": "CS270B.01",
+            "department": "信息科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "Homework 50%, Project 50%",
+            "teacher": [
+                "zhangyy8"
+            ],
+            "ta": [
+                "unknown"
+            ],
+            "mainpage": "https://piazza.com/class/m78oxj3mb3u42v"
+        },
+        {
+            "season": "Spring",
             "year": "2022",
             "course_id": "CS270B.01",
             "department": "信息科学与技术学院",

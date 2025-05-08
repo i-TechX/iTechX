@@ -1,0 +1,113 @@
+\documentclass[11pt,oneside,a4paper]{article}
+\usepackage[top=1 in, bottom=1 in, left=0.85 in, right=0.85 in]{geometry}
+\usepackage{hyperref}
+ \usepackage{float}
+\usepackage{subcaption}
+
+\usepackage{amsmath,amssymb,graphicx,url, algorithm2e}
+\usepackage{thmtools,thm-restate,wrapfig,enumitem,mathabx}
+\newtheorem{assumption}{Assumption}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proof}{Proof}
+\usepackage{color}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+\title{Online Optimization and Learning (CS245)}
+\author{Name: ~~~~~~~~~~~~ID: ~~~~~~~~~~~~Email: ~~~~~~~~~~~~}
+\date{}
+
+\begin{document}
+
+\maketitle
+\noindent
+\rule{\linewidth}{0.4pt}
+{\bf {\large Rules:}}
+\begin{enumerate} 
+    \item Deadline: \textcolor{red}{\textbf{2025/4/30/00:00:00}}.\\ The grade of the late submission subjects to the decaying policy $(75\%, 50\%, 25\%)$.
+    \item Please do latex your homework and no handwriting is accepted.
+    \item Submit your homework to TA(guohq@shanghaitech.edu.cn), including your PDF and Code, with filename ``{\sf name+id+CS245HW3.zip}''.
+    \item \textcolor{red}{Plagiarism is not allowed.} You will fail this homework if any plagiarism is detected.
+    \end{enumerate}
+    \vspace{-0.3cm}
+\rule{\linewidth}{0.4pt}
+
+\newpage
+
+\noindent  {\bf Problem 1: Policy Gradient for Multi-armed Bandits} \\
+
+\noindent The policy gradient method is a central technique in reinforcement learning, aiming to directly optimize the policy by estimating the gradient of the expected reward with respect to policy parameters. Specifically, given a parameterized stochastic policy $\pi_\theta(a|s)$, the objective is to maximize the expected reward:
+\[
+J(\theta) = \mathbb{E}_{a \sim \pi_\theta(\cdot|s)}[r(a)].
+\]
+
+\vspace{0.1in}
+\hrule
+\vspace{0.05in}
+\noindent{\bf Policy Gradient for Multi-armed Bandits}
+\vspace{0.05in}
+\hrule
+\vspace{0.05in}
+\noindent {\bf Setting:} Consider a finite-armed stochastic bandit problem with finite action set $\mathcal{A}$, and a fixed/dummy state $s_0$. At each round, the learner selects an action $a \in \mathcal{A}$ from a parameterized policy $\pi_\theta(a|s_0)$ or just $\pi_\theta(a)$, and observes a stochastic reward $R(a)$ with mean value $r(a) = \mathbb E[R(a)].$
+
+We study two parameterizations of the policy:
+\begin{itemize}
+    \item[(a)] {\bf Direct probability parameterization:} $\pi_\theta(a) = \theta(a).$
+    \item[(b)] {\bf Softmax parameterization:} $\pi_\theta(a) = \frac{e^{\theta(a)}}{\sum_{a' \in \mathcal{A}} e^{\theta(a')}}$.
+\end{itemize}
+
+\vspace{0.02in}
+\hrule
+\vspace{0.5cm}
+
+\noindent Let $a_t \sim \pi_\theta(\cdot)$ be the action sampled at round $t$, and $R(a_t)$ the observed reward. Please answer the following questions (please provide the detailed steps to justify your answers):
+\begin{itemize}
+    \item[(1)] (Direct Parameterization) Derive the policy gradient update rule for case (a).
+    \item[(2)] (Softmax Parameterization) Derive the policy gradient update rule for case (b).
+\end{itemize}
+
+\vspace{0.5cm}
+{\noindent \bf Solution:}
+
+\newpage
+
+
+
+\noindent {\bf Problem 2: Reinforcement Learning in the MountainCar Environment} 
+
+{\bf Task:}  
+The MountainCar environment is a classic control problem where the agent (a car) is placed in a valley and needs to build up momentum to reach the top of the hill on the right. However, the engine is not powerful enough to drive the car up the hill directly. The agent must learn to leverage gravity and swing back and forth to gain enough momentum.
+
+{\bf Environment Description:}  
+At each time step, the agent receives a state $s_t = (\text{position}, \text{velocity})$ and selects one of three discrete actions:
+\begin{itemize}
+    \item 0: push left
+    \item 1: no push
+    \item 2: push right
+\end{itemize}
+
+The reward is $-1$ for each time step until the goal is reached (position $\geq 0.5$), which encourages the agent to solve the task in as few steps as possible. The episode ends when the goal is reached or after 200 time steps.
+
+You can view a detailed description in the \href{https://gymnasium.farama.org/environments/classic_control/mountain_car/}{Gymnasium Documentation}. You are asked to design:
+\begin{itemize}
+    \item Policy-based algorithm
+    \item Value-based algorithm
+    \item Your algorithms (optional)
+\end{itemize}
+Please:
+\begin{itemize}
+    \item Plot the learning curves of accumulated reward per episode.
+    \item Describe the algorithm you implemented and the challenges specific to this environment (e.g., sparse reward, exploration).
+\end{itemize}
+
+Please implement the algorithm code in Python $3$ and ensure your code can be run and evaluated.
+
+\end{document}

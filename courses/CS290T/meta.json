@@ -1,0 +1,22 @@
+{
+    "code": "CS290T",
+    "name": "Project Practice for Reinforcement Learning",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2025",
+            "course_id": "CS290T.01",
+            "department": "信息科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "CS280",
+            "evaluation": "未知",
+            "teacher": [
+                "tianzheng"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        }
+    ]
+}

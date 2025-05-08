@@ -649,6 +649,12 @@
         ],
         "teach-courses": [
             [
+                "Spring",
+                "2025",
+                "CS243",
+                "Introduction to Algorithmic Game Theory"
+            ],
+            [
                 "Fall",
                 "2024",
                 "CS101",
@@ -1333,6 +1339,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2025",
+                "CS270B",
+                "Advanced Digital Image Processing"
+            ],
             [
                 "Fall",
                 "2024",
@@ -8940,6 +8952,12 @@
         ],
         "teach-courses": [
             [
+                "Spring",
+                "2025",
+                "CS245",
+                "Online Optimization and Learning"
+            ],
+            [
                 "Fall",
                 "2024",
                 "CS101",
@@ -8988,6 +9006,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2025",
+                "CS245",
+                "Online Optimization and Learning"
+            ],
             [
                 "Spring",
                 "2024",
@@ -16080,6 +16104,24 @@
                 "2023",
                 "CS280",
                 "Deep Learning"
+            ]
+        ]
+    },
+    "tianzheng": {
+        "name": "田政",
+        "info": [
+            [
+                "envelope",
+                "&#116;&#x69;&#x61;&#110;&#122;&#x68;&#101;&#x6e;&#103;&#x40;&#x73;&#x68;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#x74;&#101;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;",
+                "mailto:&#116;&#105;&#x61;&#x6e;&#122;&#x68;&#101;&#x6e;&#x67;&#x40;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#x69;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#100;&#x75;&#x2e;&#x63;&#110;"
+            ]
+        ],
+        "teach-courses": [
+            [
+                "Fall",
+                "2025",
+                "CS290T",
+                "Project Practice for Reinforcement Learning"
             ]
         ]
     }
