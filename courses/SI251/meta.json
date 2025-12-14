@@ -3,6 +3,23 @@
     "name": "Convex Optimization",
     "semesters": [
         {
+            "season": "Spring",
+            "year": "2024",
+            "course_id": "SI251.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Basic linear algebra, Basic probability, A programming language",
+            "evaluation": "Homework (20%),Quiz (10%), Final Exam (40%), Course project (30%)",
+            "teacher": [
+                "shiye",
+                "shiym"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
             "season": "Fall",
             "year": "2024",
             "course_id": "SI251.01",

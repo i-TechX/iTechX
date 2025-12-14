@@ -42,6 +42,22 @@
         },
         {
             "season": "Spring",
+            "year": "2024",
+            "course_id": "CS282.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "calculus (required), algebra (required), probability and statistics (required),optimization (strongly recommended)",
+            "evaluation": "assignments/quiz (50%) + project (50%)",
+            "teacher": [
+                "wanghao1"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Spring",
             "year": "2023",
             "course_id": "CS282.01",
             "department": "信息科学与技术学院",

@@ -9,13 +9,16 @@
             "department": "信息科学与技术学院",
             "credit": "4",
             "hours": "64",
-            "prerequisite": "Computer Programming, Data Structures and Algorithms (undergraduate level)",
-            "evaluation": "未知",
+            "prerequisite": "Algorithm and Data Structure (Undergraduate course), Basic discrete mathematic, Basic probability theory, Computer programming",
+            "evaluation": "Homework 20%, Course Project 10%, Midterm 35%, Final exam 35%",
             "teacher": [
                 "renkan"
             ],
             "ta": [
-                "gushq2024"
+                "lichm2024",
+                "gushq2024",
+                "hehy12024",
+                "chenyf12023"
             ]
         },
         {

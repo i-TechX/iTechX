@@ -4,6 +4,23 @@
     "semesters": [
         {
             "season": "Spring",
+            "year": "2025",
+            "course_id": "GEMA1010.01",
+            "department": "信息科学与技术学院",
+            "credit": "5",
+            "hours": "80",
+            "prerequisite": "数学分析 I",
+            "evaluation": "未知",
+            "teacher": [
+                "kychen"
+            ],
+            "ta": [
+                "gongyiyang",
+                "zhangjunfang"
+            ]
+        },
+        {
+            "season": "Spring",
             "year": "2023",
             "course_id": "GEMA1010.01",
             "department": "数学科学研究所",

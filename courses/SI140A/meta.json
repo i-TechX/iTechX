@@ -39,6 +39,24 @@
             ]
         },
         {
+            "season": "Spring",
+            "year": "2024",
+            "course_id": "SI140A.01",
+            "department": "信息科学与技术学院",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "Mathematical Analysis II,Linear Algebra, 编程基础知识",
+            "evaluation": "homework 20%, Behavior 5%, Final Project 15%, Midterm Exam 30%, Final Exam 30%",
+            "teacher": [
+                "shaozy"
+            ],
+            "ta": [
+                "wangshsh2",
+                "zhangty2",
+                "zhoushch"
+            ]
+        },
+        {
             "season": "Fall",
             "year": "2023",
             "course_id": "SI140A.01",
@@ -62,13 +80,16 @@
             "department": "信息科学与技术学院",
             "credit": "4",
             "hours": "64",
-            "prerequisite": "Mathematical Analysis and Linear Algebra",
-            "evaluation": "Homework 20%, Behavior 5%, Final Project 15%, Midterm Exam 30%, Final Exam 30%",
+            "prerequisite": "Mathematical Analysis II,Linear Algebra, 编程基础知识",
+            "evaluation": "homework 20%, Behavior 5%, Final Project 15%, Midterm Exam 30%, Final Exam 30%",
             "teacher": [
-                "shaozy"
+                "shaozy",
+                "wendz"
             ],
             "ta": [
-                "unknown"
+                "wangshsh2",
+                "xubw",
+                "wangyh5"
             ]
         },
         {

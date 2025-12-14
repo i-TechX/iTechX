@@ -377,6 +377,12 @@
         "teach-courses": [
             [
                 "Spring",
+                "2025",
+                "MATH1426",
+                "Numerical Analysis"
+            ],
+            [
+                "Spring",
                 "2022",
                 "EE160",
                 "Introduction to Control"
@@ -1256,6 +1262,12 @@
             ],
             [
                 "Spring",
+                "2024",
+                "SI251",
+                "Convex Optimization"
+            ],
+            [
+                "Spring",
                 "2022",
                 "SI251",
                 "Convex Optimization"
@@ -1304,6 +1316,12 @@
         "teach-courses": [
             [
                 "Fall",
+                "2024",
+                "SI251",
+                "Convex Optimization"
+            ],
+            [
+                "Spring",
                 "2024",
                 "SI251",
                 "Convex Optimization"
@@ -2059,6 +2077,12 @@
                 "2025",
                 "SI252",
                 "Reinforcement Learning"
+            ],
+            [
+                "Spring",
+                "2024",
+                "SI140A",
+                "Probability and Statistics for Information Science"
             ],
             [
                 "Fall",
@@ -7924,7 +7948,19 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2024",
+                "SI140A",
+                "Probability and Statistics for Information Science"
+            ],
+            [
                 "Fall",
+                "2023",
+                "SI140A",
+                "Probability and Statistics for Information Science"
+            ],
+            [
+                "Spring",
                 "2023",
                 "SI140A",
                 "Probability and Statistics for Information Science"
@@ -8162,6 +8198,12 @@
                 "2025",
                 "SI252",
                 "Reinforcement Learning"
+            ],
+            [
+                "Spring",
+                "2024",
+                "SI140A",
+                "Probability and Statistics for Information Science"
             ],
             [
                 "Fall",
@@ -8435,6 +8477,12 @@
             ]
         ],
         "ta-courses": [
+            [
+                "Spring",
+                "2023",
+                "SI140A",
+                "Probability and Statistics for Information Science"
+            ],
             [
                 "Spring",
                 "2022",
@@ -11261,6 +11309,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2023",
+                "SI140A",
+                "Probability and Statistics for Information Science"
+            ],
+            [
                 "Fall",
                 "2022",
                 "SI140A",
@@ -12753,6 +12807,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2025",
+                "CS182",
+                "Introduction to Machine Learning"
+            ],
+            [
                 "Fall",
                 "2024",
                 "CS101",
@@ -12763,6 +12823,12 @@
                 "2024",
                 "CS100",
                 "Introduction to Programming"
+            ],
+            [
+                "Spring",
+                "2024",
+                "SI140A",
+                "Probability and Statistics for Information Science"
             ],
             [
                 "Spring",
@@ -13248,6 +13314,12 @@
             ]
         ],
         "teach-courses": [
+            [
+                "Spring",
+                "2025",
+                "GEMA1010",
+                "Mathematical Analysis II"
+            ],
             [
                 "Spring",
                 "2023",
@@ -15170,6 +15242,12 @@
         ],
         "ta-courses": [
             [
+                "Spring",
+                "2025",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ],
+            [
                 "Fall",
                 "2024",
                 "CS181",
@@ -16314,6 +16392,198 @@
                 "2025",
                 "CS110",
                 "Computer Architecture I"
+            ]
+        ]
+    },
+    "wendz": {
+        "name": "文鼎柱",
+        "info": [
+            [
+                "envelope",
+                "&#119;&#x65;&#110;&#x64;&#122;&#104;&#x40;&#115;&#104;&#97;&#x6e;&#x67;&#x68;&#x61;&#x69;&#116;&#x65;&#99;&#104;&#46;&#101;&#100;&#x75;&#46;&#x63;&#x6e;",
+                "mailto:&#119;&#101;&#x6e;&#x64;&#x7a;&#x68;&#x40;&#115;&#x68;&#x61;&#x6e;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#99;&#104;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "teach-courses": [
+            [
+                "Spring",
+                "2023",
+                "SI140A",
+                "Probability and Statistics for Information Science"
+            ]
+        ]
+    },
+    "hanzr2023": {
+        "name": "韩子睿",
+        "info": [
+            [
+                "envelope",
+                "&#104;&#x61;&#110;&#122;&#114;&#x32;&#48;&#50;&#x33;&#64;&#x73;&#x68;&#x61;&#110;&#x67;&#104;&#97;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#110;",
+                "mailto:&#x68;&#x61;&#110;&#122;&#114;&#50;&#48;&#x32;&#x33;&#x40;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#x61;&#x69;&#116;&#x65;&#x63;&#x68;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Fall",
+                "2023",
+                "SI152",
+                "Numerical Optimization"
+            ]
+        ]
+    },
+    "shiyj2": {
+        "name": "师玉娇",
+        "info": [
+            [
+                "envelope",
+                "&#115;&#104;&#105;&#x79;&#x6a;&#x32;&#x40;&#115;&#x68;&#97;&#110;&#x67;&#x68;&#97;&#105;&#x74;&#101;&#99;&#x68;&#x2e;&#101;&#100;&#117;&#46;&#99;&#110;",
+                "mailto:&#115;&#x68;&#x69;&#121;&#106;&#50;&#64;&#115;&#x68;&#97;&#x6e;&#x67;&#104;&#x61;&#x69;&#x74;&#101;&#99;&#x68;&#x2e;&#x65;&#x64;&#117;&#46;&#x63;&#110;"
+            ]
+        ],
+        "teach-courses": [
+            [
+                "Spring",
+                "2025",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "wangluo": {
+        "name": "汪洛",
+        "info": [
+            [
+                "envelope",
+                "&#x77;&#97;&#110;&#103;&#108;&#x75;&#x6f;&#64;&#x73;&#x68;&#x61;&#x6e;&#103;&#104;&#x61;&#x69;&#x74;&#101;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#99;&#x6e;",
+                "mailto:&#x77;&#x61;&#x6e;&#x67;&#x6c;&#117;&#x6f;&#64;&#115;&#104;&#x61;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#x65;&#99;&#x68;&#x2e;&#101;&#100;&#117;&#x2e;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2025",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "xiaochy": {
+        "name": "肖楚旸",
+        "info": [
+            [
+                "envelope",
+                "&#x78;&#105;&#97;&#111;&#x63;&#104;&#x79;&#64;&#x73;&#x68;&#97;&#110;&#103;&#x68;&#x61;&#105;&#116;&#x65;&#x63;&#104;&#46;&#101;&#100;&#x75;&#46;&#x63;&#x6e;",
+                "mailto:&#120;&#x69;&#x61;&#x6f;&#x63;&#104;&#x79;&#x40;&#x73;&#x68;&#97;&#110;&#x67;&#104;&#97;&#x69;&#x74;&#x65;&#99;&#x68;&#x2e;&#101;&#x64;&#x75;&#x2e;&#99;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2025",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "zhuych12022": {
+        "name": "朱毅超",
+        "info": [
+            [
+                "envelope",
+                "&#122;&#x68;&#x75;&#121;&#x63;&#104;&#49;&#50;&#48;&#50;&#50;&#64;&#x73;&#104;&#97;&#110;&#x67;&#104;&#97;&#105;&#116;&#x65;&#99;&#x68;&#46;&#x65;&#x64;&#x75;&#x2e;&#99;&#x6e;",
+                "mailto:&#x7a;&#x68;&#117;&#121;&#99;&#x68;&#x31;&#x32;&#48;&#50;&#x32;&#x40;&#115;&#x68;&#97;&#x6e;&#x67;&#x68;&#x61;&#x69;&#x74;&#x65;&#x63;&#x68;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#110;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2025",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "renhui": {
+        "name": "任辉",
+        "info": [
+            [
+                "envelope",
+                "&#x72;&#101;&#110;&#104;&#x75;&#x69;&#x40;&#x73;&#x68;&#97;&#x6e;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#99;&#104;&#46;&#101;&#x64;&#x75;&#x2e;&#99;&#110;",
+                "mailto:&#114;&#x65;&#110;&#x68;&#x75;&#x69;&#x40;&#115;&#104;&#97;&#110;&#x67;&#x68;&#97;&#x69;&#116;&#101;&#x63;&#x68;&#x2e;&#x65;&#100;&#117;&#46;&#x63;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2025",
+                "CS182",
+                "Introduction to Machine Learning"
+            ]
+        ]
+    },
+    "chenyf12023": {
+        "name": "陈义飞",
+        "info": [
+            [
+                "envelope",
+                "&#99;&#104;&#101;&#110;&#121;&#x66;&#x31;&#x32;&#48;&#50;&#51;&#x40;&#x73;&#x68;&#97;&#x6e;&#103;&#x68;&#x61;&#105;&#116;&#101;&#99;&#104;&#46;&#x65;&#x64;&#x75;&#46;&#99;&#110;",
+                "mailto:&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2025",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ]
+        ]
+    },
+    "hehy12024": {
+        "name": "何好雨",
+        "info": [
+            [
+                "envelope",
+                "&#104;&#101;&#x68;&#x79;&#x31;&#50;&#x30;&#x32;&#52;&#64;&#x73;&#x68;&#97;&#x6e;&#x67;&#x68;&#97;&#105;&#116;&#x65;&#99;&#104;&#x2e;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;",
+                "mailto:&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2025",
+                "CS240",
+                "Algorithm Design and Analysis"
+            ]
+        ]
+    },
+    "gongyiyang": {
+        "name": "龚羿扬",
+        "info": [],
+        "ta-courses": [
+            [
+                "Spring",
+                "2025",
+                "GEMA1010",
+                "Mathematical Analysis II"
+            ]
+        ]
+    },
+    "zhangjunfang": {
+        "name": "张君放",
+        "info": [
+            [
+                "envelope",
+                "&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;",
+                "mailto:&#x77;&#x75;&#109;&#115;&#49;&#64;&#x73;&#104;&#97;&#x6e;&#103;&#x68;&#97;&#105;&#116;&#101;&#x63;&#104;&#x2e;&#101;&#x64;&#117;&#46;&#99;&#x6e;"
+            ]
+        ],
+        "ta-courses": [
+            [
+                "Spring",
+                "2025",
+                "GEMA1010",
+                "Mathematical Analysis II"
             ]
         ]
     }

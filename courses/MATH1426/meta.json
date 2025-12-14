@@ -1,0 +1,22 @@
+{
+    "code": "MATH1426",
+    "name": "Numerical Analysis",
+    "semesters": [
+        {
+            "season": "Spring",
+            "year": "2025",
+            "course_id": "MATH1426.01",
+            "department": "数学所",
+            "credit": "4",
+            "hours": "64",
+            "prerequisite": "未知",
+            "evaluation": "Homework: 40%, Final Exam: 60%",
+            "teacher": [
+                "borish"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        }
+    ]
+}
