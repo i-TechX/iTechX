@@ -1,3 +1,0 @@
-cheatsheet.pdf由cheatsheet.md导出。内容为final_review_note的精简。
-
-cheatsheet.docx的内容为pdf的进一步精简，并制作成可直接打印使用的排版形式。
