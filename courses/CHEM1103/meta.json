@@ -1,0 +1,134 @@
+{
+    "code": "CHEM1103",
+    "name": "General Chemistry I",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2025",
+            "course_id": "CHEM1103.03",
+            "department": "物质科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "无",
+            "evaluation": "未知",
+            "teacher": [
+                "xiejin"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Fall",
+            "year": "2024",
+            "course_id": "CHEM1103.01",
+            "department": "物质科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "liupx"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2024",
+            "course_id": "CHEM1103.01",
+            "department": "物质科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "unknown"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2023",
+            "course_id": "CHEM1103.01",
+            "department": "物质科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "unknown"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Fall",
+            "year": "2022",
+            "course_id": "CHEM1103.01",
+            "department": "物质科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "unknown"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2022",
+            "course_id": "CHEM1103.01",
+            "department": "物质科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "unknown"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Spring",
+            "year": "2021",
+            "course_id": "CHEM1103.01",
+            "department": "物质科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "unknown"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Fall",
+            "year": "2015",
+            "course_id": "CHEM1103.00",
+            "department": "物质科学与技术学院",
+            "credit": "3",
+            "hours": "48",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "unknown"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        }
+    ]
+}

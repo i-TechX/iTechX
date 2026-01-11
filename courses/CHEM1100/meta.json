@@ -1,0 +1,22 @@
+{
+    "code": "CHEM1100",
+    "name": "General Chemistry I Lab",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2025",
+            "course_id": "CHEM1100.04",
+            "department": "物质科学与技术学院",
+            "credit": "1",
+            "hours": "16",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "koulei"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        }
+    ]
+}

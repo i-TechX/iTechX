@@ -1,0 +1,22 @@
+{
+    "code": "MT1018",
+    "name": "History of Red Shanghai",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2025",
+            "course_id": "MT1018.01",
+            "department": "思想政治理论课教研部",
+            "credit": "2",
+            "hours": "32",
+            "prerequisite": "无",
+            "evaluation": "社会实践20分（凭社会实践报告），考勤20%，课堂表现10%，期末小论文50%",
+            "teacher": [
+                "徐光寿"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        }
+    ]
+}
