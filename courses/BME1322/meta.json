@@ -1,6 +1,7 @@
 {
     "code": "BME1322",
     "name": "Artificial Intelligence (BME)",
+    "cover": "https://raw.githubusercontent.com/i-TechX/iTechX/file-base/courses/BME1322/cover-v2.png",
     "semesters": [
         {
             "season": "Fall",
@@ -8,7 +9,7 @@
             "course_id": "BME1322.01",
             "department": "School of Biomedical Engineering",
             "credit": "3",
-            "hours": "Not specified",
+            "hours": "48",
             "prerequisite": "Not specified in the introductory slides",
             "evaluation": "Quiz 10%, Assignment & Project 70%, Final Exam 20% (introductory slides)",
             "teacher": [
