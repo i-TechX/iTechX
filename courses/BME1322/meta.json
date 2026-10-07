@@ -1,0 +1,22 @@
+{
+    "code": "BME1322",
+    "name": "Artificial Intelligence (BME)",
+    "semesters": [
+        {
+            "season": "Fall",
+            "year": "2025",
+            "course_id": "BME1322.01",
+            "department": "School of Biomedical Engineering",
+            "credit": "3",
+            "hours": "Not specified",
+            "prerequisite": "Not specified in the introductory slides",
+            "evaluation": "Quiz 10%, Assignment & Project 70%, Final Exam 20% (introductory slides)",
+            "teacher": [
+                "qianwang"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        }
+    ]
+}

@@ -16586,5 +16586,28 @@
                 "Mathematical Analysis II"
             ]
         ]
+    },
+    "qianwang": {
+        "name": "Qian Wang",
+        "info": [
+            [
+                "envelope",
+                "qianwang@shanghaitech.edu.cn",
+                "mailto:qianwang@shanghaitech.edu.cn"
+            ],
+            [
+                "home",
+                "qianwang.space",
+                "https://qianwang.space"
+            ]
+        ],
+        "teach-courses": [
+            [
+                "Fall",
+                "2025",
+                "BME1322",
+                "Artificial Intelligence (BME)"
+            ]
+        ]
     }
 }
