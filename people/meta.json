@@ -537,6 +537,12 @@
         "teach-courses": [
             [
                 "Spring",
+                "2025",
+                "CS283",
+                "Robotics"
+            ],
+            [
+                "Spring",
                 "2022",
                 "CS110",
                 "Computer Architecture I"
