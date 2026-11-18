@@ -4,6 +4,22 @@
     "semesters": [
         {
             "season": "Fall",
+            "year": "2026",
+            "course_id": "CS181.01",
+            "department": "信息科学与技术学院",
+            "credit": "未知",
+            "hours": "未知",
+            "prerequisite": "未知",
+            "evaluation": "未知",
+            "teacher": [
+                "unknown"
+            ],
+            "ta": [
+                "unknown"
+            ]
+        },
+        {
+            "season": "Fall",
             "year": "2024",
             "course_id": "CS181.01",
             "department": "信息科学与技术学院",
